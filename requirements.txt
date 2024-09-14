@@ -1,3 +1,9 @@
 nltk
 transformers
 sentencepiece
+torch
+sentence-transformers
+numpy
+transformers sentencepiece
+faiss-cpu
+faiss-gpu

@@ -1,0 +1,12 @@
+When a UAC sends a request that is within the context of a
+   dialog, it follows the common UAC rules as discussed in Section 8 but
+   also the rules for mid-dialog requests. Section 12 discusses dialogs
+   and presents the procedures for their construction and maintenance,
+   in addition to construction of requests within a dialog. The most important method in SIP is the INVITE method, which is used
+   to establish a session between participants. A session is a
+   collection of participants, and streams of media between them, for
+   the purposes of communication. Section 13 discusses how sessions are
+   initiated, resulting in one or more SIP dialogs. Section 14
+   discusses how characteristics of that session are modified through
+   the use of an INVITE request within a dialog. Finally, section 15
+   discusses how a session is terminated.

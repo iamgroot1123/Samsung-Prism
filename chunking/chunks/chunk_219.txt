@@ -1,0 +1,14 @@
+If the request contains a Max-Forwards header field with a field
+      value of zero (0), the element MUST NOT forward the request. If
+      the request was for OPTIONS, the element MAY act as the final
+      recipient and respond per Section 11. Otherwise, the element MUST
+      return a 483 (Too many hops) response. 4. Optional Loop Detection check
+      An element MAY check for forwarding loops before forwarding a
+      request. If the request contains a Via header field with a sent-
+      by value that equals a value placed into previous requests by the
+      proxy, the request has been forwarded by this element before. The
+      request has either looped or is legitimately spiraling through the
+      element. To determine if the request has looped, the element MAY
+      perform the branch parameter calculation described in Step 8 of
+      Section 16.6 on this message and compare it to the parameter
+      received in that Via header field.

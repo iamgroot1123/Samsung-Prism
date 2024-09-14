@@ -1,0 +1,16 @@
+Both types
+   of messages consist of a start-line, one or more header fields, an
+   empty line indicating the end of the header fields, and an optional
+   message-body. generic-message  =  start-line
+                             *message-header
+                             CRLF
+                             [ message-body ]
+         start-line       =  Request-Line / Status-Line
+   The start-line, each message-header line, and the empty line MUST be
+   terminated by a carriage-return line-feed sequence (CRLF). Note that
+   the empty line MUST be present even if the message-body is not. Except for the above difference in character sets, much of SIP’s
+   message and header field syntax is identical to HTTP/1.1. Rather
+   than repeating the syntax and semantics here, we use [HX.Y] to refer
+   to Section X.Y of the current HTTP/1.1 specification (RFC 2616 [8]). However, SIP is not an extension of HTTP. 7.1 Requests
+   SIP requests are distinguished by having a Request-Line for a start-
+   line.

@@ -1,0 +1,12 @@
+A common mechanism is to order the set by the "q"
+   parameter value from the Contact header field value. Requests to the
+   URIs MAY be generated serially or in parallel. One approach is to
+   process groups of decreasing q-values serially and process the URIs
+   in each q-value group in parallel. Another is to perform only serial
+   processing in decreasing q-value order, arbitrarily choosing between
+   contacts of equal q-value. If contacting an address in the list results in a failure, as defined
+   in the next paragraph, the element moves to the next address in the
+   list, until the list is exhausted. If the list is exhausted, then
+   the request has failed. Failures SHOULD be detected through failure response codes (codes
+   greater than 399); for network errors the client transaction will
+   report any transport layer failures to the transaction user.

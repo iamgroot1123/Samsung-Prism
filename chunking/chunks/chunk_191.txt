@@ -1,0 +1,11 @@
+For example, SDP    contains a session id and version number in the origin (o) field. If
+   the user is already a member of the session, and the session
+   parameters contained in the session description have not changed, the
+   UAS MAY silently accept the INVITE (that is, send a 2xx response
+   without prompting the user). If the INVITE does not contain a session description, the UAS is
+   being asked to participate in a session, and the UAC has asked that
+   the UAS provide the offer of the session. It MUST provide the offer
+   in its first non-failure reliable message back to the UAC. In this
+   specification, that is a 2xx response to the INVITE. The UAS can indicate progress, accept, redirect, or reject the
+   invitation. In all of these cases, it formulates a response using
+   the procedures described in Section 8.2.6.

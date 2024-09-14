@@ -1,0 +1,11 @@
+If the message
+   has no Content-Length header field, the message body is assumed to
+   end at the end of the transport packet. In the case of stream-oriented transports such as TCP, the Content-
+   Length header field indicates the size of the body. The Content-
+   Length header field MUST be used with stream oriented transports. 18.4 Error Handling
+   Error handling is independent of whether the message was a request or
+   response. If the transport user asks for a message to be sent over an
+   unreliable transport, and the result is an ICMP error, the behavior
+   depends on the type of ICMP error. Host, network, port or protocol
+   unreachable errors, or parameter problem errors SHOULD cause the
+   transport layer to inform the transport user of a failure in sending. Source quench and TTL exceeded ICMP errors SHOULD be ignored.

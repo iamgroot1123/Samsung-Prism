@@ -1,0 +1,14 @@
+Registration creates bindings in a location service for a particular
+   domain that associates an address-of-record URI with one or more
+   contact addresses. Thus, when a proxy for that domain receives a
+   request whose Request-URI matches the address-of-record, the proxy
+   will forward the request to the contact addresses registered to that
+   address-of-record. Generally, it only makes sense to register an
+   address-of-record at a domain’s location service when requests for
+   that address-of-record would be routed to that domain. In most
+   cases, this means that the domain of the registration will need to
+   match the domain in the URI of the address-of-record. There are many ways by which the contents of the location service can
+   be established. One way is administratively. In the above example,
+   Bob is known to be a member of the engineering department through
+   access to a corporate database. However, SIP provides a mechanism
+   for a UA to create a binding explicitly.

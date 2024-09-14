@@ -1,0 +1,12 @@
+A SIP UA can choose to register telephone numbers (with the tel URL,
+   RFC 2806 [9]) or email addresses (with a mailto URL, RFC 2368 [32])
+   as Contacts for an address-of-record, for example. For example, Carol, with address-of-record "sip:carol@chicago.com",
+   would register with the SIP registrar of the domain chicago.com. Her
+   registrations would then be used by a proxy server in the chicago.com
+   domain to route requests for Carol’s address-of-record to her SIP
+   endpoint. Once a client has established bindings at a registrar, it MAY send
+   subsequent registrations containing new bindings or modifications to
+   existing bindings as necessary. The 2xx response to the REGISTER
+   request will contain, in a Contact header field, a complete list of
+   bindings that have been registered for this address-of-record at this
+   registrar.

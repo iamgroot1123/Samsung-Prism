@@ -1,0 +1,11 @@
+Concretely, the above rules specify two exchanges for UAs compliant
+   to this specification alone - the offer is in the INVITE, and the
+   answer in the 2xx (and possibly in a 1xx as well, with the same
+   value), or the offer is in the 2xx, and the answer is in the ACK. All user agents that support INVITE MUST support these two exchanges. The Session Description Protocol (SDP) (RFC 2327 [1]) MUST be
+   supported by all user agents as a means to describe sessions, and its
+   usage for constructing offers and answers MUST follow the procedures
+   defined in [13]. The restrictions of the offer-answer model just described only apply
+   to bodies whose Content-Disposition header field value is "session". Therefore, it is possible that both the INVITE and the ACK contain a
+   body message (for example, the INVITE carries a photo (Content-
+   Disposition: render) and the ACK a session description (Content-
+   Disposition: session)).

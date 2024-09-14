@@ -1,0 +1,13 @@
+If the
+   first element in the route set indicated a strict router (resulting
+   in forming the request as described in Section 12.2.1.1), the
+   procedures MUST be applied to the Request-URI of the request. Otherwise, the procedures are applied to the first Route header field
+   value in the request (if one exists), or to the request’s Request-URI
+   if there is no Route header field present. These procedures yield an
+   ordered set of address, port, and transports to attempt. Independent
+   of which URI is used as input to the procedures of [4], if the
+   Request-URI specifies a SIPS resource, the UAC MUST follow the
+   procedures of [4] as if the input URI were a SIPS URI. Local policy MAY specify an alternate set of destinations to attempt. If the Request-URI contains a SIPS URI, any alternate destinations
+   MUST be contacted with TLS. Beyond that, there are no restrictions
+   on the alternate destinations if the request contains no Route header
+   field.

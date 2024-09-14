@@ -1,0 +1,7 @@
+The "warn-text" should be in a natural language that is most likely
+   to be intelligible to the human user receiving the response. This
+   decision can be based on any available knowledge, such as the
+   location of the user, the Accept-Language field in a request, or the    Content-Language field in a response. The default language is i-
+   default [21]. The currently-defined "warn-code"s are listed below, with a
+   recommended warn-text in English and a description of their meaning. These warnings describe failures induced by the session description. The first digit of warning codes beginning with "3" indicates
+   warnings specific to SIP.

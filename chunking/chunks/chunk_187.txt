@@ -1,0 +1,14 @@
+The UAC core MUST generate an ACK request for each 2xx received from
+   the transaction layer. The header fields of the ACK are constructed
+   in the same way as for any request sent within a dialog (see Section
+   12) with the exception of the CSeq and the header fields related to
+   authentication. The sequence number of the CSeq header field MUST be
+   the same as the INVITE being acknowledged, but the CSeq method MUST
+   be ACK. The ACK MUST contain the same credentials as the INVITE. If
+   the 2xx contains an offer (based on the rules above), the ACK MUST
+   carry an answer in its body. If the offer in the 2xx response is not
+   acceptable, the UAC core MUST generate a valid answer in the ACK and
+   then send a BYE immediately. Once the ACK has been constructed, the procedures of [4] are used to
+   determine the destination address, port and transport. However, the
+   request is passed to the transport layer directly for transmission,
+   rather than a client transaction.

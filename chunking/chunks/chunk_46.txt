@@ -1,0 +1,13 @@
+Transaction User (TU): The layer of protocol processing that
+         resides above the transaction layer. Transaction users include
+         the UAC core, UAS core, and proxy core. Upstream: A direction of message forwarding within a transaction
+         that refers to the direction that responses flow from the user
+         agent server back to the user agent client. URL-encoded: A character string encoded according to RFC 2396,
+         Section 2.4 [5]. User Agent Client (UAC): A user agent client is a logical entity
+         that creates a new request, and then uses the client
+         transaction state machinery to send it. The role of UAC lasts
+         only for the duration of that transaction. In other words, if
+         a piece of software initiates a request, it acts as a UAC for
+         the duration of that transaction. If it receives a request
+         later, it assumes the role of a user agent server for the
+         processing of that transaction.

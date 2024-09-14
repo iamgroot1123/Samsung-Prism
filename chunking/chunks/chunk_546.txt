@@ -1,0 +1,13 @@
+Because the UA has already authenticated the server on the other
+      side of the TLS connection, all requests that come over this
+      connection are known to have passed through the proxy server -
+      attackers cannot create spoofed requests that appear to have been
+      sent through that proxy server. 26.3.2.2 Interdomain Requests
+   Now let’s say that Alice’s UA would like to initiate a session with a
+   user in a remote administrative domain, namely "bob@biloxi.com". We
+   will also say that the local administrative domain (atlanta.com) has
+   a local outbound proxy. The proxy server that handles inbound requests for an administrative
+   domain MAY also act as a local outbound proxy; for simplicity’s sake
+   we’ll assume this to be the case for atlanta.com (otherwise the user
+   agent would initiate a new TLS connection to a separate server at
+   this point).

@@ -1,0 +1,13 @@
+A request may
+   traverse several proxies on its way to a UAS. Each will make routing
+   decisions, modifying the request before forwarding it to the next
+   element. Responses will route through the same set of proxies
+   traversed by the request in the reverse order. Being a proxy is a logical role for a SIP element. When a request
+   arrives, an element that can play the role of a proxy first decides
+   if it needs to respond to the request on its own. For instance, the
+   request may be malformed or the element may need credentials from the
+   client before acting as a proxy. The element MAY respond with any    appropriate error code. When responding directly to a request, the
+   element is playing the role of a UAS and MUST behave as described in
+   Section 8.2. A proxy can operate in either a stateful or stateless mode for each
+   new request. When stateless, a proxy acts as a simple forwarding
+   element.

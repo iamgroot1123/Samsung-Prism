@@ -1,0 +1,14 @@
+Note that if an authentication scheme that does not support realms is
+   used in the Proxy-Authorization header field, a proxy server MUST
+   attempt to parse all Proxy-Authorization header field values to
+   determine whether one of them has what the proxy server considers to
+   be valid credentials. Because this is potentially very time-
+   consuming in large networks, proxy servers SHOULD use an
+   authentication scheme that supports realms in the Proxy-Authorization
+   header field. If a request is forked (as described in Section 16.7), various proxy
+   servers and/or UAs may wish to challenge the UAC. In this case, the
+   forking proxy server is responsible for aggregating these challenges
+   into a single response. Each WWW-Authenticate and Proxy-Authenticate
+   value received in responses to the forked request MUST be placed into
+   the single response that is sent by the forking proxy to the UA; the
+   ordering of these header field values is not significant.

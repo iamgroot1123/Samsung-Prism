@@ -1,0 +1,13 @@
+URI parameters take the form:
+            parameter-name "=" parameter-value
+         Even though an arbitrary number of URI parameters may be
+         included in a URI, any given parameter-name MUST NOT appear
+         more than once. This extensible mechanism includes the transport, maddr, ttl,
+         user, method and lr parameters. The transport parameter determines the transport mechanism to
+         be used for sending SIP messages, as specified in [4]. SIP can
+         use any network transport protocol. Parameter names are
+         defined for UDP (RFC 768 [14]), TCP (RFC 761 [15]), and SCTP
+         (RFC 2960 [16]). For a SIPS URI, the transport parameter MUST
+         indicate a reliable transport. The maddr parameter indicates the server address to be
+         contacted for this user, overriding any address derived from
+         the host field.

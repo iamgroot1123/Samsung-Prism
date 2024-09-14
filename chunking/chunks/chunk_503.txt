@@ -1,0 +1,20 @@
+/
+                     "{" / "}" )
+   When tokens are used or separators are used between elements,
+   whitespace is often allowed before or after these characters:
+      STAR    =  SWS "*" SWS ; asterisk
+      SLASH   =  SWS "/" SWS ; slash
+      EQUAL   =  SWS "=" SWS ; equal
+      LPAREN  =  SWS "(" SWS ; left parenthesis
+      RPAREN  =  SWS ")" SWS ; right parenthesis
+      RAQUOT  =  ">" SWS ; right angle quote
+      LAQUOT  =  SWS "<"; left angle quote
+      COMMA   =  SWS "," SWS ; comma
+      SEMI    =  SWS ";" SWS ; semicolon
+      COLON   =  SWS ":" SWS ; colon
+      LDQUOT  =  SWS DQUOTE; open double quotation mark
+      RDQUOT  =  DQUOTE SWS ; close double quotation mark
+   Comments can be included in some SIP header fields by surrounding the
+   comment text with parentheses. Comments are only allowed in fields
+   containing "comment" as part of their field value definition. In all
+   other fields, parentheses are considered part of the field value.

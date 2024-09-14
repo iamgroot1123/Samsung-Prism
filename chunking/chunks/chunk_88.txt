@@ -1,0 +1,13 @@
+If a client wishes to formulate
+   new requests based on a 3xx class response to that request, it places
+   the URIs to try into the target set. Subject to the restrictions in
+   this specification, a client can choose which Contact URIs it places
+   into the target set. As with proxy recursion, a client processing
+   3xx class responses MUST NOT add any given URI to the target set more
+   than once. If the original request had a SIPS URI in the Request-
+   URI, the client MAY choose to recurse to a non-SIPS URI, but SHOULD
+   inform the user of the redirection to an insecure URI. Any new request may receive 3xx responses themselves containing
+      the original URI as a contact. Two locations can be configured to
+      redirect to each other. Placing any given URI in the target set
+      only once prevents infinite redirection loops. As the target set grows, the client MAY generate new requests to the
+   URIs in any order.

@@ -1,0 +1,11 @@
+In normal
+         endpoint operation as described in Section 12, these Record-
+         Route header field values will not have any effect on the route
+         sets used by the endpoints. The proxy will remain on the path if it chooses to not insert a
+         Record-Route header field value into requests that are already
+         part of a dialog. However, it would be removed from the path
+         when an endpoint that has failed reconstitutes the dialog. A proxy MAY insert a Record-Route header field value into any
+         request. If the request does not initiate a dialog, the
+         endpoints will ignore the value. See Section 12 for details on
+         how endpoints use the Record-Route header field values to
+         construct Route header fields.

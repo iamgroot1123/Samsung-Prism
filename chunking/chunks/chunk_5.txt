@@ -1,0 +1,12 @@
+For example, SIP can
+   locate a user and deliver an opaque object to his current location. If this primitive is used to deliver a session description written in
+   SDP, for instance, the endpoints can agree on the parameters of a
+   session. If the same primitive is used to deliver a photo of the
+   caller as well as the session description, a "caller ID" service can
+   be easily implemented. As this example shows, a single primitive is
+   typically used to provide several different services. SIP does not offer conference control services such as floor control
+   or voting and does not prescribe how a conference is to be managed. SIP can be used to initiate a session that uses some other conference
+   control protocol. Since SIP messages and the sessions they establish
+   can pass through entirely different networks, SIP cannot, and does
+   not, provide any kind of network resource reservation capabilities. The nature of the services provided make security particularly
+   important.

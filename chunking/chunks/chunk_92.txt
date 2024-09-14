@@ -1,0 +1,13 @@
+It is RECOMMENDED that the UAC reuse the same To, From, and Call-ID
+   used in the original redirected request, but the UAC MAY also choose
+   to update the Call-ID header field value for new requests, for
+   example. Finally, once the new request has been constructed, it is sent using
+   a new client transaction, and therefore MUST have a new branch ID in
+   the top Via field as discussed in Section 8.1.1.7. In all other respects, requests sent upon receipt of a redirect
+   response SHOULD re-use the header fields and bodies of the original
+   request. In some instances, Contact header field values may be cached at UAC
+   temporarily or permanently depending on the status code received and
+   the presence of an expiration interval; see Sections 21.3.2 and
+   21.3.3. 8.1.3.5 Processing 4xx Responses
+   Certain 4xx response codes require specific UA processing,
+   independent of the method.

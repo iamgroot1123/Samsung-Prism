@@ -1,0 +1,13 @@
+Once all procedures associated with the creation of a response have
+   been completed, the UAS hands the response back to the server
+   transaction from which it received the request. 8.2.6.1 Sending a Provisional Response
+   One largely non-method-specific guideline for the generation of
+   responses is that UASs SHOULD NOT issue a provisional response for a
+   non-INVITE request. Rather, UASs SHOULD generate a final response to
+   a non-INVITE request as soon as possible. When a 100 (Trying) response is generated, any Timestamp header field
+   present in the request MUST be copied into this 100 (Trying)
+   response. If there is a delay in generating the response, the UAS
+   SHOULD add a delay value into the Timestamp value in the response. This value MUST contain the difference between the time of sending of
+   the response and receipt of the request, measured in seconds. 8.2.6.2 Headers and Tags
+   The From field of the response MUST equal the From header field of
+   the request.

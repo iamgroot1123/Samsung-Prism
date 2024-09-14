@@ -1,0 +1,12 @@
+The Proxy-
+   Authorization request-header field allows the client to identify
+   itself (or its user) to a proxy that requires authentication. The
+   Proxy-Authorization header field value consists of credentials
+   containing the authentication information of the UA for the proxy
+   and/or realm of the resource being requested. A Proxy-Authorization header field value applies only to the proxy
+   whose realm is identified in the "realm" parameter (this proxy may
+   previously have demanded authentication using the Proxy-Authenticate
+   field). When multiple proxies are used in a chain, a Proxy-
+   Authorization header field value MUST NOT be consumed by any proxy
+   whose realm does not match the "realm" parameter specified in that
+   value.

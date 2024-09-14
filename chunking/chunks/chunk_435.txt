@@ -1,0 +1,11 @@
+21.4.22 484 Address Incomplete
+   The server received a request with a Request-URI that was incomplete. Additional information SHOULD be provided in the reason phrase. This status code allows overlapped dialing. With overlapped
+      dialing, the client does not know the length of the dialing
+      string. It sends strings of increasing lengths, prompting the
+      user for more input, until it no longer receives a 484 (Address
+      Incomplete) status response. 21.4.23 485 Ambiguous
+   The Request-URI was ambiguous. The response MAY contain a listing of
+   possible unambiguous addresses in Contact header fields. Revealing
+   alternatives can infringe on privacy of the user or the organization. It MUST be possible to configure a server to respond with status 404
+   (Not Found) or to suppress the listing of possible choices for
+   ambiguous Request-URIs.

@@ -1,0 +1,15 @@
+The atlanta.com proxy server locates the proxy
+   server at biloxi.com, possibly by performing a particular type of DNS
+   (Domain Name Service) lookup to find the SIP server that serves the
+   biloxi.com domain. This is described in [4]. As a result, it
+   obtains the IP address of the biloxi.com proxy server and forwards,
+   or proxies, the INVITE request there. Before forwarding the request,
+   the atlanta.com proxy server adds an additional Via header field
+   value that contains its own address (the INVITE already contains
+   Alice’s address in the first Via). The biloxi.com proxy server
+   receives the INVITE and responds with a 100 (Trying) response back to
+   the atlanta.com proxy server to indicate that it has received the
+   INVITE and is processing the request. The proxy server consults a
+   database, generically called a location service, that contains the
+   current IP address of Bob. (We shall see in the next section how
+   this database can be populated.)

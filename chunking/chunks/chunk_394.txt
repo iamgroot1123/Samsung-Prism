@@ -1,0 +1,10 @@
+Note that the value "render" is used
+   rather than "inline" to avoid the connotation that the MIME body is
+   displayed as a part of the rendering of the entire message (since the
+   MIME bodies of SIP messages oftentimes are not displayed to users). For backward-compatibility, if the Content-Disposition header field
+   is missing, the server SHOULD assume bodies of Content-Type
+   application/sdp are the disposition "session", while other content
+   types are "render". The disposition type "icon" indicates that the body part contains an
+   image suitable as an iconic representation of the caller or callee
+   that could be rendered informationally by a user agent when a message
+   has been received, or persistently while a dialog takes place.

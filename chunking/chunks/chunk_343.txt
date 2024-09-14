@@ -1,0 +1,14 @@
+It is also RECOMMENDED that a server
+   listen for requests on the default SIP ports (5060 for TCP and UDP,
+   5061 for TLS over TCP) on all public interfaces. The typical
+   exception would be private networks, or when multiple server
+   instances are running on the same host. For any port and interface
+   that a server listens on for UDP, it MUST listen on that same port
+   and interface for TCP. This is because a message may need to be sent
+   using TCP, rather than UDP, if it is too large. As a result, the
+   converse is not true. A server need not listen for UDP on a
+   particular address and port just because it is listening on that same
+   address and port for TCP. There may, of course, be other reasons why
+   a server needs to listen for UDP on a particular address and port. When the server transport receives a request over any transport, it
+   MUST examine the value of the "sent-by" parameter in the top Via
+   header field value.

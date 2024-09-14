@@ -1,0 +1,9 @@
+The INVITE request contains a number
+   of header fields. Header fields are named attributes that provide
+   additional information about a message. The ones present in an
+   INVITE include a unique identifier for the call, the destination
+   address, Alice’s address, and information about the type of session
+   that Alice wishes to establish with Bob. The INVITE (message F1 in
+   Figure 1) might look like this:
+                     atlanta.com  . . . biloxi.com
+                 . proxy              proxy     . . . Alice’s  . . . . . . . . . . . . . . . . . . . .

@@ -1,0 +1,9 @@
+Loose Routing: A proxy is said to be loose routing if it follows
+         the procedures defined in this specification for processing of
+         the Route header field. These procedures separate the
+         destination of the request (present in the Request-URI) from          the set of proxies that need to be visited along the way
+         (present in the Route header field). A proxy compliant to
+         these mechanisms is also known as a loose router. Message: Data sent between SIP elements as part of the protocol. SIP messages are either requests or responses. Method: The method is the primary function that a request is meant
+         to invoke on a server. The method is carried in the request
+         message itself. Example methods are INVITE and BYE. Outbound Proxy: A proxy that receives requests from a client, even
+         though it may not be the server resolved by the Request-URI.

@@ -1,0 +1,13 @@
+The local
+   tag component of the dialog ID MUST be set to the tag in the To field
+   in the response to the request (which always includes a tag), and the
+   remote tag component of the dialog ID MUST be set to the tag from the
+   From field in the request. A UAS MUST be prepared to receive a
+   request without a tag in the From field, in which case the tag is
+   considered to have a value of null. This is to maintain backwards compatibility with RFC 2543, which
+      did not mandate From tags. The remote URI MUST be set to the URI in the From field, and the
+   local URI MUST be set to the URI in the To field. 12.1.2 UAC Behavior
+   When a UAC sends a request that can establish a dialog (such as an
+   INVITE) it MUST provide a SIP or SIPS URI with global scope (i.e.,
+   the same SIP URI can be used in messages outside this dialog) in the
+   Contact header field of the request.

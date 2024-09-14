@@ -1,0 +1,12 @@
+These encapsulated SIP requests
+   and responses do not constitute a separate dialog or transaction,
+   they are a copy of the "outer" message that is used to verify
+   integrity or to supply additional information. If a UAS receives a request that contains a tunneled "message/sip"
+   S/MIME body, it SHOULD include a tunneled "message/sip" body in the
+   response with the same smime-type. Any traditional MIME bodies (such as SDP) SHOULD be attached to the
+   "inner" message so that they can also benefit from S/MIME security. Note that "message/sip" bodies can be sent as a part of a MIME
+   "multipart/mixed" body if any unsecured MIME types should also be
+   transmitted in a request. 23.4.1 Integrity and Confidentiality Properties of SIP Headers
+   When the S/MIME integrity or confidentiality mechanisms are used,
+   there may be discrepancies between the values in the "inner" message
+   and values in the "outer" message.

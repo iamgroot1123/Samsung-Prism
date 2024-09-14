@@ -1,0 +1,12 @@
+If the proxy chooses to recurse on any contacts in a 3xx
+         response by adding them to the target set, it MUST remove them
+         from the response before adding the response to the response
+         context. However, a proxy SHOULD NOT recurse to a non-SIPS URI
+         if the Request-URI of the original request was a SIPS URI. If          the proxy recurses on all of the contacts in a 3xx response,
+         the proxy SHOULD NOT add the resulting contactless response to
+         the response context. Removing the contact before adding the response to the response
+         context prevents the next element upstream from retrying a
+         location this proxy has already attempted. 3xx responses may contain a mixture of SIP, SIPS, and non-SIP
+         URIs. A proxy may choose to recurse on the SIP and SIPS URIs
+         and place the remainder into the response context to be
+         returned, potentially in the final response.

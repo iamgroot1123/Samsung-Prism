@@ -1,0 +1,15 @@
+21.1.1 100 Trying
+   This response indicates that the request has been received by the
+   next-hop server and that some unspecified action is being taken on
+   behalf of this call (for example, a database is being consulted). This response, like all other provisional responses, stops
+   retransmissions of an INVITE by a UAC. The 100 (Trying) response is
+   different from other provisional responses, in that it is never
+   forwarded upstream by a stateful proxy. 21.1.2 180 Ringing
+   The UA receiving the INVITE is trying to alert the user. This
+   response MAY be used to initiate local ringback. 21.1.3 181 Call Is Being Forwarded
+   A server MAY use this status code to indicate that the call is being
+   forwarded to a different set of destinations. 21.1.4 182 Queued
+   The called party is temporarily unavailable, but the server has
+   decided to queue the call rather than reject it. When the callee
+   becomes available, it will return the appropriate final status
+   response.

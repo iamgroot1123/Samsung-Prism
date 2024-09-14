@@ -1,0 +1,12 @@
+A Request-Line contains a method name, a Request-URI, and the
+   protocol version separated by a single space (SP) character. The Request-Line ends with CRLF. No CR or LF are allowed except in
+   the end-of-line CRLF sequence. No linear whitespace (LWS) is allowed
+   in any of the elements. Request-Line  =  Method SP Request-URI SP SIP-Version CRLF
+      Method: This specification defines six methods: REGISTER for
+           registering contact information, INVITE, ACK, and CANCEL for
+           setting up sessions, BYE for terminating sessions, and
+           OPTIONS for querying servers about their capabilities. SIP
+           extensions, documented in standards track RFCs, may define
+           additional methods. Request-URI: The Request-URI is a SIP or SIPS URI as described in
+           Section 19.1 or a general URI (RFC 2396 [5]). It indicates
+           the user or service to which this request is being addressed.

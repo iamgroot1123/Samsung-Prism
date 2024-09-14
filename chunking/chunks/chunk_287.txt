@@ -1,0 +1,25 @@
+U1->P1->U2
+   U1 sends:
+      INVITE sip:callee@gateway.leftprivatespace.com SIP/2.0
+      Contact: <sip:caller@u1.leftprivatespace.com>
+   P1 uses its location service and sends the following to U2:
+      INVITE sip:callee@rightprivatespace.com SIP/2.0
+      Contact: <sip:caller@u1.leftprivatespace.com>
+      Record-Route: <sip:gateway.rightprivatespace.com;lr>
+   U2 sends this 200 (OK) back to P1:
+      SIP/2.0 200 OK
+      Contact: <sip:callee@u2.rightprivatespace.com>
+      Record-Route: <sip:gateway.rightprivatespace.com;lr>
+   P1 rewrites its Record-Route header parameter to provide a value that
+   U1 will find useful, and sends the following to U1:
+      SIP/2.0 200 OK
+      Contact: <sip:callee@u2.rightprivatespace.com>
+      Record-Route: <sip:gateway.leftprivatespace.com;lr>
+   Later, U1 sends the following BYE request to P1:
+      BYE sip:callee@u2.rightprivatespace.com SIP/2.0
+      Route: <sip:gateway.leftprivatespace.com;lr>
+   which P1 forwards to U2 as:
+      BYE sip:callee@u2.rightprivatespace.com SIP/2.0
+17 Transactions
+   SIP is a transactional protocol: interactions between components take
+   place in a series of independent message exchanges.

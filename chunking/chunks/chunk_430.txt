@@ -1,0 +1,13 @@
+SIP access
+   authentication is explained in Sections 26 and 22.3. This status code can be used for applications where access to the
+   communication channel (for example, a telephony gateway) rather than
+   the callee requires authentication. 21.4.9 408 Request Timeout
+   The server could not produce a response within a suitable amount of
+   time, for example, if it could not determine the location of the user
+   in time. The client MAY repeat the request without modifications at
+   any later time. 21.4.10 410 Gone
+   The requested resource is no longer available at the server and no
+   forwarding address is known. This condition is expected to be
+   considered permanent. If the server does not know, or has no
+   facility to determine, whether or not the condition is permanent, the
+   status code 404 (Not Found) SHOULD be used instead.

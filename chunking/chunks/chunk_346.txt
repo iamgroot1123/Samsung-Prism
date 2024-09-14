@@ -1,0 +1,13 @@
+18.2.2 Sending Responses
+   The server transport uses the value of the top Via header field in
+   order to determine where to send a response. It MUST follow the
+   following process:
+      o  If the "sent-protocol" is a reliable transport protocol such as
+         TCP or SCTP, or TLS over those, the response MUST be sent using
+         the existing connection to the source of the original request
+         that created the transaction, if that connection is still open. This requires the server transport to maintain an association
+         between server transactions and transport connections. If that
+         connection is no longer open, the server SHOULD open a
+         connection to the IP address in the "received" parameter, if
+         present, using the port in the "sent-by" value, or the default
+         port for that transport, if no port is specified.

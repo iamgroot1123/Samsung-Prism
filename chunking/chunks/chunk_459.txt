@@ -1,0 +1,10 @@
+When a proxy server issues a challenge in response to a request,
+      it will not proxy the request until the UAC has retried the
+      request with valid credentials. A forking proxy may forward a
+      request simultaneously to multiple proxy servers that require
+      authentication, each of which in turn will not forward the request
+      until the originating UAC has authenticated itself in their
+      respective realm. If the UAC does not provide credentials for
+      each challenge, the proxy servers that issued the challenges will
+      not forward requests to the UA where the destination user might be
+      located, and therefore, the virtues of forking are largely lost.

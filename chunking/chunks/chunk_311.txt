@@ -1,0 +1,14 @@
+If a
+   provisional response is received while in the "Trying" state, the
+   response MUST be passed to the TU, and then the client transaction
+   SHOULD move to the "Proceeding" state. If a final response (status
+   codes 200-699) is received while in the "Trying" state, the response
+   MUST be passed to the TU, and the client transaction MUST transition
+   to the "Completed" state. If Timer E fires while in the "Proceeding" state, the request MUST be
+   passed to the transport layer for retransmission, and Timer E MUST be
+   reset with a value of T2 seconds. If timer F fires while in the
+   "Proceeding" state, the TU MUST be informed of a timeout, and the
+   client transaction MUST transition to the terminated state. If a
+   final response (status codes 200-699) is received while in the
+   "Proceeding" state, the response MUST be passed to the TU, and the
+   client transaction MUST transition to the "Completed" state.

@@ -1,0 +1,13 @@
+A stateful proxy MAY generate CANCEL requests for pending INVITE
+   client transactions based on the period specified in the INVITE’s
+   Expires header field elapsing. However, this is generally
+   unnecessary since the endpoints involved will take care of signaling
+   the end of the transaction. While a CANCEL request is handled in a stateful proxy by its own
+   server transaction, a new response context is not created for it. Instead, the proxy layer searches its existing response contexts for
+   the server transaction handling the request associated with this
+   CANCEL. If a matching response context is found, the element MUST
+   immediately return a 200 (OK) response to the CANCEL request. In
+   this case, the element is acting as a user agent server as defined in
+   Section 8.2. Furthermore, the element MUST generate CANCEL requests
+   for all pending client transactions in the context as described in
+   Section 16.7 step 10.

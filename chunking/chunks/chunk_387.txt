@@ -1,0 +1,17 @@
+Example:
+      Alert-Info: <http://www.example.com/sounds/moo.wav>
+20.5 Allow
+   The Allow header field lists the set of methods supported by the UA
+   generating the message. All methods, including ACK and CANCEL, understood by the UA MUST be
+   included in the list of methods in the Allow header field, when
+   present. The absence of an Allow header field MUST NOT be
+   interpreted to mean that the UA sending the message supports no
+   methods. Rather, it implies that the UA is not providing any
+   information on what methods it supports. Supplying an Allow header field in responses to methods other than
+   OPTIONS reduces the number of messages needed. Example:
+      Allow: INVITE, ACK, OPTIONS, CANCEL, BYE
+20.6 Authentication-Info
+   The Authentication-Info header field provides for mutual
+   authentication with HTTP Digest. A UAS MAY include this header field
+   in a 2xx response to a request that was successfully authenticated
+   using digest based on the Authorization header field.

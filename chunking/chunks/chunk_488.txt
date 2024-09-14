@@ -1,0 +1,14 @@
+If the recipient
+   of the signed MIME body has some stronger incentive to trust the
+   certificate (they were able to validate it, they acquired it from a
+   trusted repository, or they have used it frequently) then the
+   signature can be taken as a stronger assertion of the identity of the
+   subject of the certificate. In order to eliminate possible confusions about the addition or
+   subtraction of entire header fields, senders SHOULD replicate all
+   header fields from the request within the signed body. Any message
+   bodies that require integrity protection MUST be attached to the
+   "inner" message. If a Date header is present in a message with a signed body, the
+   recipient SHOULD compare the header field value with its own internal
+   clock, if applicable. If a significant time discrepancy is detected
+   (on the order of an hour or more), the user agent SHOULD alert the
+   user to the anomaly, and note that it is a potential security breach.

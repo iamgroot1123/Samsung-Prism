@@ -1,0 +1,13 @@
+For the methods defined in this specification, that includes
+   only the INVITE request. For these requests, the scope of the
+   Contact is global. That is, the Contact header field value contains
+   the URI at which the UA would like to receive requests, and this URI
+   MUST be valid even if used in subsequent requests outside of any
+   dialogs. If the Request-URI or top Route header field value contains a SIPS
+   URI, the Contact header field MUST contain a SIPS URI as well. For further information on the Contact header field, see Section
+   20.10. 8.1.1.9 Supported and Require
+   If the UAC supports extensions to SIP that can be applied by the
+   server to the response, the UAC SHOULD include a Supported header
+   field in the request listing the option tags (Section 19.2) for those
+   extensions. The option tags listed MUST only refer to extensions defined in
+   standards-track RFCs.

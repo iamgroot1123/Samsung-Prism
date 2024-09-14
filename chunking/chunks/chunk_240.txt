@@ -1,0 +1,12 @@
+If the proxy has a local policy that mandates that the request
+         visit one specific proxy, an alternative to pushing a Route
+         value into the Route header field is to bypass the forwarding
+         logic of item 10 below, and instead just send the request to
+         the address, port, and transport for that specific proxy. If
+         the request has a Route header field, this alternative MUST NOT
+         be used unless it is known that next hop proxy is a loose
+         router. Otherwise, this approach MAY be used, but the Route
+         insertion mechanism above is preferred for its robustness,
+         flexibility, generality and consistency of operation. Furthermore, if the Request-URI contains a SIPS URI, TLS MUST
+         be used to communicate with that proxy. If the copy contains a Route header field, the proxy MUST
+         inspect the URI in its first value.

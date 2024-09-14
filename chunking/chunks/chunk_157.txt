@@ -1,0 +1,12 @@
+The Contact header field contains an address where the
+   UAS would like to be contacted for subsequent requests in the dialog
+   (which includes the ACK for a 2xx response in the case of an INVITE). Generally, the host portion of this URI is the IP address or FQDN of
+   the host. The URI provided in the Contact header field MUST be a SIP
+   or SIPS URI. If the request that initiated the dialog contained a    SIPS URI in the Request-URI or in the top Record-Route header field
+   value, if there was any, or the Contact header field if there was no
+   Record-Route header field, the Contact header field in the response
+   MUST be a SIPS URI. The URI SHOULD have global scope (that is, the
+   same URI can be used in messages outside this dialog). The same way,
+   the scope of the URI in the Contact header field of the INVITE is not
+   limited to this dialog either. It can therefore be used in messages
+   to the UAC even outside this dialog. The UAS then constructs the state of the dialog.

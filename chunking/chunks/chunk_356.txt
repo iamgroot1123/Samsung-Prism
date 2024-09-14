@@ -1,0 +1,14 @@
+When an maddr parameter is present, the port
+         and transport components of the URI apply to the address
+         indicated in the maddr parameter value. [4] describes the
+         proper interpretation of the transport, maddr, and hostport in
+         order to obtain the destination address, port, and transport
+         for sending a request. The maddr field has been used as a simple form of loose source
+         routing. It allows a URI to specify a proxy that must be
+         traversed en-route to the destination. Continuing to use the
+         maddr parameter this way is strongly discouraged (the
+         mechanisms that enable it are deprecated). Implementations
+         should instead use the Route mechanism described in this
+         document, establishing a pre-existing route set if necessary
+         (see Section 8.1.1.1). This provides a full URI to describe
+         the node to be traversed.

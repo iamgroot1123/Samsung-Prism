@@ -1,0 +1,5 @@
+Therefore, placement of bodies in ACK for non-2xx is NOT RECOMMENDED,
+   but if done, the body types are restricted to any that appeared in
+   the INVITE, assuming that the response to the INVITE was not 415. If
+   it was, the body in the ACK MAY be any type listed in the Accept
+   header field in the 415.

@@ -1,0 +1,14 @@
+It caused interoperability problems in elements
+      that were not time synchronized, a common occurrence. Relative
+      times are used instead. o  The branch parameter of the Via header field value is now
+      mandatory for all elements to use. It now plays the role of a
+      unique transaction identifier. This avoids the complex and bug-
+      laden transaction identification rules from RFC 2543. A magic
+      cookie is used in the parameter value to determine if the previous
+      hop has made the parameter globally unique, and comparison falls
+      back to the old rules when it is not present. Thus,
+      interoperability is assured. o  In RFC 2543, closure of a TCP connection was made equivalent to a
+      CANCEL. This was nearly impossible to implement (and wrong) for
+      TCP connections between proxies. This has been eliminated, so
+      that there is no coupling between TCP connection state and SIP
+      processing.

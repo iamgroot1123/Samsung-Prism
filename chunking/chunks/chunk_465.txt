@@ -1,0 +1,13 @@
+RFC 2617 [17] defines mechanisms for
+   backwards compatibility using the qop attribute in the request. These mechanisms MUST be used by a server to determine if the client
+   supports the new mechanisms in RFC 2617 that were not specified in
+   RFC 2069. 23 S/MIME
+   SIP messages carry MIME bodies and the MIME standard includes
+   mechanisms for securing MIME contents to ensure both integrity and
+   confidentiality (including the ’multipart/signed’ and
+   ’application/pkcs7-mime’ MIME types, see RFC 1847 [22], RFC 2630 [23]
+   and RFC 2633 [24]). Implementers should note, however, that there
+   may be rare network intermediaries (not typical proxy servers) that
+   rely on viewing or modifying the bodies of SIP messages (especially
+   SDP), and that secure MIME may prevent these sorts of intermediaries
+   from functioning. This applies particularly to certain types of firewalls.

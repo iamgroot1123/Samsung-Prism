@@ -1,0 +1,13 @@
+Find Context
+         The proxy locates the "response context" it created before
+         forwarding the original request using the key described in
+         Section 16.6. The remaining processing steps take place in
+         this context. 2. Update timer C for provisional responses
+         For an INVITE transaction, if the response is a provisional
+         response with status codes 101 to 199 inclusive (i.e., anything
+         but 100), the proxy MUST reset timer C for that client
+         transaction. The timer MAY be reset to a different value, but
+         this value MUST be greater than 3 minutes. 3. Via
+         The proxy removes the topmost Via header field value from the
+         response. If no Via header field values remain in the response, the
+         response was meant for this element and MUST NOT be forwarded.

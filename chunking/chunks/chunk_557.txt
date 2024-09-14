@@ -1,0 +1,13 @@
+In summary, the mutual authentication of proxy servers through
+   mechanisms such as TLS significantly reduces the potential for rogue
+   intermediaries to introduce falsified requests or responses that can
+   deny service. This commensurately makes it harder for attackers to
+   make innocent SIP nodes into agents of amplification. 26.4 Limitations
+   Although these security mechanisms, when applied in a judicious
+   manner, can thwart many threats, there are limitations in the scope
+   of the mechanisms that must be understood by implementers and network
+   operators. 26.4.1 HTTP Digest
+   One of the primary limitations of using HTTP Digest in SIP is that
+   the integrity mechanisms in Digest do not work very well for SIP. Specifically, they offer protection of the Request-URI and the method
+   of a message, but not for any of the header fields that UAs would
+   most likely wish to secure.

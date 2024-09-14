@@ -1,0 +1,15 @@
+An example of the WWW-Authenticate header field in a 401 challenge
+   is:
+      WWW-Authenticate: Digest
+              realm="biloxi.com",
+              qop="auth,auth-int",
+              nonce="dcd98b7102dd2f0e8b11d0f600bfb0c093",
+              opaque="5ccc069c403ebaf9f0171e9517f40e41"
+   When the originating UAC receives the 401 (Unauthorized), it SHOULD,
+   if it is able, re-originate the request with the proper credentials. The UAC may require input from the originating user before
+   proceeding. Once authentication credentials have been supplied
+   (either directly by the user, or discovered in an internal keyring),
+   UAs SHOULD cache the credentials for a given value of the To header
+   field and "realm" and attempt to re-use these values on the next
+   request for that destination. UAs MAY cache credentials in any way
+   they would like.

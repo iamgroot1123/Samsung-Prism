@@ -1,0 +1,12 @@
+370 Insufficient bandwidth: The bandwidth specified in the session
+          description or defined by the media exceeds that known to be
+          available. 399 Miscellaneous warning: The warning text can include arbitrary
+          information to be presented to a human user or logged. A
+          system receiving this warning MUST NOT take any automated
+          action. 1xx and 2xx have been taken by HTTP/1.1. Additional "warn-code"s can be defined through IANA, as defined in
+   Section 27.2. Examples:
+      Warning: 307 isi.edu "Session parameter ’foo’ not understood"
+      Warning: 301 isi.edu "Incompatible network address type ’E.164’"
+20.44 WWW-Authenticate
+   A WWW-Authenticate header field value contains an authentication
+   challenge. See Section 22.2 for further details on its usage.

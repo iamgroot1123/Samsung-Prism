@@ -1,0 +1,10 @@
+The initial Methods table is:          INVITE                   [RFC3261]
+         ACK                      [RFC3261]
+         BYE                      [RFC3261]
+         CANCEL                   [RFC3261]
+         REGISTER                 [RFC3261]
+         OPTIONS                  [RFC3261]
+         INFO                     [RFC2976]
+   The response code table is initially populated from Section 21, the
+   portions labeled Informational, Success, Redirection, Client-Error,
+   Server-Error, and Global-Failure.

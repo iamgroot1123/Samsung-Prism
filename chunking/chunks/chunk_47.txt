@@ -1,0 +1,12 @@
+UAC Core: The set of processing functions required of a UAC that
+         reside above the transaction and transport layers. User Agent Server (UAS): A user agent server is a logical entity
+         that generates a response to a SIP request. The response
+         accepts, rejects, or redirects the request. This role lasts
+         only for the duration of that transaction. In other words, if
+         a piece of software responds to a request, it acts as a UAS for
+         the duration of that transaction. If it generates a request
+         later, it assumes the role of a user agent client for the
+         processing of that transaction. UAS Core: The set of processing functions required at a UAS that
+         resides above the transaction and transport layers. User Agent (UA): A logical entity that can act as both a user
+         agent client and user agent server. The role of UAC and UAS, as well as proxy and redirect servers, are
+   defined on a transaction-by-transaction basis.

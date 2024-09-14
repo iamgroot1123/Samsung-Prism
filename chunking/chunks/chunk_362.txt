@@ -1,0 +1,15 @@
+Contact/
+              default  Req.-URI  To  From  Contact   R-R/Route  external
+user          --          o      o    o       o          o         o
+password      --          o      o    o       o          o         o
+host          --          m      m    m       m          m         m
+port          (1)         o      -    -       o          o         o
+user-param    ip          o      o    o       o          o         o
+method        INVITE      -      -    -       -          -         o
+maddr-param   --          o      -    -       o          o         o
+ttl-param     1           o      -    -       o          -         o
+transp.-param (2)         o      -    -       o          o         o
+lr-param      --          o      -    -       -          o         o
+other-param   --          o      o    o       o          o         o
+headers       --          -      -    -       o          -         o
+   (1): The default port value is transport and scheme dependent.

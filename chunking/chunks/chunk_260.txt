@@ -1,0 +1,14 @@
+Since a proxy may not insert a tag into the To header field of
+         a 1xx response to a request that did not contain one, it cannot
+         issue non-100 provisional responses on its own. However, it
+         can branch the request to a UAS sharing the same element as the
+         proxy. This UAS can return its own provisional responses,
+         entering into an early dialog with the initiator of the
+         request. The UAS does not have to be a discreet process from
+         the proxy. It could be a virtual UAS implemented in the same
+         code space as the proxy. 3-6xx responses are delivered hop-by-hop. When issuing a 3-6xx
+         response, the element is effectively acting as a UAS, issuing
+         its own response, usually based on the responses received from
+         downstream elements. An element SHOULD preserve the To tag
+         when simply forwarding a 3-6xx response to a request that did
+         not contain a To tag.

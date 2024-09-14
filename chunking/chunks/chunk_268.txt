@@ -1,0 +1,15 @@
+Generate CANCELs
+         If the forwarded response was a final response, the proxy MUST
+         generate a CANCEL request for all pending client transactions
+         associated with this response context. A proxy SHOULD also
+         generate a CANCEL request for all pending client transactions
+         associated with this response context when it receives a 6xx
+         response. A pending client transaction is one that has
+         received a provisional response, but no final response (it is
+         in the proceeding state) and has not had an associated CANCEL
+         generated for it. Generating CANCEL requests is described in
+         Section 9.1. The requirement to CANCEL pending client transactions upon
+         forwarding a final response does not guarantee that an endpoint
+         will not receive multiple 200 (OK) responses to an INVITE. 200
+         (OK) responses on more than one branch may be generated before
+         the CANCEL requests can be sent and processed.

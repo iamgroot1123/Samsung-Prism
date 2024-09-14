@@ -1,0 +1,14 @@
+To prevent cancellation, the UAS MUST send a non-100
+   provisional response at every minute, to handle the possibility of
+   lost provisional responses. An INVITE transaction can go on for extended durations when the
+      user is placed on hold, or when interworking with PSTN systems
+      which allow communications to take place without answering the
+      call. The latter is common in Interactive Voice Response (IVR)
+      systems. 13.3.1.2 The INVITE is Redirected
+   If the UAS decides to redirect the call, a 3xx response is sent. A
+   300 (Multiple Choices), 301 (Moved Permanently) or 302 (Moved
+   Temporarily) response SHOULD contain a Contact header field    containing one or more URIs of new addresses to be tried. The
+   response is passed to the INVITE server transaction, which will deal
+   with its retransmissions. 13.3.1.3 The INVITE is Rejected
+   A common scenario occurs when the callee is currently not willing or
+   able to take additional calls at this end system.

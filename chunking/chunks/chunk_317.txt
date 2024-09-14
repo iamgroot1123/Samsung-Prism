@@ -1,0 +1,24 @@
+to TU  |                             |
+                |              |                             |
+                |              V                             |
+                |            +-----------+                   |
+                |            |           |                   |
+                |            | Completed |                   |
+                |            |           |                   |
+                |            +-----------+                   |
+                |              ^   |                         |
+                |              |   | Timer K                 |
+                +--------------+   | -                       |
+                                   |                         |
+                                   V                         |
+             NOTE:           +-----------+                   |
+                             |           |                   |
+         transitions         | Terminated|<------------------+
+         labeled with        |           |
+         the event           +-----------+
+         over the action
+         to take
+                 Figure 6: non-INVITE client transaction
+   When the client transaction sends a request to the transport layer to
+   be sent, the following procedures are followed if the transport layer
+   indicates a failure.

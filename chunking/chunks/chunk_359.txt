@@ -1,0 +1,12 @@
+An element preparing
+         to send a request based on a URI not containing this parameter
+         can assume the receiving element implements strict-routing and
+         reformat the message to preserve the information in the
+         Request-URI. Since the uri-parameter mechanism is extensible, SIP elements
+         MUST silently ignore any uri-parameters that they do not
+         understand. Headers: Header fields to be included in a request constructed
+         from the URI. Headers fields in the SIP request can be specified with the "?" mechanism within a URI. The header names and values are
+         encoded in ampersand separated hname = hvalue pairs. The
+         special hname "body" indicates that the associated hvalue is
+         the message-body of the SIP request. Table 1 summarizes the use of SIP and SIPS URI components based on
+   the context in which the URI appears.

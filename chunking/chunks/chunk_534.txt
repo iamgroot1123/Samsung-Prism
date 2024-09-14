@@ -1,0 +1,10 @@
+For
+   purposes of backwards compatibility, proxy servers, redirect servers,
+   and registrars SHOULD support TLS_RSA_WITH_3DES_EDE_CBC_SHA. Implementers MAY also support any other ciphersuite. 26.2.2 SIPS URI Scheme
+   The SIPS URI scheme adheres to the syntax of the SIP URI (described
+   in 19), although the scheme string is "sips" rather than "sip". The
+   semantics of SIPS are very different from the SIP URI, however. SIPS
+   allows resources to specify that they should be reached securely. A SIPS URI can be used as an address-of-record for a particular user
+   - the URI by which the user is canonically known (on their business
+   cards, in the From header field of their requests, in the To header
+   field of REGISTER requests).

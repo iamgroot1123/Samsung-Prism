@@ -1,0 +1,4 @@
+to TU|                     |
+            |                  |                     |      NOTE:
+            |  300-699         V                     |
+            |  ACK sent  +-----------+Transport Err.

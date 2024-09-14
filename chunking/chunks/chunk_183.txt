@@ -1,0 +1,14 @@
+If the Content-Disposition header field is missing, bodies of
+   Content-Type application/sdp imply the disposition "session", while
+   other content types imply "render". Once the INVITE has been created, the UAC follows the procedures
+   defined for sending requests outside of a dialog (Section 8). This
+   results in the construction of a client transaction that will
+   ultimately send the request and deliver responses to the UAC. 13.2.2 Processing INVITE Responses
+   Once the INVITE has been passed to the INVITE client transaction, the
+   UAC waits for responses for the INVITE. If the INVITE client
+   transaction returns a timeout rather than a response the TU acts as
+   if a 408 (Request Timeout) response had been received, as described
+   in Section 8.1.3. 13.2.2.1 1xx Responses
+   Zero, one or multiple provisional responses may arrive before one or
+   more final responses are received. Provisional responses for an
+   INVITE request can create "early dialogs".

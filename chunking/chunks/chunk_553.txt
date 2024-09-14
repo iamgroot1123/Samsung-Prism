@@ -1,0 +1,12 @@
+However, Carol has no means of proving    her identity to the biloxi proxy, but she does have a CMS-detached
+   signature over a "message/sip" body in the INVITE. It is unlikely in
+   this instance that Carol would have any credentials in the biloxi.com
+   realm, since she has no formal association with biloxi.com. The
+   biloxi proxy MAY also have a strict policy that precludes it from
+   even bothering to challenge requests that do not have biloxi.com in
+   the "domainname" portion of the From header field - it treats these
+   users as unauthenticated. The biloxi proxy has a policy for Bob that all non-authenticated
+   requests should be redirected to the appropriate contact address
+   registered against ’bob@biloxi.com’, namely <sip:bob@192.0.2.4>. Carol receives the redirection response over the TLS connection she
+   established with the biloxi proxy, so she trusts the veracity of the
+   contact address.

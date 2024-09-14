@@ -1,0 +1,13 @@
+The "q" parameter indicates a relative
+   preference for the particular Contact header field value compared to
+   other bindings for this address-of-record. Section 16.6 describes
+   how a proxy server uses this preference indication. 10.2.2 Removing Bindings
+   Registrations are soft state and expire unless refreshed, but can
+   also be explicitly removed. A client can attempt to influence the
+   expiration interval selected by the registrar as described in Section
+   10.2.1. A UA requests the immediate removal of a binding by
+   specifying an expiration interval of "0" for that contact address in
+   a REGISTER request. UAs SHOULD support this mechanism so that
+   bindings can be removed before their expiration interval has passed. The REGISTER-specific Contact header field value of "*" applies to
+   all registrations, but it MUST NOT be used unless the Expires header
+   field is present with a value of "0".

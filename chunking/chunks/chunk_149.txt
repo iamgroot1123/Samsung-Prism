@@ -1,0 +1,20 @@
+Typically,
+   this is set to a format that is used to describe the media
+   capabilities of a UA, such as SDP (application/sdp). The response to an OPTIONS request is assumed to be scoped to the
+   Request-URI in the original request. However, only when an OPTIONS
+   is sent as part of an established dialog is it guaranteed that future
+   requests will be received by the server that generated the OPTIONS
+   response. Example OPTIONS request:
+      OPTIONS sip:carol@chicago.com SIP/2.0
+      Via: SIP/2.0/UDP pc33.atlanta.com;branch=z9hG4bKhjhs8ass877
+      Max-Forwards: 70
+      To: <sip:carol@chicago.com>
+      From: Alice <sip:alice@atlanta.com>;tag=1928301774
+      Call-ID: a84b4c76e66710
+      CSeq: 63104 OPTIONS
+      Contact: <sip:alice@pc33.atlanta.com>
+      Accept: application/sdp
+      Content-Length: 0
+11.2 Processing of OPTIONS Request
+   The response to an OPTIONS is constructed using the standard rules
+   for a SIP response as discussed in Section 8.2.6.

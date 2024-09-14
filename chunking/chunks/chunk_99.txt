@@ -1,0 +1,14 @@
+If the From tag,
+   Call-ID, and CSeq exactly match those associated with an ongoing
+   transaction, but the request does not match that transaction (based
+   on the matching rules in Section 17.2.3), the UAS core SHOULD
+   generate a 482 (Loop Detected) response and pass it to the server
+   transaction. The same request has arrived at the UAS more than once, following
+      different paths, most likely due to forking. The UAS processes
+      the first such request received and responds with a 482 (Loop
+      Detected) to the rest of them. 8.2.2.3 Require
+   Assuming the UAS decides that it is the proper element to process the
+   request, it examines the Require header field, if present. The Require header field is used by a UAC to tell a UAS about SIP
+   extensions that the UAC expects the UAS to support in order to
+   process the request properly. Its format is described in Section
+   20.32.

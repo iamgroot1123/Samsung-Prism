@@ -1,0 +1,18 @@
+An optional comment can be used to indicate additional information
+   about the time of callback. An optional "duration" parameter
+   indicates how long the called party will be reachable starting at the
+   initial time of availability. If no duration parameter is given, the
+   service is assumed to be available indefinitely. Examples:
+      Retry-After: 18000;duration=3600
+      Retry-After: 120 (I’m in a meeting)
+20.34 Route
+   The Route header field is used to force routing for a request through
+   the listed set of proxies. Examples of the use of the Route header
+   field are in Section 16.12.1. Example:
+      Route: <sip:bigbox3.site3.atlanta.com;lr>,
+             <sip:server10.biloxi.com;lr>
+20.35 Server
+   The Server header field contains information about the software used
+   by the UAS to handle the request. Revealing the specific software version of the server might allow the
+   server to become more vulnerable to attacks against software that is
+   known to contain security holes.

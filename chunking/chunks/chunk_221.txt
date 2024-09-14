@@ -1,0 +1,15 @@
+Proxy-Authorization check
+      If an element requires credentials before forwarding a request,
+      the request MUST be inspected as described in Section 22.3. That
+      section also defines what the element must do if the inspection
+      fails. 16.4 Route Information Preprocessing
+   The proxy MUST inspect the Request-URI of the request. If the
+   Request-URI of the request contains a value this proxy previously
+   placed into a Record-Route header field (see Section 16.6 item 4),
+   the proxy MUST replace the Request-URI in the request with the last
+   value from the Route header field, and remove that value from the
+   Route header field. The proxy MUST then proceed as if it received
+   this modified request. This will only happen when the element sending the request to the
+      proxy (which may have been an endpoint) is a strict router. This
+      rewrite on receive is necessary to enable backwards compatibility
+      with those elements.

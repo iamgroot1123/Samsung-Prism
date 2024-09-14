@@ -1,0 +1,18 @@
+SIP/2.0 allows
+   six values for the first digit:
+      1xx: Provisional -- request received, continuing to process the
+           request;
+      2xx: Success -- the action was successfully received, understood,
+           and accepted;
+      3xx: Redirection -- further action needs to be taken in order to
+           complete the request;
+      4xx: Client Error -- the request contains bad syntax or cannot be
+           fulfilled at this server;
+      5xx: Server Error -- the server failed to fulfill an apparently
+           valid request;
+      6xx: Global Failure -- the request cannot be fulfilled at any
+           server. Section 21 defines these classes and describes the individual codes. 7.3 Header Fields
+   SIP header fields are similar to HTTP header fields in both syntax
+   and semantics. In particular, SIP header fields follow the [H4.2]
+   definitions of syntax for the message-header and the rules for
+   extending header fields over multiple lines.

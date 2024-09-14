@@ -1,0 +1,12 @@
+The specification instructs the IANA to create four new sub-
+   registries under http://www.iana.org/assignments/sip-parameters:
+   Option Tags, Warning Codes (warn-codes), Methods and Response Codes,
+   added to the sub-registry of Header Fields that is already present
+   there. 27.1 Option Tags
+   This specification establishes the Option Tags sub-registry under
+   http://www.iana.org/assignments/sip-parameters. Option tags are used in header fields such as Require, Supported,
+   Proxy-Require, and Unsupported in support of SIP compatibility
+   mechanisms for extensions (Section 19.2). The option tag itself is a
+   string that is associated with a particular SIP option (that is, an
+   extension). It identifies the option to SIP endpoints. Option tags are registered by the IANA when they are published in
+   standards track RFCs.

@@ -1,0 +1,14 @@
+The user could also be available
+   elsewhere, such as through a voice mail service. Status 600 (Busy
+   Everywhere) SHOULD be used if the client knows that no other end
+   system will be able to accept this call. 21.4.25 487 Request Terminated
+   The request was terminated by a BYE or CANCEL request. This response
+   is never returned for a CANCEL request itself. 21.4.26 488 Not Acceptable Here
+   The response has the same meaning as 606 (Not Acceptable), but only
+   applies to the specific resource addressed by the Request-URI and the
+   request may succeed elsewhere. A message body containing a description of media capabilities MAY be
+   present in the response, which is formatted according to the Accept
+   header field in the INVITE (or application/sdp if not present), the
+   same as a message body in a 200 (OK) response to an OPTIONS request. 21.4.27 491 Request Pending
+   The request was received by a UAS that had a pending request within
+   the same dialog.

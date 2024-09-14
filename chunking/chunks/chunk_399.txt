@@ -1,0 +1,15 @@
+The sequence number MUST be
+   expressible as a 32-bit unsigned integer. The method part of CSeq is
+   case-sensitive. The CSeq header field serves to order transactions
+   within a dialog, to provide a means to uniquely identify
+   transactions, and to differentiate between new requests and request
+   retransmissions. Two CSeq header fields are considered equal if the
+   sequence number and the request method are identical. Example:
+      CSeq: 4711 INVITE
+20.17 Date
+   The Date header field contains the date and time. Unlike HTTP/1.1,
+   SIP only supports the most recent RFC 1123 [20] format for dates. As
+   in [H3.3], SIP restricts the time zone in SIP-date to "GMT", while
+   RFC 1123 allows any time zone. An RFC 1123 date is case-sensitive. The Date header field reflects the time when the request or response
+   is first sent. The Date header field can be used by simple end systems without a
+      battery-backed clock to acquire a notion of current time.

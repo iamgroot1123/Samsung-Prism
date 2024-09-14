@@ -1,0 +1,31 @@
+The following is an example of an encrypted S/MIME SDP body
+         within a SIP message:
+        INVITE sip:bob@biloxi.com SIP/2.0
+        Via: SIP/2.0/UDP pc33.atlanta.com;branch=z9hG4bKnashds8
+        To: Bob <sip:bob@biloxi.com>
+        From: Alice <sip:alice@atlanta.com>;tag=1928301774
+        Call-ID: a84b4c76e66710
+        CSeq: 314159 INVITE
+        Max-Forwards: 70
+        Contact: <sip:alice@pc33.atlanta.com>
+        Content-Type: application/pkcs7-mime; smime-type=enveloped-data;
+             name=smime.p7m
+        Content-Disposition: attachment; filename=smime.p7m
+           handling=required
+      *******************************************************
+      * Content-Type: application/sdp                       *
+      *                                                     *
+      * v=0                                                 *
+      * o=alice 53655765 2353687637 IN IP4 pc33.atlanta.com *
+      * s=-                                                 *
+      * t=0 0                                               *
+      * c=IN IP4 pc33.atlanta.com                           *
+      * m=audio 3456 RTP/AVP 0 1 3 99                       *
+      * a=rtpmap:0 PCMU/8000                                *
+      *******************************************************
+23.4 SIP Header Privacy and Integrity using S/MIME: Tunneling SIP
+   As a means of providing some degree of end-to-end authentication,
+   integrity or confidentiality for SIP header fields, S/MIME can
+   encapsulate entire SIP messages within MIME bodies of type
+   "message/sip" and then apply MIME security to these bodies in the
+   same manner as typical SIP bodies.

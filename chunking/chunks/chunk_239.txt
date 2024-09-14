@@ -1,0 +1,15 @@
+INVITE is the only such
+         request in this specification, but extensions to the protocol
+         MAY define others. 5. Add Additional Header Fields
+         The proxy MAY add any other appropriate header fields to the
+         copy at this point. 6. Postprocess routing information
+         A proxy MAY have a local policy that mandates that a request
+         visit a specific set of proxies before being delivered to the
+         destination. A proxy MUST ensure that all such proxies are
+         loose routers. Generally, this can only be known with
+         certainty if the proxies are within the same administrative
+         domain. This set of proxies is represented by a set of URIs
+         (each of which contains the lr parameter). This set MUST be
+         pushed into the Route header field of the copy ahead of any
+         existing values, if present. If the Route header field is
+         absent, it MUST be added, containing that list of URIs.

@@ -1,0 +1,12 @@
+If the user hangs up upon media failure, the
+      UA would send a BYE request as usual. 14.1 UAC Behavior
+   The same offer-answer model that applies to session descriptions in
+   INVITEs (Section 13.2.1) applies to re-INVITEs. As a result, a UAC
+   that wants to add a media stream, for example, will create a new
+   offer that contains this media stream, and send that in an INVITE
+   request to its peer. It is important to note that the full
+   description of the session, not just the change, is sent. This
+   supports stateless session processing in various elements, and
+   supports failover and recovery capabilities. Of course, a UAC MAY    send a re-INVITE with no session description, in which case the first
+   reliable non-failure response to the re-INVITE will contain the offer
+   (in this specification, that is a 2xx response).

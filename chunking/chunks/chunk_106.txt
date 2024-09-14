@@ -1,0 +1,14 @@
+The Call-ID header field of the response MUST equal the
+   Call-ID header field of the request. The CSeq header field of the
+   response MUST equal the CSeq field of the request. The Via header
+   field values in the response MUST equal the Via header field values
+   in the request and MUST maintain the same ordering. If a request contained a To tag in the request, the To header field
+   in the response MUST equal that of the request. However, if the To
+   header field in the request did not contain a tag, the URI in the To
+   header field in the response MUST equal the URI in the To header
+   field; additionally, the UAS MUST add a tag to the To header field in
+   the response (with the exception of the 100 (Trying) response, in
+   which a tag MAY be present). This serves to identify the UAS that is
+   responding, possibly resulting in a component of a dialog ID. The
+   same tag MUST be used for all responses to that request, both final
+   and provisional (again excepting the 100 (Trying)).

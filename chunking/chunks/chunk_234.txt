@@ -1,0 +1,12 @@
+Each proxy in the path of a request chooses whether to add a
+         Record-Route header field value independently - the presence of
+         a Record-Route header field in a request does not obligate this
+         proxy to add a value. The URI placed in the Record-Route header field value MUST be a
+         SIP or SIPS URI. This URI MUST contain an lr parameter (see
+         Section 19.1.1). This URI MAY be different for each
+         destination the request is forwarded to. The URI SHOULD NOT
+         contain the transport parameter unless the proxy has knowledge
+         (such as in a private network) that the next downstream element
+         that will be in the path of subsequent requests supports that
+         transport. The URI this proxy provides will be used by some other element
+         to make a routing decision.

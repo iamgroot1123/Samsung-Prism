@@ -1,0 +1,40 @@
+*(DIGIT) ]
+To        =  ( "To" / "t" ) HCOLON ( name-addr
+             / addr-spec ) *( SEMI to-param )
+to-param  =  tag-param / generic-param
+Unsupported  =  "Unsupported" HCOLON option-tag *(COMMA option-tag)
+User-Agent  =  "User-Agent" HCOLON server-val *(LWS server-val)
+Via               =  ( "Via" / "v" ) HCOLON via-parm *(COMMA via-parm)
+via-parm          =  sent-protocol LWS sent-by *( SEMI via-params )
+via-params        =  via-ttl / via-maddr
+                     / via-received / via-branch
+                     / via-extension
+via-ttl           =  "ttl" EQUAL ttl
+via-maddr         =  "maddr" EQUAL host
+via-received      =  "received" EQUAL (IPv4address / IPv6address)
+via-branch        =  "branch" EQUAL token
+via-extension     =  generic-param
+sent-protocol     =  protocol-name SLASH protocol-version
+                     SLASH transport
+protocol-name     =  "SIP" / token
+protocol-version  =  token
+transport         =  "UDP" / "TCP" / "TLS" / "SCTP"
+                     / other-transport
+sent-by           =  host [ COLON port ]
+ttl               =  1*3DIGIT ; 0 to 255
+Warning        =  "Warning" HCOLON warning-value *(COMMA warning-value)
+warning-value  =  warn-code SP warn-agent SP warn-text
+warn-code      =  3DIGIT
+warn-agent     =  hostport / pseudonym
+                  ;  the name or pseudonym of the server adding
+                  ;  the Warning header, for use in debugging
+warn-text      =  quoted-string
+pseudonym      =  token
+WWW-Authenticate  =  "WWW-Authenticate" HCOLON challenge
+extension-header  =  header-name HCOLON header-value
+header-name       =  token
+header-value      =  *(TEXT-UTF8char / UTF8-CONT / LWS)
+message-body  =  *OCTET
+26 Security Considerations: Threat Model and Security Usage
+   Recommendations
+   SIP is not an easy protocol to secure.

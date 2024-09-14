@@ -1,0 +1,12 @@
+A registrar has to know (for example, through configuration) the set
+   of domain(s) for which it maintains bindings. REGISTER requests MUST
+   be processed by a registrar in the order that they are received. REGISTER requests MUST also be processed atomically, meaning that a
+   particular REGISTER request is either processed completely or not at
+   all. Each REGISTER message MUST be processed independently of any
+   other registration or binding changes. When receiving a REGISTER request, a registrar follows these steps:
+      1. The registrar inspects the Request-URI to determine whether it
+         has access to bindings for the domain identified in the
+         Request-URI. If not, and if the server also acts as a proxy
+         server, the server SHOULD forward the request to the addressed
+         domain, following the general behavior for proxying messages
+         described in Section 16. 2.

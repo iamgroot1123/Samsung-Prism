@@ -1,0 +1,19 @@
+header *( "&" header )
+header          =  hname "=" hvalue
+hname           =  1*( hnv-unreserved / unreserved / escaped )
+hvalue          =  *( hnv-unreserved / unreserved / escaped )
+hnv-unreserved  =  "[" / "]" / "/" / "?" / ":" / "+" / "$"
+SIP-message    =  Request / Response
+Request        =  Request-Line
+                  *( message-header )
+                  CRLF
+                  [ message-body ]
+Request-Line   =  Method SP Request-URI SP SIP-Version CRLF
+Request-URI    =  SIP-URI / SIPS-URI / absoluteURI
+absoluteURI    =  scheme ":" ( hier-part / opaque-part )
+hier-part      =  ( net-path / abs-path ) [ "?" query ]
+net-path       =  "//" authority [ abs-path ]
+abs-path       =  "/" path-segments
+opaque-part    =  uric-no-slash *uric
+uric           =  reserved / unreserved / escaped
+uric-no-slash  =  unreserved / escaped / ";" / "?"

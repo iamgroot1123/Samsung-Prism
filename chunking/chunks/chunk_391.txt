@@ -1,0 +1,13 @@
+Example:
+   Call-Info: <http://wwww.example.com/alice/photo.jpg> ;purpose=icon,
+     <http://www.example.com/alice/> ;purpose=info
+20.10 Contact
+   A Contact header field value provides a URI whose meaning depends on
+   the type of request or response it is in. A Contact header field value can contain a display name, a URI with
+   URI parameters, and header parameters. This document defines the Contact parameters "q" and "expires". These parameters are only used when the Contact is present in a
+   REGISTER request or response, or in a 3xx response. Additional
+   parameters may be defined in other specifications. When the header field value contains a display name, the URI
+   including all URI parameters is enclosed in "<" and ">". If no "<"
+   and ">" are present, all parameters after the URI are header
+   parameters, not URI parameters. The display name can be tokens, or a
+   quoted string, if a larger character set is desired.

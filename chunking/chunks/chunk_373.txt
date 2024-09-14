@@ -1,0 +1,11 @@
+These
+      include, but are not limited to, syntax error in header fields,
+      invalid combinations of URI parameters, or an incorrect
+      description of the message body. Sending a request formed from a given URI may require capabilities
+   unavailable to the implementation. The URI might indicate use of an
+   unimplemented transport or extension, for example. An implementation
+   SHOULD refuse to send these requests rather than modifying them to
+   match their capabilities. An implementation MUST NOT send a request
+   requiring an extension that it does not support. For example, such a request can be formed through the presence of
+      a Require header parameter or a method URI parameter with an
+      unknown or explicitly unsupported value.

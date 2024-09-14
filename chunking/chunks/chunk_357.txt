@@ -1,0 +1,13 @@
+The ttl parameter determines the time-to-live value of the UDP
+         multicast packet and MUST only be used if maddr is a multicast
+         address and the transport protocol is UDP. For example, to
+         specify a call to alice@atlanta.com using multicast to
+         239.255.255.1 with a ttl of 15, the following URI would be
+         used:
+            sip:alice@atlanta.com;maddr=239.255.255.1;ttl=15
+         The set of valid telephone-subscriber strings is a subset of
+         valid user strings. The user URI parameter exists to
+         distinguish telephone numbers from user names that happen to
+         look like telephone numbers. If the user string contains a
+         telephone number formatted as a telephone-subscriber, the user
+         parameter value "phone" SHOULD be present.

@@ -1,0 +1,13 @@
+For locating prospective session participants, and
+   for other functions, SIP enables the creation of an infrastructure of
+   network hosts (called proxy servers) to which user agents can send
+   registrations, invitations to sessions, and other requests. SIP is
+   an agile, general-purpose tool for creating, modifying, and
+   terminating sessions that works independently of underlying transport
+   protocols and without dependency on the type of session that is being
+   established. 2 Overview of SIP Functionality
+   SIP is an application-layer control protocol that can establish,
+   modify, and terminate multimedia sessions (conferences) such as
+   Internet telephony calls. SIP can also invite participants to
+   already existing sessions, such as multicast conferences. Media can
+   be added to (and removed from) an existing session.

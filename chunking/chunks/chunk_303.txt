@@ -1,0 +1,18 @@
+|  transitions
+            |  +---------|           |Inform TU      |  labeled with
+            |  |         | Completed |-------------->|  the event
+            |  +-------->|           |               |  over the action
+            |            +-----------+               |  to take
+            |              ^   |                     |
+            |              |   | Timer D fires       |
+            +--------------+   | -                   |
+                               |                     |
+                               V                     |
+                         +-----------+               |
+                         |           |               |
+                         | Terminated|<--------------+
+                         |           |
+                         +-----------+
+                 Figure 5: INVITE client transaction
+   If timer D fires while the client transaction is in the "Completed"
+   state, the client transaction MUST move to the terminated state.

@@ -1,0 +1,10 @@
+o  A UA or proxy cannot send CANCEL for a transaction until it gets a
+      provisional response for the request. This was allowed in RFC
+      2543 but leads to potential race conditions. o  The action parameter in registrations has been deprecated. It was
+      insufficient for any useful services, and caused conflicts when
+      application processing was applied in proxies. o  RFC 2543 had a number of special cases for multicast. For
+      example, certain responses were suppressed, timers were adjusted,
+      and so on. Multicast now plays a more limited role, and the
+      protocol operation is unaffected by usage of multicast as opposed
+      to unicast. The limitations as a result of that are documented. o  Basic authentication has been removed entirely and its usage
+      forbidden. o  Proxies no longer forward a 6xx immediately on receiving it. Instead, they CANCEL pending branches immediately.

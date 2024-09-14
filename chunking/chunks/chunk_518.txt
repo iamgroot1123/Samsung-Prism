@@ -1,0 +1,12 @@
+The following examples by no means provide an exhaustive list of the
+   threats against SIP; rather, these are "classic" threats that
+   demonstrate the need for particular security services that can
+   potentially prevent whole categories of threats. These attacks assume an environment in which attackers can
+   potentially read any packet on the network - it is anticipated that
+   SIP will frequently be used on the public Internet. Attackers on the
+   network may be able to modify packets (perhaps at some compromised
+   intermediary). Attackers may wish to steal services, eavesdrop on
+   communications, or disrupt sessions. 26.1.1 Registration Hijacking
+   The SIP registration mechanism allows a user agent to identify itself
+   to a registrar as a device at which a user (designated by an address
+   of record) is located.

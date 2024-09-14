@@ -1,0 +1,12 @@
+o  If the initial offer is in the first reliable non-failure
+         message from the UAS back to UAC, the answer MUST be in the
+         acknowledgement for that message (in this specification, ACK
+         for a 2xx response). o  After having sent or received an answer to the first offer, the
+         UAC MAY generate subsequent offers in requests based on rules
+         specified for that method, but only if it has received answers
+         to any previous offers, and has not sent any offers to which it
+         hasn’t gotten an answer. o  Once the UAS has sent or received an answer to the initial
+         offer, it MUST NOT generate subsequent offers in any responses
+         to the initial INVITE. This means that a UAS based on this
+         specification alone can never generate subsequent offers until
+         completion of the initial transaction.

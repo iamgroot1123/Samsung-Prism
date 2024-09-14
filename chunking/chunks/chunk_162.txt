@@ -1,0 +1,12 @@
+12.2 Requests within a Dialog
+   Once a dialog has been established between two UAs, either of them
+   MAY initiate new transactions as needed within the dialog. The UA
+   sending the request will take the UAC role for the transaction. The
+   UA receiving the request will take the UAS role. Note that these may
+   be different roles than the UAs held during the transaction that
+   established the dialog. Requests within a dialog MAY contain Record-Route and Contact header
+   fields. However, these requests do not cause the dialog’s route set
+   to be modified, although they may modify the remote target URI. Specifically, requests that are not target refresh requests do not
+   modify the dialog’s remote target URI, and requests that are target
+   refresh requests do. For dialogs that have been established with an    INVITE, the only target refresh request defined is re-INVITE (see
+   Section 14).

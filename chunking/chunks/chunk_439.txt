@@ -1,0 +1,15 @@
+21.5.2 501 Not Implemented
+   The server does not support the functionality required to fulfill the
+   request. This is the appropriate response when a UAS does not
+   recognize the request method and is not capable of supporting it for
+   any user. (Proxies forward all requests regardless of method.) Note that a 405 (Method Not Allowed) is sent when the server
+   recognizes the request method, but that method is not allowed or
+   supported. 21.5.3 502 Bad Gateway
+   The server, while acting as a gateway or proxy, received an invalid
+   response from the downstream server it accessed in attempting to
+   fulfill the request. 21.5.4 503 Service Unavailable
+   The server is temporarily unable to process the request due to a
+   temporary overloading or maintenance of the server. The server MAY
+   indicate when the client should retry the request in a Retry-After
+   header field. If no Retry-After is given, the client MUST act as if
+   it had received a 500 (Server Internal Error) response.

@@ -1,0 +1,10 @@
+A UAC SHOULD include a Contact header field in any target refresh
+   requests within a dialog, and unless there is a need to change it,
+   the URI SHOULD be the same as used in previous requests within the
+   dialog. If the "secure" flag is true, that URI MUST be a SIPS URI. As discussed in Section 12.2.2, a Contact header field in a target
+   refresh request updates the remote target URI. This allows a UA to
+   provide a new contact address, should its address change during the
+   duration of the dialog. However, requests that are not target refresh requests do not affect
+   the remote target URI for the dialog. The rest of the request is formed as described in Section 8.1.1. Once the request has been constructed, the address of the server is
+   computed and the request is sent, using the same procedures for
+   requests outside of a dialog (Section 8.1.2).

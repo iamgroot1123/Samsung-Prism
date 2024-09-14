@@ -1,0 +1,13 @@
+This proxy, in general, has no way
+         of knowing the capabilities of that element, so it must
+         restrict itself to the mandatory elements of a SIP
+         implementation: SIP URIs and either the TCP or UDP transports. The URI placed in the Record-Route header field MUST resolve to
+         the element inserting it (or a suitable stand-in) when the
+         server location procedures of [4] are applied to it, so that
+         subsequent requests reach the same SIP element. If the
+         Request-URI contains a SIPS URI, or the topmost Route header
+         field value (after the post processing of bullet 6) contains a
+         SIPS URI, the URI placed into the Record-Route header field
+         MUST be a SIPS URI. Furthermore, if the request was not
+         received over TLS, the proxy MUST insert a Record-Route header
+         field.

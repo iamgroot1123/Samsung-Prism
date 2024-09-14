@@ -1,0 +1,14 @@
+Section 16.7 bullet 2 discusses how this timer is
+         updated with provisional responses, and Section 16.8 discusses
+         processing when it fires. 16.7 Response Processing
+   When a response is received by an element, it first tries to locate a
+   client transaction (Section 17.1.3) matching the response. If none
+   is found, the element MUST process the response (even if it is an
+   informational response) as a stateless proxy (described below). If a
+   match is found, the response is handed to the client transaction. Forwarding responses for which a client transaction (or more
+      generally any knowledge of having sent an associated request) is
+      not found improves robustness. In particular, it ensures that
+      "late" 2xx responses to INVITE requests are forwarded properly. As client transactions pass responses to the proxy layer, the
+   following processing MUST take place:
+      1. Find the appropriate response context
+      2.

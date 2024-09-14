@@ -1,0 +1,13 @@
+The following rule is RECOMMENDED for proxy credential caching:
+   If a UA receives a Proxy-Authenticate header field value in a 401/407
+   response to a request with a particular Call-ID, it should
+   incorporate credentials for that realm in all subsequent requests
+   that contain the same Call-ID. These credentials MUST NOT be cached
+   across dialogs; however, if a UA is configured with the realm of its
+   local outbound proxy, when one exists, then the UA MAY cache
+   credentials for that realm across dialogs. Note that this does mean
+   a future request in a dialog could contain credentials that are not
+   needed by any proxy along the Route header path. Any UA that wishes to authenticate itself to a proxy server --
+   usually, but not necessarily, after receiving a 407 (Proxy
+   Authentication Required) response -- MAY do so by including a Proxy-
+   Authorization header field value with the request.

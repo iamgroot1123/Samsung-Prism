@@ -1,0 +1,14 @@
+Check response for forwarding
+         Until a final response has been sent on the server transaction,
+         the following responses MUST be forwarded immediately:
+         -  Any provisional response other than 100 (Trying)
+         -  Any 2xx response
+         If a 6xx response is received, it is not immediately forwarded,
+         but the stateful proxy SHOULD cancel all client pending
+         transactions as described in Section 10, and it MUST NOT create
+         any new branches in this context. This is a change from RFC 2543, which mandated that the proxy
+         was to forward the 6xx response immediately. For an INVITE
+         transaction, this approach had the problem that a 2xx response
+         could arrive on another branch, in which case the proxy would          have to forward the 2xx. The result was that the UAC could
+         receive a 6xx response followed by a 2xx response, which should
+         never be allowed to happen.

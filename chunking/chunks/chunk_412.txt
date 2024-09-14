@@ -1,0 +1,17 @@
+Implementers SHOULD make the Server
+   header field a configurable option. Example:
+      Server: HomeServer v2
+20.36 Subject
+   The Subject header field provides a summary or indicates the nature
+   of the call, allowing call filtering without having to parse the
+   session description. The session description does not have to use
+   the same subject indication as the invitation. The compact form of the Subject header field is s.    Example:
+      Subject: Need more boxes
+      s: Tech Support
+20.37 Supported
+   The Supported header field enumerates all the extensions supported by
+   the UAC or UAS. The Supported header field contains a list of option tags, described
+   in Section 19.2, that are understood by the UAC or UAS. A UA
+   compliant to this specification MUST only include option tags
+   corresponding to standards-track RFCs. If empty, it means that no
+   extensions are supported.

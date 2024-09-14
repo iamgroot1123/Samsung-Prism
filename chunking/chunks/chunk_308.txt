@@ -1,0 +1,23 @@
+For example, consider the following request:
+   INVITE sip:bob@biloxi.com SIP/2.0
+   Via: SIP/2.0/UDP pc33.atlanta.com;branch=z9hG4bKkjshdyff
+   To: Bob <sip:bob@biloxi.com>
+   From: Alice <sip:alice@atlanta.com>;tag=88sja8x
+   Max-Forwards: 70
+   Call-ID: 987asjd97y7atg
+   CSeq: 986759 INVITE
+   The ACK request for a non-2xx final response to this request would
+   look like this:
+   ACK sip:bob@biloxi.com SIP/2.0
+   Via: SIP/2.0/UDP pc33.atlanta.com;branch=z9hG4bKkjshdyff
+   To: Bob <sip:bob@biloxi.com>;tag=99sa0xk
+   From: Alice <sip:alice@atlanta.com>;tag=88sja8x
+   Max-Forwards: 70
+   Call-ID: 987asjd97y7atg
+   CSeq: 986759 ACK
+17.1.2 Non-INVITE Client Transaction
+17.1.2.1 Overview of the non-INVITE Transaction
+   Non-INVITE transactions do not make use of ACK. They are simple
+   request-response interactions. For unreliable transports, requests
+   are retransmitted at an interval which starts at T1 and doubles until
+   it hits T2.

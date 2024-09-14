@@ -1,0 +1,13 @@
+It also    MUST be prepared to receive incoming connections on any address and
+   port that would be selected by a server based on the procedures
+   described in Section 5 of [4]. For unreliable unicast transports, the client transport MUST be
+   prepared to receive responses on the source IP address from which the
+   request is sent (as responses are sent back to the source address)
+   and the port number in the "sent-by" field. Furthermore, as with
+   reliable transports, in certain cases the response will be sent
+   elsewhere. The client MUST be prepared to receive responses on any
+   address and port that would be selected by a server based on the
+   procedures described in Section 5 of [4]. For multicast, the client transport MUST be prepared to receive
+   responses on the same multicast group and port to which the request
+   is sent (that is, it needs to be a member of the multicast group it
+   sent the request to.)

@@ -1,0 +1,15 @@
+The authors
+   request that these values be recorded in the IANA registry for
+   Content-Dispositions. Descriptions of these "disposition-types", including motivation and
+   examples, are given in Section 20.11. Short descriptions suitable for the IANA registry are:
+      alert     the body is a custom ring tone to alert the user
+      icon      the body is displayed as an icon to the user
+      render    the body should be displayed to the user
+      session   the body describes a communications session, for
+                example, as RFC 2327 SDP body
+28 Changes From RFC 2543
+   This RFC revises RFC 2543. It is mostly backwards compatible with
+   RFC 2543. The changes described here fix many errors discovered in
+   RFC 2543 and provide information on scenarios not detailed in RFC
+   2543. The protocol has been presented in a more cleanly layered
+   model here.

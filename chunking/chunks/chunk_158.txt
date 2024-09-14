@@ -1,0 +1,12 @@
+This state MUST be
+   maintained for the duration of the dialog. If the request arrived over TLS, and the Request-URI contained a SIPS
+   URI, the "secure" flag is set to TRUE. The route set MUST be set to the list of URIs in the Record-Route
+   header field from the request, taken in order and preserving all URI
+   parameters. If no Record-Route header field is present in the
+   request, the route set MUST be set to the empty set. This route set,
+   even if empty, overrides any pre-existing route set for future
+   requests in this dialog. The remote target MUST be set to the URI
+   from the Contact header field of the request. The remote sequence number MUST be set to the value of the sequence
+   number in the CSeq header field of the request. The local sequence
+   number MUST be empty. The call identifier component of the dialog ID
+   MUST be set to the value of the Call-ID in the request.

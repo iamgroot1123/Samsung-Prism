@@ -1,0 +1,15 @@
+A
+   UAC MUST treat any provisional response different than 100 that it
+   does not recognize as 183 (Session Progress). A UAC MUST be able to
+   process 100 and 183 responses. 8.1.3.3 Vias
+   If more than one Via header field value is present in a response, the
+   UAC SHOULD discard the message. The presence of additional Via header field values that precede
+      the originator of the request suggests that the message was
+      misrouted or possibly corrupted. 8.1.3.4 Processing 3xx Responses
+   Upon receipt of a redirection response (for example, a 301 response
+   status code), clients SHOULD use the URI(s) in the Contact header
+   field to formulate one or more new requests based on the redirected
+   request. This process is similar to that of a proxy recursing on a
+   3xx class response as detailed in Sections 16.5 and 16.6. A client
+   starts with an initial target set containing exactly one URI, the
+   Request-URI of the original request.

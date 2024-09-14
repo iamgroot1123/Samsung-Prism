@@ -1,0 +1,11 @@
+Warning reason codes are listed in Section 20.43. A message body containing a description of media capabilities MAY be
+   present in the response, which is formatted according to the Accept
+   header field in the INVITE (or application/sdp if not present), the
+   same as a message body in a 200 (OK) response to an OPTIONS request. It is hoped that negotiation will not frequently be needed, and when
+   a new user is being invited to join an already existing conference,
+   negotiation may not be possible. It is up to the invitation
+   initiator to decide whether or not to act on a 606 (Not Acceptable)
+   response. This status response is returned only if the client knows that no
+   other end point will answer the request. 22 Usage of HTTP Authentication
+   SIP provides a stateless, challenge-based mechanism for
+   authentication that is based on authentication in HTTP.

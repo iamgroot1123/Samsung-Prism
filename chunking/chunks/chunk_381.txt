@@ -1,0 +1,9 @@
+m: The header field is mandatory. m*: The header field SHOULD be sent, but clients/servers need to
+           be prepared to receive messages without that header field. o: The header field is optional. t: The header field SHOULD be sent, but clients/servers need to be
+           prepared to receive messages without that header field. If a stream-based protocol (such as TCP) is used as a
+           transport, then the header field MUST be sent. *: The header field is required if the message body is not empty. See Sections 20.14, 20.15 and 7.4 for details. -: The header field is not applicable. "Optional" means that an element MAY include the header field in a
+   request or response, and a UA MAY ignore the header field if present
+   in the request or response (The exception to this rule is the Require
+   header field discussed in 20.32). A "mandatory" header field MUST be
+   present in a request, and MUST be understood by the UAS receiving the
+   request.

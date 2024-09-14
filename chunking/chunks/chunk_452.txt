@@ -1,0 +1,10 @@
+If no credentials for a realm can be located, UACs MAY attempt to
+   retry the request with a username of "anonymous" and no password (a
+   password of ""). Once credentials have been located, any UA that wishes to
+   authenticate itself with a UAS or registrar -- usually, but not
+   necessarily, after receiving a 401 (Unauthorized) response -- MAY do
+   so by including an Authorization header field with the request. The
+   Authorization field value consists of credentials containing the
+   authentication information of the UA for the realm of the resource
+   being requested as well as parameters required in support of
+   authentication and replay protection.

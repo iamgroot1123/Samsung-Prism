@@ -1,0 +1,14 @@
+Section 6.1 of RFC 2234 defines a set of core rules that
+   are used by this specification, and not repeated here. Implementers
+   need to be familiar with the notation and content of RFC 2234 in
+   order to understand this specification. Certain basic rules are in
+   uppercase, such as SP, LWS, HTAB, CRLF, DIGIT, ALPHA, etc. Angle
+   brackets are used within definitions to clarify the use of rule
+   names. The use of square brackets is redundant syntactically. It is used as
+   a semantic hint that the specific parameter is optional to use. 25.1 Basic Rules
+   The following rules are used throughout this specification to
+   describe basic parsing constructs. The US-ASCII coded character set
+   is defined by ANSI X3.4-1986. alphanum  =  ALPHA / DIGIT
+   Several rules are incorporated from RFC 2396 [5] but are updated to
+   make them compliant with RFC 2234 [10]. These include:
+      reserved    =  ";" / "/" / "?"

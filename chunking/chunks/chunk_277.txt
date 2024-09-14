@@ -1,0 +1,15 @@
+If the configuration state is not time-invariant
+         (for example, if a routing table is updated) any requests that
+         could be affected by the change may not be forwarded
+         statelessly during an interval equal to the transaction timeout
+         window before or after the change. The method of processing
+         the affected requests in that interval is an implementation
+         decision. A common solution is to forward them transaction
+         statefully. Stateless proxies MUST NOT perform special processing for CANCEL
+   requests. They are processed by the above rules as any other
+   requests. In particular, a stateless proxy applies the same Route
+   header field processing to CANCEL requests that it applies to any
+   other request. Response processing as described in Section 16.7 does not apply to a
+   proxy behaving statelessly. When a response arrives at a stateless
+   proxy, the proxy MUST inspect the sent-by value in the first
+   (topmost) Via header field value.

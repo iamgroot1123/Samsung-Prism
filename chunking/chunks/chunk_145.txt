@@ -1,0 +1,12 @@
+If
+         the Call-ID value in the existing binding differs from the
+         Call-ID value in the request, the binding MUST be removed if
+         the expiration time is zero and updated otherwise. If they are
+         the same, the registrar compares the CSeq value. If the value
+         is higher than that of the existing binding, it MUST update or
+         remove the binding as above. If not, the update MUST be
+         aborted and the request fails. This algorithm ensures that out-of-order requests from the same
+         UA are ignored. Each binding record records the Call-ID and CSeq values from
+         the request. The binding updates MUST be committed (that is, made visible to
+         the proxy or redirect server) if and only if all binding
+         updates and additions succeed.

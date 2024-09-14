@@ -1,0 +1,11 @@
+Before they forward the request, both proxy servers SHOULD add a
+   Record-Route header field to the request so that all future requests
+   in this dialog will pass through the proxy servers. The proxy
+   servers can thereby continue to provide security services for the
+   lifetime of this dialog. If the proxy servers do not add themselves
+   to the Record-Route, future messages will pass directly end-to-end
+   between Alice and Bob without any security services (unless the two
+   parties agree on some independent end-to-end security such as
+   S/MIME). In this respect the SIP trapezoid model can provide a nice
+   structure where conventions of agreement between the site proxies can
+   provide a reasonably secure channel between Alice and Bob.

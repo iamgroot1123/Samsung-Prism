@@ -1,0 +1,17 @@
+Update timer C for provisional responses
+      3. Remove the topmost Via
+      4. Add the response to the response context
+      5. Check to see if this response should be forwarded immediately
+      6. When necessary, choose the best final response from the
+          response context
+   If no final response has been forwarded after every client
+   transaction associated with the response context has been terminated,
+   the proxy must choose and forward the "best" response from those it
+   has seen so far. The following processing MUST be performed on each response that is
+   forwarded. It is likely that more than one response to each request
+   will be forwarded: at least each provisional and one final response. 7. Aggregate authorization header field values if necessary
+      8. Optionally rewrite Record-Route header field values
+      9. Forward the response
+      10. Generate any necessary CANCEL requests
+   Each of the above steps are detailed below:
+      1.

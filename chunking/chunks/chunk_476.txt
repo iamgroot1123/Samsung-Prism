@@ -1,0 +1,12 @@
+However, if a user agent that supports S/MIME receives a request with
+   an unsecured body, it SHOULD NOT respond with a secured body, but if
+   it expects S/MIME from the sender (for example, because the sender’s
+   From header field value corresponds to an identity on its keychain),
+   the UAS SHOULD notify its user that the session could not be secured. A number of conditions that arise in the previous text call for the
+   notification of the user when an anomalous certificate-management
+   event occurs. Users might well ask what they should do under these
+   circumstances. First and foremost, an unexpected change in a
+   certificate, or an absence of security when security is expected, are    causes for caution but not necessarily indications that an attack is
+   in progress. Users might abort any connection attempt or refuse a
+   connection request they have received; in telephony parlance, they
+   could hang up and call back.

@@ -1,0 +1,13 @@
+The To
+           header field and the Request-URI field typically differ, as
+           the former contains a user name. This address-of-record MUST
+           be a SIP URI or SIPS URI. From: The From header field contains the address-of-record of the
+           person responsible for the registration. The value is the
+           same as the To header field unless the request is a third-
+           party registration. Call-ID: All registrations from a UAC SHOULD use the same Call-ID
+           header field value for registrations sent to a particular
+           registrar. If the same client were to use different Call-ID values, a
+           registrar could not detect whether a delayed REGISTER request
+           might have arrived out of order. CSeq: The CSeq value guarantees proper ordering of REGISTER
+           requests. A UA MUST increment the CSeq value by one for each
+           REGISTER request with the same Call-ID.

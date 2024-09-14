@@ -1,0 +1,13 @@
+10.3 Processing REGISTER Requests
+   A registrar is a UAS that responds to REGISTER requests and maintains
+   a list of bindings that are accessible to proxy servers and redirect
+   servers within its administrative domain. A registrar handles
+   requests according to Section 8.2 and Section 17.2, but it accepts
+   only REGISTER requests. A registrar MUST not generate 6xx responses. A registrar MAY redirect REGISTER requests as appropriate. One
+   common usage would be for a registrar listening on a multicast
+   interface to redirect multicast REGISTER requests to its own unicast
+   interface with a 302 (Moved Temporarily) response. Registrars MUST ignore the Record-Route header field if it is
+   included in a REGISTER request. Registrars MUST NOT include a
+   Record-Route header field in any response to a REGISTER request. A registrar might receive a request that traversed a proxy which
+      treats REGISTER as an unknown request and which added a Record-
+      Route header field value.

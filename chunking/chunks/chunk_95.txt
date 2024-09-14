@@ -1,0 +1,12 @@
+With other 4xx responses, including those yet to be defined, a retry
+   may or may not be possible depending on the method and the use case. 8.2 UAS Behavior
+   When a request outside of a dialog is processed by a UAS, there is a
+   set of processing rules that are followed, independent of the method. Section 12 gives guidance on how a UAS can tell whether a request is
+   inside or outside of a dialog. Note that request processing is atomic. If a request is accepted,
+   all state changes associated with it MUST be performed. If it is
+   rejected, all state changes MUST NOT be performed. UASs SHOULD process the requests in the order of the steps that
+   follow in this section (that is, starting with authentication, then
+   inspecting the method, the header fields, and so on throughout the
+   remainder of this section). 8.2.1 Method Inspection
+   Once a request is authenticated (or authentication is skipped), the
+   UAS MUST inspect the method of the request.

@@ -1,0 +1,36 @@
+Bob’s
+      softphone                                        SIP Phone
+         |                |                |                |
+         |    INVITE F1   |                |                |
+         |--------------->|    INVITE F2   |                |
+         |  100 Trying F3 |--------------->|    INVITE F4   |
+         |<---------------|  100 Trying F5 |--------------->|
+         |                |<-------------- | 180 Ringing F6 |
+         |                | 180 Ringing F7 |<---------------|
+         | 180 Ringing F8 |<---------------|     200 OK F9  |
+         |<---------------|    200 OK F10  |<---------------|
+         |    200 OK F11  |<---------------|                |
+         |<---------------|                |                |
+         |                       ACK F12                    |
+         |------------------------------------------------->|
+         |                   Media Session                  |
+         |<================================================>|
+         |                       BYE F13                    |
+         |<-------------------------------------------------|
+         |                     200 OK F14                   |
+         |------------------------------------------------->|
+         |                                                  |
+         Figure 1: SIP session setup example with SIP trapezoid
+      INVITE sip:bob@biloxi.com SIP/2.0
+      Via: SIP/2.0/UDP pc33.atlanta.com;branch=z9hG4bK776asdhds
+      Max-Forwards: 70
+      To: Bob <sip:bob@biloxi.com>
+      From: Alice <sip:alice@atlanta.com>;tag=1928301774
+      Call-ID: a84b4c76e66710@pc33.atlanta.com
+      CSeq: 314159 INVITE
+      Contact: <sip:alice@pc33.atlanta.com>
+      Content-Type: application/sdp
+      Content-Length: 142
+      (Alice’s SDP not shown)
+   The first line of the text-encoded message contains the method name
+   (INVITE).

@@ -1,0 +1,15 @@
+If this header field is missing, the MIME type determines the default
+   content disposition. If there is none, "render" is assumed. Example:
+      Content-Disposition: session
+20.12 Content-Encoding
+   The Content-Encoding header field is used as a modifier to the
+   "media-type". When present, its value indicates what additional
+   content codings have been applied to the entity-body, and thus what
+   decoding mechanisms MUST be applied in order to obtain the media-type
+   referenced by the Content-Type header field. Content-Encoding is
+   primarily used to allow a body to be compressed without losing the
+   identity of its underlying media type. If multiple encodings have been applied to an entity-body, the
+   content codings MUST be listed in the order in which they were
+   applied. All content-coding values are case-insensitive. IANA acts as a
+   registry for content-coding value tokens. See [H3.5] for a
+   definition of the syntax for content-coding.

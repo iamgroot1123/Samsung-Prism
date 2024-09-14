@@ -1,0 +1,14 @@
+However, the latter is
+   specified in HTTP with implicit whitespace and folding. This
+   specification conforms to RFC 2234 [10] and uses only explicit
+   whitespace and folding as an integral part of the grammar. [H4.2] also specifies that multiple header fields of the same field
+   name whose value is a comma-separated list can be combined into one
+   header field. That applies to SIP as well, but the specific rule is
+   different because of the different grammars. Specifically, any SIP
+   header whose grammar is of the form
+      header  =  "header-name" HCOLON header-value *(COMMA header-value)
+   allows for combining header fields of the same name into a comma-
+   separated list. The Contact header field allows a comma-separated
+   list unless the header field value is "*". 7.3.1 Header Field Format
+   Header fields follow the same generic header format as that given in
+   Section 2.2 of RFC 2822 [3].

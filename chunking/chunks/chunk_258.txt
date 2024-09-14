@@ -1,0 +1,12 @@
+If no 6xx class
+         responses are present, the proxy SHOULD choose from the lowest
+         response class stored in the response context. The proxy MAY
+         select any response within that chosen class. The proxy SHOULD          give preference to responses that provide information affecting
+         resubmission of this request, such as 401, 407, 415, 420, and
+         484 if the 4xx class is chosen. A proxy which receives a 503 (Service Unavailable) response
+         SHOULD NOT forward it upstream unless it can determine that any
+         subsequent requests it might proxy will also generate a 503. In other words, forwarding a 503 means that the proxy knows it
+         cannot service any requests, not just the one for the Request-
+         URI in the request which generated the 503. If the only
+         response that was received is a 503, the proxy SHOULD generate
+         a 500 response and forward that upstream.

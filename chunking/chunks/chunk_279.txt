@@ -1,0 +1,17 @@
+The proxy will inspect the URI in the topmost Route header
+          field value. If it indicates this proxy, the proxy removes it
+          from the Route header field (this route node has been
+          reached). 3. The proxy will forward the request to the resource indicated
+          by the URI in the topmost Route header field value or in the
+          Request-URI if no Route header field is present. The proxy
+          determines the address, port and transport to use when
+          forwarding the request by applying the procedures in [4] to
+          that URI. If no strict-routing elements are encountered on the path of the
+   request, the Request-URI will always indicate the target of the
+   request. 16.12.1 Examples
+16.12.1.1 Basic SIP Trapezoid
+   This scenario is the basic SIP trapezoid, U1 -> P1 -> P2 -> U2, with
+   both proxies record-routing. Here is the flow. U1 sends:
+      INVITE sip:callee@domain.com SIP/2.0
+      Contact: sip:caller@u1.example.com
+   to P1.

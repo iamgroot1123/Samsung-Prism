@@ -1,0 +1,14 @@
+This
+   type of parallel search is known as forking. In this case, the 200 (OK) is routed back through the two proxies and
+   is received by Alice’s softphone, which then stops the ringback tone
+   and indicates that the call has been answered. Finally, Alice’s
+   softphone sends an acknowledgement message, ACK, to Bob’s SIP phone
+   to confirm the reception of the final response (200 (OK)). In this
+   example, the ACK is sent directly from Alice’s softphone to Bob’s SIP
+   phone, bypassing the two proxies. This occurs because the endpoints
+   have learned each other’s address from the Contact header fields
+   through the INVITE/200 (OK) exchange, which was not known when the
+   initial INVITE was sent. The lookups performed by the two proxies
+   are no longer needed, so the proxies drop out of the call flow. This
+   completes the INVITE/200/ACK three-way handshake used to establish
+   SIP sessions. Full details on session setup are in Section 13.

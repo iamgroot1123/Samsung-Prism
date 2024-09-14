@@ -1,0 +1,14 @@
+Primarily, a user agent will want to encrypt header fields that have
+   an end-to-end semantic, including: Subject, Reply-To, Organization,
+   Accept, Accept-Encoding, Accept-Language, Alert-Info, Error-Info,
+   Authentication-Info, Expires, In-Reply-To, Require, Supported,
+   Unsupported, Retry-After, User-Agent, Server, and Warning. If any of
+   these header fields are present in an encrypted body, they should be
+   used instead of any "outer" header fields, whether this entails
+   displaying the header field values to users or setting internal
+   states in the UA. They SHOULD NOT however be used in the "outer"
+   headers of any future messages. If present, the Date header field MUST always be the same in the
+   "inner" and "outer" headers. Since MIME bodies are attached to the "inner" message,
+   implementations will usually encrypt MIME-specific header fields,
+   including: MIME-Version, Content-Type, Content-Length, Content-
+   Language, Content-Encoding and Content-Disposition.

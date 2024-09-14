@@ -1,0 +1,14 @@
+Therefore, if
+   the local sequence number is not empty, the value of the local
+   sequence number MUST be incremented by one, and this value MUST be
+   placed into the CSeq header field. If the local sequence number is
+   empty, an initial value MUST be chosen using the guidelines of
+   Section 8.1.1.5. The method field in the CSeq header field value
+   MUST match the method of the request. With a length of 32 bits, a client could generate, within a single
+      call, one request a second for about 136 years before needing to
+      wrap around. The initial value of the sequence number is chosen
+      so that subsequent requests within the same call will not wrap
+      around. A non-zero initial value allows clients to use a time-
+      based initial sequence number. A client could, for example,
+      choose the 31 most significant bits of a 32-bit second clock as an
+      initial sequence number.

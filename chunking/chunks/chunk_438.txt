@@ -1,0 +1,14 @@
+Section 14.2 describes how such "glare" situations
+   are resolved. 21.4.28 493 Undecipherable
+   The request was received by a UAS that contained an encrypted MIME
+   body for which the recipient does not possess or will not provide an
+   appropriate decryption key. This response MAY have a single body
+   containing an appropriate public key that should be used to encrypt
+   MIME bodies sent to this UA. Details of the usage of this response
+   code can be found in Section 23.2. 21.5 Server Failure 5xx
+   5xx responses are failure responses given when a server itself has
+   erred. 21.5.1 500 Server Internal Error
+   The server encountered an unexpected condition that prevented it from
+   fulfilling the request. The client MAY display the specific error
+   condition and MAY retry the request after several seconds. If the condition is temporary, the server MAY indicate when the
+   client may retry the request using the Retry-After header field.

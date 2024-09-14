@@ -1,0 +1,12 @@
+Whenever the CMS SignedData message is used in S/MIME for SIP, it
+   MUST contain the certificate bearing the public key necessary to
+   verify the signature. When a UAC sends a request containing an S/MIME body that initiates a
+   dialog, or sends a non-INVITE request outside the context of a
+   dialog, the UAC SHOULD structure the body as an S/MIME
+   ’multipart/signed’ CMS SignedData body. If the desired CMS service
+   is EnvelopedData (and the public key of the target user is known),
+   the UAC SHOULD send the EnvelopedData message encapsulated within a
+   SignedData message. When a UAS receives a request containing an S/MIME CMS body that
+   includes a certificate, the UAS SHOULD first validate the
+   certificate, if possible, with any available root certificates for
+   certificate authorities.

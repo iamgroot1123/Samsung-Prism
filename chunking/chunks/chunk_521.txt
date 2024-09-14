@@ -1,0 +1,14 @@
+For example, consider a case in which a redirect server at one
+   domain, chicago.com, impersonates a redirect server at another
+   domain, biloxi.com. A user agent sends a request to biloxi.com, but
+   the redirect server at chicago.com answers with a forged response
+   that has appropriate SIP header fields for a response from
+   biloxi.com. The forged contact addresses in the redirection response
+   could direct the originating UA to inappropriate or insecure
+   resources, or simply prevent requests for biloxi.com from succeeding. This family of threats has a vast membership, many of which are
+   critical. As a converse to the registration hijacking threat,
+   consider the case in which a registration sent to biloxi.com is
+   intercepted by chicago.com, which replies to the intercepted
+   registration with a forged 301 (Moved Permanently) response. This
+   response might seem to come from biloxi.com yet designate chicago.com
+   as the appropriate registrar.

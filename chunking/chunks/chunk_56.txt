@@ -1,0 +1,17 @@
+Each header field consists of a field
+   name followed by a colon (":") and the field value. field-name: field-value
+   The formal grammar for a message-header specified in Section 25
+   allows for an arbitrary amount of whitespace on either side of the
+   colon; however, implementations should avoid spaces between the field
+   name and the colon and use a single space (SP) between the colon and
+   the field-value. Subject:            lunch
+      Subject      :      lunch
+      Subject            :lunch
+      Subject: lunch
+   Thus, the above are all valid and equivalent, but the last is the
+   preferred form. Header fields can be extended over multiple lines by preceding each
+   extra line with at least one SP or horizontal tab (HT). The line
+   break and the whitespace at the beginning of the next line are
+   treated as a single SP character. Thus, the following are
+   equivalent:
+      Subject: I know you’re there, pick up the phone and talk to me!

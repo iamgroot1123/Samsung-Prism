@@ -1,0 +1,13 @@
+Some
+   informational header fields, such as the Subject or Organization
+   could perhaps warrant end-to-end security. Headers defined by future
+   SIP applications might also require obfuscation. Another possible application of encrypting header fields is selective
+   anonymity. A request could be constructed with a From header field
+   that contains no personal information (for example,
+   sip:anonymous@anonymizer.invalid). However, a second From header
+   field containing the genuine address-of-record of the originator
+   could be encrypted within a "message/sip" MIME body where it will
+   only be visible to the endpoints of a dialog. Note that if this mechanism is used for anonymity, the From header
+      field will no longer be usable by the recipient of a message as an
+      index to their certificate keychain for retrieving the proper
+      S/MIME key to associated with the sender.

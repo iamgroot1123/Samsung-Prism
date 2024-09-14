@@ -1,0 +1,26 @@
+bob
+                                               +----+
+                                               | UA |
+                                               |    |
+                                               +----+
+                                                  |
+                                                  |3)INVITE
+                                                  |   carol@chicago.com
+         chicago.com        +--------+            V
+         +---------+ 2)Store|Location|4)Query +-----+
+         |Registrar|=======>| Service|<=======|Proxy|sip.chicago.com
+         +---------+        +--------+=======>+-----+
+               A                      5)Resp      |
+               |                                  |
+               |                                  |
+     1)REGISTER|                                  |
+               |                                  |
+            +----+                                |
+            | UA |<-------------------------------+
+   cube2214a|    |                            6)INVITE
+            +----+                    carol@cube2214a.chicago.com
+             carol
+                      Figure 2: REGISTER example
+      The following Contact header parameters have a special meaning in
+           REGISTER requests:
+      action: The "action" parameter from RFC 2543 has been deprecated.

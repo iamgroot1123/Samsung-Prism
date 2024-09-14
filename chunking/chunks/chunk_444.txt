@@ -1,0 +1,14 @@
+Any time
+   that a proxy server or UA receives a request (with the exceptions
+   given in Section 22.1), it MAY challenge the initiator of the request
+   to provide assurance of its identity. Once the originator has been
+   identified, the recipient of the request SHOULD ascertain whether or
+   not this user is authorized to make the request in question. No
+   authorization systems are recommended or discussed in this document. The "Digest" authentication mechanism described in this section
+   provides message authentication and replay protection only, without
+   message integrity or confidentiality. Protective measures above and
+   beyond those provided by Digest need to be taken to prevent active
+   attackers from modifying SIP requests and responses. Note that due to its weak security, the usage of "Basic"
+   authentication has been deprecated. Servers MUST NOT accept
+   credentials using the "Basic" authorization scheme, and servers also
+   MUST NOT challenge with "Basic".

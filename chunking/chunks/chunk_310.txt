@@ -1,0 +1,13 @@
+The request
+   MUST be passed to the transport layer for transmission. If an
+   unreliable transport is in use, the client transaction MUST set timer
+   E to fire in T1 seconds. If timer E fires while still in this state,
+   the timer is reset, but this time with a value of MIN(2*T1, T2). When the timer fires again, it is reset to a MIN(4*T1, T2). This
+   process continues so that retransmissions occur with an exponentially
+   increasing interval that caps at T2. The default value of T2 is 4s,
+   and it represents the amount of time a non-INVITE server transaction
+   will take to respond to a request, if it does not respond
+   immediately. For the default values of T1 and T2, this results in
+   intervals of 500 ms, 1 s, 2 s, 4 s, 4 s, 4 s, etc. If Timer F fires while the client transaction is still in the
+   "Trying" state, the client transaction SHOULD inform the TU about the
+   timeout, and then it SHOULD enter the "Terminated" state.

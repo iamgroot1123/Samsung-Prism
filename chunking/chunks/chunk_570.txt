@@ -1,0 +1,11 @@
+This can apply not only to the
+   From and related headers representing the originator of the request,
+   but also the To - it may not be appropriate to convey to the final
+   destination a speed-dialing nickname, or an unexpanded identifier for
+   a group of targets, either of which would be removed from the
+   Request-URI as the request is routed, but not changed in the To    header field if the two were initially identical. Thus it MAY be
+   desirable for privacy reasons to create a To header field that
+   differs from the Request-URI. 27 IANA Considerations
+   All method names, header field names, status codes, and option tags
+   used in SIP applications are registered with IANA through
+   instructions in an IANA Considerations section in an RFC.

@@ -1,0 +1,14 @@
+While in the "Trying" state, if the TU passes a provisional response
+   to the server transaction, the server transaction MUST enter the
+   "Proceeding" state. The response MUST be passed to the transport
+   layer for transmission. Any further provisional responses that are
+   received from the TU while in the "Proceeding" state MUST be passed
+   to the transport layer for transmission. If a retransmission of the
+   request is received while in the "Proceeding" state, the most
+   recently sent provisional response MUST be passed to the transport
+   layer for retransmission. If the TU passes a final response (status
+   codes 200-699) to the server while in the "Proceeding" state, the
+   transaction MUST enter the "Completed" state, and the response MUST
+   be passed to the transport layer for transmission. When the server transaction enters the "Completed" state, it MUST set
+   Timer J to fire in 64*T1 seconds for unreliable transports, and zero
+   seconds for reliable transports.

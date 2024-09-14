@@ -1,0 +1,11 @@
+UACs SHOULD NOT use the "action" parameter. expires: The "expires" parameter indicates how long the UA would
+           like the binding to be valid. The value is a number
+           indicating seconds. If this parameter is not provided, the
+           value of the Expires header field is used instead. Implementations MAY treat values larger than 2**32-1
+           (4294967295 seconds or 136 years) as equivalent to 2**32-1. Malformed values SHOULD be treated as equivalent to 3600. 10.2.1 Adding Bindings
+   The REGISTER request sent to a registrar includes the contact
+   address(es) to which SIP requests for the address-of-record should be
+   forwarded. The address-of-record is included in the To header field
+   of the REGISTER request. The Contact header field values of the request typically consist of
+   SIP or SIPS URIs that identify particular SIP endpoints (for example,
+   "sip:carol@cube2214a.chicago.com"), but they MAY use any URI scheme.

@@ -1,0 +1,14 @@
+Usually the user will suggest the To
+   header field through a human interface, perhaps inputting the URI
+   manually or selecting it from some sort of address book. Frequently,
+   the user will not enter a complete URI, but rather a string of digits
+   or letters (for example, "bob"). It is at the discretion of the UA
+   to choose how to interpret this input. Using the string to form the
+   user part of a SIP URI implies that the UA wishes the name to be
+   resolved in the domain to the right-hand side (RHS) of the at-sign in
+   the SIP URI (for instance, sip:bob@example.com). Using the string to
+   form the user part of a SIPS URI implies that the UA wishes to
+   communicate securely, and that the name is to be resolved in the
+   domain to the RHS of the at-sign. The RHS will frequently be the
+   home domain of the requestor, which allows for the home domain to
+   process the outgoing request.

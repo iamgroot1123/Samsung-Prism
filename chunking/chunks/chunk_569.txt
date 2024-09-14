@@ -1,0 +1,12 @@
+If a user or service chooses to be
+   reachable at an address that is guessable from the person’s name and
+   organizational affiliation (which describes most addresses-of-
+   record), the traditional method of ensuring privacy by having an
+   unlisted "phone number" is compromised. A user location service can
+   infringe on the privacy of the recipient of a session invitation by
+   divulging their specific whereabouts to the caller; an implementation
+   consequently SHOULD be able to restrict, on a per-user basis, what
+   kind of location and availability information is given out to certain
+   classes of callers. This is a whole class of problem that is
+   expected to be studied further in ongoing SIP work. In some cases, users may want to conceal personal information in
+   header fields that convey identity.

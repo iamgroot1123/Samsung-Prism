@@ -1,0 +1,15 @@
+26.3 Implementing Security Mechanisms
+26.3.1 Requirements for Implementers of SIP
+   Proxy servers, redirect servers, and registrars MUST implement TLS,
+   and MUST support both mutual and one-way authentication. It is
+   strongly RECOMMENDED that UAs be capable initiating TLS; UAs MAY also
+   be capable of acting as a TLS server. Proxy servers, redirect
+   servers, and registrars SHOULD possess a site certificate whose
+   subject corresponds to their canonical hostname. UAs MAY have
+   certificates of their own for mutual authentication with TLS, but no
+   provisions are set forth in this document for their use. All SIP
+   elements that support TLS MUST have a mechanism for validating
+   certificates received during TLS negotiation; this entails possession
+   of one or more root certificates issued by certificate authorities
+   (preferably well-known distributors of site certificates comparable
+   to those that issue root certificates for web browsers).

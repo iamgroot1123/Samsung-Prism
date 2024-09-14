@@ -1,0 +1,13 @@
+This is because the UAC core
+   handles retransmissions of the ACK, not the transaction layer. The
+   ACK MUST be passed to the client transport every time a
+   retransmission of the 2xx final response that triggered the ACK
+   arrives. The UAC core considers the INVITE transaction completed 64*T1 seconds
+   after the reception of the first 2xx response. At this point all the
+   early dialogs that have not transitioned to established dialogs are
+   terminated. Once the INVITE transaction is considered completed by
+   the UAC core, no more new 2xx responses are expected to arrive. If, after acknowledging any 2xx response to an INVITE, the UAC does
+   not want to continue with that dialog, then the UAC MUST terminate
+   the dialog by sending a BYE request as described in Section 15. 13.3 UAS Processing
+13.3.1 Processing of the INVITE
+   The UAS core will receive INVITE requests from the transaction layer.

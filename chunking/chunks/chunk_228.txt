@@ -1,0 +1,12 @@
+Allowing a URI to be added to the set only once reduces
+      unnecessary network traffic, and in the case of incorporating
+      contacts from redirect requests prevents infinite recursion. For example, a trivial location service is a "no-op", where the
+   target URI is equal to the incoming request URI. The request is sent
+   to a specific next hop proxy for further processing. During request    forwarding of Section 16.6, Item 6, the identity of that next hop,
+   expressed as a SIP or SIPS URI, is inserted as the top-most Route
+   header field value into the request. If the Request-URI indicates a resource at this proxy that does not
+   exist, the proxy MUST return a 404 (Not Found) response. If the target set remains empty after applying all of the above, the
+   proxy MUST return an error response, which SHOULD be the 480
+   (Temporarily Unavailable) response. 16.6 Request Forwarding
+   As soon as the target set is non-empty, a proxy MAY begin forwarding
+   the request.

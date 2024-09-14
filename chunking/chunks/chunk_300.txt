@@ -1,0 +1,11 @@
+However, the client transaction does not know the
+   value of T1 in use by the server transaction, so an absolute minimum
+   of 32s is used instead of basing Timer D on T1. Any retransmissions of the final response that are received while in
+   the "Completed" state MUST cause the ACK to be re-passed to the
+   transport layer for retransmission, but the newly received response
+   MUST NOT be passed up to the TU. A retransmission of the response is
+   defined as any response which would match the same client transaction
+   based on the rules of Section 17.1.3. |INVITE from TU
+             Timer A fires     |INVITE sent
+             Reset A,          V                      Timer B fires
+             INVITE sent +-----------+                or Transport Err.

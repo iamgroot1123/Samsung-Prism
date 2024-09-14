@@ -1,0 +1,13 @@
+1 Introduction
+   There are many applications of the Internet that require the creation
+   and management of a session, where a session is considered an
+   exchange of data between an association of participants. The
+   implementation of these applications is complicated by the practices
+   of participants: users may move between endpoints, they may be
+   addressable by multiple names, and they may communicate in several
+   different media - sometimes simultaneously. Numerous protocols have
+   been authored that carry various forms of real-time multimedia
+   session data such as voice, video, or text messages. The Session
+   Initiation Protocol (SIP) works in concert with these protocols by    enabling Internet endpoints (called user agents) to discover one
+   another and to agree on a characterization of a session they would
+   like to share.

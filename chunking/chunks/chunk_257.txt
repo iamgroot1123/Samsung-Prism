@@ -1,0 +1,13 @@
+This step, combined with the next, ensures that a stateful
+         proxy will forward exactly one final response to a non-INVITE
+         request, and either exactly one non-2xx response or one or more
+         2xx responses to an INVITE request. 6. Choosing the best response
+         A stateful proxy MUST send a final response to a response
+         context’s server transaction if no final responses have been
+         immediately forwarded by the above rules and all client
+         transactions in this response context have been terminated. The stateful proxy MUST choose the "best" final response among
+         those received and stored in the response context. If there are no final responses in the context, the proxy MUST
+         send a 408 (Request Timeout) response to the server
+         transaction. Otherwise, the proxy MUST forward a response from the responses
+         stored in the response context. It MUST choose from the 6xx
+         class responses if any exist in the context.

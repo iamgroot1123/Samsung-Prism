@@ -1,0 +1,14 @@
+When a UAC receives a challenge, it SHOULD render to the user the
+   contents of the "realm" parameter in the challenge (which appears in
+   either a WWW-Authenticate header field or Proxy-Authenticate header
+   field) if the UAC device does not already know of a credential for
+   the realm in question. A service provider that pre-configures UAs
+   with credentials for its realm should be aware that users will not
+   have the opportunity to present their own credentials for this realm
+   when challenged at a pre-configured device. Finally, note that even if a UAC can locate credentials that are
+   associated with the proper realm, the potential exists that these
+   credentials may no longer be valid or that the challenging server
+   will not accept these credentials for whatever reason (especially
+   when "anonymous" with no password is submitted). In this instance a
+   server may repeat its challenge, or it may respond with a 403
+   Forbidden.

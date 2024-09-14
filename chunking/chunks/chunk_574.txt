@@ -1,0 +1,12 @@
+The following information needs to be provided in an RFC publication
+   in order to register a new header field name:
+      o  The RFC number in which the header is registered;
+      o  the name of the header field being registered;
+      o  a compact form version for that header field, if one is
+         defined;
+   Some common and widely used header fields MAY be assigned one-letter
+   compact forms (Section 7.3.3). Compact forms can only be assigned
+   after SIP working group review, followed by RFC publication. 27.4 Method and Response Codes
+   This specification establishes the Method and Response-Code sub-
+   registries under http://www.iana.org/assignments/sip-parameters and
+   initiates their population as follows.

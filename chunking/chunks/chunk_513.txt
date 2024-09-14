@@ -1,0 +1,56 @@
+1*DIGIT
+Min-Expires  =  "Min-Expires" HCOLON delta-seconds
+Organization  =  "Organization" HCOLON [TEXT-UTF8-TRIM]
+Priority        =  "Priority" HCOLON priority-value
+priority-value  =  "emergency" / "urgent" / "normal"
+                   / "non-urgent" / other-priority
+other-priority  =  token
+Proxy-Authenticate  =  "Proxy-Authenticate" HCOLON challenge
+challenge           =  ("Digest" LWS digest-cln *(COMMA digest-cln))
+                       / other-challenge
+other-challenge     =  auth-scheme LWS auth-param
+                       *(COMMA auth-param)
+digest-cln          =  realm / domain / nonce
+                        / opaque / stale / algorithm
+                        / qop-options / auth-param
+realm               =  "realm" EQUAL realm-value
+realm-value         =  quoted-string
+domain              =  "domain" EQUAL LDQUOT URI
+                       *( 1*SP URI ) RDQUOT
+URI                 =  absoluteURI / abs-path
+nonce               =  "nonce" EQUAL nonce-value
+nonce-value         =  quoted-string
+opaque              =  "opaque" EQUAL quoted-string
+stale               =  "stale" EQUAL ( "true" / "false" )
+algorithm           =  "algorithm" EQUAL ( "MD5" / "MD5-sess"
+                       / token )
+qop-options         =  "qop" EQUAL LDQUOT qop-value
+                       *("," qop-value) RDQUOT
+qop-value           =  "auth" / "auth-int" / token
+Proxy-Authorization  =  "Proxy-Authorization" HCOLON credentials
+Proxy-Require  =  "Proxy-Require" HCOLON option-tag
+                  *(COMMA option-tag)
+option-tag     =  token
+Record-Route  =  "Record-Route" HCOLON rec-route *(COMMA rec-route)
+rec-route     =  name-addr *( SEMI rr-param )
+rr-param      =  generic-param
+Reply-To      =  "Reply-To" HCOLON rplyto-spec
+rplyto-spec   =  ( name-addr / addr-spec )
+                 *( SEMI rplyto-param )
+rplyto-param  =  generic-param
+Require       =  "Require" HCOLON option-tag *(COMMA option-tag)
+Retry-After  =  "Retry-After" HCOLON delta-seconds
+                [ comment ] *( SEMI retry-param )
+retry-param  =  ("duration" EQUAL delta-seconds)
+                / generic-param
+Route        =  "Route" HCOLON route-param *(COMMA route-param)
+route-param  =  name-addr *( SEMI rr-param )
+Server           =  "Server" HCOLON server-val *(LWS server-val)
+server-val       =  product / comment
+product          =  token [SLASH product-version]
+product-version  =  token
+Subject  =  ( "Subject" / "s" ) HCOLON [TEXT-UTF8-TRIM]
+Supported  =  ( "Supported" / "k" ) HCOLON
+              [option-tag *(COMMA option-tag)]
+Timestamp  =  "Timestamp" HCOLON 1*(DIGIT)
+               [ "."

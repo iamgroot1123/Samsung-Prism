@@ -1,0 +1,11 @@
+Note that a user agent that receives a request containing an S/MIME
+   body that is not optional (with a Content-Disposition header
+   "handling" parameter of "required") MUST reject the request with a
+   415 Unsupported Media Type response if the MIME type is not
+   understood. A user agent that receives such a response when S/MIME
+   is sent SHOULD notify its user that the remote device does not
+   support S/MIME, and it MAY subsequently resend the request without
+   S/MIME, if appropriate; however, this 415 response may constitute a
+   downgrade attack. If a user agent sends an S/MIME body in a request, but receives a
+   response that contains a MIME body that is not secured, the UAC
+   SHOULD notify its user that the session could not be secured.

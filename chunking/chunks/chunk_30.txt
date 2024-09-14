@@ -1,0 +1,15 @@
+Cores, except for the stateless
+   proxy, are transaction users. While the behavior of the UAC and UAS
+   cores depends on the method, there are some common rules for all
+   methods (Section 8). For a UAC, these rules govern the construction
+   of a request; for a UAS, they govern the processing of a request and
+   generating a response. Since registrations play an important role in
+   SIP, a UAS that handles a REGISTER is given the special name
+   registrar. Section 10 describes UAC and UAS core behavior for the
+   REGISTER method. Section 11 describes UAC and UAS core behavior for
+   the OPTIONS method, used for determining the capabilities of a UA. Certain other requests are sent within a dialog. A dialog is a
+   peer-to-peer SIP relationship between two user agents that persists
+   for some time. The dialog facilitates sequencing of messages and
+   proper routing of requests between the user agents. The INVITE
+   method is the only way defined in this specification to establish a
+   dialog.

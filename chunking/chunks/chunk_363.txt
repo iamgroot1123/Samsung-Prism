@@ -1,0 +1,14 @@
+The
+   default  is  5060  for  sip: using UDP, TCP, or SCTP. The default is
+   5061 for sip: using TLS over TCP and sips: over TCP. (2): The default transport is scheme dependent. For sip:, it is UDP. For sips:, it is TCP. Table 1: Use and default values of URI components for SIP header
+   field values, Request-URI and references
+   SIP follows the requirements and guidelines of RFC 2396 [5] when
+   defining the set of characters that must be escaped in a SIP URI, and
+   uses its ""%" HEX HEX" mechanism for escaping. From RFC 2396 [5]:
+      The set of characters actually reserved within any given URI
+      component is defined by that component. In general, a character
+      is reserved if the semantics of the URI changes if the character
+      is replaced with its escaped US-ASCII encoding [5]. Excluded US-
+      ASCII characters (RFC 2396 [5]), such as space and control
+      characters and characters used as URI delimiters, also MUST be
+      escaped.

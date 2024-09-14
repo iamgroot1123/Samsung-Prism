@@ -1,0 +1,18 @@
+Priority: emergency
+   or
+      Subject: Weekend plans
+      Priority: non-urgent
+20.27 Proxy-Authenticate
+   A Proxy-Authenticate header field value contains an authentication
+   challenge. The use of this header field is defined in [H14.33]. See Section
+   22.3 for further details on its usage. Example:
+      Proxy-Authenticate: Digest realm="atlanta.com",
+       domain="sip:ss1.carrier.com", qop="auth",
+       nonce="f84f1cec41e6cbe5aea9c8e88d359",
+       opaque="", stale=FALSE, algorithm=MD5
+20.28 Proxy-Authorization
+   The Proxy-Authorization header field allows the client to identify
+   itself (or its user) to a proxy that requires authentication. A
+   Proxy-Authorization field value consists of credentials containing
+   the authentication information of the user agent for the proxy and/or
+   realm of the resource being requested. See Section 22.3 for a definition of the usage of this header field.

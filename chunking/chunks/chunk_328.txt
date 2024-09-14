@@ -1,0 +1,14 @@
+Therefore, the branch parameter
+   will be unique across all transactions sent by that client. The
+   request matches a transaction if:
+      1. the branch parameter in the request is equal to the one in the
+         top Via header field of the request that created the
+         transaction, and
+      2. the sent-by value in the top Via of the request is equal to the
+         one in the request that created the transaction, and
+      3. the method of the request matches the one that created the
+         transaction, except for ACK, where the method of the request
+         that created the transaction is INVITE. This matching rule applies to both INVITE and non-INVITE transactions
+   alike. The sent-by value is used as part of the matching process because
+      there could be accidental or malicious duplication of branch
+      parameters from different clients.

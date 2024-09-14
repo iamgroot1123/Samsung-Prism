@@ -1,0 +1,14 @@
+Add a Content-Length header field if necessary
+         If the request will be sent to the next hop using a stream-
+         based transport and the copy contains no Content-Length header
+         field, the proxy MUST insert one with the correct value for the
+         body of the request (see Section 20.14). 10. Forward Request
+         A stateful proxy MUST create a new client transaction for this
+         request as described in Section 17.1 and instructs the
+         transaction to send the request using the address, port and
+         transport determined in step 7. 11. Set timer C
+         In order to handle the case where an INVITE request never
+         generates a final response, the TU uses a timer which is called
+         timer C.  Timer C MUST be set for each client transaction when
+         an INVITE request is proxied. The timer MUST be larger than 3
+         minutes.

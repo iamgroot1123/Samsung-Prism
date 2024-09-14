@@ -1,0 +1,16 @@
+Example:
+      WWW-Authenticate: Digest realm="atlanta.com",
+        domain="sip:boxesbybob.com", qop="auth",
+        nonce="f84f1cec41e6cbe5aea9c8e88d359",
+        opaque="", stale=FALSE, algorithm=MD5
+21 Response Codes
+   The response codes are consistent with, and extend, HTTP/1.1 response
+   codes. Not all HTTP/1.1 response codes are appropriate, and only
+   those that are appropriate are given here. Other HTTP/1.1 response
+   codes SHOULD NOT be used. Also, SIP defines a new class, 6xx. 21.1 Provisional 1xx
+   Provisional responses, also known as informational responses,
+   indicate that the server contacted is performing some further action
+   and does not yet have a definitive response. A server sends a 1xx
+   response if it expects to take more than 200 ms to obtain a final
+   response. Note that 1xx responses are not transmitted reliably. They never cause the client to send an ACK. Provisional (1xx)
+   responses MAY contain message bodies, including session descriptions.

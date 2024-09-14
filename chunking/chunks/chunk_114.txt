@@ -1,0 +1,15 @@
+Because of this, it is most useful
+   to CANCEL requests to which it can take a server long time to
+   respond. For this reason, CANCEL is best for INVITE requests, which
+   can take a long time to generate a response. In that usage, a UAS
+   that receives a CANCEL request for an INVITE, but has not yet sent a
+   final response, would "stop ringing", and then respond to the INVITE
+   with a specific error response (a 487). CANCEL requests can be constructed and sent by both proxies and user
+   agent clients. Section 15 discusses under what conditions a UAC
+   would CANCEL an INVITE request, and Section 16.10 discusses proxy
+   usage of CANCEL. A stateful proxy responds to a CANCEL, rather than simply forwarding
+   a response it would receive from a downstream element. For that
+   reason, CANCEL is referred to as a "hop-by-hop" request, since it is
+   responded to at each stateful proxy hop. 9.1 Client Behavior
+   A CANCEL request SHOULD NOT be sent to cancel a request other than
+   INVITE.

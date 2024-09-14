@@ -1,0 +1,14 @@
+It then skips the remaining steps. Allowing the registrar to set the registration interval
+         protects it against excessively frequent registration refreshes
+         while limiting the state that it needs to maintain and
+         decreasing the likelihood of registrations going stale. The
+         expiration interval of a registration is frequently used in the
+         creation of services. An example is a follow-me service, where
+         the user may only be available at a terminal for a brief
+         period. Therefore, registrars should accept brief
+         registrations; a request should only be rejected if the
+         interval is so short that the refreshes would degrade registrar
+         performance. For each address, the registrar then searches the list of
+         current bindings using the URI comparison rules. If the
+         binding does not exist, it is tentatively added. If the
+         binding does exist, the registrar checks the Call-ID value.

@@ -1,0 +1,13 @@
+Determine Next-Hop Address, Port, and Transport
+         The proxy MAY have a local policy to send the request to a
+         specific IP address, port, and transport, independent of the
+         values of the Route and Request-URI. Such a policy MUST NOT be
+         used if the proxy is not certain that the IP address, port, and
+         transport correspond to a server that is a loose router. However, this mechanism for sending the request through a
+         specific next hop is NOT RECOMMENDED; instead a Route header
+         field should be used for that purpose as described above. In the absence of such an overriding mechanism, the proxy
+         applies the procedures listed in [4] as follows to determine
+         where to send the request. If the proxy has reformatted the
+         request to send to a strict-routing element as described in
+         step 6 above, the proxy MUST apply those procedures to the
+         Request-URI of the request.

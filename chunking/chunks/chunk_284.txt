@@ -1,0 +1,17 @@
+U1->P1->P2->P3->P4->U2
+   The INVITE arriving at U2 contains:
+      INVITE sip:callee@u2.domain.com SIP/2.0
+      Contact: sip:caller@u1.example.com
+      Record-Route: <sip:p4.domain.com;lr>
+      Record-Route: <sip:p3.middle.com>
+      Record-Route: <sip:p2.example.com;lr>
+      Record-Route: <sip:p1.example.com;lr>
+   Which U2 responds to with a 200 OK.  Later, U2 sends the following
+   BYE request to P4 based on the first Route header field value. BYE sip:caller@u1.example.com SIP/2.0
+      Route: <sip:p4.domain.com;lr>
+      Route: <sip:p3.middle.com>
+      Route: <sip:p2.example.com;lr>
+      Route: <sip:p1.example.com;lr>
+   P4 is not responsible for the resource indicated in the Request-URI
+   so it will leave it alone. It notices that it is the element in the
+   first Route header field value so it removes it.

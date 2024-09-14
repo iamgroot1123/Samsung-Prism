@@ -1,0 +1,14 @@
+Note that in some instances, header fields that have been
+   communicated in the contact address may instead append to existing
+   request header fields in the original redirected request. As a
+   general rule, if the header field can accept a comma-separated list
+   of values, then the new header field value MAY be appended to any
+   existing values in the original redirected request. If the header
+   field does not accept multiple values, the value in the original
+   redirected request MAY be overwritten by the header field value
+   communicated in the contact address. For example, if a contact
+   address is returned with the following value:
+      sip:user@host?Subject=foo&Call-Info=<http://www.foo.com>
+   Then any Subject header field in the original redirected request is
+   overwritten, but the HTTP URL is merely appended to any existing
+   Call-Info header field values.

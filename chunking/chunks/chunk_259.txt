@@ -1,0 +1,11 @@
+The forwarded response MUST be processed as described in steps
+         "Aggregate Authorization Header Field Values" through "Record-
+         Route". For example, if a proxy forwarded a request to 4 locations, and
+         received 503, 407, 501, and 404 responses, it may choose to
+         forward the 407 (Proxy Authentication Required) response. 1xx and 2xx responses may be involved in the establishment of
+         dialogs. When a request does not contain a To tag, the To tag
+         in the response is used by the UAC to distinguish multiple
+         responses to a dialog creating request. A proxy MUST NOT
+         insert a tag into the To header field of a 1xx or 2xx response
+         if the request did not contain one. A proxy MUST NOT modify
+         the tag in the To header field of a 1xx or 2xx response.

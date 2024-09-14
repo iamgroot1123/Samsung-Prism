@@ -1,0 +1,14 @@
+Also, if the
+   attacker is unable to learn the parameters of the session due to
+   confidentiality, it would not be possible to forge the BYE. However,
+   some intermediaries (like proxy servers) will need to inspect those
+   parameters as the session is established. 26.1.5 Denial of Service and Amplification
+   Denial-of-service attacks focus on rendering a particular network
+   element unavailable, usually by directing an excessive amount of
+   network traffic at its interfaces. A distributed denial-of-service
+   attack allows one network user to cause multiple network hosts to
+   flood a target host with a large amount of network traffic. In many architectures, SIP proxy servers face the public Internet in
+   order to accept requests from worldwide IP endpoints. SIP creates a
+   number of potential opportunities for distributed denial-of-service
+   attacks that must be recognized and addressed by the implementers and
+   operators of SIP systems.

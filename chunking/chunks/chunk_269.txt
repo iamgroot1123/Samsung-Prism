@@ -1,0 +1,12 @@
+Further, it is
+         reasonable to expect that a future extension may override this
+         requirement to issue CANCEL requests. 16.8 Processing Timer C
+   If timer C should fire, the proxy MUST either reset the timer with
+   any value it chooses, or terminate the client transaction. If the
+   client transaction has received a provisional response, the proxy
+   MUST generate a CANCEL request matching that transaction. If the
+   client transaction has not received a provisional response, the proxy
+   MUST behave as if the transaction received a 408 (Request Timeout)
+   response. Allowing the proxy to reset the timer allows the proxy to dynamically
+   extend the transaction’s lifetime based on current conditions (such
+   as utilization) when the timer fires.

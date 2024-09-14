@@ -1,0 +1,10 @@
+A proxy MUST NOT modify the To tag in any forwarded response to
+         a request that contains a To tag. While it makes no difference to the upstream elements if the
+         proxy replaced the To tag in a forwarded 3-6xx response,
+         preserving the original tag may assist with debugging. When the proxy is aggregating information from several
+         responses, choosing a To tag from among them is arbitrary, and
+         generating a new To tag may make debugging easier. This
+         happens, for instance, when combining 401 (Unauthorized) and
+         407 (Proxy Authentication Required) challenges, or combining
+         Contact values from unencrypted and unauthenticated 3xx
+         responses. 7.

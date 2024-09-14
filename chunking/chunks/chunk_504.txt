@@ -1,0 +1,11 @@
+comment  =  LPAREN *(ctext / quoted-pair / comment) RPAREN
+      ctext    =  %x21-27 / %x2A-5B / %x5D-7E / UTF8-NONASCII
+                  / LWS
+   ctext includes all chars except left and right parens and backslash. A string of text is parsed as a single word if it is quoted using
+   double-quote marks. In quoted strings, quotation marks (") and
+   backslashes (\) need to be escaped. quoted-string  =  SWS DQUOTE *(qdtext / quoted-pair ) DQUOTE
+      qdtext         =  LWS / %x21 / %x23-5B / %x5D-7E
+                        / UTF8-NONASCII
+   The backslash character ("\") MAY be used as a single-character
+   quoting mechanism only within quoted-string and comment constructs. Unlike HTTP/1.1, the characters CR and LF cannot be escaped by this
+   mechanism to avoid conflict with line folding and header separation.

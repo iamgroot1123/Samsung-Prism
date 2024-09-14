@@ -1,0 +1,14 @@
+Examples of communications resources include the following:
+      o  a user of an online service
+      o  an appearance on a multi-line phone
+      o  a mailbox on a messaging system
+      o  a PSTN number at a gateway service
+      o  a group (such as "sales" or "helpdesk") in an organization
+   A SIPS URI specifies that the resource be contacted securely. This
+   means, in particular, that TLS is to be used between the UAC and the
+   domain that owns the URI. From there, secure communications are used
+   to reach the user, where the specific security mechanism depends on
+   the policy of the domain. Any resource described by a SIP URI can be
+   "upgraded" to a SIPS URI by just changing the scheme, if it is
+   desired to communicate with that resource securely. 19.1.1 SIP and SIPS URI Components
+   The "sip:" and "sips:" schemes follow the guidelines in RFC 2396 [5].

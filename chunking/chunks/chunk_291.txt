@@ -1,0 +1,12 @@
+The transaction exists between the UA or stateful proxy on one side,
+   and the UA or stateful proxy on the other side. As far as SIP
+   transactions are concerned, stateless proxies are effectively
+   transparent. The purpose of the client transaction is to receive a
+   request from the element in which the client is embedded (call this
+   element the "Transaction User" or TU; it can be a UA or a stateful
+   proxy), and reliably deliver the request to a server transaction. The client transaction is also responsible for receiving responses
+   and delivering them to the TU, filtering out any response
+   retransmissions or disallowed responses (such as a response to ACK). Additionally, in the case of an INVITE request, the client
+   transaction is responsible for generating the ACK request for any
+   final response accepting a 2xx response. Similarly, the purpose of the server transaction is to receive
+   requests from the transport layer and deliver them to the TU.

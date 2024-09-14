@@ -1,0 +1,13 @@
+Furthermore, when handling a request statelessly,
+   an element MUST NOT generate its own 100 (Trying) or any other
+   provisional response. A stateless proxy MUST validate a request as described in Section
+   16.3
+   A stateless proxy MUST follow the request processing steps described
+   in Sections 16.4 through 16.5 with the following exception:
+      o  A stateless proxy MUST choose one and only one target from the
+         target set. This choice MUST only rely on fields in the
+         message and time-invariant properties of the server. In
+         particular, a retransmitted request MUST be forwarded to the
+         same destination each time it is processed. Furthermore,
+         CANCEL and non-Routed ACK requests MUST generate the same
+         choice as their associated INVITE.

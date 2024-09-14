@@ -1,0 +1,11 @@
+A request may arrive with a maddr matching the proxy, but on a
+      port or transport different from that indicated in the URI. Such
+      a request needs to be forwarded to the proxy using the indicated
+      port and transport. If the first value in the Route header field indicates this proxy,
+   the proxy MUST remove that value from the request. 16.5 Determining Request Targets
+   Next, the proxy calculates the target(s) of the request. The set of
+   targets will either be predetermined by the contents of the request
+   or will be obtained from an abstract location service. Each target
+   in the set is represented as a URI. If the Request-URI of the request contains an maddr parameter, the
+   Request-URI MUST be placed into the target set as the only target
+   URI, and the proxy MUST proceed to Section 16.6.

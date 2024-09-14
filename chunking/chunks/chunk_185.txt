@@ -1,0 +1,13 @@
+4xx,
+   5xx and 6xx responses may contain a Contact header field value
+   indicating the location where additional information about the error
+   can be found. Subsequent final responses (which would only arrive
+   under error conditions) MUST be ignored. All early dialogs are considered terminated upon reception of the
+   non-2xx final response. After having received the non-2xx final response the UAC core
+   considers the INVITE transaction completed. The INVITE client
+   transaction handles the generation of ACKs for the response (see
+   Section 17). 13.2.2.4 2xx Responses
+   Multiple 2xx responses may arrive at the UAC for a single INVITE
+   request due to a forking proxy. Each response is distinguished by
+   the tag parameter in the To header field, and each represents a
+   distinct dialog, with a distinct dialog identifier.

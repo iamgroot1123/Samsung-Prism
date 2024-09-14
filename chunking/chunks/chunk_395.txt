@@ -1,0 +1,14 @@
+The
+   value "alert" indicates that the body part contains information, such
+   as an audio clip, that should be rendered by the user agent in an
+   attempt to alert the user to the receipt of a request, generally a
+   request that initiates a dialog; this alerting body could for example
+   be rendered as a ring tone for a phone call after a 180 Ringing
+   provisional response has been sent. Any MIME body with a "disposition-type" that renders content to the
+   user should only be processed when a message has been properly
+   authenticated. The handling parameter, handling-param, describes how the UAS should
+   react if it receives a message body whose content type or disposition
+   type it does not understand. The parameter has defined values of
+   "optional" and "required". If the handling parameter is missing, the
+   value "required" SHOULD be assumed. The handling parameter is
+   described in RFC 3204 [19].

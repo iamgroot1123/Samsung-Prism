@@ -1,0 +1,14 @@
+This usually means at least 64*T1 (see Section 17.1.1.1 for a
+   definition of T1). However, it could be larger in an element that
+   has a TU using a large value for timer C (bullet 11 of Section 16.6),
+   for example. All SIP elements MUST implement UDP and TCP. SIP elements MAY
+   implement other protocols. Making TCP mandatory for the UA is a substantial change from RFC
+      2543. It has arisen out of the need to handle larger messages,
+      which MUST use TCP, as discussed below. Thus, even if an element
+      never sends large messages, it may receive one and needs to be
+      able to handle them. 18.1 Clients
+18.1.1 Sending Requests
+   The client side of the transport layer is responsible for sending the
+   request and receiving responses. The user of the transport layer
+   passes the client transport the request, an IP address, port,
+   transport, and possibly TTL for multicast destinations.

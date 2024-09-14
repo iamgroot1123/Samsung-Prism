@@ -1,0 +1,12 @@
+The procedures of Sections 8, 10, 11, 12, 13, 14, and 15 deal
+   entirely with the UA core (Section 9 describes cancellation, which
+   applies to both UA core and proxy core). Section 16 discusses the
+   proxy element, which facilitates routing of messages between user
+   agents. 6 Definitions
+   The following terms have special significance for SIP. Address-of-Record: An address-of-record (AOR) is a SIP or SIPS URI
+         that points to a domain with a location service that can map
+         the URI to another URI where the user might be available. Typically, the location service is populated through
+         registrations. An AOR is frequently thought of as the "public
+         address" of the user. Back-to-Back User Agent: A back-to-back user agent (B2BUA) is a
+         logical entity that receives a request and processes it as a
+         user agent server (UAS).

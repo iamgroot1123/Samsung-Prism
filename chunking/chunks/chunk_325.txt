@@ -1,0 +1,13 @@
+When this state is entered, timer I is set to fire in T4
+   seconds for unreliable transports, and zero seconds for reliable
+   transports. Once timer I fires, the server MUST transition to the
+   "Terminated" state. Once the transaction is in the "Terminated" state, it MUST be
+   destroyed immediately. As with client transactions, this is needed
+   to ensure reliability of the 2xx responses to INVITE. 17.2.2 Non-INVITE Server Transaction
+   The state machine for the non-INVITE server transaction is shown in
+   Figure 8. The state machine is initialized in the "Trying" state and is passed
+   a request other than INVITE or ACK when initialized. This request is
+   passed up to the TU. Once in the "Trying" state, any further request
+   retransmissions are discarded. A request is a retransmission if it
+   matches the same server transaction, using the rules specified in
+   Section 17.2.3.

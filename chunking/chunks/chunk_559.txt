@@ -1,0 +1,13 @@
+If self-
+   signed certificates (or certificates that cannot be verified by one
+   of the participants in a dialog) are used, the SIP-based key exchange
+   mechanism described in Section 23.2 is susceptible to a man-in-the-
+   middle attack with which an attacker can potentially inspect and
+   modify S/MIME bodies. The attacker needs to intercept the first
+   exchange of keys between the two parties in a dialog, remove the
+   existing CMS-detached signatures from the request and response, and
+   insert a different CMS-detached signature containing a certificate
+   supplied by the attacker (but which seems to be a certificate for the
+   proper address-of-record). Each party will think they have exchanged
+   keys with the other, when in fact each has the public key of the
+   attacker.

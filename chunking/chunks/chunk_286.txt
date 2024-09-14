@@ -1,0 +1,9 @@
+P1 notices itself in the topmost Route header field value, so it
+   removes it, resulting in:
+      BYE sip:caller@u1.example.com SIP/2.0
+   Since P1 is not responsible for u1.example.com and there is no Route
+   header field, P1 will forward the request to u1.example.com based on
+   the Request-URI. 16.12.1.3 Rewriting Record-Route Header Field Values
+   In this scenario, U1 and U2 are in different private namespaces and
+   they enter a dialog through a proxy P1, which acts as a gateway
+   between the namespaces.

@@ -1,0 +1,14 @@
+The
+         proxy MUST pass the response to the server transaction
+         associated with the response context. This will result in the
+         response being sent to the location now indicated in the
+         topmost Via header field value. If the server transaction is
+         no longer available to handle the transmission, the element
+         MUST forward the response statelessly by sending it to the
+         server transport. The server transaction might indicate
+         failure to send the response or signal a timeout in its state
+         machine. These errors would be logged for diagnostic purposes
+         as appropriate, but the protocol requires no remedial action
+         from the proxy. The proxy MUST maintain the response context until all of its
+         associated transactions have been terminated, even after
+         forwarding a final response. 10.

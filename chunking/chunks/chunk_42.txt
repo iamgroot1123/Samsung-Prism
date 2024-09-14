@@ -1,0 +1,12 @@
+Examples of servers are proxies, user agent servers,
+         redirect servers, and registrars. Sequential Search: In a sequential search, a proxy server attempts
+         each contact address in sequence, proceeding to the next one
+         only after the previous has generated a final response. A 2xx
+         or 6xx class final response always terminates a sequential
+         search. Session: From the SDP specification: "A multimedia session is a
+         set of multimedia senders and receivers and the data streams
+         flowing from senders to receivers. A multimedia conference is
+         an example of a multimedia session." (RFC 2327 [1]) (A session
+         as defined for SDP can comprise one or more RTP sessions.) As
+         defined, a callee can be invited several times, by different
+         calls, to the same session.

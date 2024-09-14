@@ -1,0 +1,14 @@
+A UAS core receiving a BYE request for an existing dialog MUST follow
+   the procedures of Section 12.2.2 to process the request. Once done,
+   the UAS SHOULD terminate the session (and therefore stop sending and
+   listening for media). The only case where it can elect not to are
+   multicast sessions, where participation is possible even if the other
+   participant in the dialog has terminated its involvement in the
+   session. Whether or not it ends its participation on the session,
+   the UAS core MUST generate a 2xx response to the BYE, and MUST pass
+   that to the server transaction for transmission. The UAS MUST still respond to any pending requests received for that
+   dialog. It is RECOMMENDED that a 487 (Request Terminated) response
+   be generated to those pending requests. 16 Proxy Behavior
+16.1 Overview
+   SIP proxies are elements that route SIP requests to user agent
+   servers and SIP responses to user agent clients.

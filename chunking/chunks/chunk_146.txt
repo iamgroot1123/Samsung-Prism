@@ -1,0 +1,12 @@
+If any one of them fails (for
+         example, because the back-end database commit failed), the
+         request MUST fail with a 500 (Server Error) response and all
+         tentative binding updates MUST be removed. 8. The registrar returns a 200 (OK) response. The response MUST
+         contain Contact header field values enumerating all current
+         bindings. Each Contact value MUST feature an "expires"
+         parameter indicating its expiration interval chosen by the
+         registrar. The response SHOULD include a Date header field. 11 Querying for Capabilities
+   The SIP method OPTIONS allows a UA to query another UA or a proxy
+   server as to its capabilities. This allows a client to discover
+   information about the supported methods, content types, extensions,
+   codecs, etc. without "ringing" the other party.

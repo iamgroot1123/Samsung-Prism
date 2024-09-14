@@ -1,0 +1,45 @@
+|Request received
+                                  |pass to TU
+                                  V
+                            +-----------+
+                            |           |
+                            | Trying    |-------------+
+                            |           |             |
+                            +-----------+             |200-699 from TU
+                                  |                   |send response
+                                  |1xx from TU        |
+                                  |send response      |
+                                  |                   |
+               Request            V      1xx from TU  |
+               send response+-----------+send response|
+                   +--------|           |--------+    |
+                   |        | Proceeding|        |    |
+                   +------->|           |<-------+    |
+            +<--------------|           |             |
+            |Trnsprt Err    +-----------+             |
+            |Inform TU            |                   |
+            |                     |                   |
+            |                     |200-699 from TU    |
+            |                     |send response      |
+            |  Request            V                   |
+            |  send response+-----------+             |
+            |      +--------|           |             |
+            |      |        | Completed |<------------+
+            |      +------->|           |
+            +<--------------|           |
+            |Trnsprt Err    +-----------+
+            |Inform TU            |
+            |                     |Timer J fires
+            |                     |-
+            |                     |
+            |                     V
+            |               +-----------+
+            |               |           |
+            +-------------->| Terminated|
+                            |           |
+                            +-----------+
+                Figure 8: non-INVITE server transaction
+   For all other request methods, a request is matched to a transaction
+   if the Request-URI, To tag, From tag, Call-ID, CSeq (including the
+   method), and top Via header field match those of the request that
+   created the transaction.

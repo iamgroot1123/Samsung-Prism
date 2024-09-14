@@ -1,0 +1,13 @@
+If there is no
+   final response for the original request in 64*T1 seconds (T1 is    defined in Section 17.1.1.1), the client SHOULD then consider the
+   original transaction cancelled and SHOULD destroy the client
+   transaction handling the original request. 9.2 Server Behavior
+   The CANCEL method requests that the TU at the server side cancel a
+   pending transaction. The TU determines the transaction to be
+   cancelled by taking the CANCEL request, and then assuming that the
+   request method is anything but CANCEL or ACK and applying the
+   transaction matching procedures of Section 17.2.3. The matching
+   transaction is the one to be cancelled. The processing of a CANCEL request at a server depends on the type of
+   server. A stateless proxy will forward it, a stateful proxy might
+   respond to it and generate some CANCEL requests of its own, and a UAS
+   will respond to it. See Section 16.10 for proxy treatment of CANCEL.

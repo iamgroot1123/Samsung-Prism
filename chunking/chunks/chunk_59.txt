@@ -1,0 +1,22 @@
+The following groups of header field rows are valid and equivalent:
+      Route: <sip:alice@atlanta.com>
+      Subject: Lunch
+      Route: <sip:bob@biloxi.com>
+      Route: <sip:carol@chicago.com>
+      Route: <sip:alice@atlanta.com>, <sip:bob@biloxi.com>
+      Route: <sip:carol@chicago.com>
+      Subject: Lunch
+      Subject: Lunch
+      Route: <sip:alice@atlanta.com>, <sip:bob@biloxi.com>,
+             <sip:carol@chicago.com>
+   Each of the following blocks is valid but not equivalent to the
+   others:
+      Route: <sip:alice@atlanta.com>
+      Route: <sip:bob@biloxi.com>
+      Route: <sip:carol@chicago.com>
+      Route: <sip:bob@biloxi.com>
+      Route: <sip:alice@atlanta.com>
+      Route: <sip:carol@chicago.com>
+      Route: <sip:alice@atlanta.com>,<sip:carol@chicago.com>,
+             <sip:bob@biloxi.com>
+   The format of a header field-value is defined per header-name.

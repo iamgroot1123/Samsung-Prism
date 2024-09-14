@@ -1,0 +1,11 @@
+A dialog ID is also associated with all responses and with any
+   request that contains a tag in the To field. The rules for computing
+   the dialog ID of a message depend on whether the SIP element is a UAC
+   or UAS. For a UAC, the Call-ID value of the dialog ID is set to the
+   Call-ID of the message, the remote tag is set to the tag in the To
+   field of the message, and the local tag is set to the tag in the From    field of the message (these rules apply to both requests and
+   responses). As one would expect for a UAS, the Call-ID value of the
+   dialog ID is set to the Call-ID of the message, the remote tag is set
+   to the tag in the From field of the message, and the local tag is set
+   to the tag in the To field of the message. A dialog contains certain pieces of state needed for further message
+   transmissions within the dialog.

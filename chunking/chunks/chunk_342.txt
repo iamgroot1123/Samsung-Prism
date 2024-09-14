@@ -1,0 +1,15 @@
+If there is a
+   match, the response MUST be passed to that transaction. Otherwise,
+   the response MUST be passed to the core (whether it be stateless
+   proxy, stateful proxy, or UA) for further processing. Handling of
+   these "stray" responses is dependent on the core (a proxy will
+   forward them, while a UA will discard, for example). 18.2 Servers
+18.2.1 Receiving Requests
+   A server SHOULD be prepared to receive requests on any IP address,
+   port and transport combination that can be the result of a DNS lookup
+   on a SIP or SIPS URI [4] that is handed out for the purposes of
+   communicating with that server. In this context, "handing out"
+   includes placing a URI in a Contact header field in a REGISTER
+   request or a redirect response, or in a Record-Route header field in
+   a request or response. A URI can also be "handed out" by placing it
+   on a web page or business card.

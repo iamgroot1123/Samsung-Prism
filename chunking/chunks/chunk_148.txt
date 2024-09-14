@@ -1,0 +1,11 @@
+This behavior can be used
+      as a "traceroute" functionality to check the capabilities of
+      individual hop servers by sending a series of OPTIONS requests
+      with incremented Max-Forwards values. As is the case for general UA behavior, the transaction layer can
+   return a timeout error if the OPTIONS yields no response. This may
+   indicate that the target is unreachable and hence unavailable. An OPTIONS request MAY be sent as part of an established dialog to
+   query the peer on capabilities that may be utilized later in the
+   dialog. 11.1 Construction of OPTIONS Request
+   An OPTIONS request is constructed using the standard rules for a SIP
+   request as discussed in Section 8.1.1. A Contact header field MAY be present in an OPTIONS. An Accept header field SHOULD be included to indicate the type of
+   message body the UAC wishes to receive in the response.

@@ -1,0 +1,18 @@
+(All components of a tel URL except for future-
+   extension parameters are defined to be compared case-insensitive.) Following this suggestion, both
+      tel:+358-555-1234567;postd=pp22
+      tel:+358-555-1234567;POSTD=PP22
+      become
+        sip:+358-555-1234567;postd=pp22@foo.com;user=phone
+   and both
+        tel:+358-555-1234567;tsp=a.b;phone-context=5
+        tel:+358-555-1234567;phone-context=5;tsp=a.b
+      become
+        sip:+358-555-1234567;phone-context=5;tsp=a.b@foo.com;user=phone
+19.2 Option Tags
+   Option tags are unique identifiers used to designate new options
+   (extensions) in SIP. These tags are used in Require (Section 20.32),
+   Proxy-Require (Section 20.29), Supported (Section 20.37) and
+   Unsupported (Section 20.40) header fields. Note that these options
+   appear as parameters in those header fields in an option-tag = token
+   form (see Section 25 for the definition of token). Option tags are defined in standards track RFCs.

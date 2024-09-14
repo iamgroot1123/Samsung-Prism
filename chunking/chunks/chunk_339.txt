@@ -1,0 +1,14 @@
+Before a request is sent, the client transport MUST insert a value of
+   the "sent-by" field into the Via header field. This field contains
+   an IP address or host name, and port. The usage of an FQDN is
+   RECOMMENDED. This field is used for sending responses under certain
+   conditions, described below. If the port is absent, the default
+   value depends on the transport. It is 5060 for UDP, TCP and SCTP,
+   5061 for TLS. For reliable transports, the response is normally sent on the
+   connection on which the request was received. Therefore, the client
+   transport MUST be prepared to receive the response on the same
+   connection used to send the request. Under error conditions, the
+   server may attempt to open a new connection to send the response. To
+   handle this case, the transport layer MUST also be prepared to
+   receive an incoming connection on the source IP address from which
+   the request was sent and port number in the "sent-by" field.

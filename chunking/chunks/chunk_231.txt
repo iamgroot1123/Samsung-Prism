@@ -1,0 +1,13 @@
+The proxy MUST NOT reorder field values with a common field
+         name (See Section 7.3.1). The proxy MUST NOT add to, modify,
+         or remove the message body. An actual implementation need not perform a copy; the primary
+         requirement is that the processing for each next hop begin with
+         the same request. 2. Request-URI
+         The Request-URI in the copy’s start line MUST be replaced with
+         the URI for this target. If the URI contains any parameters
+         not allowed in a Request-URI, they MUST be removed. This is the essence of a proxy’s role. This is the mechanism
+         through which a proxy routes a request toward its destination. In some circumstances, the received Request-URI is placed into
+         the target set without being modified. For that target, the
+         replacement above is effectively a no-op. 3. Max-Forwards
+         If the copy contains a Max-Forwards header field, the proxy
+         MUST decrement its value by one (1).

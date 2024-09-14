@@ -1,0 +1,14 @@
+An attacker preying on this architecture would, for example, be
+      unable to forge a BYE request and insert it into the signaling
+      stream between Bob and Alice because the attacker has no way of
+      ascertaining the parameters of the session and also because the
+      integrity mechanism transitively protects the traffic between
+      Alice and Bob. 26.3.2.3 Peer-to-Peer Requests
+   Alternatively, consider a UA asserting the identity
+   "carol@chicago.com" that has no local outbound proxy. When Carol
+   wishes to send an INVITE to "bob@biloxi.com", her UA SHOULD initiate
+   a TLS connection with the biloxi proxy directly (using the mechanism
+   described in [4] to determine how to best to reach the given
+   Request-URI). When her UA receives a certificate from the biloxi
+   proxy, it SHOULD be verified normally before she passes her INVITE
+   across the TLS connection.

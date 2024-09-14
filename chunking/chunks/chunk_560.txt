@@ -1,0 +1,13 @@
+It is important to note that the attacker can only leverage this
+   vulnerability on the first exchange of keys between two parties - on
+   subsequent occasions, the alteration of the key would be noticeable
+   to the UAs. It would also be difficult for the attacker to remain in
+   the path of all future dialogs between the two parties over time (as
+   potentially days, weeks, or years pass). SSH is susceptible to the same man-in-the-middle attack on the first
+   exchange of keys; however, it is widely acknowledged that while SSH
+   is not perfect, it does improve the security of connections. The use
+   of key fingerprints could provide some assistance to SIP, just as it
+   does for SSH. For example, if two parties use SIP to establish a
+   voice communications session, each could read off the fingerprint of
+   the key they received from the other, which could be compared against
+   the original.

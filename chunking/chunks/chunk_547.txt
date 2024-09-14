@@ -1,0 +1,13 @@
+Assuming that the client has completed the registration    process described in the preceding section, it SHOULD reuse the TLS
+   connection to the local proxy server when it sends an INVITE request
+   to another user. The UA SHOULD reuse cached credentials in the
+   INVITE to avoid prompting the user unnecessarily. When the local outbound proxy server has validated the credentials
+   presented by the UA in the INVITE, it SHOULD inspect the Request-URI
+   to determine how the message should be routed (see [4]). If the
+   "domainname" portion of the Request-URI had corresponded to the local
+   domain (atlanta.com) rather than biloxi.com, then the proxy server
+   would have consulted its location service to determine how best to
+   reach the requested user. Had "alice@atlanta.com" been attempting to contact, say,
+      "alex@atlanta.com", the local proxy would have proxied to the
+      request to the TLS connection Alex had established with the
+      registrar when he registered.

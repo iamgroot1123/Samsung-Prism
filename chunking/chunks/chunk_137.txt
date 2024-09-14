@@ -1,0 +1,14 @@
+10.2.7 Transmitting a Request
+   Once the REGISTER method has been constructed, and the destination of
+   the message identified, UACs follow the procedures described in
+   Section 8.1.2 to hand off the REGISTER to the transaction layer. If the transaction layer returns a timeout error because the REGISTER
+   yielded no response, the UAC SHOULD NOT immediately re-attempt a
+   registration to the same registrar. An immediate re-attempt is likely to also timeout. Waiting some
+      reasonable time interval for the conditions causing the timeout to
+      be corrected reduces unnecessary load on the network. No specific
+      interval is mandated. 10.2.8 Error Responses
+   If a UA receives a 423 (Interval Too Brief) response, it MAY retry
+   the registration after making the expiration interval of all contact
+   addresses in the REGISTER request equal to or greater than the
+   expiration interval within the Min-Expires header field of the 423
+   (Interval Too Brief) response.

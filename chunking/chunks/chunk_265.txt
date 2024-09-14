@@ -1,0 +1,14 @@
+The rules above recommend that a proxy
+         wishing to rewrite Record-Route header field values insert
+         sufficiently distinct URIs into the Record-Route header field
+         so that the right one may be selected for rewriting. A
+         RECOMMENDED mechanism to achieve this is for the proxy to
+         append a unique identifier for the proxy instance to the user
+         portion of the URI. When the response arrives, the proxy modifies the first
+         Record-Route whose identifier matches the proxy instance. The
+         modification results in a URI without this piece of data
+         appended to the user portion of the URI. Upon the next
+         iteration, the same algorithm (find the topmost Record-Route
+         header field value with the parameter) will correctly extract
+         the next Record-Route header field value inserted by that
+         proxy.

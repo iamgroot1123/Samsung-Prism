@@ -1,0 +1,13 @@
+When used as the Request-URI of a
+   request, the SIPS scheme signifies that each hop over which the
+   request is forwarded, until the request reaches the SIP entity
+   responsible for the domain portion of the Request-URI, must be
+   secured with TLS; once it reaches the domain in question it is
+   handled in accordance with local security and routing policy, quite
+   possibly using TLS for any last hop to a UAS. When used by the
+   originator of a request (as would be the case if they employed a SIPS
+   URI as the address-of-record of the target), SIPS dictates that the
+   entire request path to the target domain be so secured. The SIPS scheme is applicable to many of the other ways in which SIP
+   URIs are used in SIP today in addition to the Request-URI, including
+   in addresses-of-record, contact addresses (the contents of Contact
+   headers, including those of REGISTER methods), and Route headers.

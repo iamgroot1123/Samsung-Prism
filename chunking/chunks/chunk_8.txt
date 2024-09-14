@@ -1,0 +1,13 @@
+Alice might have typed in Bob’s URI or perhaps clicked on a hyperlink
+   or an entry in an address book. SIP also provides a secure URI,
+   called a SIPS URI. An example would be sips:bob@biloxi.com. A call
+   made to a SIPS URI guarantees that secure, encrypted transport
+   (namely TLS) is used to carry all SIP messages from the caller to the
+   domain of the callee. From there, the request is sent securely to
+   the callee, but with security mechanisms that depend on the policy of
+   the domain of the callee. SIP is based on an HTTP-like request/response transaction model. Each transaction consists of a request that invokes a particular
+   method, or function, on the server and at least one response. In
+   this example, the transaction begins with Alice’s softphone sending
+   an INVITE request addressed to Bob’s SIP URI. INVITE is an example
+   of a SIP method that specifies the action that the requestor (Alice)
+   wants the server (Bob) to take.

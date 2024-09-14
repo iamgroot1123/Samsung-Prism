@@ -1,0 +1,15 @@
+This status response is appropriate if the callee can be reached
+      at several different locations and the server cannot or prefers
+      not to proxy the request. 21.3.2 301 Moved Permanently
+   The user can no longer be found at the address in the Request-URI,
+   and the requesting client SHOULD retry at the new address given by
+   the Contact header field (Section 20.10). The requestor SHOULD
+   update any local directories, address books, and user location caches
+   with this new value and redirect future requests to the address(es)
+   listed. 21.3.3 302 Moved Temporarily
+   The requesting client SHOULD retry the request at the new address(es)
+   given by the Contact header field (Section 20.10). The Request-URI
+   of the new request uses the value of the Contact header field in the
+   response. The duration of the validity of the Contact URI can be indicated
+   through an Expires (Section 20.19) header field or an expires
+   parameter in the Contact header field.

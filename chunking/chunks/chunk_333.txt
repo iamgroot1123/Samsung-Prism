@@ -1,0 +1,14 @@
+18 Transport
+   The transport layer is responsible for the actual transmission of
+   requests and responses over network transports. This includes
+   determination of the connection to use for a request or response in
+   the case of connection-oriented transports. The transport layer is responsible for managing persistent
+   connections for transport protocols like TCP and SCTP, or TLS over
+   those, including ones opened to the transport layer. This includes
+   connections opened by the client or server transports, so that
+   connections are shared between client and server transport functions. These connections are indexed by the tuple formed from the address,
+   port, and transport protocol at the far end of the connection. When
+   a connection is opened by the transport layer, this index is set to
+   the destination IP, port and transport. When the connection is
+   accepted by the transport layer, this index is set to the source IP
+   address, port number, and transport.

@@ -1,0 +1,14 @@
+The BYE request is
+   used to terminate a specific session or attempted session. In this
+   case, the specific session is the one with the peer UA on the other
+   side of the dialog. When a BYE is received on a dialog, any session
+   associated with that dialog SHOULD terminate. A UA MUST NOT send a
+   BYE outside of a dialog. The caller’s UA MAY send a BYE for either
+   confirmed or early dialogs, and the callee’s UA MAY send a BYE on
+   confirmed dialogs, but MUST NOT send a BYE on early dialogs. However, the callee’s UA MUST NOT send a BYE on a confirmed dialog
+   until it has received an ACK for its 2xx response or until the server
+   transaction times out. If no SIP extensions have defined other
+   application layer states associated with the dialog, the BYE also
+   terminates the dialog. The impact of a non-2xx final response to INVITE on dialogs and
+   sessions makes the use of CANCEL attractive. The CANCEL attempts to
+   force a non-2xx response to the INVITE (in particular, a 487).

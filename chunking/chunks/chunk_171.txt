@@ -1,0 +1,14 @@
+If the
+   request has a tag in the To header field, the UAS core computes the
+   dialog identifier corresponding to the request and compares it with
+   existing dialogs. If there is a match, this is a mid-dialog request. In that case, the UAS first applies the same processing rules for
+   requests outside of a dialog, discussed in Section 8.2. If the request has a tag in the To header field, but the dialog
+   identifier does not match any existing dialogs, the UAS may have
+   crashed and restarted, or it may have received a request for a
+   different (possibly failed) UAS (the UASs can construct the To tags
+   so that a UAS can identify that the tag was for a UAS for which it is
+   providing recovery). Another possibility is that the incoming
+   request has been simply misrouted. Based on the To tag, the UAS MAY
+   either accept or reject the request. Accepting the request for
+   acceptable To tags provides robustness, so that dialogs can persist
+   even through crashes.

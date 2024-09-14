@@ -1,0 +1,11 @@
+It first performs the request processing procedures of Section 8.2,
+   which are applied for both requests inside and outside of a dialog. Assuming these processing states are completed without generating a
+   response, the UAS core performs the additional processing steps:
+      1. If the request is an INVITE that contains an Expires header
+         field, the UAS core sets a timer for the number of seconds
+         indicated in the header field value. When the timer fires, the
+         invitation is considered to be expired. If the invitation
+         expires before the UAS has generated a final response, a 487
+         (Request Terminated) response SHOULD be generated. 2. If the request is a mid-dialog request, the method-independent
+         processing described in Section 12.2.2 is first applied. It
+         might also modify the session; Section 14 provides details. 3.

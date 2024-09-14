@@ -1,0 +1,15 @@
+Note that since many UAs will not accept
+   incoming TLS connections, even those UAs that do support TLS may be
+   required to maintain persistent TLS connections as described in the
+   TLS limitations section above in order to receive requests over TLS
+   as a UAS. Location services are not required to provide a SIPS binding for a
+   SIPS Request-URI. Although location services are commonly populated
+   by user registrations (as described in Section 10.2.1), various other
+   protocols and interfaces could conceivably supply contact addresses
+   for an AOR, and these tools are free to map SIPS URIs to SIP URIs as
+   appropriate. When queried for bindings, a location service returns
+   its contact addresses without regard for whether it received a
+   request with a SIPS Request-URI. If a redirect server is accessing
+   the location service, it is up to the entity that processes the
+   Contact header field of a redirection to determine the propriety of
+   the contact addresses.

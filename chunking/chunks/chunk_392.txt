@@ -1,0 +1,9 @@
+Even if the "display-name" is empty, the "name-addr" form MUST be
+   used if the "addr-spec" contains a comma, semicolon, or question
+   mark. There may or may not be LWS between the display-name and the
+   "<". These rules for parsing a display name, URI and URI parameters, and
+   header parameters also apply for the header fields To and From. The Contact header field has a role similar to the Location header
+      field in HTTP. However, the HTTP header field only allows one
+      address, unquoted. Since URIs can contain commas and semicolons
+      as reserved characters, they can be mistaken for header or
+      parameter delimiters, respectively. The compact form of the Contact header field is m (for "moved").

@@ -1,0 +1,14 @@
+When Alice’s softphone receives the 180 (Ringing) response, it passes
+   this information to Alice, perhaps using an audio ringback tone or by
+   displaying a message on Alice’s screen. In this example, Bob decides to answer the call. When he picks up
+   the handset, his SIP phone sends a 200 (OK) response to indicate that
+   the call has been answered. The 200 (OK) contains a message body
+   with the SDP media description of the type of session that Bob is
+   willing to establish with Alice. As a result, there is a two-phase
+   exchange of SDP messages: Alice sent one to Bob, and Bob sent one
+   back to Alice. This two-phase exchange provides basic negotiation
+   capabilities and is based on a simple offer/answer model of SDP
+   exchange. If Bob did not wish to answer the call or was busy on
+   another call, an error response would have been sent instead of the
+   200 (OK), which would have resulted in no media session being
+   established.

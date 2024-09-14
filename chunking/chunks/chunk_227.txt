@@ -1,0 +1,12 @@
+If the proxy is not
+      responsible for that URI, it will not recurse on 3xx or 416
+      responses as described below. If the Request-URI of the original request indicates a resource this
+   proxy is responsible for, the proxy MAY continue to add targets to
+   the set after beginning Request Forwarding. It MAY use any
+   information obtained during that processing to determine new targets. For instance, a proxy may choose to incorporate contacts obtained in
+   a redirect response (3xx) into the target set. If a proxy uses a
+   dynamic source of information while building the target set (for
+   instance, if it consults a SIP Registrar), it SHOULD monitor that
+   source for the duration of processing the request. New locations
+   SHOULD be added to the target set as they become available. As
+   above, any given URI MUST NOT be added to the set more than once.

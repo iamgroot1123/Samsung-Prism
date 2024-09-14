@@ -1,0 +1,19 @@
+If no body is present in a message, then the
+   Content-Length header field value MUST be set to zero. The ability to omit Content-Length simplifies the creation of
+      cgi-like scripts that dynamically generate responses. The compact form of the header field is l.
+   Examples:
+      Content-Length: 349
+      l: 173
+20.15 Content-Type
+   The Content-Type header field indicates the media type of the
+   message-body sent to the recipient. The "media-type" element is
+   defined in [H3.7]. The Content-Type header field MUST be present if
+   the body is not empty. If the body is empty, and a Content-Type
+   header field is present, it indicates that the body of the specific
+   type has zero length (for example, an empty audio file). The compact form of the header field is c.
+   Examples:
+      Content-Type: application/sdp
+      c: text/html; charset=ISO-8859-4
+20.16 CSeq
+   A CSeq header field in a request contains a single decimal sequence
+   number and the request method.

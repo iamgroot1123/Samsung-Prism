@@ -1,0 +1,13 @@
+For the callee’s UA, it would typically imply a BYE;
+      presumably, when the user picked up the phone, a 2xx was
+      generated, and so hanging up would result in a BYE after the ACK
+      is received. This does not mean a user cannot hang up before
+      receipt of the ACK, it just means that the software in his phone
+      needs to maintain state for a short while in order to clean up
+      properly. If the particular UI allows for the user to reject a
+      call before its answered, a 403 (Forbidden) is a good way to
+      express that. As per the rules above, a BYE can’t be sent. 15.1 Terminating a Session with a BYE Request
+15.1.1 UAC Behavior
+   A BYE request is constructed as would any other request within a
+   dialog, as described in Section 12. Once the BYE is constructed, the UAC core creates a new non-INVITE
+   client transaction, and passes it the BYE request.

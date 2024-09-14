@@ -1,0 +1,14 @@
+The response code
+   chosen MUST be the same that would have been chosen had the request
+   been an INVITE. That is, a 200 (OK) would be returned if the UAS is
+   ready to accept a call, a 486 (Busy Here) would be returned if the
+   UAS is busy, etc. This allows an OPTIONS request to be used to
+   determine the basic state of a UAS, which can be an indication of
+   whether the UAS will accept an INVITE request. An OPTIONS request received within a dialog generates a 200 (OK)
+   response that is identical to one constructed outside a dialog and
+   does not have any impact on the dialog. This use of OPTIONS has limitations due to the differences in proxy
+   handling of OPTIONS and INVITE requests. While a forked INVITE can
+   result in multiple 200 (OK) responses being returned, a forked
+   OPTIONS will only result in a single 200 (OK) response, since it is
+   treated by proxies using the non-INVITE handling. See Section 16.7
+   for the normative details.

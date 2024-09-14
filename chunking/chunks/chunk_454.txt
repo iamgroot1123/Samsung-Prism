@@ -1,0 +1,14 @@
+If no credentials (in the Proxy-Authorization header
+   field) are provided in the request, the proxy can challenge the
+   originator to provide credentials by rejecting the request with a 407
+   (Proxy Authentication Required) status code. The proxy MUST populate
+   the 407 (Proxy Authentication Required) message with a Proxy-
+   Authenticate header field value applicable to the proxy for the
+   requested resource. The use of Proxy-Authenticate and Proxy-Authorization parallel that
+   described in [17], with one difference. Proxies MUST NOT add values
+   to the Proxy-Authorization header field. All 407 (Proxy
+   Authentication Required) responses MUST be forwarded upstream toward
+   the UAC following the procedures for any other response. It is the
+   UAC’s responsibility to add the Proxy-Authorization header field
+   value containing credentials for the realm of the proxy that has
+   asked for authentication.

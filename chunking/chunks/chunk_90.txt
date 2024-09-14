@@ -1,0 +1,12 @@
+Note
+   that some response codes (detailed in 8.1.3.5) indicate that the
+   request can be retried; requests that are reattempted should not be
+   considered failures. When a failure for a particular contact address is received, the
+   client SHOULD try the next contact address. This will involve
+   creating a new client transaction to deliver a new request. In order to create a request based on a contact address in a 3xx
+   response, a UAC MUST copy the entire URI from the target set into the
+   Request-URI, except for the "method-param" and "header" URI
+   parameters (see Section 19.1.1 for a definition of these parameters). It uses the "header" parameters to create header field values for the
+   new request, overwriting header field values associated with the
+   redirected request in accordance with the guidelines in Section
+   19.1.5.

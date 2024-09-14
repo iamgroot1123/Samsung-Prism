@@ -1,0 +1,12 @@
+It also allows elements following this
+      specification to preserve the Request-URI through strict-routing
+      proxies (see Section 12.2.1.1). This requirement does not obligate a proxy to keep state in order
+      to detect URIs it previously placed in Record-Route header fields. Instead, a proxy need only place enough information in those URIs
+      to recognize them as values it provided when they later appear. If the Request-URI contains a maddr parameter, the proxy MUST check
+   to see if its value is in the set of addresses or domains the proxy
+   is configured to be responsible for. If the Request-URI has a maddr
+   parameter with a value the proxy is responsible for, and the request
+   was received using the port and transport indicated (explicitly or by
+   default) in the Request-URI, the proxy MUST strip the maddr and any
+   non-default port or transport parameter and continue processing as if
+   those values had not been present in the request.

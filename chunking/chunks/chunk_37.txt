@@ -1,0 +1,13 @@
+Location Service: A location service is used by a SIP redirect or
+         proxy server to obtain information about a callee’s possible
+         location(s). It contains a list of bindings of address-of-
+         record keys to zero or more contact addresses. The bindings
+         can be created and removed in many ways; this specification
+         defines a REGISTER method that updates the bindings. Loop: A request that arrives at a proxy, is forwarded, and later
+         arrives back at the same proxy. When it arrives the second
+         time, its Request-URI is identical to the first time, and other
+         header fields that affect proxy operation are unchanged, so
+         that the proxy would make the same processing decision on the
+         request it made the first time. Looped requests are errors,
+         and the procedures for detecting them and handling them are
+         described by the protocol.

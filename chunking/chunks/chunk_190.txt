@@ -1,0 +1,12 @@
+If the request has a tag in the To header field but the dialog
+         identifier does not match any of the existing dialogs, the UAS
+         may have crashed and restarted, or may have received a request
+         for a different (possibly failed) UAS. Section 12.2.2 provides
+         guidelines to achieve a robust behavior under such a situation. Processing from here forward assumes that the INVITE is outside of a
+   dialog, and is thus for the purposes of establishing a new session. The INVITE may contain a session description, in which case the UAS
+   is being presented with an offer for that session. It is possible
+   that the user is already a participant in that session, even though
+   the INVITE is outside of a dialog. This can happen when a user is
+   invited to the same multicast conference by multiple other
+   participants. If desired, the UAS MAY use identifiers within the
+   session description to detect this duplication.

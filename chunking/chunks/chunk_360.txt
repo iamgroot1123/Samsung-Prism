@@ -1,0 +1,12 @@
+The external column describes
+   URIs appearing anywhere outside of a SIP message, for instance on a
+   web page or business card. Entries marked "m" are mandatory, those
+   marked "o" are optional, and those marked "-" are not allowed. Elements processing URIs SHOULD ignore any disallowed components if
+   they are present. The second column indicates the default value of
+   an optional element if it is not present.  " --" indicates that the
+   element is either not optional, or has no default value. URIs in Contact header fields have different restrictions depending
+   on the context in which the header field appears. One set applies to
+   messages that establish and maintain dialogs (INVITE and its 200 (OK)
+   response). The other applies to registration and redirection
+   messages (REGISTER, its 200 (OK) response, and 3xx class responses to
+   any method).

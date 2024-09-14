@@ -1,0 +1,14 @@
+If a user wants to initiate a
+   session with another user, SIP must discover the current host(s) at
+   which the destination user is reachable. This discovery process is
+   frequently accomplished by SIP network elements such as proxy servers
+   and redirect servers which are responsible for receiving a request,
+   determining where to send it based on knowledge of the location of
+   the user, and then sending it there. To do this, SIP network
+   elements consult an abstract service known as a location service,
+   which provides address bindings for a particular domain. These
+   address bindings map an incoming SIP or SIPS URI, sip:bob@biloxi.com,
+   for example, to one or more URIs that are somehow "closer" to the
+   desired user, sip:bob@engineering.biloxi.com, for example. Ultimately, a proxy will consult a location service that maps a
+   received URI to the user agent(s) at which the desired recipient is
+   currently residing.

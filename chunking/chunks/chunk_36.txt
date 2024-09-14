@@ -1,0 +1,10 @@
+Header Field Value: A header field value is a single value; a
+         header field consists of zero or more header field values. Home Domain: The domain providing service to a SIP user. Typically, this is the domain present in the URI in the
+         address-of-record of a registration. Informational Response: Same as a provisional response. Initiator, Calling Party, Caller: The party initiating a session
+         (and dialog) with an INVITE request. A caller retains this
+         role from the time it sends the initial INVITE that established
+         a dialog until the termination of that dialog. Invitation: An INVITE request. Invitee, Invited User, Called Party, Callee: The party that
+         receives an INVITE request for the purpose of establishing a
+         new session. A callee retains this role from the time it
+         receives the INVITE until the termination of the dialog
+         established by that INVITE.

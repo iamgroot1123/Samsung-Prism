@@ -1,0 +1,7 @@
+While this specification suggests specific wording for the reason
+   phrase, implementations MAY choose other text, for example, in the
+   language indicated in the Accept-Language header field of the
+   request. The first digit of the Status-Code defines the class of response. The last two digits do not have any categorization role. For this
+   reason, any response with a status code between 100 and 199 is
+   referred to as a "1xx response", any response with a status code
+   between 200 and 299 as a "2xx response", and so on.

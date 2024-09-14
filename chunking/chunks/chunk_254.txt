@@ -1,0 +1,13 @@
+If a proxy receives a 416 (Unsupported URI Scheme) response to
+         a request whose Request-URI scheme was not SIP, but the scheme
+         in the original received request was SIP or SIPS (that is, the
+         proxy changed the scheme from SIP or SIPS to something else
+         when it proxied a request), the proxy SHOULD add a new URI to
+         the target set. This URI SHOULD be a SIP URI version of the
+         non-SIP URI that was just tried. In the case of the tel URL,
+         this is accomplished by placing the telephone-subscriber part
+         of the tel URL into the user part of the SIP URI, and setting
+         the hostpart to the domain where the prior request was sent. See Section 19.1.6 for more detail on forming SIP URIs from tel
+         URLs. As with a 3xx response, if a proxy "recurses" on the 416 by
+         trying a SIP or SIPS URI instead, the 416 response SHOULD NOT
+         be added to the response context. 5.

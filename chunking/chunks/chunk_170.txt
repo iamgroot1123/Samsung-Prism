@@ -1,0 +1,13 @@
+When a UAC receives a 2xx response to a target refresh request, it
+   MUST replace the dialog’s remote target URI with the URI from the
+   Contact header field in that response, if present. If the response for a request within a dialog is a 481
+   (Call/Transaction Does Not Exist) or a 408 (Request Timeout), the UAC
+   SHOULD terminate the dialog. A UAC SHOULD also terminate a dialog if
+   no response at all is received for the request (the client
+   transaction would inform the TU about the timeout.) For INVITE initiated dialogs, terminating the dialog consists of
+      sending a BYE. 12.2.2 UAS Behavior
+   Requests sent within a dialog, as any other requests, are atomic. If
+   a particular request is accepted by the UAS, all the state changes
+   associated with it are performed. If the request is rejected, none
+   of the state changes are performed. Note that some requests, such as INVITEs, affect several pieces of
+      state. The UAS will receive the request from the transaction layer.

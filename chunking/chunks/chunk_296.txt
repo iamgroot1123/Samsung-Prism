@@ -1,0 +1,12 @@
+The initial state, "calling", MUST be entered when the TU
+   initiates a new client transaction with an INVITE request. The
+   client transaction MUST pass the request to the transport layer for
+   transmission (see Section 18). If an unreliable transport is being
+   used, the client transaction MUST start timer A with a value of T1. If a reliable transport is being used, the client transaction SHOULD
+   NOT start timer A (Timer A controls request retransmissions). For
+   any transport, the client transaction MUST start timer B with a value
+   of 64*T1 seconds (Timer B controls transaction timeouts). When timer A fires, the client transaction MUST retransmit the
+   request by passing it to the transport layer, and MUST reset the
+   timer with a value of 2*T1. The formal definition of retransmit    within the context of the transaction layer is to take the message
+   previously sent to the transport layer and pass it to the transport
+   layer once more.

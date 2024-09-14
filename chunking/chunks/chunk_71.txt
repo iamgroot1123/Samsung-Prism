@@ -1,0 +1,14 @@
+This is useful for features like
+   "speed dial" that require interpretation of the user part in the home
+   domain. The tel URL may be used when the UA does not wish to specify
+   the domain that should interpret a telephone number that has been
+   input by the user. Rather, each domain through which the request
+   passes would be given that opportunity. As an example, a user in an
+   airport might log in and send requests through an outbound proxy in
+   the airport. If they enter "411" (this is the phone number for local
+   directory assistance in the United States), that needs to be
+   interpreted and processed by the outbound proxy in the airport, not
+   the user’s home domain. In this case, tel:411 would be the right
+   choice. A request outside of a dialog MUST NOT contain a To tag; the tag in
+   the To field of a request identifies the peer of the dialog. Since
+   no dialog is established, no tag is present. For further information on the To header field, see Section 20.39.

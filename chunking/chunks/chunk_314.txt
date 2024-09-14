@@ -1,0 +1,7 @@
+If a request is sent via multicast, it is possible that it will
+   generate multiple responses from different servers. These responses
+   will all have the same branch parameter in the topmost Via, but vary
+   in the To tag. The first response received, based on the rules
+   above, will be used, and others will be viewed as retransmissions. That is not an error; multicast SIP provides only a rudimentary
+   "single-hop-discovery-like" service that is limited to processing a
+   single response. See Section 18.1.1 for details.

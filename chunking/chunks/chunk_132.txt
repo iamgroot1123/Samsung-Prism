@@ -1,0 +1,14 @@
+There are two ways in which a client can suggest an expiration
+   interval for a binding: through an Expires header field or an
+   "expires" Contact header parameter. The latter allows expiration
+   intervals to be suggested on a per-binding basis when more than one
+   binding is given in a single REGISTER request, whereas the former
+   suggests an expiration interval for all Contact header field values
+   that do not contain the "expires" parameter. If neither mechanism for expressing a suggested expiration time is
+   present in a REGISTER, the client is indicating its desire for the
+   server to choose. 10.2.1.2 Preferences among Contact Addresses
+   If more than one Contact is sent in a REGISTER request, the
+   registering UA intends to associate all of the URIs in these Contact
+   header field values with the address-of-record present in the To
+   field. This list can be prioritized with the "q" parameter in the
+   Contact header field.

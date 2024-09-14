@@ -1,0 +1,12 @@
+If the address-of-record in the To header field of a REGISTER request
+   is a SIPS URI, then any Contact header field values in the request
+   SHOULD also be SIPS URIs. Clients should only register non-SIPS URIs
+   under a SIPS address-of-record when the security of the resource
+   represented by the contact address is guaranteed by other means. This may be applicable to URIs that invoke protocols other than SIP,
+   or SIP devices secured by protocols other than TLS. Registrations do not need to update all bindings. Typically, a UA
+   only updates its own contact addresses. 10.2.1.1 Setting the Expiration Interval of Contact Addresses
+   When a client sends a REGISTER request, it MAY suggest an expiration
+   interval that indicates how long the client would like the
+   registration to be valid. (As described in Section 10.3, the
+   registrar selects the actual time interval based on its local
+   policy.)

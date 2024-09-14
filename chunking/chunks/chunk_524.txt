@@ -1,0 +1,12 @@
+However, since many header fields are legitimately
+   inspected or altered by proxy servers as a request is routed, not all
+   header fields should be secured end-to-end. For these reasons, the UA might want to secure SIP message bodies,
+   and in some limited cases header fields, end-to-end. The security
+   services required for bodies include confidentiality, integrity, and
+   authentication. These end-to-end services should be independent of
+   the means used to secure interactions with intermediaries such as
+   proxy servers. 26.1.4 Tearing Down Sessions
+   Once a dialog has been established by initial messaging, subsequent
+   requests can be sent that modify the state of the dialog and/or
+   session. It is critical that principals in a session can be certain
+   that such requests are not forged by attackers.

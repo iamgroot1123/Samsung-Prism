@@ -1,0 +1,12 @@
+It forwards each request downstream to a single element
+   determined by making a targeting and routing decision based on the
+   request. It simply forwards every response it receives upstream. A
+   stateless proxy discards information about a message once the message
+   has been forwarded. A stateful proxy remembers information
+   (specifically, transaction state) about each incoming request and any
+   requests it sends as a result of processing the incoming request. It
+   uses this information to affect the processing of future messages
+   associated with that request. A stateful proxy MAY choose to "fork"
+   a request, routing it to multiple destinations. Any request that is
+   forwarded to more than one location MUST be handled statefully. In some circumstances, a proxy MAY forward requests using stateful
+   transports (such as TCP) without being transaction-stateful.

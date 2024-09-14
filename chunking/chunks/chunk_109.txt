@@ -1,0 +1,14 @@
+8.3 Redirect Servers
+   In some architectures it may be desirable to reduce the processing
+   load on proxy servers that are responsible for routing requests, and
+   improve signaling path robustness, by relying on redirection. Redirection allows servers to push routing information for a request
+   back in a response to the client, thereby taking themselves out of
+   the loop of further messaging for this transaction while still aiding
+   in locating the target of the request. When the originator of the
+   request receives the redirection, it will send a new request based on
+   the URI(s) it has received. By propagating URIs from the core of the
+   network to its edges, redirection allows for considerable network
+   scalability. A redirect server is logically constituted of a server transaction
+   layer and a transaction user that has access to a location service of
+   some kind (see Section 10 for more on registrars and location
+   services).

@@ -1,0 +1,12 @@
+Note that a Contact header field value MAY also refer to a different
+   resource than the one originally called. For example, a SIP call
+   connected to PSTN gateway may need to deliver a special informational
+   announcement such as "The number you have dialed has been changed." A Contact response header field can contain any suitable URI
+   indicating where the called party can be reached, not limited to SIP
+   URIs. For example, it could contain URIs for phones, fax, or irc (if
+   they were defined) or a mailto:  (RFC 2368 [32]) URL. Section 26.4.4
+   discusses implications and limitations of redirecting a SIPS URI to a
+   non-SIPS URI. The "expires" parameter of a Contact header field value indicates how
+   long the URI is valid. The value of the parameter is a number
+   indicating seconds. If this parameter is not provided, the value of
+   the Expires header field determines how long the URI is valid. Malformed values SHOULD be treated as equivalent to 3600.

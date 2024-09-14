@@ -1,0 +1,14 @@
+For each address, it determines the
+         expiration interval as follows:
+         -  If the field value has an "expires" parameter, that value
+            MUST be taken as the requested expiration. -  If there is no such parameter, but the request has an
+            Expires header field, that value MUST be taken as the
+            requested expiration. -  If there is neither, a locally-configured default value MUST
+            be taken as the requested expiration. The registrar MAY choose an expiration less than the requested
+         expiration interval. If and only if the requested expiration
+         interval is greater than zero AND smaller than one hour AND
+         less than a registrar-configured minimum, the registrar MAY
+         reject the registration with a response of 423 (Interval Too
+         Brief). This response MUST contain a Min-Expires header field
+         that states the minimum expiration interval the registrar is
+         willing to honor.

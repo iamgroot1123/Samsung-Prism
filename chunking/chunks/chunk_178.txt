@@ -1,0 +1,12 @@
+The Accept header field
+   is especially useful for indicating support of various session
+   description formats. The UAC MAY add an Expires header field (Section 20.19) to limit the
+   validity of the invitation. If the time indicated in the Expires
+   header field is reached and no final answer for the INVITE has been
+   received, the UAC core SHOULD generate a CANCEL request for the
+   INVITE, as per Section 9. A UAC MAY also find it useful to add, among others, Subject (Section
+   20.36), Organization (Section 20.25) and User-Agent (Section 20.41)
+   header fields. They all contain information related to the INVITE. The UAC MAY choose to add a message body to the INVITE. Section
+   8.1.1.10 deals with how to construct the header fields -- Content-
+   Type among others -- needed to describe the message body. There are special rules for message bodies that contain a session
+   description - their corresponding Content-Disposition is "session".

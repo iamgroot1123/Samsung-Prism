@@ -1,0 +1,14 @@
+Worse yet, if the proxy
+   server were actively malicious, it could modify the session key,
+   either acting as a man-in-the-middle, or perhaps changing the
+   security characteristics requested by the originating UA. This family of threats applies not only to session keys, but to most
+   conceivable forms of content carried end-to-end in SIP. These might
+   include MIME bodies that should be rendered to the user, SDP, or
+   encapsulated telephony signals, among others. Attackers might
+   attempt to modify SDP bodies, for example, in order to point RTP
+   media streams to a wiretapping device in order to eavesdrop on
+   subsequent voice communications. Also note that some header fields in SIP are meaningful end-to-end,
+   for example, Subject. UAs might be protective of these header fields
+   as well as bodies (a malicious intermediary changing the Subject
+   header field might make an important request appear to be spam, for
+   example).

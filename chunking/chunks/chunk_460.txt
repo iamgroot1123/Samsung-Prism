@@ -1,0 +1,13 @@
+When resubmitting its request in response to a 401 (Unauthorized) or
+   407 (Proxy Authentication Required) that contains multiple
+   challenges, a UAC MAY include an Authorization value for each WWW-
+   Authenticate value and a Proxy-Authorization value for each Proxy-
+   Authenticate value for which the UAC wishes to supply a credential. As noted above, multiple credentials in a request SHOULD be
+   differentiated by the "realm" parameter. It is possible for multiple challenges associated with the same realm
+   to appear in the same 401 (Unauthorized) or 407 (Proxy Authentication
+   Required). This can occur, for example, when multiple proxies within
+   the same administrative domain, which use a common realm, are reached
+   by a forking request. When it retries a request, a UAC MAY therefore
+   supply multiple credentials in Authorization or Proxy-Authorization
+   header fields with the same "realm" parameter value. The same
+   credentials SHOULD be used for the same realm.

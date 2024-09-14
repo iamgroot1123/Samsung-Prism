@@ -1,0 +1,13 @@
+Stateless Proxy: A logical entity that does not maintain the
+         client or server transaction state machines defined in this
+         specification when it processes requests. A stateless proxy
+         forwards every request it receives downstream and every
+         response it receives upstream. Strict Routing: A proxy is said to be strict routing if it follows
+         the Route processing rules of RFC 2543 and many prior work in
+         progress versions of this RFC. That rule caused proxies to
+         destroy the contents of the Request-URI when a Route header
+         field was present. Strict routing behavior is not used in this
+         specification, in favor of a loose routing behavior. Proxies
+         that perform strict routing are also known as strict routers. Target Refresh Request: A target refresh request sent within a
+         dialog is defined as a request that can modify the remote
+         target of the dialog.

@@ -1,0 +1,13 @@
+o  Senders of S/MIME bodies SHOULD use the "SMIMECapabilities"
+         (see Section 2.5.2 of [24]) attribute to express their
+         capabilities and preferences for further communications. Note
+         especially that senders MAY use the "preferSignedData"          capability to encourage receivers to respond with CMS
+         SignedData messages (for example, when sending an OPTIONS
+         request as described above). o  S/MIME implementations MUST at a minimum support SHA1 as a
+         digital signature algorithm, and 3DES as an encryption
+         algorithm. All other signature and encryption algorithms MAY
+         be supported. Implementations can negotiate support for these
+         algorithms with the "SMIMECapabilities" attribute. o  Each S/MIME body in a SIP message SHOULD be signed with only
+         one certificate. If a UA receives a message with multiple
+         signatures, the outermost signature should be treated as the
+         single certificate for this body.

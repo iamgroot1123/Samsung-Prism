@@ -1,0 +1,15 @@
+Typically, this
+         means that the request’s Request-URI differs from its previous
+         arrival. A spiral is not an error condition, unlike a loop. A
+         typical cause for this is call forwarding. A user calls
+         joe@example.com. The example.com proxy forwards it to Joe’s
+         PC, which in turn, forwards it to bob@example.com. This
+         request is proxied back to the example.com proxy. However,
+         this is not a loop. Since the request is targeted at a
+         different user, it is considered a spiral, and is a valid
+         condition. Stateful Proxy: A logical entity that maintains the client and
+         server transaction state machines defined by this specification
+         during the processing of a request, also known as a transaction
+         stateful proxy. The behavior of a stateful proxy is further
+         defined in Section 16. A (transaction) stateful proxy is not
+         the same as a call stateful proxy.

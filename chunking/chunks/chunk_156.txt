@@ -1,0 +1,14 @@
+A dialog established by a non-final
+   response to a request is in the "early" state and it is called an
+   early dialog. Extensions MAY define other means for creating
+   dialogs. Section 13 gives more details that are specific to the
+   INVITE method. Here, we describe the process for creation of dialog
+   state that is not dependent on the method. UAs MUST assign values to the dialog ID components as described
+   below. 12.1.1 UAS behavior
+   When a UAS responds to a request with a response that establishes a
+   dialog (such as a 2xx to INVITE), the UAS MUST copy all Record-Route
+   header field values from the request into the response (including the
+   URIs, URI parameters, and any Record-Route header field parameters,
+   whether they are known or unknown to the UAS) and MUST maintain the
+   order of those values. The UAS MUST add a Contact header field to
+   the response.

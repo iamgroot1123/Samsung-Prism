@@ -1,0 +1,12 @@
+26.2 Security Mechanisms
+   From the threats described above, we gather that the fundamental
+   security services required for the SIP protocol are: preserving the
+   confidentiality and integrity of messaging, preventing replay attacks
+   or message spoofing, providing for the authentication and privacy of
+   the participants in a session, and preventing denial-of-service
+   attacks. Bodies within SIP messages separately require the security
+   services of confidentiality, integrity, and authentication. Rather than defining new security mechanisms specific to SIP, SIP
+   reuses wherever possible existing security models derived from the
+   HTTP and SMTP space. Full encryption of messages provides the best means to preserve the
+   confidentiality of signaling - it can also guarantee that messages
+   are not modified by any malicious intermediaries.

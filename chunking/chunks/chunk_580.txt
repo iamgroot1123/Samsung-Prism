@@ -1,0 +1,13 @@
+Furthermore, comparison rules were
+      simplified to be primarily case-insensitive, and detailed handling
+      of comparison in the presence of parameters was described. The
+      most substantial change is that a URI with a parameter with the
+      default value does not match a URI without that parameter. o  Removed Via hiding. It had serious trust issues, since it relied
+      on the next hop to perform the obfuscation process. Instead, Via
+      hiding can be done as a local implementation choice in stateful
+      proxies, and thus is no longer documented. o  In RFC 2543, CANCEL and INVITE transactions were intermingled. They are separated now. When a user sends an INVITE and then a
+      CANCEL, the INVITE transaction still terminates normally. A UAS
+      needs to respond to the original INVITE request with a 487
+      response. o  Similarly, CANCEL and BYE transactions were intermingled; RFC 2543
+      allowed the UAS not to send a response to INVITE when a BYE was
+      received.

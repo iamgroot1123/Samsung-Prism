@@ -1,0 +1,12 @@
+A cryptographic authentication mechanism is provided in
+   SIP to address this requirement. An independent security mechanism for SIP message bodies supplies an
+   alternative means of end-to-end mutual authentication, as well as
+   providing a limit on the degree to which user agents must trust
+   intermediaries. 26.2.1 Transport and Network Layer Security
+   Transport or network layer security encrypts signaling traffic,
+   guaranteeing message confidentiality and integrity. Oftentimes, certificates are used in the establishment of lower-layer
+   security, and these certificates can also be used to provide a means
+   of authentication in many architectures. Two popular alternatives for providing security at the transport and
+   network layer are, respectively, TLS [25] and IPSec [26]. IPSec is a set of network-layer protocol tools that collectively can
+   be used as a secure replacement for traditional IP (Internet
+   Protocol).

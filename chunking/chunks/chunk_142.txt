@@ -1,0 +1,13 @@
+If not, it skips to the last step. If the
+         Contact header field is present, the registrar checks if there
+         is one Contact field value that contains the special value "*"
+         and an Expires field. If the request has additional Contact
+         fields or an expiration time other than zero, the request is
+         invalid, and the server MUST return a 400 (Invalid Request) and
+         skip the remaining steps. If not, the registrar checks whether
+         the Call-ID agrees with the value stored for each binding. If
+         not, it MUST remove the binding. If it does agree, it MUST
+         remove the binding only if the CSeq in the request is higher
+         than the value stored for that binding. Otherwise, the update
+         MUST be aborted and the request fails. 7. The registrar now processes each contact address in the Contact
+         header field in turn.

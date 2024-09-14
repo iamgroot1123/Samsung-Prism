@@ -1,0 +1,13 @@
+If the branch parameter in the top Via header field is not present,
+   or does not contain the magic cookie, the following procedures are
+   used. These exist to handle backwards compatibility with RFC 2543
+   compliant implementations. The INVITE request matches a transaction if the Request-URI, To tag,
+   From tag, Call-ID, CSeq, and top Via header field match those of the
+   INVITE request which created the transaction. In this case, the
+   INVITE is a retransmission of the original one that created the
+   transaction. The ACK request matches a transaction if the Request-
+   URI, From tag, Call-ID, CSeq number (not the method), and top Via
+   header field match those of the INVITE request which created the
+   transaction, and the To tag of the ACK matches the To tag of the
+   response sent by the server transaction. Matching is done based on
+   the matching rules defined for each of those header fields.

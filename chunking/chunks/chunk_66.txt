@@ -1,0 +1,15 @@
+Dialogs are discussed
+   thoroughly in Section 12; they represent a peer-to-peer relationship
+   between user agents and are established by specific SIP methods, such
+   as INVITE. In this section, we discuss the method-independent rules for UAC and
+   UAS behavior when processing requests that are outside of a dialog. This includes, of course, the requests which themselves establish a
+   dialog. Security procedures for requests and responses outside of a dialog
+   are described in Section 26. Specifically, mechanisms exist for the
+   UAS and UAC to mutually authenticate. A limited set of privacy
+   features are also supported through encryption of bodies using
+   S/MIME. 8.1 UAC Behavior
+   This section covers UAC behavior outside of a dialog. 8.1.1 Generating the Request
+   A valid SIP request formulated by a UAC MUST, at a minimum, contain
+   the following header fields: To, From, CSeq, Call-ID, Max-Forwards,
+   and Via; all of these header fields are mandatory in all SIP
+   requests.

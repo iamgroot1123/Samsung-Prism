@@ -1,0 +1,11 @@
+A UAC MUST NOT re-attempt requests with the credentials
+   that have just been rejected (though the request may be retried if
+   the nonce was stale). 22.2 User-to-User Authentication
+   When a UAS receives a request from a UAC, the UAS MAY authenticate
+   the originator before the request is processed. If no credentials
+   (in the Authorization header field) are provided in the request, the
+   UAS can challenge the originator to provide credentials by rejecting
+   the request with a 401 (Unauthorized) status code. The WWW-Authenticate response-header field MUST be included in 401
+   (Unauthorized) response messages. The field value consists of at
+   least one challenge that indicates the authentication scheme(s) and
+   parameters applicable to the realm.

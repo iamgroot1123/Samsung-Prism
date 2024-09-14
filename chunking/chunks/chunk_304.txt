@@ -1,0 +1,13 @@
+When in either the "Calling" or "Proceeding" states, reception of a
+   2xx response MUST cause the client transaction to enter the
+   "Terminated" state, and the response MUST be passed up to the TU. The handling of this response depends on whether the TU is a proxy    core or a UAC core. A UAC core will handle generation of the ACK for
+   this response, while a proxy core will always forward the 200 (OK)
+   upstream. The differing treatment of 200 (OK) between proxy and UAC
+   is the reason that handling of it does not take place in the
+   transaction layer. The client transaction MUST be destroyed the instant it enters the
+   "Terminated" state. This is actually necessary to guarantee correct
+   operation. The reason is that 2xx responses to an INVITE are treated
+   differently; each one is forwarded by proxies, and the ACK handling
+   in a UAC is different. Thus, each 2xx needs to be passed to a proxy
+   core (so that it can be forwarded) and to a UAC core (so it can be
+   acknowledged).

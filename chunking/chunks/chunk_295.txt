@@ -1,0 +1,14 @@
+T1 is an estimate of the round-trip time (RTT), and
+   it defaults to 500 ms.  Nearly all of the transaction timers
+   described here scale with T1, and changing T1 adjusts their values. The request is not retransmitted over reliable transports. After
+   receiving a 1xx response, any retransmissions cease altogether, and
+   the client waits for further responses. The server transaction can
+   send additional 1xx responses, which are not transmitted reliably by
+   the server transaction. Eventually, the server transaction decides
+   to send a final response. For unreliable transports, that response
+   is retransmitted periodically, and for reliable transports, it is
+   sent once. For each final response that is received at the client
+   transaction, the client transaction sends an ACK, the purpose of
+   which is to quench retransmissions of the response. 17.1.1.2 Formal Description
+   The state machine for the INVITE client transaction is shown in
+   Figure 5.

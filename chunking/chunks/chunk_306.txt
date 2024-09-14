@@ -1,0 +1,13 @@
+The To
+   header field in the ACK MUST equal the To header field in the
+   response being acknowledged, and therefore will usually differ from
+   the To header field in the original request by the addition of the
+   tag parameter. The ACK MUST contain a single Via header field, and
+   this MUST be equal to the top Via header field of the original
+   request. The CSeq header field in the ACK MUST contain the same
+   value for the sequence number as was present in the original request,
+   but the method parameter MUST be equal to "ACK". If the INVITE request whose response is being acknowledged had Route
+   header fields, those header fields MUST appear in the ACK. This is
+   to ensure that the ACK can be routed properly through any downstream
+   stateless proxies. Although any request MAY contain a body, a body in an ACK is special
+   since the request cannot be rejected if the body is not understood.

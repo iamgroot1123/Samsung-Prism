@@ -1,0 +1,14 @@
+If that address matches the proxy,
+   (it equals a value this proxy has inserted into previous requests)
+   the proxy MUST remove that header field value from the response and
+   forward the result to the location indicated in the next Via header
+   field value. The proxy MUST NOT add to, modify, or remove the
+   message body. Unless specified otherwise, the proxy MUST NOT remove
+   any other header field values. If the address does not match the
+   proxy, the message MUST be silently discarded. 16.12 Summary of Proxy Route Processing
+   In the absence of local policy to the contrary, the processing a
+   proxy performs on a request containing a Route header field can be
+   summarized in the following steps. 1. The proxy will inspect the Request-URI. If it indicates a
+          resource owned by this proxy, the proxy will replace it with
+          the results of running a location service. Otherwise, the
+          proxy will not change the Request-URI. 2.

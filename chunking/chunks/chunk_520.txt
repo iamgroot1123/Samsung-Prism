@@ -1,0 +1,13 @@
+This threat belongs to a family of threats that rely on the absence
+   of cryptographic assurance of a request’s originator. Any SIP UAS
+   that represents a valuable service (a gateway that interworks SIP
+   requests with traditional telephone calls, for example) might want to
+   control access to its resources by authenticating requests that it
+   receives. Even end-user UAs, for example SIP phones, have an
+   interest in ascertaining the identities of originators of requests. This threat demonstrates the need for security services that enable
+   SIP entities to authenticate the originators of requests. 26.1.2 Impersonating a Server
+   The domain to which a request is destined is generally specified in
+   the Request-URI. UAs commonly contact a server in this domain
+   directly in order to deliver a request. However, there is always a
+   possibility that an attacker could impersonate the remote server, and
+   that the UA’s request could be intercepted by some other party.

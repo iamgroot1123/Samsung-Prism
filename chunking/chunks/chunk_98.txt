@@ -1,0 +1,12 @@
+If the Request-URI uses a scheme not supported by the UAS,
+   it SHOULD reject the request with a 416 (Unsupported URI Scheme)
+   response. If the Request-URI does not identify an address that the
+   UAS is willing to accept requests for, it SHOULD reject the request
+   with a 404 (Not Found) response. Typically, a UA that uses the
+   REGISTER method to bind its address-of-record to a specific contact
+   address will see requests whose Request-URI equals that contact
+   address. Other potential sources of received Request-URIs include
+   the Contact header fields of requests and responses sent by the UA
+   that establish or refresh dialogs. 8.2.2.2 Merged Requests
+   If the request has no tag in the To header field, the UAS core MUST
+   check the request against ongoing transactions.

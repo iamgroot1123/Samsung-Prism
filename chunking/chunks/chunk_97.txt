@@ -1,0 +1,13 @@
+8.2.2.1 To and Request-URI
+   The To header field identifies the original recipient of the request
+   designated by the user identified in the From field. The original
+   recipient may or may not be the UAS processing the request, due to
+   call forwarding or other proxy operations. A UAS MAY apply any
+   policy it wishes to determine whether to accept requests when the To    header field is not the identity of the UAS. However, it is
+   RECOMMENDED that a UAS accept requests even if they do not recognize
+   the URI scheme (for example, a tel: URI) in the To header field, or
+   if the To header field does not address a known or current user of
+   this UAS. If, on the other hand, the UAS decides to reject the
+   request, it SHOULD generate a response with a 403 (Forbidden) status
+   code and pass it to the server transaction for transmission. However, the Request-URI identifies the UAS that is to process the
+   request.

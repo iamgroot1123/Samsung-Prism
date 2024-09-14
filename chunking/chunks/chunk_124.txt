@@ -1,0 +1,14 @@
+The only requirement is that a registrar for some
+   domain MUST be able to read and write data to the location service,
+   and a proxy or a redirect server for that domain MUST be capable of
+   reading that same data. A registrar MAY be co-located with a
+   particular SIP proxy server for the same domain. 10.2 Constructing the REGISTER Request
+   REGISTER requests add, remove, and query bindings. A REGISTER
+   request can add a new binding between an address-of-record and one or
+   more contact addresses. Registration on behalf of a particular
+   address-of-record can be performed by a suitably authorized third
+   party. A client can also remove previous bindings or query to
+   determine which bindings are currently in place for an address-of-
+   record. Except as noted, the construction of the REGISTER request and the
+   behavior of clients sending a REGISTER request is identical to the
+   general UAC behavior described in Section 8.1 and Section 17.1.

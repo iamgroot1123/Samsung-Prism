@@ -1,0 +1,12 @@
+The existing replay protection mechanisms described in RFC 2617 also
+   have some limitations for SIP. The next-nonce mechanism, for
+   example, does not support pipelined requests. The nonce-count
+   mechanism should be used for replay protection. Another limitation of HTTP Digest is the scope of realms. Digest is
+   valuable when a user wants to authenticate themselves to a resource
+   with which they have a pre-existing association, like a service    provider of which the user is a customer (which is quite a common
+   scenario and thus Digest provides an extremely useful function). By
+   way of contrast, the scope of TLS is interdomain or multirealm, since
+   certificates are often globally verifiable, so that the UA can
+   authenticate the server with no pre-existing association. 26.4.2 S/MIME
+   The largest outstanding defect with the S/MIME mechanism is the lack
+   of a prevalent public key infrastructure for end users.

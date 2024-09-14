@@ -1,0 +1,13 @@
+However, users SHOULD acquire certificates from known public
+   certificate authorities. As an alternative, users MAY create self-
+   signed certificates. The implications of self-signed certificates
+   are explored further in Section 26.4.2. Implementations may also use
+   pre-configured certificates in deployments in which a previous trust
+   relationship exists between all SIP entities. Above and beyond the problem of acquiring an end-user certificate,
+   there are few well-known centralized directories that distribute
+   end-user certificates. However, the holder of a certificate SHOULD
+   publish their certificate in any public directories as appropriate. Similarly, UACs SHOULD support a mechanism for importing (manually or
+   automatically) certificates discovered in public directories
+   corresponding to the target URIs of SIP requests. 23.2 S/MIME Key Exchange
+   SIP itself can also be used as a means to distribute public keys in
+   the following manner.

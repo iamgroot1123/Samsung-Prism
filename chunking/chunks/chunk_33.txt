@@ -1,0 +1,13 @@
+In order to determine how the request
+         should be answered, it acts as a user agent client (UAC) and
+         generates requests. Unlike a proxy server, it maintains dialog
+         state and must participate in all requests sent on the dialogs
+         it has established. Since it is a concatenation of a UAC and
+         UAS, no explicit definitions are needed for its behavior. Call: A call is an informal term that refers to some communication
+         between peers, generally set up for the purposes of a
+         multimedia conversation. Call Leg: Another name for a dialog [31]; no longer used in this
+         specification. Call Stateful: A proxy is call stateful if it retains state for a
+         dialog from the initiating INVITE to the terminating BYE
+         request. A call stateful proxy is always transaction stateful,
+         but the converse is not necessarily true. Client: A client is any network element that sends SIP requests
+         and receives SIP responses.

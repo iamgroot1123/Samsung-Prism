@@ -1,0 +1,13 @@
+If a request
+   retransmission is received while in the "Proceeding" state, the most
+   recent provisional response that was received from the TU MUST be
+   passed to the transport layer for retransmission. A request is a
+   retransmission if it matches the same server transaction based on the
+   rules of Section 17.2.3. If, while in the "Proceeding" state, the TU passes a 2xx response to
+   the server transaction, the server transaction MUST pass this
+   response to the transport layer for transmission. It is not    retransmitted by the server transaction; retransmissions of 2xx
+   responses are handled by the TU. The server transaction MUST then
+   transition to the "Terminated" state. While in the "Proceeding" state, if the TU passes a response with
+   status code from 300 to 699 to the server transaction, the response
+   MUST be passed to the transport layer for transmission, and the state
+   machine MUST enter the "Completed" state.

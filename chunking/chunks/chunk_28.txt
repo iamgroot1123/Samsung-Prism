@@ -1,0 +1,14 @@
+Transactions are a
+   fundamental component of SIP. A transaction is a request sent by a
+   client transaction (using the transport layer) to a server
+   transaction, along with all responses to that request sent from the
+   server transaction back to the client. The transaction layer handles
+   application-layer retransmissions, matching of responses to requests,
+   and application-layer timeouts. Any task that a user agent client
+   (UAC) accomplishes takes place using a series of transactions. Discussion of transactions can be found in Section 17. User agents
+   contain a transaction layer, as do stateful proxies. Stateless
+   proxies do not contain a transaction layer. The transaction layer
+   has a client component (referred to as a client transaction) and a
+   server component (referred to as a server transaction), each of which
+   are represented by a finite state machine that is constructed to
+   process a particular request.

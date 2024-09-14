@@ -1,0 +1,12 @@
+If the client transaction is still in the "Calling" state when timer
+   B fires, the client transaction SHOULD inform the TU that a timeout
+   has occurred. The client transaction MUST NOT generate an ACK. The
+   value of 64*T1 is equal to the amount of time required to send seven
+   requests in the case of an unreliable transport. If the client transaction receives a provisional response while in
+   the "Calling" state, it transitions to the "Proceeding" state. In the
+   "Proceeding" state, the client transaction SHOULD NOT retransmit the
+   request any longer. Furthermore, the provisional response MUST be
+   passed to the TU. Any further provisional responses MUST be passed
+   up to the TU while in the "Proceeding" state. When in either the "Calling" or "Proceeding" states, reception of a
+   response with status code from 300-699 MUST cause the client
+   transaction to transition to "Completed".

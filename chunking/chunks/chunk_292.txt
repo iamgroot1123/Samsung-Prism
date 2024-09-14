@@ -1,0 +1,14 @@
+The
+   server transaction filters any request retransmissions from the
+   network. The server transaction accepts responses from the TU and
+   delivers them to the transport layer for transmission over the
+   network. In the case of an INVITE transaction, it absorbs the ACK
+   request for any final response excepting a 2xx response. The 2xx response and its ACK receive special treatment. This
+   response is retransmitted only by a UAS, and its ACK generated only
+   by the UAC. This end-to-end treatment is needed so that a caller
+   knows the entire set of users that have accepted the call. Because
+   of this special handling, retransmissions of the 2xx response are
+   handled by the UA core, not the transaction layer. Similarly,
+   generation of the ACK for the 2xx is handled by the UA core. Each
+   proxy along the path merely forwards each 2xx response to INVITE and
+   its corresponding ACK.

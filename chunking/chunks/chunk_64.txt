@@ -1,0 +1,14 @@
+7.4.2 Message Body Length
+   The body length in bytes is provided by the Content-Length header
+   field. Section 20.14 describes the necessary contents of this header
+   field in detail. The "chunked" transfer encoding of HTTP/1.1 MUST NOT be used for SIP. (Note: The chunked encoding modifies the body of a message in order
+   to transfer it as a series of chunks, each with its own size
+   indicator.) 7.5 Framing SIP Messages
+   Unlike HTTP, SIP implementations can use UDP or other unreliable
+   datagram protocols. Each such datagram carries one request or
+   response. See Section 18 on constraints on usage of unreliable
+   transports. Implementations processing SIP messages over stream-oriented
+   transports MUST ignore any CRLF appearing before the start-line
+   [H4.1]. The Content-Length header field value is used to locate the end of
+      each SIP message in a stream. It will always be present when SIP
+      messages are sent over stream-oriented transports.

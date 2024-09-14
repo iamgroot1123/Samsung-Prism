@@ -1,0 +1,13 @@
+The BNF in RFC 2617 has an error in that the ’uri’ parameter
+          of the Authorization header field for HTTP Digest
+          authentication is not enclosed in quotation marks. (The
+          example in Section 3.5 of RFC 2617 is correct.) For SIP, the
+          ’uri’ MUST be enclosed in quotation marks. 3. The BNF for digest-uri-value is:
+          digest-uri-value  =  Request-URI ; as defined in Section 25
+      4. The example procedure for choosing a nonce based on Etag does
+          not work for SIP. 5. The text in RFC 2617 [17] regarding cache operation does not
+          apply to SIP. 6. RFC 2617 [17] requires that a server check that the URI in the
+          request line and the URI included in the Authorization header
+          field point to the same resource. In a SIP context, these two
+          URIs may refer to different users, due to forwarding at some
+          proxy.

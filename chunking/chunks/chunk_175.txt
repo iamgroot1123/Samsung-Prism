@@ -1,0 +1,11 @@
+This request
+   may be forwarded by proxies, eventually arriving at one or more UAS
+   that can potentially accept the invitation. These UASs will
+   frequently need to query the user about whether to accept the    invitation. After some time, those UASs can accept the invitation
+   (meaning the session is to be established) by sending a 2xx response. If the invitation is not accepted, a 3xx, 4xx, 5xx or 6xx response is
+   sent, depending on the reason for the rejection. Before sending a
+   final response, the UAS can also send provisional responses (1xx) to
+   advise the UAC of progress in contacting the called user. After possibly receiving one or more provisional responses, the UAC
+   will get one or more 2xx responses or one non-2xx final response. Because of the protracted amount of time it can take to receive final
+   responses to INVITE, the reliability mechanisms for INVITE
+   transactions differ from those of other requests (like OPTIONS).

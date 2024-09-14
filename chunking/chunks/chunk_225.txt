@@ -1,0 +1,13 @@
+This may consist of obtaining information from a location service
+   created by a SIP Registrar, reading a database, consulting a presence
+   server, utilizing other protocols, or simply performing an
+   algorithmic substitution on the Request-URI. When accessing the
+   location service constructed by a registrar, the Request-URI MUST
+   first be canonicalized as described in Section 10.3 before being used
+   as an index. The output of these mechanisms is used to construct the
+   target set. If the Request-URI does not provide sufficient information for the
+   proxy to determine the target set, it SHOULD return a 485 (Ambiguous)
+   response. This response SHOULD contain a Contact header field
+   containing URIs of new addresses to be tried. For example, an INVITE    to sip:John.Smith@company.com may be ambiguous at a proxy whose
+   location service has multiple John Smiths listed. See Section
+   21.4.23 for details.

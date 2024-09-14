@@ -1,0 +1,7 @@
+The exceptions
+   to this rule are the WWW-Authenticate, Authorization, Proxy-
+   Authenticate, and Proxy-Authorization header fields. Multiple header    field rows with these names MAY be present in a message, but since
+   their grammar does not follow the general form listed in Section 7.3,
+   they MUST NOT be combined into a single header field row. Implementations MUST be able to process multiple header field rows
+   with the same name in any combination of the single-value-per-line or
+   comma-separated value forms.

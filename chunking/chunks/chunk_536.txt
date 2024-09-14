@@ -1,0 +1,14 @@
+In
+   each instance, the SIPS URI scheme allows these existing fields to    designate secure resources. The manner in which a SIPS URI is
+   dereferenced in any of these contexts has its own security properties
+   which are detailed in [4]. The use of SIPS in particular entails that mutual TLS authentication
+   SHOULD be employed, as SHOULD the ciphersuite
+   TLS_RSA_WITH_AES_128_CBC_SHA. Certificates received in the
+   authentication process SHOULD be validated with root certificates
+   held by the client; failure to validate a certificate SHOULD result
+   in the failure of the request. Note that in the SIPS URI scheme, transport is independent of TLS,
+      and thus "sips:alice@atlanta.com;transport=tcp" and
+      "sips:alice@atlanta.com;transport=sctp" are both valid (although
+      note that UDP is not a valid transport for SIPS). The use of
+      "transport=tls" has consequently been deprecated, partly because
+      it was specific to a single hop of the request.

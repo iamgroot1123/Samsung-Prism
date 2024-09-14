@@ -1,0 +1,20 @@
+For each target, the proxy forwards the request following these
+   steps:
+      1. Make a copy of the received request
+      2. Update the Request-URI
+      3. Update the Max-Forwards header field
+      4. Optionally add a Record-route header field value
+      5. Optionally add additional header fields
+      6. Postprocess routing information
+      7. Determine the next-hop address, port, and transport
+      8. Add a Via header field value
+      9. Add a Content-Length header field if necessary
+      10. Forward the new request
+      11. Set timer C
+   Each of these steps is detailed below:
+      1. Copy request
+         The proxy starts with a copy of the received request. The copy
+         MUST initially contain all of the header fields from the
+         received request. Fields not detailed in the processing
+         described below MUST NOT be removed. The copy SHOULD maintain
+         the ordering of the header fields as in the received request.

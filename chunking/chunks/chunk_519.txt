@@ -1,0 +1,13 @@
+A registrar assesses the identity asserted in
+   the From header field of a REGISTER message to determine whether this
+   request can modify the contact addresses associated with the
+   address-of-record in the To header field. While these two fields are
+   frequently the same, there are many valid deployments in which a
+   third-party may register contacts on a user’s behalf. The From header field of a SIP request, however, can be modified
+   arbitrarily by the owner of a UA, and this opens the door to
+   malicious registrations. An attacker that successfully impersonates
+   a party authorized to change contacts associated with an address-of-
+   record could, for example, de-register all existing contacts for a
+   URI and then register their own device as the appropriate contact
+   address, thereby directing all requests for the affected user to the
+   attacker’s device.

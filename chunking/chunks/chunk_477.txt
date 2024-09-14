@@ -1,0 +1,15 @@
+Users may wish to find an alternate
+   means to contact the other party and confirm that their key has
+   legitimately changed. Note that users are sometimes compelled to
+   change their certificates, for example when they suspect that the
+   secrecy of their private key has been compromised. When their
+   private key is no longer private, users must legitimately generate a
+   new key and re-establish trust with any users that held their old
+   key. Finally, if during the course of a dialog a UA receives a certificate
+   in a CMS SignedData message that does not correspond with the
+   certificates previously exchanged during a dialog, the UA MUST notify
+   its user of the change, preferably in terms that indicate that this
+   is a potential security breach. 23.3 Securing MIME bodies
+   There are two types of secure MIME bodies that are of interest to
+   SIP: use of these bodies should follow the S/MIME specification [24]
+   with a few variations.

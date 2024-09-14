@@ -1,0 +1,12 @@
+Otherwise, the proxy MUST apply
+         the procedures to the first value in the Route header field, if
+         present, else the Request-URI. The procedures will produce an
+         ordered set of (address, port, transport) tuples. Independently of which URI is being used as input to the
+         procedures of [4], if the Request-URI specifies a SIPS
+         resource, the proxy MUST follow the procedures of [4] as if the
+         input URI were a SIPS URI. As described in [4], the proxy MUST attempt to deliver the
+         message to the first tuple in that set, and proceed through the
+         set in order until the delivery attempt succeeds. For each tuple attempted, the proxy MUST format the message as
+         appropriate for the tuple and send the request using a new
+         client transaction as detailed in steps 8 through 10. Since each attempt uses a new client transaction, it represents
+         a new branch.

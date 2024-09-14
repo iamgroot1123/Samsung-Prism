@@ -1,0 +1,14 @@
+Any information in or about the request or the current environment of
+   the element MAY be used in the construction of the target set. For
+   instance, different sets may be constructed depending on contents or
+   the presence of header fields and bodies, the time of day of the
+   request’s arrival, the interface on which the request arrived,
+   failure of previous requests, or even the element’s current level of
+   utilization. As potential targets are located through these services, their URIs
+   are added to the target set. Targets can only be placed in the
+   target set once. If a target URI is already present in the set
+   (based on the definition of equality for the URI type), it MUST NOT
+   be added again. A proxy MUST NOT add additional targets to the target set if the
+   Request-URI of the original request does not indicate a resource this
+   proxy is responsible for. A proxy can only change the Request-URI of a request during
+      forwarding if it is responsible for that URI.

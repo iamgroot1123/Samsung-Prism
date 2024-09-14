@@ -1,0 +1,12 @@
+When a pre-existing route set is present, the procedures for
+   populating the Request-URI and Route header field detailed in Section
+   12.2.1.1 MUST be followed (even though there is no dialog), using the
+   desired Request-URI as the remote target URI. 8.1.1.2 To
+   The To header field first and foremost specifies the desired
+   "logical" recipient of the request, or the address-of-record of the
+   user or resource that is the target of this request. This may or may
+   not be the ultimate recipient of the request. The To header field
+   MAY contain a SIP or SIPS URI, but it may also make use of other URI
+   schemes (the tel URL (RFC 2806 [9]), for example) when appropriate. All SIP implementations MUST support the SIP URI scheme. Any
+   implementation that supports TLS MUST support the SIPS URI scheme. The To header field allows for a display name. A UAC may learn how to populate the To header field for a particular
+   request in a number of ways.

@@ -1,0 +1,15 @@
+17.1.4 Handling Transport Errors
+                                   |Request from TU
+                                   |send request
+               Timer E             V
+               send request  +-----------+
+                   +---------|           |-------------------+
+                   |         |  Trying   |  Timer F          |
+                   +-------->|           |  or Transport Err.|
+                             +-----------+  inform TU        |
+                200-699         |  |                         |
+                resp. to TU     |  |1xx                      |
+                +---------------+  |resp. to TU              |
+                |                  |                         |
+                |   Timer E        V       Timer F           |
+                |   send req +-----------+ or Transport Err.

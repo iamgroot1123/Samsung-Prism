@@ -1,0 +1,12 @@
+The client side
+   is known as a client transaction and the server side as a server
+   transaction. The client transaction sends the request, and the
+   server transaction sends the response. The client and server
+   transactions are logical functions that are embedded in any number of
+   elements. Specifically, they exist within user agents and stateful
+   proxy servers. Consider the example in Section 4. In this example,
+   the UAC executes the client transaction, and its outbound proxy
+   executes the server transaction. The outbound proxy also executes a
+   client transaction, which sends the request to a server transaction
+   in the inbound proxy. That proxy also executes a client transaction,
+   which in turn sends the request to a server transaction in the UAS. This is shown in Figure 4.

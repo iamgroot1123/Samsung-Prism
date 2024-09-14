@@ -1,0 +1,13 @@
+Full details on session modification are in Section
+   14. At the end of the call, Bob disconnects (hangs up) first and
+   generates a BYE message. This BYE is routed directly to Alice’s
+   softphone, again bypassing the proxies. Alice confirms receipt of
+   the BYE with a 200 (OK) response, which terminates the session and
+   the BYE transaction. No ACK is sent - an ACK is only sent in
+   response to a response to an INVITE request. The reasons for this
+   special handling for INVITE will be discussed later, but relate to
+   the reliability mechanisms in SIP, the length of time it can take for
+   a ringing phone to be answered, and forking. For this reason,
+   request handling in SIP is often classified as either INVITE or non-
+   INVITE, referring to all other methods besides INVITE. Full details
+   on session termination are in Section 15. Section 24.2 describes the messages shown in Figure 1 in full.

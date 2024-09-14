@@ -1,0 +1,14 @@
+Figure 1 shows a typical example of a SIP message exchange between
+   two users, Alice and Bob. (Each message is labeled with the letter
+   "F" and a number for reference by the text.) In this example, Alice
+   uses a SIP application on her PC (referred to as a softphone) to call
+   Bob on his SIP phone over the Internet. Also shown are two SIP proxy
+   servers that act on behalf of Alice and Bob to facilitate the session
+   establishment. This typical arrangement is often referred to as the
+   "SIP trapezoid" as shown by the geometric shape of the dotted lines
+   in Figure 1. Alice "calls" Bob using his SIP identity, a type of Uniform Resource
+   Identifier (URI) called a SIP URI. SIP URIs are defined in Section
+   19.1. It has a similar form to an email address, typically
+   containing a username and a host name. In this case, it is
+   sip:bob@biloxi.com, where biloxi.com is the domain of Bob’s SIP
+   service provider. Alice has a SIP URI of sip:alice@atlanta.com.

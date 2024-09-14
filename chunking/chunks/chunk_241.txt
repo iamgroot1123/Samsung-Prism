@@ -1,0 +1,13 @@
+If that URI does not
+         contain an lr parameter, the proxy MUST modify the copy as
+         follows:
+         -  The proxy MUST place the Request-URI into the Route header
+            field as the last value. -  The proxy MUST then place the first Route header field value
+            into the Request-URI and remove that value from the Route
+            header field. Appending the Request-URI to the Route header field is part of
+         a mechanism used to pass the information in that Request-URI
+         through strict-routing elements. "Popping" the first Route
+         header field value into the Request-URI formats the message the
+         way a strict-routing element expects to receive it (with its
+         own URI in the Request-URI and the next location to visit in
+         the first Route header field value). 7.

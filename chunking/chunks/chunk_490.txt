@@ -1,0 +1,51 @@
+The following is an example of the use of a tunneled "message/sip"
+   body:
+      INVITE sip:bob@biloxi.com SIP/2.0
+      Via: SIP/2.0/UDP pc33.atlanta.com;branch=z9hG4bKnashds8
+      To: Bob <sip:bob@biloxi.com>
+      From: Alice <sip:alice@atlanta.com>;tag=1928301774
+      Call-ID: a84b4c76e66710
+      CSeq: 314159 INVITE
+      Max-Forwards: 70
+      Date: Thu, 21 Feb 2002 13:02:03 GMT
+      Contact: <sip:alice@pc33.atlanta.com>
+      Content-Type: multipart/signed;
+        protocol="application/pkcs7-signature";
+        micalg=sha1; boundary=boundary42
+      Content-Length: 568
+      --boundary42
+      Content-Type: message/sip
+      INVITE sip:bob@biloxi.com SIP/2.0
+      Via: SIP/2.0/UDP pc33.atlanta.com;branch=z9hG4bKnashds8
+      To: Bob <bob@biloxi.com>
+      From: Alice <alice@atlanta.com>;tag=1928301774
+      Call-ID: a84b4c76e66710
+      CSeq: 314159 INVITE
+      Max-Forwards: 70
+      Date: Thu, 21 Feb 2002 13:02:03 GMT
+      Contact: <sip:alice@pc33.atlanta.com>
+      Content-Type: application/sdp
+      Content-Length: 147
+      v=0
+      o=UserA 2890844526 2890844526 IN IP4 here.com
+      s=Session SDP
+      c=IN IP4 pc33.atlanta.com
+      t=0 0
+      m=audio 49172 RTP/AVP 0
+      a=rtpmap:0 PCMU/8000
+      --boundary42
+      Content-Type: application/pkcs7-signature; name=smime.p7s
+      Content-Transfer-Encoding: base64
+      Content-Disposition: attachment; filename=smime.p7s;
+         handling=required
+      ghyHhHUujhJhjH77n8HHGTrfvbnj756tbB9HG4VQpfyF467GhIGfHfYT6
+      4VQpfyF467GhIGfHfYT6jH77n8HHGghyHhHUujhJh756tbB9HGTrfvbnj
+      n8HHGTrfvhJhjH776tbB9HG4VQbnj7567GhIGfHfYT6ghyHhHUujpfyF4
+      7GhIGfHfYT64VQbnj756
+      --boundary42-
+23.4.3 Tunneling Encryption
+   It may also be desirable to use this mechanism to encrypt a
+   "message/sip" MIME body within a CMS EnvelopedData message S/MIME
+   body, but in practice, most header fields are of at least some use to
+   the network; the general use of encryption with S/MIME is to secure
+   message bodies like SDP rather than message headers.

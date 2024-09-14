@@ -1,0 +1,14 @@
+The server transaction MUST generate a 100
+   (Trying) response unless it knows that the TU will generate a
+   provisional or final response within 200 ms, in which case it MAY
+   generate a 100 (Trying) response. This provisional response is
+   needed to quench request retransmissions rapidly in order to avoid
+   network congestion. The 100 (Trying) response is constructed
+   according to the procedures in Section 8.2.6, except that the
+   insertion of tags in the To header field of the response (when none
+   was present in the request) is downgraded from MAY to SHOULD NOT. The request MUST be passed to the TU. The TU passes any number of provisional responses to the server
+   transaction. So long as the server transaction is in the
+   "Proceeding" state, each of these MUST be passed to the transport
+   layer for transmission. They are not sent reliably by the
+   transaction layer (they are not retransmitted by it) and do not cause
+   a change in the state of the server transaction.

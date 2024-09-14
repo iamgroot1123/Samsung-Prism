@@ -1,0 +1,12 @@
+This location service is effectively a database
+   containing mappings between a single URI and a set of one or more
+   alternative locations at which the target of that URI can be found. A redirect server does not issue any SIP requests of its own. After
+   receiving a request other than CANCEL, the server either refuses the
+   request or gathers the list of alternative locations from the    location service and returns a final response of class 3xx. For
+   well-formed CANCEL requests, it SHOULD return a 2xx response. This
+   response ends the SIP transaction. The redirect server maintains
+   transaction state for an entire SIP transaction. It is the
+   responsibility of clients to detect forwarding loops between redirect
+   servers. When a redirect server returns a 3xx response to a request, it
+   populates the list of (one or more) alternative locations into the
+   Contact header field.

@@ -1,0 +1,12 @@
+If a proxy were to resubmit a request adding a Proxy-Authorization
+      header field value, it would need to increment the CSeq in the new
+      request. However, this would cause the UAC that submitted the
+      original request to discard a response from the UAS, as the CSeq
+      value would be different. When the originating UAC receives the 407 (Proxy Authentication
+   Required) it SHOULD, if it is able, re-originate the request with the
+   proper credentials. It should follow the same procedures for the
+   display of the "realm" parameter that are given above for responding
+   to 401. If no credentials for a realm can be located, UACs MAY attempt to
+   retry the request with a username of "anonymous" and no password (a
+   password of ""). The UAC SHOULD also cache the credentials used in the re-originated
+   request.

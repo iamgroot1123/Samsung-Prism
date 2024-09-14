@@ -1,0 +1,20 @@
+Example:
+      Max-Forwards: 6
+20.23 Min-Expires
+   The Min-Expires header field conveys the minimum refresh interval
+   supported for soft-state elements managed by that server. This
+   includes Contact header fields that are stored by a registrar. The
+   header field contains a decimal integer number of seconds from 0 to
+   (2**32)-1. The use of the header field in a 423 (Interval Too Brief)
+   response is described in Sections 10.2.8, 10.3, and 21.4.17. Example:
+      Min-Expires: 60
+20.24 MIME-Version
+   See [H19.4.1]. Example:
+      MIME-Version: 1.0
+20.25 Organization
+   The Organization header field conveys the name of the organization to
+   which the SIP element issuing the request or response belongs. The field MAY be used by client software to filter calls. Example:
+      Organization: Boxes by Bob
+20.26 Priority
+   The Priority header field indicates the urgency of the request as
+   perceived by the client.

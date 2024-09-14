@@ -1,0 +1,13 @@
+In particular, if the proxy inserts a Record-Route
+         value or pushes URIs into the Route header field, it MUST place
+         the same values in retransmissions of the request. As for the
+         Via branch parameter, this implies that the transformations
+         MUST be based on time-invariant configuration or
+         retransmission-invariant properties of the request. o  A stateless proxy determines where to forward the request as
+         described for stateful proxies in Section 16.6 Item 10. The
+         request is sent directly to the transport layer instead of
+         through a client transaction. Since a stateless proxy must forward retransmitted requests to
+         the same destination and add identical branch parameters to
+         each of them, it can only use information from the message
+         itself and time-invariant configuration data for those
+         calculations.

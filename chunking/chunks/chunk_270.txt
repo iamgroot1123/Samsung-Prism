@@ -1,0 +1,14 @@
+16.9 Handling Transport Errors
+   If the transport layer notifies a proxy of an error when it tries to
+   forward a request (see Section 18.4), the proxy MUST behave as if the
+   forwarded request received a 503 (Service Unavailable) response. If the proxy is notified of an error when forwarding a response, it
+   drops the response. The proxy SHOULD NOT cancel any outstanding
+   client transactions associated with this response context due to this
+   notification. If a proxy cancels its outstanding client transactions, a single
+      malicious or misbehaving client can cause all transactions to fail
+      through its Via header field. 16.10 CANCEL Processing
+   A stateful proxy MAY generate a CANCEL to any other request it has
+   generated at any time (subject to receiving a provisional response to
+   that request as described in section 9.1). A proxy MUST cancel any
+   pending client transactions associated with a response context when
+   it receives a matching CANCEL request.

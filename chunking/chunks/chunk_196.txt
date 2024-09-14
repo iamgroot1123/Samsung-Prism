@@ -1,0 +1,14 @@
+Response retransmissions cease when an ACK request for
+   the response is received. This is independent of whatever transport
+   protocols are used to send the response. Since 2xx is retransmitted end-to-end, there may be hops between
+      UAS and UAC that are UDP. To ensure reliable delivery across
+      these hops, the response is retransmitted periodically even if the
+      transport at the UAS is reliable. If the server retransmits the 2xx response for 64*T1 seconds without
+   receiving an ACK, the dialog is confirmed, but the session SHOULD be
+   terminated. This is accomplished with a BYE, as described in Section
+   15. 14 Modifying an Existing Session
+   A successful INVITE request (see Section 13) establishes both a
+   dialog between two user agents and a session using the offer-answer
+   model. Section 12 explains how to modify an existing dialog using a
+   target refresh request (for example, changing the remote target URI
+   of the dialog).

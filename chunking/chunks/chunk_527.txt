@@ -1,0 +1,11 @@
+Attackers can create bogus requests that contain a falsified source
+   IP address and a corresponding Via header field that identify a
+   targeted host as the originator of the request and then send this
+   request to a large number of SIP network elements, thereby using
+   hapless SIP UAs or proxies to generate denial-of-service traffic
+   aimed at the target. Similarly, attackers might use falsified Route header field values in
+   a request that identify the target host and then send such messages
+   to forking proxies that will amplify messaging sent to the target. Record-Route could be used to similar effect when the attacker is
+   certain that the SIP dialog initiated by the request will result in
+   numerous transactions originating in the backwards direction. A number of denial-of-service attacks open up if REGISTER requests
+   are not properly authenticated and authorized by registrars.

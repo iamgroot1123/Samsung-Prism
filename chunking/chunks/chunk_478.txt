@@ -1,0 +1,10 @@
+o  "multipart/signed" MUST be used only with CMS detached
+         signatures. This allows backwards compatibility with non-S/MIME-
+            compliant recipients. o  S/MIME bodies SHOULD have a Content-Disposition header field,
+         and the value of the "handling" parameter SHOULD be "required." o  If a UAC has no certificate on its keyring associated with the
+         address-of-record to which it wants to send a request, it
+         cannot send an encrypted "application/pkcs7-mime" MIME message. UACs MAY send an initial request such as an OPTIONS message
+         with a CMS detached signature in order to solicit the
+         certificate of the remote side (the signature SHOULD be over a
+         "message/sip" body of the type described in Section 23.4). Note that future standardization work on S/MIME may define
+            non-certificate based keys.

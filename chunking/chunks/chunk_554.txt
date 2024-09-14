@@ -1,0 +1,14 @@
+Carol SHOULD then establish a TCP connection with the designated
+   address and send a new INVITE with a Request-URI containing the
+   received contact address (recomputing the signature in the body as
+   the request is readied). Bob receives this INVITE on an insecure
+   interface, but his UA inspects and, in this instance, recognizes the
+   From header field of the request and subsequently matches a locally
+   cached certificate with the one presented in the signature of the
+   body of the INVITE. He replies in similar fashion, authenticating
+   himself to Carol, and a secure dialog begins. Sometimes firewalls or NATs in an administrative domain could
+      preclude the establishment of a direct TCP connection to a UA. In
+      these cases, proxy servers could also potentially relay requests
+      to UAs in a way that has no trust implications (for example,
+      forgoing an existing TLS connection and forwarding the request
+      over cleartext TCP) as local policy dictates.

@@ -1,0 +1,15 @@
+The proxy core collects the responses from the client
+   transactions and uses them to send responses to the server
+   transaction. A stateful proxy creates a new server transaction for each new
+   request received. Any retransmissions of the request will then be
+   handled by that server transaction per Section 17. The proxy core
+   MUST behave as a UAS with respect to sending an immediate provisional
+   on that server transaction (such as 100 Trying) as described in
+   Section 8.2.6. Thus, a stateful proxy SHOULD NOT generate 100
+   (Trying) responses to non-INVITE requests. This is a model of proxy behavior, not of software. An
+   implementation is free to take any approach that replicates the
+   external behavior this model defines. For all new requests, including any with unknown methods, an element
+   intending to proxy the request MUST:
+      1. Validate the request (Section 16.3)
+      2. Preprocess routing information (Section 16.4)
+      3.

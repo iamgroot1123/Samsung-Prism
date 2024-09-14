@@ -1,0 +1,12 @@
+When a UAS sends a response containing an S/MIME body that answers
+   the first request in a dialog, or a response to a non-INVITE request
+   outside the context of a dialog, the UAS SHOULD structure the body as
+   an S/MIME ’multipart/signed’ CMS SignedData body. If the desired CMS
+   service is EnvelopedData, the UAS SHOULD send the EnvelopedData
+   message encapsulated within a SignedData message. When a UAC receives a response containing an S/MIME CMS body that
+   includes a certificate, the UAC SHOULD first validate the
+   certificate, if possible, with any appropriate root certificate. The
+   UAC SHOULD also determine the subject of the certificate and compare
+   this value to the To field of the response; although the two may very
+   well be different, and this is not necessarily indicative of a
+   security breach.

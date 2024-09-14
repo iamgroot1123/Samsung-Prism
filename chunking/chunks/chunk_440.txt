@@ -1,0 +1,14 @@
+A client (proxy or UAC) receiving a 503 (Service Unavailable) SHOULD
+   attempt to forward the request to an alternate server. It SHOULD NOT
+   forward any other requests to that server for the duration specified
+   in the Retry-After header field, if present. Servers MAY refuse the connection or drop the request instead of
+   responding with 503 (Service Unavailable). 21.5.5 504 Server Time-out
+   The server did not receive a timely response from an external server
+   it accessed in attempting to process the request. 408 (Request
+   Timeout) should be used instead if there was no response within the
+   period specified in the Expires header field from the upstream
+   server. 21.5.6 505 Version Not Supported
+   The server does not support, or refuses to support, the SIP protocol
+   version that was used in the request. The server is indicating that
+   it is unable or unwilling to complete the request using the same
+   major version as the client, other than with this error message.

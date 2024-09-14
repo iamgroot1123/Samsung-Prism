@@ -1,0 +1,12 @@
+LWS  =  [*WSP CRLF] 1*WSP ; linear whitespace
+      SWS  =  [LWS] ; sep whitespace
+   To separate the header name from the rest of value, a colon is used,
+   which, by the above rule, allows whitespace before, but no line
+   break, and whitespace after, including a linebreak. The HCOLON
+   defines this construct. HCOLON  =  *( SP / HTAB ) ":" SWS
+   The TEXT-UTF8 rule is only used for descriptive field contents and
+   values that are not intended to be interpreted by the message parser. Words of *TEXT-UTF8 contain characters from the UTF-8 charset (RFC
+   2279 [7]). The TEXT-UTF8-TRIM rule is used for descriptive field
+   contents that are n t quoted strings, where leading and trailing LWS
+   is not meaningful. In this regard, SIP differs from HTTP, which uses
+   the ISO 8859-1 character set.

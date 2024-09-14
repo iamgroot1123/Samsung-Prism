@@ -1,0 +1,13 @@
+21.5.7 513 Message Too Large
+   The server was unable to process the request since the message length
+   exceeded its capabilities. 21.6 Global Failures 6xx
+   6xx responses indicate that a server has definitive information about
+   a particular user, not just the particular instance indicated in the
+   Request-URI. 21.6.1 600 Busy Everywhere
+   The callee’s end system was contacted successfully but the callee is
+   busy and does not wish to take the call at this time. The response
+   MAY indicate a better time to call in the Retry-After header field. If the callee does not wish to reveal the reason for declining the
+   call, the callee uses status code 603 (Decline) instead. This status
+   response is returned only if the client knows that no other end point
+   (such as a voice mail system) will answer the request. Otherwise,
+   486 (Busy Here) should be returned.

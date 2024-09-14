@@ -1,0 +1,12 @@
+If the certificate cannot be verified because it is
+   self-signed, or signed by no known authority, the UAC MUST notify its
+   user of the status of the certificate (including the subject of the
+   certificate, its signator, and any key fingerprint information) and
+   request explicit permission before proceeding. If the certificate
+   was successfully verified, and the subject of the certificate
+   corresponds to the To header field in the response, or if the user
+   (after notification) explicitly authorizes the use of the
+   certificate, the UAC SHOULD add this certificate to a local keyring,
+   indexed by the address-of-record of the holder of the certificate. If the UAC had not transmitted its own certificate to the UAS in any
+   previous transaction, it SHOULD use a CMS SignedData body for its
+   next request or response.

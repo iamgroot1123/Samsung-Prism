@@ -1,0 +1,12 @@
+Unlike HTTP/1.1, SIP treats the version number as a literal
+           string. In practice, this should make no difference. 7.2 Responses
+   SIP responses are distinguished from requests by having a Status-Line
+   as their start-line. A Status-Line consists of the protocol version
+   followed by a numeric Status-Code and its associated textual phrase,
+   with each element separated by a single SP character. No CR or LF is allowed except in the final CRLF sequence. Status-Line  =  SIP-Version SP Status-Code SP Reason-Phrase CRLF
+   The Status-Code is a 3-digit integer result code that indicates the
+   outcome of an attempt to understand and satisfy a request. The
+   Reason-Phrase is intended to give a short textual description of the
+   Status-Code. The Status-Code is intended for use by automata,
+   whereas the Reason-Phrase is intended for the human user. A client
+   is not required to examine or display the Reason-Phrase.

@@ -1,0 +1,14 @@
+Under the new rules, upon
+         receiving a 6xx, a proxy will issue a CANCEL request, which
+         will generally result in 487 responses from all outstanding
+         client transactions, and then at that point the 6xx is
+         forwarded upstream. After a final response has been sent on the server transaction,
+         the following responses MUST be forwarded immediately:
+         -  Any 2xx response to an INVITE request
+         A stateful proxy MUST NOT immediately forward any other
+         responses. In particular, a stateful proxy MUST NOT forward
+         any 100 (Trying) response. Those responses that are candidates
+         for forwarding later as the "best" response have been gathered
+         as described in step "Add Response to Context". Any response chosen for immediate forwarding MUST be processed
+         as described in steps "Aggregate Authorization Header Field
+         Values" through "Record-Route".

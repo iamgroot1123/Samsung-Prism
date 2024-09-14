@@ -1,0 +1,13 @@
+These special characters MUST be in a quoted string to
+   be used within a parameter value. The word construct is used in
+   Call-ID to allow most separators to be used. token       =  1*(alphanum / "-" / "." / "!" / "%" / "*"
+                     / "_" / "+" / "‘" / "’" / "˜" )
+      separators  =  "(" / ")" / "<" / ">" / "@" /
+                     "," / ";" / ":" / "\" / DQUOTE /
+                     "/" / "[" / "]" / "?" / "=" /
+                     "{" / "}" / SP / HTAB
+      word        =  1*(alphanum / "-" / "." / "!" / "%" / "*" /
+                     "_" / "+" / "‘" / "’" / "˜" /
+                     "(" / ")" / "<" / ">" /
+                     ":" / "\" / DQUOTE /
+                     "/" / "[" / "]" / "?"

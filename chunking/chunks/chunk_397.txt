@@ -1,0 +1,18 @@
+Clients MAY apply content encodings to the body in requests. A
+   server MAY apply content encodings to the bodies in responses. The
+   server MUST only use encodings listed in the Accept-Encoding header
+   field in the request. The compact form of the Content-Encoding header field is e.
+   Examples:
+      Content-Encoding: gzip
+      e: tar
+20.13 Content-Language
+   See [H14.12]. Example:
+      Content-Language: fr
+20.14 Content-Length
+   The Content-Length header field indicates the size of the message-
+   body, in decimal number of octets, sent to the recipient. Applications SHOULD use this field to indicate the size of the
+   message-body to be transferred, regardless of the media type of the
+   entity. If a stream-based protocol (such as TCP) is used as
+   transport, the header field MUST be used. The size of the message-body does not include the CRLF separating
+   header fields and body. Any Content-Length greater than or equal to
+   zero is a valid value.

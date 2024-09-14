@@ -1,0 +1,12 @@
+The IANA Considerations section of the RFC
+   must include the following information, which appears in the IANA
+   registry along with the RFC number of the publication. o  Name of the option tag. The name MAY be of any length, but
+         SHOULD be no more than twenty characters long. The name MUST
+         consist of alphanum (Section 25) characters only. o  Descriptive text that describes the extension. 27.2 Warn-Codes
+   This specification establishes the Warn-codes sub-registry under
+   http://www.iana.org/assignments/sip-parameters and initiates its
+   population with the warn-codes listed in Section 20.43. Additional
+   warn-codes are registered by RFC publication. The descriptive text for the table of warn-codes is:
+   Warning codes provide information supplemental to the status code in
+   SIP response messages when the failure of the transaction results
+   from a Session Description Protocol (SDP) (RFC 2327 [1]) problem. The "warn-code" consists of three digits.

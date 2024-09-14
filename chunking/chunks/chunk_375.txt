@@ -1,0 +1,18 @@
+For example,
+      tel:+358-555-1234567;postd=pp22
+      tel:+358-555-1234567;POSTD=PP22
+   are equivalent, while
+      sip:+358-555-1234567;postd=pp22@foo.com;user=phone
+      sip:+358-555-1234567;POSTD=PP22@foo.com;user=phone
+   are not. Likewise,
+      tel:+358-555-1234567;postd=pp22;isub=1411
+      tel:+358-555-1234567;isub=1411;postd=pp22
+   are equivalent, while
+      sip:+358-555-1234567;postd=pp22;isub=1411@foo.com;user=phone
+      sip:+358-555-1234567;isub=1411;postd=pp22@foo.com;user=phone
+   are not. To mitigate this problem, elements constructing telephone-subscriber
+   fields to place in the userinfo part of a SIP or SIPS URI SHOULD fold
+   any case-insensitive portion of telephone-subscriber to lower case,
+   and order the telephone-subscriber parameters lexically by parameter
+   name, excepting isdn-subaddress and post-dial, which occur first and
+   in that order.

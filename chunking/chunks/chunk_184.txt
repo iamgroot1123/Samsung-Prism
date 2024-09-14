@@ -1,0 +1,14 @@
+If a provisional response
+   has a tag in the To field, and if the dialog ID of the response does
+   not match an existing dialog, one is constructed using the procedures
+   defined in Section 12.1.2. The early dialog will only be needed if the UAC needs to send a
+   request to its peer within the dialog before the initial INVITE
+   transaction completes. Header fields present in a provisional
+   response are applicable as long as the dialog is in the early state
+   (for example, an Allow header field in a provisional response
+   contains the methods that can be used in the dialog while this is in
+   the early state). 13.2.2.2 3xx Responses
+   A 3xx response may contain one or more Contact header field values
+   providing new addresses where the callee might be reachable. Depending on the status code of the 3xx response (see Section 21.3),
+   the UAC MAY choose to try those new addresses. 13.2.2.3 4xx, 5xx and 6xx Responses
+   A single non-2xx final response may be received for the INVITE.

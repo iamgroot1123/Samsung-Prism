@@ -1,0 +1,13 @@
+URIs from business cards, web pages, and even from
+   sources inside the protocol such as registered contacts may contain
+   inappropriate header fields or body parts. An implementation MUST include any provided transport, maddr, ttl, or
+   user parameter in the Request-URI of the formed request. If the URI
+   contains a method parameter, its value MUST be used as the method of
+   the request. The method parameter MUST NOT be placed in the
+   Request-URI. Unknown URI parameters MUST be placed in the message’s
+   Request-URI. An implementation SHOULD treat the presence of any headers or body
+   parts in the URI as a desire to include them in the message, and
+   choose to honor the request on a per-component basis. An implementation SHOULD NOT honor these obviously dangerous header
+   fields: From, Call-ID, CSeq, Via, and Record-Route. An implementation SHOULD NOT honor any requested Route header field
+   values in order to not be used as an unwitting agent in malicious
+   attacks.

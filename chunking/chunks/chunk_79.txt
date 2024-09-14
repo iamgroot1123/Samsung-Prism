@@ -1,0 +1,12 @@
+These
+   7 characters are used as a magic cookie (7 is deemed sufficient to
+   ensure that an older RFC 2543 implementation would not pick such a
+   value), so that servers receiving the request can determine that the
+   branch ID was constructed in the fashion described by this    specification (that is, globally unique). Beyond this requirement,
+   the precise format of the branch token is implementation-defined. The Via header maddr, ttl, and sent-by components will be set when
+   the request is processed by the transport layer (Section 18). Via processing for proxies is described in Section 16.6 Item 8 and
+   Section 16.7 Item 3. 8.1.1.8 Contact
+   The Contact header field provides a SIP or SIPS URI that can be used
+   to contact that specific instance of the UA for subsequent requests. The Contact header field MUST be present and contain exactly one SIP
+   or SIPS URI in any request that can result in the establishment of a
+   dialog.

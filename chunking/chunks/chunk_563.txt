@@ -1,0 +1,14 @@
+Maintaining redundancy of
+   long-lived TLS connections, especially when a UA is solely
+   responsible for their establishment, could also be cumbersome. TLS only allows SIP entities to authenticate servers to which they
+   are adjacent; TLS offers strictly hop-by-hop security. Neither TLS,
+   nor any other mechanism specified in this document, allows clients to
+   authenticate proxy servers to whom they cannot form a direct TCP
+   connection. 26.4.4 SIPS URIs
+   Actually using TLS on every segment of a request path entails that
+   the terminating UAS must be reachable over TLS (perhaps registering
+   with a SIPS URI as a contact address). This is the preferred use of
+   SIPS. Many valid architectures, however, use TLS to secure part of
+   the request path, but rely on some other mechanism for the final hop
+   to a UAS, for example. Thus SIPS cannot guarantee that TLS usage
+   will be truly end-to-end.

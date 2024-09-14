@@ -1,0 +1,11 @@
+UAs wishing to support this capability must
+   take into consideration some issues such as choosing monotonically
+   increasing CSeq sequence numbers even across reboots, reconstructing
+   the route set, and accepting out-of-range RTP timestamps and sequence
+   numbers. If the UAS wishes to reject the request because it does not wish to
+   recreate the dialog, it MUST respond to the request with a 481
+   (Call/Transaction Does Not Exist) status code and pass that to the
+   server transaction. Requests that do not change in any way the state of a dialog may be
+   received within a dialog (for example, an OPTIONS request). They are
+   processed as if they had been received outside the dialog. If the remote sequence number is empty, it MUST be set to the value
+   of the sequence number in the CSeq header field value in the request.

@@ -1,0 +1,13 @@
+Values in this column are:
+      R: header field may only appear in requests;
+      r: header field may only appear in responses;
+      2xx, 4xx, etc. : A numerical value or range indicates response
+           codes with which the header field can be used;
+      c: header field is copied from the request to the response. An empty entry in the "where" column indicates that the header
+           field may be present in all requests and responses. The "proxy" column describes the operations a proxy may perform on a
+   header field:
+      a: A proxy can add or concatenate the header field if not present. m: A proxy can modify an existing header field value. d: A proxy can delete a header field value. r: A proxy must be able to read the header field, and thus this
+           header field cannot be encrypted. The next six columns relate to the presence of a header field in a
+   method:
+      c: Conditional; requirements on the header field depend on the
+           context of the message.

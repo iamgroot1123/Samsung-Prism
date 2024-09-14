@@ -1,0 +1,11 @@
+All SIP elements that support TLS MUST also support the SIPS URI
+   scheme. Proxy servers, redirect servers, registrars, and UAs MAY also
+   implement IPSec or other lower-layer security protocols. When a UA attempts to contact a proxy server, redirect server, or
+   registrar, the UAC SHOULD initiate a TLS connection over which it
+   will send SIP messages. In some architectures, UASs MAY receive
+   requests over such TLS connections as well. Proxy servers, redirect servers, registrars, and UAs MUST implement
+   Digest Authorization, encompassing all of the aspects required in 22. Proxy servers, redirect servers, and registrars SHOULD be configured
+   with at least one Digest realm, and at least one "realm" string
+   supported by a given server SHOULD correspond to the server’s
+   hostname or domainname. UAs MAY support the signing and encrypting of MIME bodies, and
+   transference of credentials with S/MIME as described in Section 23.

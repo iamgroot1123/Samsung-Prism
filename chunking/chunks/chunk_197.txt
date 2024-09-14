@@ -1,0 +1,12 @@
+This section describes how to modify the actual
+   session. This modification can involve changing addresses or ports,
+   adding a media stream, deleting a media stream, and so on. This is
+   accomplished by sending a new INVITE request within the same dialog
+   that established the session. An INVITE request sent within an
+   existing dialog is known as a re-INVITE. Note that a single re-INVITE can modify the dialog and the
+      parameters of the session at the same time. Either the caller or callee can modify an existing session. The behavior of a UA on detection of media failure is a matter of
+   local policy. However, automated generation of re-INVITE or BYE is
+   NOT RECOMMENDED to avoid flooding the network with traffic when there
+   is congestion. In any case, if these messages are sent
+   automatically, they SHOULD be sent after some randomized interval. Note that the paragraph above refers to automatically generated
+      BYEs and re-INVITEs.

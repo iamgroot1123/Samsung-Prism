@@ -1,0 +1,14 @@
+A stateless proxy MUST follow the request processing steps described
+   in Section 16.6 with the following exceptions:
+      o  The requirement for unique branch IDs across space and time
+         applies to stateless proxies as well. However, a stateless
+         proxy cannot simply use a random number generator to compute
+         the first component of the branch ID, as described in Section
+         16.6 bullet 8. This is because retransmissions of a request
+         need to have the same value, and a stateless proxy cannot tell
+         a retransmission from the original request. Therefore, the
+         component of the branch parameter that makes it unique MUST be
+         the same each time a retransmitted request is forwarded. Thus
+         for a stateless proxy, the branch parameter MUST be computed as
+         a combinatoric function of message parameters which are
+         invariant on retransmission.

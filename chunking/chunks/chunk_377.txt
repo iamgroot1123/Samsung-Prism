@@ -1,0 +1,14 @@
+This is a change
+   from past practice, and is instituted to ensure continuing multi-
+   vendor interoperability (see discussion in Section 20.32 and Section
+   20.37). An IANA registry of option tags is used to ensure easy
+   reference. 19.3 Tags
+   The "tag" parameter is used in the To and From header fields of SIP
+   messages. It serves as a general mechanism to identify a dialog,
+   which is the combination of the Call-ID along with two tags, one from
+   each participant in the dialog. When a UA sends a request outside of
+   a dialog, it contains a From tag only, providing "half" of the dialog
+   ID. The dialog is completed from the response(s), each of which
+   contributes the second half in the To header field. The forking of
+   SIP requests means that multiple dialogs can be established from a
+   single request.

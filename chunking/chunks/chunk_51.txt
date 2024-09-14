@@ -1,0 +1,13 @@
+The Request-URI MUST NOT contain unescaped spaces or control
+           characters and MUST NOT be enclosed in "<>". SIP elements MAY support Request-URIs with schemes other than
+           "sip" and "sips", for example the "tel" URI scheme of RFC
+           2806 [9]. SIP elements MAY translate non-SIP URIs using any
+           mechanism at their disposal, resulting in SIP URI, SIPS URI,
+           or some other scheme. SIP-Version: Both request and response messages include the
+           version of SIP in use, and follow [H3.1] (with HTTP replaced
+           by SIP, and HTTP/1.1 replaced by SIP/2.0) regarding version
+           ordering, compliance requirements, and upgrading of version
+           numbers. To be compliant with this specification,
+           applications sending SIP messages MUST include a SIP-Version
+           of "SIP/2.0". The SIP-Version string is case-insensitive,
+           but implementations MUST send upper-case.

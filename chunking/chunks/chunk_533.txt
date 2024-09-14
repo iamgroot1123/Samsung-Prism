@@ -1,0 +1,13 @@
+TLS provides transport-layer security over connection-oriented
+   protocols (for the purposes of this document, TCP); "tls" (signifying
+   TLS over TCP) can be specified as the desired transport protocol
+   within a Via header field value or a SIP-URI. TLS is most suited to
+   architectures in which hop-by-hop security is required between hosts
+   with no pre-existing trust association. For example, Alice trusts
+   her local proxy server, which after a certificate exchange decides to
+   trust Bob’s local proxy server, which Bob trusts, hence Bob and Alice
+   can communicate securely. TLS must be tightly coupled with a SIP application. Note that
+   transport mechanisms are specified on a hop-by-hop basis in SIP, thus
+   a UA that sends requests over TLS to a proxy server has no assurance
+   that TLS will be used end-to-end. The TLS_RSA_WITH_AES_128_CBC_SHA ciphersuite [6] MUST be supported at
+   a minimum by implementers when TLS is used in a SIP application.

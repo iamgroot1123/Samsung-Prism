@@ -1,0 +1,14 @@
+If
+         the authenticated user is not authorized to modify bindings,
+         the registrar MUST return a 403 (Forbidden) and skip the
+         remaining steps. In architectures that support third-party registration, one
+         entity may be responsible for updating the registrations
+         associated with multiple addresses-of-record. 5. The registrar extracts the address-of-record from the To header
+         field of the request. If the address-of-record is not valid
+         for the domain in the Request-URI, the registrar MUST send a
+         404 (Not Found) response and skip the remaining steps. The URI
+         MUST then be converted to a canonical form. To do that, all
+         URI parameters MUST be removed (including the user-param), and
+         any escaped characters MUST be converted to their unescaped
+         form. The result serves as an index into the list of bindings. 6. The registrar checks whether the request contains the Contact
+         header field.

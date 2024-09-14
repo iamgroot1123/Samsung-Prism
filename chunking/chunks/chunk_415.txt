@@ -1,0 +1,12 @@
+Example:
+      User-Agent: Softphone Beta1.5
+20.42 Via
+   The Via header field indicates the path taken by the request so far
+   and indicates the path that should be followed in routing responses. The branch ID parameter in the Via header field values serves as a
+   transaction identifier, and is used by proxies to detect loops. A Via header field value contains the transport protocol used to send
+   the message, the client’s host name or network address, and possibly
+   the port number at which it wishes to receive responses. A Via
+   header field value can also contain parameters such as "maddr",
+   "ttl", "received", and "branch", whose meaning and use are described    in other sections. For implementations compliant to this
+   specification, the value of the branch parameter MUST start with the
+   magic cookie "z9hG4bK", as discussed in Section 8.1.1.7. Transport protocols defined here are "UDP", "TCP", "TLS", and "SCTP". "TLS" means TLS over TCP.

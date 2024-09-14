@@ -1,0 +1,11 @@
+When we say that an element "contains" a layer, we mean
+   it is compliant to the set of rules defined by that layer. Not every element specified by the protocol contains every layer. Furthermore, the elements specified by SIP are logical elements, not
+   physical ones. A physical realization can choose to act as different
+   logical elements, perhaps even on a transaction-by-transaction basis. The lowest layer of SIP is its syntax and encoding. Its encoding is
+   specified using an augmented Backus-Naur Form grammar (BNF). The
+   complete BNF is specified in Section 25; an overview of a SIP
+   message’s structure can be found in Section 7. The second layer is the transport layer. It defines how a client
+   sends requests and receives responses and how a server receives
+   requests and sends responses over the network. All SIP elements
+   contain a transport layer. The transport layer is described in
+   Section 18. The third layer is the transaction layer.

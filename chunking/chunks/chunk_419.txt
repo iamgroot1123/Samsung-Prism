@@ -1,0 +1,12 @@
+Warnings 300 through 329 are reserved for
+   indicating problems with keywords in the session description, 330
+   through 339 are warnings related to basic network services requested
+   in the session description, 370 through 379 are warnings related to
+   quantitative QoS parameters requested in the session description, and
+   390 through 399 are miscellaneous warnings that do not fall into one
+   of the above categories. 300 Incompatible network protocol: One or more network protocols
+          contained in the session description are not available. 301 Incompatible network address formats: One or more network
+          address formats contained in the session description are not
+          available. 302 Incompatible transport protocol: One or more transport
+          protocols described in the session description are not
+          available.

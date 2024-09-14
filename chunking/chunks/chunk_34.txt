@@ -1,0 +1,12 @@
+Clients may or may not interact
+         directly with a human user. User agent clients and proxies are
+         clients. Conference: A multimedia session (see below) that contains
+         multiple participants. Core: Core designates the functions specific to a particular type
+         of SIP entity, i.e., specific to either a stateful or stateless
+         proxy, a user agent or registrar. All cores, except those for
+         the stateless proxy, are transaction users. Dialog: A dialog is a peer-to-peer SIP relationship between two
+         UAs that persists for some time. A dialog is established by
+         SIP messages, such as a 2xx response to an INVITE request. A
+         dialog is identified by a call identifier, local tag, and a
+         remote tag. A dialog was formerly known as a call leg in RFC
+         2543.

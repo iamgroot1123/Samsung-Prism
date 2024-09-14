@@ -1,0 +1,12 @@
+This is to prevent servers from insisting that
+   clients implement non-standard, vendor-defined features in order to
+   receive service. Extensions defined by experimental and
+   informational RFCs are explicitly excluded from usage with the
+   Supported header field in a request, since they too are often used to
+   document vendor-defined extensions. If the UAC wishes to insist that a UAS understand an extension that
+   the UAC will apply to the request in order to process the request, it
+   MUST insert a Require header field into the request listing the
+   option tag for that extension. If the UAC wishes to apply an
+   extension to the request and insist that any proxies that are    traversed understand that extension, it MUST insert a Proxy-Require
+   header field into the request listing the option tag for that
+   extension.

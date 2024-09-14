@@ -1,0 +1,17 @@
+Example:
+      UAC->UAS:   INVITE sip:watson@bell-telephone.com SIP/2.0
+                  Require: 100rel
+      UAS->UAC:   SIP/2.0 420 Bad Extension
+                  Unsupported: 100rel
+      This behavior ensures that the client-server interaction will
+      proceed without delay when all options are understood by both
+      sides, and only slow down if options are not understood (as in the
+      example above). For a well-matched client-server pair, the
+      interaction proceeds quickly, saving a round-trip often required
+      by negotiation mechanisms. In addition, it also removes ambiguity
+      when the client requires features that the server does not
+      understand. Some features, such as call handling fields, are only
+      of interest to end systems. 8.2.3 Content Processing
+   Assuming the UAS understands any extensions required by the client,
+   the UAS examines the body of the message, and the header fields that
+   describe it.

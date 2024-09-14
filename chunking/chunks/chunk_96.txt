@@ -1,0 +1,13 @@
+If the UAS recognizes
+   but does not support the method of a request, it MUST generate a 405
+   (Method Not Allowed) response. Procedures for generating responses
+   are described in Section 8.2.6. The UAS MUST also add an Allow
+   header field to the 405 (Method Not Allowed) response. The Allow
+   header field MUST list the set of methods supported by the UAS
+   generating the message. The Allow header field is presented in
+   Section 20.5. If the method is one supported by the server, processing continues. 8.2.2 Header Inspection
+   If a UAS does not understand a header field in a request (that is,
+   the header field is not defined in this specification or in any
+   supported extension), the server MUST ignore that header field and
+   continue processing the message. A UAS SHOULD ignore any malformed
+   header fields that are not necessary for processing requests.

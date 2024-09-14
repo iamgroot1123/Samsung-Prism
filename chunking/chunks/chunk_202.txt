@@ -1,0 +1,14 @@
+For
+   example, if the call was already hung up with a BYE, the re-INVITE
+   would not take place. The rules for transmitting a re-INVITE and for generating an ACK for
+   a 2xx response to re-INVITE are the same as for the initial INVITE
+   (Section 13.2.1). 14.2 UAS Behavior
+   Section 13.3.1 describes the procedure for distinguishing incoming
+   re-INVITEs from incoming initial INVITEs and handling a re-INVITE for
+   an existing dialog. A UAS that receives a second INVITE before it sends the final
+   response to a first INVITE with a lower CSeq sequence number on the
+   same dialog MUST return a 500 (Server Internal Error) response to the
+   second INVITE and MUST include a Retry-After header field with a
+   randomly chosen value of between 0 and 10 seconds. A UAS that receives an INVITE on a dialog while an INVITE it had sent
+   on that dialog is in progress MUST return a 491 (Request Pending)
+   response to the received INVITE.

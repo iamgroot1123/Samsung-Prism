@@ -1,0 +1,13 @@
+If a SIP UA
+   encounters an unknown header field with an integrity violation, it
+   MUST ignore the header field. 23.4.2 Tunneling Integrity and Authentication
+   Tunneling SIP messages within S/MIME bodies can provide integrity for
+   SIP header fields if the header fields that the sender wishes to
+   secure are replicated in a "message/sip" MIME body signed with a CMS
+   detached signature. Provided that the "message/sip" body contains at least the
+   fundamental dialog identifiers (To, From, Call-ID, CSeq), then a
+   signed MIME body can provide limited authentication. At the very
+   least, if the certificate used to sign the body is unknown to the
+   recipient and cannot be verified, the signature can be used to
+   ascertain that a later request in a dialog was transmitted by the
+   same certificate-holder that initiated the dialog.

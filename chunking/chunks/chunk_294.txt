@@ -1,0 +1,14 @@
+If the TU wishes to send an ACK, it passes one
+   directly to the transport layer for transmission. The INVITE transaction is different from those of other methods
+   because of its extended duration. Normally, human input is required
+   in order to respond to an INVITE. The long delays expected for
+   sending a response argue for a three-way handshake. On the other
+   hand, requests of other methods are expected to complete rapidly. Because of the non-INVITE transaction’s reliance on a two-way
+   handshake, TUs SHOULD respond immediately to non-INVITE requests. 17.1.1 INVITE Client Transaction
+17.1.1.1 Overview of INVITE Transaction
+   The INVITE transaction consists of a three-way handshake. The client
+   transaction sends an INVITE, the server transaction sends responses,
+   and the client transaction sends an ACK. For unreliable transports
+   (such as UDP), the client transaction retransmits requests at an
+   interval that starts at T1 seconds and doubles after every
+   retransmission.

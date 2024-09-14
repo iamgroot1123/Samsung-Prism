@@ -1,0 +1,13 @@
+Alice and Bob’s media session has now begun, and they send media
+   packets using the format to which they agreed in the exchange of SDP. In general, the end-to-end media packets take a different path from
+   the SIP signaling messages. During the session, either Alice or Bob may decide to change the
+   characteristics of the media session. This is accomplished by
+   sending a re-INVITE containing a new media description. This re-
+   INVITE references the existing dialog so that the other party knows
+   that it is to modify an existing session instead of establishing a
+   new session. The other party sends a 200 (OK) to accept the change. The requestor responds to the 200 (OK) with an ACK. If the other
+   party does not accept the change, he sends an error response such as
+   488 (Not Acceptable Here), which also receives an ACK. However, the
+   failure of the re-INVITE does not cause the existing call to fail -
+   the session continues using the previously negotiated
+   characteristics.

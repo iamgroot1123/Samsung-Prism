@@ -1,0 +1,13 @@
+A proxy server primarily plays the
+         role of routing, which means its job is to ensure that a
+         request is sent to another entity "closer" to the targeted
+         user. Proxies are also useful for enforcing policy (for
+         example, making sure a user is allowed to make a call). A
+         proxy interprets, and, if necessary, rewrites specific parts of
+         a request message before forwarding it. Recursion: A client recurses on a 3xx response when it generates a
+         new request to one or more of the URIs in the Contact header
+         field in the response. Redirect Server: A redirect server is a user agent server that
+         generates 3xx responses to requests it receives, directing the
+         client to contact an alternate set of URIs. Registrar: A registrar is a server that accepts REGISTER requests
+         and places the information it receives in those requests into
+         the location service for the domain it handles.

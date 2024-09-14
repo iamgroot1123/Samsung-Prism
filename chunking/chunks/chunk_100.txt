@@ -1,0 +1,8 @@
+If a UAS does not understand an option-tag listed in a
+   Require header field, it MUST respond by generating a response with
+   status code 420 (Bad Extension). The UAS MUST add an Unsupported
+   header field, and list in it those options it does not understand
+   amongst those in the Require header field of the request. Note that Require and Proxy-Require MUST NOT be used in a SIP CANCEL
+   request, or in an ACK request sent for a non-2xx response. These
+   header fields MUST be ignored if they are present in these requests. An ACK request for a 2xx response MUST contain only those Require and
+   Proxy-Require values that were present in the initial request.

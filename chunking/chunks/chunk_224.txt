@@ -1,0 +1,11 @@
+If the domain of the Request-URI indicates a domain this element is
+   not responsible for, the Request-URI MUST be placed into the target
+   set as the only target, and the element MUST proceed to the task of
+   Request Forwarding (Section 16.6). There are many circumstances in which a proxy might receive a
+      request for a domain it is not responsible for. A firewall proxy
+      handling outgoing calls (the way HTTP proxies handle outgoing
+      requests) is an example of where this is likely to occur. If the target set for the request has not been predetermined as
+   described above, this implies that the element is responsible for the
+   domain in the Request-URI, and the element MAY use whatever mechanism
+   it desires to determine where to send the request. Any of these
+   mechanisms can be modeled as accessing an abstract Location Service.

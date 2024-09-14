@@ -1,0 +1,11 @@
+This is identical to the retransmit behavior for requests in the
+   "Trying" state of the non-INVITE client transaction. Furthermore,
+   while in the "Completed" state, if a request retransmission is
+   received, the server SHOULD pass the response to the transport for
+   retransmission. If an ACK is received while the server transaction is in the
+   "Completed" state, the server transaction MUST transition to the
+   "Confirmed" state. As Timer G is ignored in this state, any
+   retransmissions of the response will cease. If timer H fires while in the "Completed" state, it implies that the
+   ACK was never received. In this case, the server transaction MUST
+   transition to the "Terminated" state, and MUST indicate to the TU
+   that a transaction failure has occurred.

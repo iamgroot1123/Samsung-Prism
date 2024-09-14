@@ -1,0 +1,10 @@
+An implementation SHOULD NOT honor requests to include header fields
+   that may cause it to falsely advertise its location or capabilities. These include: Accept, Accept-Encoding, Accept-Language, Allow,
+   Contact (in its dialog usage), Organization, Supported, and User-
+   Agent. An implementation SHOULD verify the accuracy of any requested
+   descriptive header fields, including: Content-Disposition, Content-
+   Encoding, Content-Language, Content-Length, Content-Type, Date,
+   Mime-Version, and Timestamp. If the request formed from constructing a message from a given URI is
+   not a valid SIP request, the URI is invalid. An implementation MUST
+   NOT proceed with transmitting the request. It should instead pursue
+   the course of action due an invalid URI in the context it occurs. The constructed request can be invalid in many ways.

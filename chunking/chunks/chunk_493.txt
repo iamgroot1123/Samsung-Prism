@@ -1,0 +1,59 @@
+In the following example, of an encrypted and signed message, the
+   text boxed in asterisks ("*") is encrypted:
+        INVITE sip:bob@biloxi.com SIP/2.0
+        Via: SIP/2.0/UDP pc33.atlanta.com;branch=z9hG4bKnashds8
+        To: Bob <sip:bob@biloxi.com>
+        From: Anonymous <sip:anonymous@atlanta.com>;tag=1928301774
+        Call-ID: a84b4c76e66710
+        CSeq: 314159 INVITE
+        Max-Forwards: 70
+        Date: Thu, 21 Feb 2002 13:02:03 GMT
+        Contact: <sip:pc33.atlanta.com>
+        Content-Type: multipart/signed;
+          protocol="application/pkcs7-signature";
+          micalg=sha1; boundary=boundary42
+        Content-Length: 568
+        --boundary42
+        Content-Type: application/pkcs7-mime; smime-type=enveloped-data;
+             name=smime.p7m
+        Content-Transfer-Encoding: base64
+        Content-Disposition: attachment; filename=smime.p7m
+           handling=required
+        Content-Length: 231
+      ***********************************************************
+      * Content-Type: message/sip                               *
+      *                                                         *
+      * INVITE sip:bob@biloxi.com SIP/2.0                       *
+      * Via: SIP/2.0/UDP pc33.atlanta.com;branch=z9hG4bKnashds8 *
+      * To: Bob <bob@biloxi.com>                                *
+      * From: Alice <alice@atlanta.com>;tag=1928301774          *
+      * Call-ID: a84b4c76e66710                                 *
+      * CSeq: 314159 INVITE                                     *
+      * Max-Forwards: 70                                        *
+      * Date: Thu, 21 Feb 2002 13:02:03 GMT                     *
+      * Contact: <sip:alice@pc33.atlanta.com>                   *
+      *                                                         *
+      * Content-Type: application/sdp                           *
+      *                                                         *
+      * v=0                                                     *
+      * o=alice 53655765 2353687637 IN IP4 pc33.atlanta.com     *
+      * s=Session SDP                                           *
+      * t=0 0                                                   *
+      * c=IN IP4 pc33.atlanta.com                               *
+      * m=audio 3456 RTP/AVP 0 1 3 99                           *
+      * a=rtpmap:0 PCMU/8000                                    *
+      ***********************************************************
+        --boundary42
+        Content-Type: application/pkcs7-signature; name=smime.p7s
+        Content-Transfer-Encoding: base64
+        Content-Disposition: attachment; filename=smime.p7s;
+           handling=required
+        ghyHhHUujhJhjH77n8HHGTrfvbnj756tbB9HG4VQpfyF467GhIGfHfYT6
+        4VQpfyF467GhIGfHfYT6jH77n8HHGghyHhHUujhJh756tbB9HGTrfvbnj
+        n8HHGTrfvhJhjH776tbB9HG4VQbnj7567GhIGfHfYT6ghyHhHUujpfyF4
+        7GhIGfHfYT64VQbnj756
+        --boundary42-
+24 Examples
+   In the following examples, we often omit the message body and the
+   corresponding Content-Length and Content-Type header fields for
+   brevity.

@@ -1,0 +1,13 @@
+A UAS MAY choose not to generate 180 (Ringing) responses for a re-
+   INVITE because UACs do not typically render this information to the
+   user. For the same reason, UASs MAY choose not to use an Alert-Info
+   header field or a body with Content-Disposition "alert" in responses
+   to a re-INVITE. A UAS providing an offer in a 2xx (because the INVITE did not contain
+   an offer) SHOULD construct the offer as if the UAS were making a
+   brand new call, subject to the constraints of sending an offer that
+   updates an existing session, as described in [13] in the case of SDP. Specifically, this means that it SHOULD include as many media formats
+   and media types that the UA is willing to support. The UAS MUST
+   ensure that the session description overlaps with its previous
+   session description in media formats, transports, or other parameters
+   that require support from the peer. This is to avoid the need for
+   the peer to reject the session description.

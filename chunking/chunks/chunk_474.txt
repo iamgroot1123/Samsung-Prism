@@ -1,0 +1,11 @@
+In the opinion of the authors,
+   however, the security it provides is proverbially better than
+   nothing; it is in fact comparable to the widely used SSH application. These limitations are explored in greater detail in Section 26.4.2. If a UA receives an S/MIME body that has been encrypted with a public
+   key unknown to the recipient, it MUST reject the request with a 493
+   (Undecipherable) response. This response SHOULD contain a valid
+   certificate for the respondent (corresponding, if possible, to any
+   address of record given in the To header field of the rejected
+   request) within a MIME body with a ’certs-only’ "smime-type"
+   parameter. A 493 (Undecipherable) sent without any certificate indicates that
+   the respondent cannot or will not utilize S/MIME encrypted messages,
+   though they may still support S/MIME signatures.

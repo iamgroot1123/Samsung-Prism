@@ -1,0 +1,11 @@
+The remainder of the processing described in this section is
+         not performed on this message, the UAC processing rules
+         described in Section 8.1.3 are followed instead (transport
+         layer processing has already occurred). This will happen, for instance, when the element generates
+         CANCEL requests as described in Section 10. 4. Add response to context
+         Final responses received are stored in the response context
+         until a final response is generated on the server transaction
+         associated with this context. The response may be a candidate
+         for the best final response to be returned on that server
+         transaction. Information from this response may be needed in
+         forming the best response, even if this response is not chosen.

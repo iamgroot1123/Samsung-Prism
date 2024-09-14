@@ -1,0 +1,16 @@
+See
+   [H14.3]. The semantics in SIP are identical to those defined in
+   [H14.3]. An empty Accept-Encoding header field is permissible. It is
+   equivalent to Accept-Encoding: identity, that is, only the identity
+   encoding, meaning no encoding, is permissible. If no Accept-Encoding header field is present, the server SHOULD
+   assume a default value of identity. This differs slightly from the HTTP definition, which indicates that
+   when not present, any encoding can be used, but the identity encoding
+   is preferred. Example:
+      Accept-Encoding: gzip
+20.3 Accept-Language
+   The Accept-Language header field is used in requests to indicate the
+   preferred languages for reason phrases, session descriptions, or
+   status responses carried as message bodies in the response. If no
+   Accept-Language header field is present, the server SHOULD assume all
+   languages are acceptable to the client. The Accept-Language header field follows the syntax defined in
+   [H14.4].

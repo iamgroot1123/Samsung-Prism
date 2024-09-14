@@ -1,0 +1,14 @@
+If the parameters match, the
+      request has looped. If they differ, the request is spiraling, and
+      processing continues. If a loop is detected, the element MAY
+      return a 482 (Loop Detected) response. 5. Proxy-Require check
+      Future extensions to this protocol may introduce features that
+      require special handling by proxies. Endpoints will include a
+      Proxy-Require header field in requests that use these features,
+      telling the proxy not to process the request unless the feature is
+      understood. If the request contains a Proxy-Require header field (Section
+      20.29) with one or more option-tags this element does not
+      understand, the element MUST return a 420 (Bad Extension)
+      response. The response MUST include an Unsupported (Section
+      20.40) header field listing those option-tags the element did not
+      understand. 6.

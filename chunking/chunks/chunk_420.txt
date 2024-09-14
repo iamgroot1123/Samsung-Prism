@@ -1,0 +1,10 @@
+303 Incompatible bandwidth units: One or more bandwidth
+          measurement units contained in the session description were
+          not understood. 304 Media type not available: One or more media types contained in
+          the session description are not available. 305 Incompatible media format: One or more media formats contained
+          in the session description are not available. 306 Attribute not understood: One or more of the media attributes
+          in the session description are not supported. 307 Session description parameter not understood: A parameter
+          other than those listed above was not understood. 330 Multicast not available: The site where the user is located
+          does not support multicast. 331 Unicast not available: The site where the user is located does
+          not support unicast communication (usually due to the presence
+          of a firewall).

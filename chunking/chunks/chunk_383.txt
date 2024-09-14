@@ -1,0 +1,7 @@
+If the URI is not enclosed in angle
+   brackets, any semicolon-delimited parameters are header-parameters,
+   not URI parameters. 20.1 Accept
+   The Accept header field follows the syntax defined in [H14.1]. The
+   semantics are also identical, with the exception that if no Accept
+   header field is present, the server SHOULD assume a default value of
+   application/sdp. An empty Accept header field means that no formats are acceptable.

@@ -1,0 +1,14 @@
+More complex
+      SDP usages are allowed in extensions. o  Added full support for IPv6 in URIs and in the Via header field. Support for IPv6 in Via has required that its header field
+      parameters allow the square bracket and colon characters. These
+      characters were previously not permitted. In theory, this could
+      cause interop problems with older implementations. However, we
+      have observed that most implementations accept any non-control
+      ASCII character in these parameters. o  DNS SRV procedure is now documented in a separate specification
+      [4]. This procedure uses both SRV and NAPTR resource records and
+      no longer combines data from across SRV records as described in
+      RFC 2543.
+   o  Loop detection has been made optional, supplanted by a mandatory
+      usage of Max-Forwards. The loop detection procedure in RFC 2543
+      had a serious bug which would report "spirals" as an error
+      condition when it was not.

@@ -1,0 +1,12 @@
+Likewise, a proxy would not remove a
+      malformed Date header field before forwarding a request. This protocol is designed to be extended. Future extensions may
+      define new methods and header fields at any time. An element MUST
+      NOT refuse to proxy a request because it contains a method or
+      header field it does not know about. 2. URI scheme check
+      If the Request-URI has a URI whose scheme is not understood by the
+      proxy, the proxy SHOULD reject the request with a 416 (Unsupported
+      URI Scheme) response. 3. Max-Forwards check
+      The Max-Forwards header field (Section 20.22) is used to limit the
+      number of elements a SIP request can traverse. If the request does not contain a Max-Forwards header field, this
+      check is passed. If the request contains a Max-Forwards header field with a field
+      value greater than zero, the check is passed.

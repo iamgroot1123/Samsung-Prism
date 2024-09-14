@@ -1,0 +1,14 @@
+Examples:
+      Contact: "Mr. Watson" <sip:watson@worcester.bell-telephone.com>
+         ;q=0.7; expires=3600,
+         "Mr. Watson" <mailto:watson@bell-telephone.com> ;q=0.1
+      m: <sips:bob@192.0.2.4>;expires=60
+20.11 Content-Disposition
+   The Content-Disposition header field describes how the message body
+   or, for multipart messages, a message body part is to be interpreted
+   by the UAC or UAS. This SIP header field extends the MIME Content-
+   Type (RFC 2183 [18]). Several new "disposition-types" of the Content-Disposition header are
+   defined by SIP. The value "session" indicates that the body part
+   describes a session, for either calls or early (pre-call) media. The
+   value "render" indicates that the body part should be displayed or
+   otherwise rendered to the user.

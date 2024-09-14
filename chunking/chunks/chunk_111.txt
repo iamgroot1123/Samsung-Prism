@@ -1,0 +1,14 @@
+An "expires" parameter to the Contact header
+   field values may also be supplied to indicate the lifetime of the
+   Contact data. The Contact header field contains URIs giving the new locations or
+   user names to try, or may simply specify additional transport
+   parameters. A 301 (Moved Permanently) or 302 (Moved Temporarily)
+   response may also give the same location and username that was
+   targeted by the initial request but specify additional transport
+   parameters such as a different server or multicast address to try, or
+   a change of SIP transport from UDP to TCP or vice versa. However, redirect servers MUST NOT redirect a request to a URI equal
+   to the one in the Request-URI; instead, provided that the URI does
+   not point to itself, the server MAY proxy the request to the
+   destination URI, or MAY reject it with a 404. If a client is using an outbound proxy, and that proxy actually
+      redirects requests, a potential arises for infinite redirection
+      loops.

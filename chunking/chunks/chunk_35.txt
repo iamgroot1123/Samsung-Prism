@@ -1,0 +1,12 @@
+Downstream: A direction of message forwarding within a transaction
+         that refers to the direction that requests flow from the user
+         agent client to user agent server. Final Response: A response that terminates a SIP transaction, as
+         opposed to a provisional response that does not. All 2xx, 3xx,
+         4xx, 5xx and 6xx responses are final. Header: A header is a component of a SIP message that conveys
+         information about the message. It is structured as a sequence
+         of header fields. Header Field: A header field is a component of the SIP message
+         header. A header field can appear as one or more header field
+         rows. Header field rows consist of a header field name and zero
+         or more header field values. Multiple header field values on a          given header field row are separated by commas. Some header
+         fields can only have a single header field value, and as a
+         result, always appear as a single header field row.

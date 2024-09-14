@@ -1,0 +1,13 @@
+A client that sends a request to a multicast address MUST add the
+   "maddr" parameter to its Via header field value containing the
+   destination multicast address, and for IPv4, SHOULD add the "ttl"
+   parameter with a value of 1. Usage of IPv6 multicast is not defined
+   in this specification, and will be a subject of future
+   standardization when the need arises. These rules result in a purposeful limitation of multicast in SIP. Its primary function is to provide a "single-hop-discovery-like"
+   service, delivering a request to a group of homogeneous servers,
+   where it is only required to process the response from any one of
+   them. This functionality is most useful for registrations. In fact,
+   based on the transaction processing rules in Section 17.1.3, the
+   client transaction will accept the first response, and view any
+   others as retransmissions because they all contain the same Via
+   branch identifier.

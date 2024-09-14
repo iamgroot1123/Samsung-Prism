@@ -1,0 +1,12 @@
+If the value of the remote or local tags is null,
+   the tag parameter MUST be omitted from the To or From header fields,
+   respectively. Usage of the URI from the To and From fields in the original
+      request within subsequent requests is done for backwards
+      compatibility with RFC 2543, which used the URI for dialog
+      identification. In this specification, only the tags are used for
+      dialog identification. It is expected that mandatory reflection
+      of the original To and From URI in mid-dialog requests will be
+      deprecated in a subsequent revision of this specification. The Call-ID of the request MUST be set to the Call-ID of the dialog. Requests within a dialog MUST contain strictly monotonically
+   increasing and contiguous CSeq sequence numbers (increasing-by-one)
+   in each direction (excepting ACK and CANCEL of course, whose numbers
+   equal the requests being acknowledged or cancelled).

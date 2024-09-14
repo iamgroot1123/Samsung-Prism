@@ -1,0 +1,12 @@
+The "outer"
+   message will have the proper MIME header fields for S/MIME bodies. These header fields (and any MIME bodies they preface) should be
+   treated as normal MIME header fields and bodies received in a SIP
+   message. It is not particularly useful to encrypt the following header fields:
+   Min-Expires, Timestamp, Authorization, Priority, and WWW-
+   Authenticate. This category also includes those header fields that
+   can be changed by proxy servers (described in the preceding section). UAs SHOULD never include these in an "inner" message if they are not
+   included in the "outer" message. UAs that receive any of these
+   header fields in an encrypted body SHOULD ignore the encrypted
+   values. Note that extensions to SIP may define additional header fields; the
+   authors of these extensions should describe the integrity and
+   confidentiality properties of such header fields.

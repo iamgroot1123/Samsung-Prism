@@ -1,0 +1,14 @@
+The response MAY indicate a
+   better time to call in the Retry-After header field. The user could
+   also be available elsewhere (unbeknownst to this server). The reason
+   phrase SHOULD indicate a more precise cause as to why the callee is
+   unavailable. This value SHOULD be settable by the UA. Status 486
+   (Busy Here) MAY be used to more precisely indicate a particular
+   reason for the call failure. This status is also returned by a redirect or proxy server that
+   recognizes the user identified by the Request-URI, but does not
+   currently have a valid forwarding location for that user. 21.4.19 481 Call/Transaction Does Not Exist
+   This status indicates that the UAS received a request that does not
+   match any existing dialog or transaction. 21.4.20 482 Loop Detected
+   The server has detected a loop (Section 16.3 Item 4). 21.4.21 483 Too Many Hops
+   The server received a request that contains a Max-Forwards (Section
+   20.22) header field with the value zero.

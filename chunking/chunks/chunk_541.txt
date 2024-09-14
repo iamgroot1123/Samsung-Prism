@@ -1,0 +1,15 @@
+If a UA holds one or more root certificates of certificate
+   authorities in order to validate certificates for TLS or IPSec, it
+   SHOULD be capable of reusing these to verify S/MIME certificates, as
+   appropriate. A UA MAY hold root certificates specifically for
+   validating S/MIME certificates. Note that is it anticipated that future security extensions may
+      upgrade the normative strength associated with S/MIME as S/MIME
+      implementations appear and the problem space becomes better
+      understood. 26.3.2 Security Solutions
+   The operation of these security mechanisms in concert can follow the
+   existing web and email security models to some degree. At a high
+   level, UAs authenticate themselves to servers (proxy servers,
+   redirect servers, and registrars) with a Digest username and
+   password; servers authenticate themselves to UAs one hop away, or to
+   another server one hop away (and vice versa), with a site certificate
+   delivered by TLS.

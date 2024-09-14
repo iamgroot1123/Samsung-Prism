@@ -1,0 +1,14 @@
+SIP uses an offer/answer model where one UA sends a session
+   description, called the offer, which contains a proposed description
+   of the session. The offer indicates the desired communications means
+   (audio, video, games), parameters of those means (such as codec
+   types) and addresses for receiving media from the answerer. The
+   other UA responds with another session description, called the
+   answer, which indicates which communications means are accepted, the
+   parameters that apply to those means, and addresses for receiving
+   media from the offerer. An offer/answer exchange is within the
+   context of a dialog, so that if a SIP INVITE results in multiple
+   dialogs, each is a separate offer/answer exchange. The offer/answer
+   model defines restrictions on when offers and answers can be made
+   (for example, you cannot make a new offer while one is in progress). This results in restrictions on where the offers and answers can
+   appear in SIP messages.

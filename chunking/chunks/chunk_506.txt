@@ -1,0 +1,10 @@
+1*3DIGIT
+IPv6reference  =  "[" IPv6address "]"
+IPv6address    =  hexpart [ ":" IPv4address ]
+hexpart        =  hexseq / hexseq "::" [ hexseq ] / "::" [ hexseq ]
+hexseq         =  hex4 *( ":" hex4)
+hex4           =  1*4HEXDIG
+port           =  1*DIGIT
+   The BNF for telephone-subscriber can be found in RFC 2806 [9]. Note,
+   however, that any characters allowed there that are not allowed in
+   the user part of the SIP URI MUST be escaped.

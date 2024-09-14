@@ -1,0 +1,11 @@
+The optional loop detection procedure
+      is more fully and correctly specified here. o  Usage of tags is now mandatory (they were optional in RFC 2543),
+      as they are now the fundamental building blocks of dialog
+      identification. o  Added the Supported header field, allowing for clients to indicate
+      what extensions are supported to a server, which can apply those
+      extensions to the response, and indicate their usage with a
+      Require in the response. o  Extension parameters were missing from the BNF for several header
+      fields, and they have been added. o  Handling of Route and Record-Route construction was very
+      underspecified in RFC 2543, and also not the right approach. It
+      has been substantially reworked in this specification (and made
+      vastly simpler), and this is arguably the largest change.

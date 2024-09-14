@@ -1,0 +1,12 @@
+All future REGISTER requests from the
+   originating UA would then go to chicago.com. Prevention of this threat requires a means by which UAs can
+   authenticate the servers to whom they send requests. 26.1.3 Tampering with Message Bodies
+   As a matter of course, SIP UAs route requests through trusted proxy
+   servers. Regardless of how that trust is established (authentication
+   of proxies is discussed elsewhere in this section), a UA may trust a
+   proxy server to route a request, but not to inspect or possibly
+   modify the bodies contained in that request. Consider a UA that is using SIP message bodies to communicate session
+   encryption keys for a media session. Although it trusts the proxy
+   server of the domain it is contacting to deliver signaling properly,
+   it may not want the administrators of that domain to be capable of
+   decrypting any subsequent media session.

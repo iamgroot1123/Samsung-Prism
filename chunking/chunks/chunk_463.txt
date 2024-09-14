@@ -1,0 +1,15 @@
+Therefore, in SIP, a server MAY check that the
+          Request-URI in the Authorization header field value
+          corresponds to a user for whom the server is willing to accept
+          forwarded or direct requests, but it is not necessarily a
+          failure if the two fields are not equivalent. 7. As a clarification to the calculation of the A2 value for
+          message integrity assurance in the Digest authentication
+          scheme, implementers should assume, when the entity-body is
+          empty (that is, when SIP messages have no body) that the hash
+          of the entity-body resolves to the MD5 hash of an empty
+          string, or:
+             H(entity-body) = MD5("") =
+          "d41d8cd98f00b204e9800998ecf8427e"
+      8. RFC 2617 notes that a cnonce value MUST NOT be sent in an
+          Authorization (and by extension Proxy-Authorization) header
+          field if no qop directive has been sent.

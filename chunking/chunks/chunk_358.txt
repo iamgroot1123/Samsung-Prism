@@ -1,0 +1,11 @@
+Even without this
+         parameter, recipients of SIP and SIPS URIs MAY interpret the
+         pre-@ part as a telephone number if local restrictions on the
+         name space for user name allow it. The method of the SIP request constructed from the URI can be
+         specified with the method parameter. The lr parameter, when present, indicates that the element
+         responsible for this resource implements the routing mechanisms
+         specified in this document. This parameter will be used in the
+         URIs proxies place into Record-Route header field values, and
+         may appear in the URIs in a pre-existing route set. This parameter is used to achieve backwards compatibility with
+         systems implementing the strict-routing mechanisms of RFC 2543
+         and the rfc2543bis drafts up to bis-05.

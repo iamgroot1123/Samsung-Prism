@@ -1,0 +1,13 @@
+Only if biloxi.com
+   has some other way of knowing atlanta.com’s authentication policies
+   could it possibly ascertain how Alice proved her identity. biloxi.com might then institute an even stricter policy that forbids
+   requests that come from domains that are not known administratively
+   to share a common authentication policy with biloxi.com. Once the INVITE has been approved by the biloxi proxy, the proxy
+   server SHOULD identify the existing TLS channel, if any, associated
+   with the user targeted by this request (in this case
+   "bob@biloxi.com"). The INVITE should be proxied through this channel
+   to Bob. Since the request is received over a TLS connection that had
+   previously been authenticated as the biloxi proxy, Bob knows that the
+   From header field was not tampered with and that atlanta.com has
+   validated Alice, although not necessarily whether or not to trust
+   Alice’s identity.

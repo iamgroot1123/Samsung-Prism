@@ -1,0 +1,9 @@
+P1 is an outbound proxy. P1 is not responsible for
+   domain.com, so it looks it up in DNS and sends it there. It also
+   adds a Record-Route header field value:
+      INVITE sip:callee@domain.com SIP/2.0
+      Contact: sip:caller@u1.example.com
+      Record-Route: <sip:p1.example.com;lr>
+   P2 gets this. It is responsible for domain.com so it runs a location
+   service and rewrites the Request-URI. It also adds a Record-Route
+   header field value.

@@ -1,0 +1,14 @@
+IPSec is most commonly used in architectures in which a
+   set of hosts or administrative domains have an existing trust
+   relationship with one another. IPSec is usually implemented at the
+   operating system level in a host, or on a security gateway that
+   provides confidentiality and integrity for all traffic it receives
+   from a particular interface (as in a VPN architecture). IPSec can
+   also be used on a hop-by-hop basis. In many architectures IPSec does not require integration with SIP
+   applications; IPSec is perhaps best suited to deployments in which
+   adding security directly to SIP hosts would be arduous. UAs that
+   have a pre-shared keying relationship with their first-hop proxy
+   server are also good candidates to use IPSec. Any deployment of
+   IPSec for SIP would require an IPSec profile describing the protocol
+   tools that would be required to secure SIP. No such profile is given
+   in this document.

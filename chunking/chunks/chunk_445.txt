@@ -1,0 +1,14 @@
+This is a change from RFC 2543. 22.1 Framework
+   The framework for SIP authentication closely parallels that of HTTP
+   (RFC 2617 [17]). In particular, the BNF for auth-scheme, auth-param,
+   challenge, realm, realm-value, and credentials is identical (although
+   the usage of "Basic" as a scheme is not permitted). In SIP, a UAS
+   uses the 401 (Unauthorized) response to challenge the identity of a
+   UAC. Additionally, registrars and redirect servers MAY make use of
+   401 (Unauthorized) responses for authentication, but proxies MUST
+   NOT, and instead MAY use the 407 (Proxy Authentication Required)
+   response. The requirements for inclusion of the Proxy-Authenticate,
+   Proxy-Authorization, WWW-Authenticate, and Authorization in the
+   various messages are identical to those described in RFC 2617 [17]. Since SIP does not have the concept of a canonical root URL, the
+   notion of protection spaces is interpreted differently in SIP. The
+   realm string alone defines the protection domain.

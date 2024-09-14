@@ -1,0 +1,12 @@
+This avoids a
+      potential race condition that would result in a UAC getting a 6xx
+      followed by a 2xx. In all cases except this race condition, the
+      result will be the same - the 6xx is forwarded upstream. o  RFC 2543 did not address the problem of request merging. This
+      occurs when a request forks at a proxy and later rejoins at an
+      element. Handling of merging is done only at a UA, and procedures
+      are defined for rejecting all but the first request. 28.2 Minor Functional Changes
+   o  Added the Alert-Info, Error-Info, and Call-Info header fields for
+      optional content presentation to users. o  Added the Content-Language, Content-Disposition and MIME-Version
+      header fields. o  Added a "glare handling" mechanism to deal with the case where
+      both parties send each other a re-INVITE simultaneously. It uses
+      the new 491 (Request Pending) error code.

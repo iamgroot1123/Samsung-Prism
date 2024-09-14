@@ -1,0 +1,14 @@
+If there is no configured
+   registrar address, the UA SHOULD use the host part of the address-
+   of-record as the Request-URI and address the request there, using the
+   normal SIP server location mechanisms [4]. For example, the UA for
+   the user "sip:carol@chicago.com" addresses the REGISTER request to
+   "sip:chicago.com". Finally, a UA can be configured to use multicast. Multicast
+   registrations are addressed to the well-known "all SIP servers"
+   multicast address "sip.mcast.net" (224.0.1.75 for IPv4). No well-
+   known IPv6 multicast address has been allocated; such an allocation
+   will be documented separately when needed. SIP UAs MAY listen to
+   that address and use it to become aware of the location of other
+   local users (see [33]); however, they do not respond to the request. Multicast registration may be inappropriate in some environments,
+      for example, if multiple businesses share the same local area
+      network.

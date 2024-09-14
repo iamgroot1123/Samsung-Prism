@@ -1,0 +1,13 @@
+This provides a simple alternative to a pre-existing route
+   set as a way to specify an outbound proxy. However, that approach
+   for configuring an outbound proxy is NOT RECOMMENDED; a pre-existing
+   route set with a single URI SHOULD be used instead. If the request
+   contains a Route header field, the request SHOULD be sent to the
+   locations derived from its topmost value, but MAY be sent to any
+   server that the UA is certain will honor the Route and Request-URI
+   policies specified in this document (as opposed to those in RFC
+   2543). In particular, a UAC configured with an outbound proxy SHOULD    attempt to send the request to the location indicated in the first
+   Route header field value instead of adopting the policy of sending
+   all messages to the outbound proxy. This ensures that outbound proxies that do not add Record-Route
+      header field values will drop out of the path of subsequent
+      requests.

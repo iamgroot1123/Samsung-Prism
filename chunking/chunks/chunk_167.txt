@@ -1,0 +1,16 @@
+The UAC MUST then place the remote target URI into the
+   Route header field as the last value. For example, if the remote target is sip:user@remoteua and the route
+   set contains:
+      <sip:proxy1>,<sip:proxy2>,<sip:proxy3;lr>,<sip:proxy4>
+   The request will be formed with the following Request-URI and Route
+   header field:
+   METHOD sip:proxy1
+   Route: <sip:proxy2>,<sip:proxy3;lr>,<sip:proxy4>,<sip:user@remoteua>
+      If the first URI of the route set does not contain the lr
+      parameter, the proxy indicated does not understand the routing
+      mechanisms described in this document and will act as specified in
+      RFC 2543, replacing the Request-URI with the first Route header
+      field value it receives while forwarding the message. Placing the
+      Request-URI at the end of the Route header field preserves the       information in that Request-URI across the strict router (it will
+      be returned to the Request-URI when the request reaches a loose-
+      router).

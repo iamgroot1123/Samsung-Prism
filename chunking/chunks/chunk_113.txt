@@ -1,0 +1,14 @@
+This provides a modest level of backwards compatibility with RFC
+      2543, which allowed absolute times in this header field. If an
+      absolute time is received, it will be treated as malformed, and
+      then default to 3600. Redirect servers MUST ignore features that are not understood
+   (including unrecognized header fields, any unknown option tags in
+   Require, or even method names) and proceed with the redirection of
+   the request in question. 9 Canceling a Request
+   The previous section has discussed general UA behavior for generating
+   requests and processing responses for requests of all methods. In
+   this section, we discuss a general purpose method, called CANCEL. The CANCEL request, as the name implies, is used to cancel a previous
+   request sent by a client. Specifically, it asks the UAS to cease
+   processing the request and to generate an error response to that
+   request. CANCEL has no effect on a request to which a UAS has
+   already given a final response.

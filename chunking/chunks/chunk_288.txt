@@ -1,0 +1,13 @@
+Specifically, a
+   SIP transaction consists of a single request and any responses to
+   that request, which include zero or more provisional responses and
+   one or more final responses. In the case of a transaction where the
+   request was an INVITE (known as an INVITE transaction), the
+   transaction also includes the ACK only if the final response was not
+   a 2xx response. If the response was a 2xx, the ACK is not considered
+   part of the transaction. The reason for this separation is rooted in the importance of
+      delivering all 200 (OK) responses to an INVITE to the UAC. To
+      deliver them all to the UAC, the UAS alone takes responsibility       for retransmitting them (see Section 13.3.1.4), and the UAC alone
+      takes responsibility for acknowledging them with ACK (see Section
+      13.2.2.4). Since this ACK is retransmitted only by the UAC, it is
+      effectively considered its own transaction. Transactions have a client side and a server side.

@@ -1,0 +1,12 @@
+That is disallowed here. The original INVITE needs a
+      response. o  In RFC 2543, UAs needed to support only UDP. In this RFC, UAs
+      need to support both UDP and TCP. o  In RFC 2543, a forking proxy only passed up one challenge from
+      downstream elements in the event of multiple challenges. In this
+      RFC, proxies are supposed to collect all challenges and place them
+      into the forwarded response. o  In Digest credentials, the URI needs to be quoted; this is unclear
+      from RFC 2617 and RFC 2069 which are both inconsistent on it. o  SDP processing has been split off into a separate specification
+      [13], and more fully specified as a formal offer/answer exchange
+      process that is effectively tunneled through SIP. SDP is allowed
+      in INVITE/200 or 200/ACK for baseline SIP implementations; RFC
+      2543 alluded to the ability to use it in INVITE, 200, and ACK in a
+      single transaction, but this was not well specified.

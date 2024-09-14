@@ -1,0 +1,25 @@
+Bob hangs up first. Note that Bob’s SIP phone maintains its own CSeq
+   numbering space, which, in this example, begins with 231. Since Bob
+   is making the request, the To and From URIs and tags have been
+   swapped. F13 BYE Bob -> Alice
+BYE sip:alice@pc33.atlanta.com SIP/2.0
+Via: SIP/2.0/UDP 192.0.2.4;branch=z9hG4bKnashds10
+Max-Forwards: 70
+From: Bob <sip:bob@biloxi.com>;tag=a6c85cf
+To: Alice <sip:alice@atlanta.com>;tag=1928301774
+Call-ID: a84b4c76e66710
+CSeq: 231 BYE
+Content-Length: 0
+F14 200 OK Alice -> Bob
+SIP/2.0 200 OK
+Via: SIP/2.0/UDP 192.0.2.4;branch=z9hG4bKnashds10
+From: Bob <sip:bob@biloxi.com>;tag=a6c85cf
+To: Alice <sip:alice@atlanta.com>;tag=1928301774
+Call-ID: a84b4c76e66710
+CSeq: 231 BYE
+Content-Length: 0
+   The SIP Call Flows document [40] contains further examples of SIP
+   messages. 25  Augmented BNF for the SIP Protocol
+   All of the mechanisms specified in this document are described in
+   both prose and an augmented Backus-Naur Form (BNF) defined in RFC
+   2234 [10].

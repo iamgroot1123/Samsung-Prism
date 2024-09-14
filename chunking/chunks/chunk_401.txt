@@ -1,0 +1,16 @@
+Examples:
+      SIP/2.0 404 The number you have dialed is not in service
+      Error-Info: <sip:not-in-service-recording@atlanta.com>
+20.19 Expires
+   The Expires header field gives the relative time after which the
+   message (or content) expires. The precise meaning of this is method dependent. The expiration time in an INVITE does not affect the duration of the
+   actual session that may result from the invitation. Session
+   description protocols may offer the ability to express time limits on
+   the session duration, however. The value of this field is an integral number of seconds (in decimal)
+   between 0 and (2**32)-1, measured from the receipt of the request. Example:
+      Expires: 5
+20.20 From
+   The From header field indicates the initiator of the request. This
+   may be different from the initiator of the dialog. Requests sent by
+   the callee to the caller use the callee’s address in the From header
+   field.

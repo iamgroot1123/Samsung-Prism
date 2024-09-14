@@ -1,0 +1,14 @@
+This is a change
+   from RFC 2543, in which the Request-URI and the realm together
+   defined the protection domain. This previous definition of protection domain caused some amount
+      of confusion since the Request-URI sent by the UAC and the
+      Request-URI received by the challenging server might be different,
+      and indeed the final form of the Request-URI might not be known to
+      the UAC. Also, the previous definition depended on the presence
+      of a SIP URI in the Request-URI and seemed to rule out alternative
+      URI schemes (for example, the tel URL). Operators of user agents or proxy servers that will authenticate
+   received requests MUST adhere to the following guidelines for
+   creation of a realm string for their server:
+      o  Realm strings MUST be globally unique. It is RECOMMENDED that
+         a realm string contain a hostname or domain name, following the
+         recommendation in Section 3.2.1 of RFC 2617 [17].

@@ -1,0 +1,6 @@
+The message must first
+      be decrypted, and the "inner" From header field MUST be used as an
+      index. In order to provide end-to-end integrity, encrypted "message/sip"
+   MIME bodies SHOULD be signed by the sender. This creates a
+   "multipart/signed" MIME body that contains an encrypted body and a
+   signature, both of type "application/pkcs7-mime".

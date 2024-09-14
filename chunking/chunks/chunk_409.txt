@@ -1,0 +1,18 @@
+Example:
+      Record-Route: <sip:server10.biloxi.com;lr>,
+                    <sip:bigbox3.site3.atlanta.com;lr>
+20.31 Reply-To
+   The Reply-To header field contains a logical return URI that may be
+   different from the From header field. For example, the URI MAY be
+   used to return missed calls or unestablished sessions. If the user
+   wished to remain anonymous, the header field SHOULD either be omitted
+   from the request or populated in such a way that does not reveal any
+   private information. Even if the "display-name" is empty, the "name-addr" form MUST be
+   used if the "addr-spec" contains a comma, question mark, or
+   semicolon. Syntax issues are discussed in Section 7.3.1. Example:
+      Reply-To: Bob <sip:bob@biloxi.com>
+20.32 Require
+   The Require header field is used by UACs to tell UASs about options
+   that the UAC expects the UAS to support in order to process the
+   request. Although an optional header field, the Require MUST NOT be
+   ignored if it is present.

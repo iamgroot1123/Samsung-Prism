@@ -1,0 +1,13 @@
+If a provisional response is received, retransmissions
+   continue for unreliable transports, but at an interval of T2. The
+   server transaction retransmits the last response it sent, which can
+   be a provisional or final response, only when a retransmission of the
+   request is received. This is why request retransmissions need to
+   continue even after a provisional response; they are to ensure
+   reliable delivery of the final response. Unlike an INVITE transaction, a non-INVITE transaction has no special
+   handling for the 2xx response. The result is that only a single 2xx
+   response to a non-INVITE is ever delivered to a UAC. 17.1.2.2 Formal Description
+   The state machine for the non-INVITE client transaction is shown in
+   Figure 6. It is very similar to the state machine for INVITE. The "Trying" state is entered when the TU initiates a new client
+   transaction with a request. When entering this state, the client
+   transaction SHOULD set timer F to fire in 64*T1 seconds.

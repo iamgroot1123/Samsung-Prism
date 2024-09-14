@@ -1,0 +1,13 @@
+/ ":" / "@" / "&" / "=" / "+"
+                     / "$" / ","
+      unreserved  =  alphanum / mark
+      mark        =  "-" / "_" / "." / "!" / "˜" / "*" / "’"
+                     / "(" / ")"
+      escaped     =  "%" HEXDIG HEXDIG
+   SIP header field values can be folded onto multiple lines if the
+   continuation line begins with a space or horizontal tab. All linear
+   white space, including folding, has the same semantics as SP. A
+   recipient MAY replace any linear white space with a single SP before
+   interpreting the field value or forwarding the message downstream. This is intended to behave exactly as HTTP/1.1 as described in RFC
+   2616 [8]. The SWS construct is used when linear white space is
+   optional, generally between tokens and separators.

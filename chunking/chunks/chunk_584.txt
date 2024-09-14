@@ -1,0 +1,12 @@
+Backwards compatibility is still provided for deployments that do
+      not use "pre-loaded routes", where the initial request has a set
+      of Route header field values obtained in some way outside of
+      Record-Route. In those situations, the new mechanism is not
+      interoperable. o  In RFC 2543, lines in a message could be terminated with CR, LF,
+      or CRLF. This specification only allows CRLF. o  Usage of Route in CANCEL and ACK was not well defined in RFC 2543. It is now well specified; if a request had a Route header field,
+      its CANCEL or ACK for a non-2xx response to the request need to
+      carry the same Route header field values. ACKs for 2xx responses
+      use the Route values learned from the Record-Route of the 2xx
+      responses. o  RFC 2543 allowed multiple requests in a single UDP packet. This
+      usage has been removed. o  Usage of absolute time in the Expires header field and parameter
+      has been removed.

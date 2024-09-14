@@ -1,0 +1,15 @@
+To that end, SIP provides a suite of security services,
+   which include denial-of-service prevention, authentication (both user
+   to user and proxy to user), integrity protection, and encryption and
+   privacy services. SIP works with both IPv4 and IPv6. 3 Terminology
+   In this document, the key words "MUST", "MUST NOT", "REQUIRED",
+   "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "NOT
+   RECOMMENDED", "MAY", and "OPTIONAL" are to be interpreted as
+   described in BCP 14, RFC 2119 [2] and indicate requirement levels for
+   compliant SIP implementations. 4 Overview of Operation
+   This section introduces the basic operations of SIP using simple
+   examples. This section is tutorial in nature and does not contain
+   any normative statements. The first example shows the basic functions of SIP: location of an
+   end point, signal of a desire to communicate, negotiation of session
+   parameters to establish the session, and teardown of the session once
+   established.

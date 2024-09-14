@@ -1,0 +1,12 @@
+This may be useful when messages would otherwise
+   become too large to be carried on the transport available to it
+   (exceeding the maximum transmission unit (MTU) when using UDP, for
+   example). These compact forms are defined in Section 20. A compact
+   form MAY be substituted for the longer form of a header field name at
+   any time without changing the semantics of the message. A header    field name MAY appear in both long and short forms within the same
+   message. Implementations MUST accept both the long and short forms
+   of each header name. 7.4 Bodies
+   Requests, including new requests defined in extensions to this
+   specification, MAY contain message bodies unless otherwise noted. The interpretation of the body depends on the request method. For response messages, the request method and the response status
+   code determine the type and interpretation of any message body. All
+   responses MAY include a body.

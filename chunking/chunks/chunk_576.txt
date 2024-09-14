@@ -1,0 +1,15 @@
+The table has the following
+   format:
+      Type (e.g., Informational)
+            Number    Default Reason Phrase         [RFC3261]
+   The following information needs to be provided in an RFC publication
+   in order to register a new response code or method:
+      o  The RFC number in which the method or response code is
+         registered;
+      o  the number of the response code or name of the method being
+         registered;
+      o  the default reason phrase for that response code, if
+         applicable;
+27.5 The "message/sip" MIME type. This document registers the "message/sip" MIME media type in order to
+   allow SIP messages to be tunneled as bodies within SIP, primarily for
+   end-to-end security purposes.

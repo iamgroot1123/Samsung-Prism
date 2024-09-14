@@ -1,0 +1,14 @@
+The UAS SHOULD also determine the subject
+   of the certificate (for S/MIME, the SubjectAltName will contain the
+   appropriate identity) and compare this value to the From header field    of the request. If the certificate cannot be verified, because it is
+   self-signed, or signed by no known authority, or if it is verifiable
+   but its subject does not correspond to the From header field of
+   request, the UAS MUST notify its user of the status of the
+   certificate (including the subject of the certificate, its signer,
+   and any key fingerprint information) and request explicit permission
+   before proceeding. If the certificate was successfully verified and
+   the subject of the certificate corresponds to the From header field
+   of the SIP request, or if the user (after notification) explicitly
+   authorizes the use of the certificate, the UAS SHOULD add this
+   certificate to a local keyring, indexed by the address-of-record of
+   the holder of the certificate.

@@ -1,0 +1,12 @@
+Typically, a UA is manually configured with an outbound proxy,
+         or can learn about one through auto-configuration protocols. Parallel Search: In a parallel search, a proxy issues several
+         requests to possible user locations upon receiving an incoming
+         request. Rather than issuing one request and then waiting for
+         the final response before issuing the next request as in a
+         sequential search, a parallel search issues requests without
+         waiting for the result of previous requests. Provisional Response: A response used by the server to indicate
+         progress, but that does not terminate a SIP transaction. 1xx
+         responses are provisional, other responses are considered
+         final. Proxy, Proxy Server: An intermediary entity that acts as both a
+         server and a client for the purpose of making requests on
+         behalf of other clients.

@@ -1,0 +1,11 @@
+If a UA receives a re-INVITE for an existing dialog, it MUST check
+   any version identifiers in the session description or, if there are
+   no version identifiers, the content of the session description to see
+   if it has changed. If the session description has changed, the UAS
+   MUST adjust the session parameters accordingly, possibly after asking
+   the user for confirmation. Versioning of the session description can be used to accommodate
+      the capabilities of new arrivals to a conference, add or delete
+      media, or change from a unicast to a multicast conference. If the new session description is not acceptable, the UAS can reject
+   it by returning a 488 (Not Acceptable Here) response for the re-
+   INVITE. This response SHOULD include a Warning header field. If a UAS generates a 2xx response and never receives an ACK, it
+   SHOULD generate a BYE to terminate the dialog.

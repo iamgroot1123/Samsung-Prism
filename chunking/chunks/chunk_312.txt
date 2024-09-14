@@ -1,0 +1,10 @@
+Once the client transaction enters the "Completed" state, it MUST set
+   Timer K to fire in T4 seconds for unreliable transports, and zero
+   seconds for reliable transports. The "Completed" state exists to
+   buffer any additional response retransmissions that may be received
+   (which is why the client transaction remains there only for    unreliable transports). T4 represents the amount of time the network
+   will take to clear messages between client and server transactions. The default value of T4 is 5s. A response is a retransmission when
+   it matches the same transaction, using the rules specified in Section
+   17.1.3. If Timer K fires while in this state, the client transaction
+   MUST transition to the "Terminated" state. Once the transaction is in the terminated state, it MUST be destroyed
+   immediately.

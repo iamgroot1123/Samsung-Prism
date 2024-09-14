@@ -1,0 +1,14 @@
+Before passing the request up, the transport adds a "received"
+   parameter, so that the request would look like, in part:
+      INVITE sip:bob@Biloxi.com SIP/2.0
+      Via: SIP/2.0/UDP bobspc.biloxi.com:5060;received=192.0.2.4
+   Next, the server transport attempts to match the request to a server
+   transaction. It does so using the matching rules described in
+   Section 17.2.3. If a matching server transaction is found, the
+   request is passed to that transaction for processing. If no match is
+   found, the request is passed to the core, which may decide to
+   construct a new server transaction for that request. Note that when
+   a UAS core sends a 2xx response to INVITE, the server transaction is
+   destroyed. This means that when the ACK arrives, there will be no
+   matching server transaction, and based on this rule, the ACK is
+   passed to the UAS core, where it is processed.

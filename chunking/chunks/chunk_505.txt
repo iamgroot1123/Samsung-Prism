@@ -1,0 +1,18 @@
+quoted-pair  =  "\" (%x00-09 / %x0B-0C
+                / %x0E-7F)
+SIP-URI          =  "sip:" [ userinfo ] hostport
+                    uri-parameters [ headers ]
+SIPS-URI         =  "sips:" [ userinfo ] hostport
+                    uri-parameters [ headers ]
+userinfo         =  ( user / telephone-subscriber ) [ ":" password ] "@"
+user             =  1*( unreserved / escaped / user-unreserved )
+user-unreserved  =  "&" / "=" / "+" / "$" / "," / ";" / "?" / "/"
+password         =  *( unreserved / escaped /
+                    "&" / "=" / "+" / "$" / "," )
+hostport         =  host [ ":" port ]
+host             =  hostname / IPv4address / IPv6reference
+hostname         =  *( domainlabel "." ) toplabel [ "." ]
+domainlabel      =  alphanum
+                    / alphanum *( alphanum / "-" ) alphanum
+toplabel         =  ALPHA / ALPHA *( alphanum / "-" ) alphanum
+IPv4address    =  1*3DIGIT "." 1*3DIGIT "." 1*3DIGIT "."

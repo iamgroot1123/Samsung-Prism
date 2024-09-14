@@ -1,0 +1,12 @@
+When a request is sent to a SIPS URI, the
+   protocol still indicates "SIP", and the transport protocol is TLS. Via: SIP/2.0/UDP erlang.bell-telephone.com:5060;branch=z9hG4bK87asdks7
+Via: SIP/2.0/UDP 192.0.2.1:5060 ;received=192.0.2.207
+     ;branch=z9hG4bK77asjd
+   The compact form of the Via header field is v.
+   In this example, the message originated from a multi-homed host with
+   two addresses, 192.0.2.1 and 192.0.2.207. The sender guessed wrong
+   as to which network interface would be used. Erlang.bell-
+   telephone.com noticed the mismatch and added a parameter to the
+   previous hop’s Via header field value, containing the address that
+   the packet actually came from. The host or network address and port number are not required to
+   follow the SIP URI syntax.

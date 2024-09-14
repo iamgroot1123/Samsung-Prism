@@ -1,0 +1,11 @@
+Therefore, if a UAC wishes to give up on its call attempt entirely,
+   it can send a CANCEL. If the INVITE results in 2xx final response(s)
+   to the INVITE, this means that a UAS accepted the invitation while
+   the CANCEL was in progress. The UAC MAY continue with the sessions
+   established by any 2xx responses, or MAY terminate them with BYE. The notion of "hanging up" is not well defined within SIP. It is
+      specific to a particular, albeit common, user interface. Typically, when the user hangs up, it indicates a desire to
+      terminate the attempt to establish a session, and to terminate any
+      sessions already created. For the caller’s UA, this would imply a
+      CANCEL request if the initial INVITE has not generated a final
+      response, and a BYE to all confirmed dialogs after a final
+      response.

@@ -1,0 +1,14 @@
+Bodies are signed with the
+   private key of the sender (who may include their public key with the
+   message as appropriate), but bodies are encrypted with the public key
+   of the intended recipient. Obviously, senders must have
+   foreknowledge of the public key of recipients in order to encrypt
+   message bodies. Public keys can be stored within a UA on a virtual
+   keyring. Each user agent that supports S/MIME MUST contain a keyring
+   specifically for end-users’ certificates. This keyring should map
+   between addresses of record and corresponding certificates. Over
+   time, users SHOULD use the same certificate when they populate the
+   originating URI of signaling (the From header field) with the same
+   address-of-record. Any mechanisms depending on the existence of end-user certificates
+   are seriously limited in that there is virtually no consolidated
+   authority today that provides certificates for end-user applications.

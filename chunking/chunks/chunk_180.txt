@@ -1,0 +1,16 @@
+In this specification, offers and answers
+   can only appear in INVITE requests and responses, and ACK. The usage
+   of offers and answers is further restricted. For the initial INVITE
+   transaction, the rules are:
+      o  The initial offer MUST be in either an INVITE or, if not there,
+         in the first reliable non-failure message from the UAS back to
+         the UAC. In this specification, that is the final 2xx
+         response. o  If the initial offer is in an INVITE, the answer MUST be in a
+         reliable non-failure message from UAS back to UAC which is
+         correlated to that INVITE. For this specification, that is
+         only the final 2xx response to that INVITE. That same exact
+         answer MAY also be placed in any provisional responses sent
+         prior to the answer. The UAC MUST treat the first session
+         description it receives as the answer, and MUST ignore any
+         session descriptions in subsequent responses to the initial
+         INVITE.

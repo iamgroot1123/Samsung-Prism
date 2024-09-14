@@ -1,0 +1,12 @@
+It would certainly be more difficult for the man-in-
+   the-middle to emulate the voices of the participants than their
+   signaling (a practice that was used with the Clipper chip-based
+   secure telephone). The S/MIME mechanism allows UAs to send encrypted requests without
+   preamble if they possess a certificate for the destination address-
+   of-record on their keyring. However, it is possible that any
+   particular device registered for an address-of-record will not hold
+   the certificate that has been previously employed by the device’s
+   current user, and that it will therefore be unable to process an    encrypted request properly, which could lead to some avoidable error
+   signaling. This is especially likely when an encrypted request is
+   forked. The keys associated with S/MIME are most useful when associated with
+   a particular user (an address-of-record) rather than a device (a UA).

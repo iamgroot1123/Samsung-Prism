@@ -1,0 +1,13 @@
+Consider a case in which a third-party attacker captures some initial
+   messages in a dialog shared by two parties in order to learn the
+   parameters of the session (To tag, From tag, and so forth) and then
+   inserts a BYE request into the session. The attacker could opt to
+   forge the request such that it seemed to come from either
+   participant. Once the BYE is received by its target, the session
+   will be torn down prematurely. Similar mid-session threats include the transmission of forged re-
+   INVITEs that alter the session (possibly to reduce session security
+   or redirect media streams as part of a wiretapping attack). The most effective countermeasure to this threat is the
+   authentication of the sender of the BYE. In this instance, the
+   recipient needs only know that the BYE came from the same party with
+   whom the corresponding dialog was established (as opposed to
+   ascertaining the absolute identity of the sender).

@@ -1,0 +1,13 @@
+Since Alex would receive this
+      request over his authenticated channel, he would be assured that
+      Alice’s request had been authorized by the proxy server of the
+      local administrative domain. However, in this instance the Request-URI designates a remote domain. The local outbound proxy server at atlanta.com SHOULD therefore
+   establish a TLS connection with the remote proxy server at
+   biloxi.com. Since both of the participants in this TLS connection
+   are servers that possess site certificates, mutual TLS authentication
+   SHOULD occur. Each side of the connection SHOULD verify and inspect
+   the certificate of the other, noting the domain name that appears in
+   the certificate for comparison with the header fields of SIP
+   messages. The atlanta.com proxy server, for example, SHOULD verify
+   at this stage that the certificate received from the remote side
+   corresponds with the biloxi.com domain.

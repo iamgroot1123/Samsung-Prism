@@ -1,0 +1,12 @@
+As with the Supported header field, the option tags in the Require
+   and Proxy-Require header fields MUST only refer to extensions defined
+   in standards-track RFCs. 8.1.1.10 Additional Message Components
+   After a new request has been created, and the header fields described
+   above have been properly constructed, any additional optional header
+   fields are added, as are any header fields specific to the method. SIP requests MAY contain a MIME-encoded message-body. Regardless of
+   the type of body that a request contains, certain header fields must
+   be formulated to characterize the contents of the body. For further
+   information on these header fields, see Sections 20.11 through 20.15. 8.1.2 Sending the Request
+   The destination for the request is then computed. Unless there is
+   local policy specifying otherwise, the destination MUST be determined
+   by applying the DNS procedures described in [4] as follows.

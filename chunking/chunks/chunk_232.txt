@@ -1,0 +1,11 @@
+If the copy does not contain a Max-Forwards header field, the
+         proxy MUST add one with a field value, which SHOULD be 70. Some existing UAs will not provide a Max-Forwards header field
+         in a request. 4. Record-Route
+         If this proxy wishes to remain on the path of future requests
+         in a dialog created by this request (assuming the request
+         creates a dialog), it MUST insert a Record-Route header field
+         value into the copy before any existing Record-Route header
+         field values, even if a Route header field is already present. Requests establishing a dialog may contain a preloaded Route
+         header field. If this request is already part of a dialog, the proxy SHOULD
+         insert a Record-Route header field value if it wishes to remain
+         on the path of future requests in the dialog.

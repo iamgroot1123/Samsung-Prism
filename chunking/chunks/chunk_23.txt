@@ -1,0 +1,14 @@
+In some cases, it may be useful for proxies in the SIP signaling path
+   to see all the messaging between the endpoints for the duration of
+   the session. For example, if the biloxi.com proxy server wished to
+   remain in the SIP messaging path beyond the initial INVITE, it would
+   add to the INVITE a required routing header field known as Record-
+   Route that contained a URI resolving to the hostname or IP address of
+   the proxy. This information would be received by both Bob’s SIP
+   phone and (due to the Record-Route header field being passed back in
+   the 200 (OK)) Alice’s softphone and stored for the duration of the
+   dialog. The biloxi.com proxy server would then receive and proxy the
+   ACK, BYE, and 200 (OK) to the BYE. Each proxy can independently
+   decide to receive subsequent messages, and those messages will pass
+   through all proxies that elect to receive it. This capability is
+   frequently used for proxies that are providing mid-call features.

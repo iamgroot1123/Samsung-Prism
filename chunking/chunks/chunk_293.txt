@@ -1,0 +1,14 @@
+17.1 Client Transaction
+   The client transaction provides its functionality through the
+   maintenance of a state machine. The TU communicates with the client transaction through a simple
+   interface. When the TU wishes to initiate a new transaction, it
+   creates a client transaction and passes it the SIP request to send
+   and an IP address, port, and transport to which to send it. The
+   client transaction begins execution of its state machine. Valid
+   responses are passed up to the TU from the client transaction. There are two types of client transaction state machines, depending
+   on the method of the request passed by the TU. One handles client
+   transactions for INVITE requests. This type of machine is referred
+   to as an INVITE client transaction. Another type handles client
+   transactions for all requests except INVITE and ACK. This is
+   referred to as a non-INVITE client transaction. There is no client
+   transaction for ACK.

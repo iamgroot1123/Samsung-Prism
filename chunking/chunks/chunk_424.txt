@@ -1,0 +1,13 @@
+The reason phrase MAY give further details about the
+   status of the call, for example, "5 calls queued; expected waiting
+   time is 15 minutes". The server MAY issue several 182 (Queued)
+   responses to update the caller about the status of the queued call. 21.1.5 183 Session Progress
+   The 183 (Session Progress) response is used to convey information
+   about the progress of the call that is not otherwise classified. The
+   Reason-Phrase, header fields, or message body MAY be used to convey
+   more details about the call progress. 21.2 Successful 2xx
+   The request was successful. 21.2.1 200 OK
+   The request has succeeded. The information returned with the
+   response depends on the method used in the request. 21.3 Redirection 3xx
+   3xx responses give information about the user’s new location, or
+   about alternative services that might be able to satisfy the call.

@@ -1,0 +1,13 @@
+Record-Route
+         If the selected response contains a Record-Route header field
+         value originally provided by this proxy, the proxy MAY choose
+         to rewrite the value before forwarding the response. This
+         allows the proxy to provide different URIs for itself to the
+         next upstream and downstream elements. A proxy may choose to
+         use this mechanism for any reason. For instance, it is useful
+         for multi-homed hosts. If the proxy received the request over TLS, and sent it out
+         over a non-TLS connection, the proxy MUST rewrite the URI in
+         the Record-Route header field to be a SIPS URI. If the proxy
+         received the request over a non-TLS connection, and sent it out
+         over TLS, the proxy MUST rewrite the URI in the Record-Route
+         header field to be a SIP URI.

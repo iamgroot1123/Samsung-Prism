@@ -1,0 +1,13 @@
+23.4.1.2 Confidentiality
+   When messages are encrypted, header fields may be included in the
+   encrypted body that are not present in the "outer" message. Some header fields must always have a plaintext version because they
+   are required header fields in requests and responses - these include:
+   To, From, Call-ID, CSeq, Contact. While it is probably not useful to
+   provide an encrypted alternative for the Call-ID, CSeq, or Contact,
+   providing an alternative to the information in the "outer" To or From
+   is permitted. Note that the values in an encrypted body are not used
+   for the purposes of identifying transactions or dialogs - they are
+   merely informational. If the From header field in an encrypted body
+   differs from the value in the "outer" message, the value within the
+   encrypted body SHOULD be displayed to the user, but MUST NOT be used
+   in the "outer" header fields of any future messages.

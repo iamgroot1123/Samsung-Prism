@@ -1,0 +1,12 @@
+If a 401 (Unauthorized) or 407 (Proxy Authentication Required)
+   response is received, the UAC SHOULD follow the authorization
+   procedures of Section 22.2 and Section 22.3 to retry the request with
+   credentials. If a 413 (Request Entity Too Large) response is received (Section
+   21.4.11), the request contained a body that was longer than the UAS
+   was willing to accept. If possible, the UAC SHOULD retry the
+   request, either omitting the body or using one of a smaller length. If a 415 (Unsupported Media Type) response is received (Section
+   21.4.13), the request contained media types not supported by the UAS. The UAC SHOULD retry sending the request, this time only using
+   content with types listed in the Accept header field in the response,
+   with encodings listed in the Accept-Encoding header field in the
+   response, and with languages listed in the Accept-Language in the
+   response.

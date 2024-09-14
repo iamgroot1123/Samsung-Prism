@@ -1,0 +1,12 @@
+If SDP is used, a session is
+         defined by the concatenation of the SDP user name, session id,
+         network type, address type, and address elements in the origin
+         field. SIP Transaction: A SIP transaction occurs between a client and a
+         server and comprises all messages from the first request sent
+         from the client to the server up to a final (non-1xx) response          sent from the server to the client. If the request is INVITE
+         and the final response is a non-2xx, the transaction also
+         includes an ACK to the response. The ACK for a 2xx response to
+         an INVITE request is a separate transaction. Spiral: A spiral is a SIP request that is routed to a proxy,
+         forwarded onwards, and arrives once again at that proxy, but
+         this time differs in a way that will result in a different
+         processing decision than the original request.

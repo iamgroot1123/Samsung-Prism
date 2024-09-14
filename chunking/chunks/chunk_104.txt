@@ -1,0 +1,13 @@
+Any extensions applied to a non-421 response MUST be listed in a
+   Require header field included in the response. Of course, the server
+   MUST NOT apply extensions not listed in the Supported header field in
+   the request. As a result of this, the Require header field in a
+   response will only ever contain option tags defined in standards-
+   track RFCs. 8.2.5 Processing the Request
+   Assuming all of the checks in the previous subsections are passed,
+   the UAS processing becomes method-specific. Section 10 covers the
+   REGISTER request, Section 11 covers the OPTIONS request, Section 13
+   covers the INVITE request, and Section 15 covers the BYE request. 8.2.6 Generating the Response
+   When a UAS wishes to construct a response to a request, it follows
+   the general procedures detailed in the following subsections. Additional behaviors specific to the response code in question, which
+   are not detailed in this section, may also be required.

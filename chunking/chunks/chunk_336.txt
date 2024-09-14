@@ -1,0 +1,13 @@
+If a request is within 200 bytes of the path MTU, or if it is larger
+   than 1300 bytes and the path MTU is unknown, the request MUST be sent
+   using an RFC 2914 [43] congestion controlled transport protocol, such
+   as TCP. If this causes a change in the transport protocol from the
+   one indicated in the top Via, the value in the top Via MUST be
+   changed. This prevents fragmentation of messages over UDP and
+   provides congestion control for larger messages. However,
+   implementations MUST be able to handle messages up to the maximum
+   datagram packet size. For UDP, this size is 65,535 bytes, including
+   IP and UDP headers. The 200 byte "buffer" between the message size and the MTU
+      accommodates the fact that the response in SIP can be larger than
+      the request. This happens due to the addition of Record-Route
+      header field values to the responses to INVITE, for example.

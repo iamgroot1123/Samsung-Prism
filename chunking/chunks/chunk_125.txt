@@ -1,0 +1,13 @@
+A REGISTER request does not establish a dialog. A UAC MAY include a
+   Route header field in a REGISTER request based on a pre-existing
+   route set as described in Section 8.1. The Record-Route header field
+   has no meaning in REGISTER requests or responses, and MUST be ignored
+   if present. In particular, the UAC MUST NOT create a new route set
+   based on the presence or absence of a Record-Route header field in
+   any response to a REGISTER request. The following header fields, except Contact, MUST be included in a
+   REGISTER request. A Contact header field MAY be included:
+      Request-URI: The Request-URI names the domain of the location
+           service for which the registration is meant (for example,
+           "sip:chicago.com"). The "userinfo" and "@" components of the
+           SIP URI MUST NOT be present. To: The To header field contains the address of record whose
+           registration is to be created, queried, or modified.

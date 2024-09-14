@@ -1,0 +1,14 @@
+The rules for ordering the languages based on the "q"
+   parameter apply to SIP as well. Example:
+      Accept-Language: da, en-gb;q=0.8, en;q=0.7
+20.4 Alert-Info
+   When present in an INVITE request, the Alert-Info header field
+   specifies an alternative ring tone to the UAS. When present in a 180
+   (Ringing) response, the Alert-Info header field specifies an
+   alternative ringback tone to the UAC. A typical usage is for a proxy
+   to insert this header field to provide a distinctive ring feature. The Alert-Info header field can introduce security risks. These
+   risks and the ways to handle them are discussed in Section 20.9,
+   which discusses the Call-Info header field since the risks are
+   identical. In addition, a user SHOULD be able to disable this feature
+   selectively. This helps prevent disruptions that could result from the use of
+      this header field by untrusted elements.

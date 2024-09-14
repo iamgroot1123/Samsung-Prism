@@ -1,0 +1,10 @@
+If the transport user asks for a request to be sent over a reliable
+   transport, and the result is a connection failure, the transport
+   layer SHOULD inform the transport user of a failure in sending. 19 Common Message Components
+   There are certain components of SIP messages that appear in various
+   places within SIP messages (and sometimes, outside of them) that
+   merit separate discussion. 19.1 SIP and SIPS Uniform Resource Indicators
+   A SIP or SIPS URI identifies a communications resource. Like all
+   URIs, SIP and SIPS URIs may be placed in web pages, email messages,
+   or printed literature. They contain sufficient information to
+   initiate and maintain a communication session with the resource.

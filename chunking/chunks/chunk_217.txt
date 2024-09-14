@@ -1,0 +1,18 @@
+Reasonable Syntax
+      2. URI scheme
+      3. Max-Forwards
+      4. (Optional) Loop Detection
+      5. Proxy-Require
+      6. Proxy-Authorization
+   If any of these checks fail, the element MUST behave as a user agent
+   server (see Section 8.2) and respond with an error code. Notice that a proxy is not required to detect merged requests and
+   MUST NOT treat merged requests as an error condition. The endpoints
+   receiving the requests will resolve the merge as described in Section
+   8.2.2.2. 1. Reasonable syntax check
+      The request MUST be well-formed enough to be handled with a server
+      transaction. Any components involved in the remainder of these
+      Request Validation steps or the Request Forwarding section MUST be
+      well-formed. Any other components, well-formed or not, SHOULD be
+      ignored and remain unchanged when the message is forwarded. For
+      instance, an element would not reject a request because of a
+      malformed Date header field.

@@ -1,0 +1,14 @@
+The escaping rules defined above allow a
+   semicolon to appear unescaped in this field. For the purposes of
+   this protocol, the field is opaque. The structure of that value is
+   only useful to the SIP element responsible for the resource. 19.1.4 URI Comparison
+   Some operations in this specification require determining whether two
+   SIP or SIPS URIs are equivalent. In this specification, registrars
+   need to compare bindings in Contact URIs in REGISTER requests (see
+   Section 10.3.). SIP and SIPS URIs are compared for equality
+   according to the following rules:
+      o  A SIP and SIPS URI are never equivalent. o  Comparison of the userinfo of SIP and SIPS URIs is case-
+         sensitive. This includes userinfo containing passwords or
+         formatted as telephone-subscribers. Comparison of all other
+         components of the URI is case-insensitive unless explicitly
+         defined otherwise.

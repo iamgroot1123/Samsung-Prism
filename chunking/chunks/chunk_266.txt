@@ -1,0 +1,13 @@
+Not every response to a request to which a proxy adds a
+         Record-Route header field value will contain a Record-Route
+         header field. If the response does contain a Record-Route
+         header field, it will contain the value the proxy added. 9. Forward response
+         After performing the processing described in steps "Aggregate
+         Authorization Header Field Values" through "Record-Route", the
+         proxy MAY perform any feature specific manipulations on the
+         selected response. The proxy MUST NOT add to, modify, or
+         remove the message body. Unless otherwise specified, the proxy
+         MUST NOT remove any header field values other than the Via
+         header field value discussed in Section 16.7 Item 3. In
+         particular, the proxy MUST NOT remove any "received" parameter          it may have added to the next Via header field value while
+         processing the request associated with this response.

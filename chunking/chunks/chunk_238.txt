@@ -1,0 +1,11 @@
+Non-dialog-
+         stateful proxies, of course, have no concept of when the dialog
+         has terminated, but they MAY encode enough information in the
+         value to compare it against the dialog identifier of future
+         requests and MAY reject requests not matching that information. Endpoints MUST NOT use a URI obtained from a Record-Route
+         header field outside the dialog in which it was provided. See          Section 12 for more information on an endpoint’s use of
+         Record-Route header fields. Record-routing may be required by certain services where the
+         proxy needs to observe all messages in a dialog. However, it
+         slows down processing and impairs scalability and thus proxies
+         should only record-route if required for a particular service. The Record-Route process is designed to work for any SIP
+         request that initiates a dialog.

@@ -1,0 +1,12 @@
+The next several subsections are written
+   from the point of view of a stateful proxy. The last section calls
+   out those places where a stateless proxy behaves differently. 16.2 Stateful Proxy
+   When stateful, a proxy is purely a SIP transaction processing engine. Its behavior is modeled here in terms of the server and client
+   transactions defined in Section 17. A stateful proxy has a server
+   transaction associated with one or more client transactions by a
+   higher layer proxy processing component (see figure 3), known as a
+   proxy core. An incoming request is processed by a server    transaction. Requests from the server transaction are passed to a
+   proxy core. The proxy core determines where to route the request,
+   choosing one or more next-hop locations. An outgoing request for
+   each next-hop location is processed by its own associated client
+   transaction.

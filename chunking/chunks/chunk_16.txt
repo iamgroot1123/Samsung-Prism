@@ -1,0 +1,13 @@
+The biloxi.com proxy server adds
+   another Via header field value with its own address to the INVITE and
+   proxies it to Bob’s SIP phone. Bob’s SIP phone receives the INVITE and alerts Bob to the incoming
+   call from Alice so that Bob can decide whether to answer the call,
+   that is, Bob’s phone rings. Bob’s SIP phone indicates this in a 180
+   (Ringing) response, which is routed back through the two proxies in
+   the reverse direction. Each proxy uses the Via header field to
+   determine where to send the response and removes its own address from
+   the top. As a result, although DNS and location service lookups were
+   required to route the initial INVITE, the 180 (Ringing) response can
+   be returned to the caller without lookups or without state being    maintained in the proxies. This also has the desirable property that
+   each proxy that sees the INVITE will also see all responses to the
+   INVITE.

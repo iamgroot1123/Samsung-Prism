@@ -1,0 +1,12 @@
+These six header fields are the fundamental building
+   blocks of a SIP message, as they jointly provide for most of the
+   critical message routing services including the addressing of
+   messages, the routing of responses, limiting message propagation,
+   ordering of messages, and the unique identification of transactions. These header fields are in addition to the mandatory request line,
+   which contains the method, Request-URI, and SIP version. Examples of requests sent outside of a dialog include an INVITE to
+   establish a session (Section 13) and an OPTIONS to query for
+   capabilities (Section 11). 8.1.1.1 Request-URI
+   The initial Request-URI of the message SHOULD be set to the value of
+   the URI in the To field. One notable exception is the REGISTER
+   method; behavior for setting the Request-URI of REGISTER is given in
+   Section 10.

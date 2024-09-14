@@ -1,0 +1,17 @@
+19.1.6 Relating SIP URIs and tel URLs
+   When a tel URL (RFC 2806 [9]) is converted to a SIP or SIPS URI, the
+   entire telephone-subscriber portion of the tel URL, including any
+   parameters, is placed into the userinfo part of the SIP or SIPS URI. Thus, tel:+358-555-1234567;postd=pp22 becomes
+      sip:+358-555-1234567;postd=pp22@foo.com;user=phone
+   or
+      sips:+358-555-1234567;postd=pp22@foo.com;user=phone
+   not
+      sip:+358-555-1234567@foo.com;postd=pp22;user=phone
+   or
+      sips:+358-555-1234567@foo.com;postd=pp22;user=phone
+   In general, equivalent "tel" URLs converted to SIP or SIPS URIs in
+   this fashion may not produce equivalent SIP or SIPS URIs. The
+   userinfo of SIP and SIPS URIs are compared as a case-sensitive
+   string. Variance in case-insensitive portions of tel URLs and
+   reordering of tel URL parameters does not affect tel URL equivalence,
+   but does affect the equivalence of SIP URIs formed from them.

@@ -1,0 +1,11 @@
+If
+   unauthenticated requests were handled statefully, then malicious
+   floods of unauthenticated requests could create massive amounts of    transaction state that might slow or completely halt call processing
+   in a UAS, effectively creating a denial of service condition; for
+   more information see Section 26.1.5. The most important behaviors of a stateless UAS are the following:
+      o  A stateless UAS MUST NOT send provisional (1xx) responses. o  A stateless UAS MUST NOT retransmit responses. o  A stateless UAS MUST ignore ACK requests. o  A stateless UAS MUST ignore CANCEL requests. o  To header tags MUST be generated for responses in a stateless
+         manner - in a manner that will generate the same tag for the
+         same request consistently. For information on tag construction
+         see Section 19.3. In all other respects, a stateless UAS behaves in the same manner as
+   a stateful UAS. A UAS can operate in either a stateful or stateless
+   mode for each new request.

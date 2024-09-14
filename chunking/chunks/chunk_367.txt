@@ -1,0 +1,11 @@
+o  The ordering of parameters and header fields is not significant
+         in comparing SIP and SIPS URIs. o  Characters other than those in the "reserved" set (see RFC 2396
+         [5]) are equivalent to their ""%" HEX HEX" encoding. o  An IP address that is the result of a DNS lookup of a host name
+         does not match that host name. o  For two URIs to be equal, the user, password, host, and port
+         components must match. A URI omitting the user component will not match a URI that
+         includes one. A URI omitting the password component will not
+         match a URI that includes one. A URI omitting any component with a default value will not
+         match a URI explicitly containing that component with its
+         default value. For instance, a URI omitting the optional port
+         component will not match a URI explicitly declaring port 5060. The same is true for the transport-parameter, ttl-parameter,
+         user-parameter, and method components.

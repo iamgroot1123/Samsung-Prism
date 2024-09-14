@@ -1,0 +1,16 @@
+Example response to a request with the Request-URI
+   sip:lee@example.com:
+      SIP/2.0 485 Ambiguous
+      Contact: Carol Lee <sip:carol.lee@example.com>
+      Contact: Ping Lee <sip:p.lee@example.com>
+      Contact: Lee M. Foote <sips:lee.foote@example.com>
+      Some email and voice mail systems provide this functionality. A
+      status code separate from 3xx is used since the semantics are
+      different: for 300, it is assumed that the same person or service
+      will be reached by the choices provided. While an automated
+      choice or sequential search makes sense for a 3xx response, user
+      intervention is required for a 485 (Ambiguous) response. 21.4.24 486 Busy Here
+   The callee’s end system was contacted successfully, but the callee is
+   currently not willing or able to take additional calls at this end
+   system. The response MAY indicate a better time to call in the
+   Retry-After header field.

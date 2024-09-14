@@ -1,0 +1,11 @@
+For example, the user
+   agent initiating a call acts as a UAC when sending the initial INVITE
+   request and as a UAS when receiving a BYE request from the callee. Similarly, the same software can act as a proxy server for one
+   request and as a redirect server for the next request. Proxy, location, and registrar servers defined above are logical
+   entities; implementations MAY combine them into a single application. 7 SIP Messages
+   SIP is a text-based protocol and uses the UTF-8 charset (RFC 2279
+   [7]). A SIP message is either a request from a client to a server, or a
+   response from a server to a client. Both Request (section 7.1) and Response (section 7.2) messages use
+   the basic format of RFC 2822 [3], even though the syntax differs in
+   character set and syntax specifics. (SIP allows header fields that
+   would not be valid RFC 2822 header fields, for example.)

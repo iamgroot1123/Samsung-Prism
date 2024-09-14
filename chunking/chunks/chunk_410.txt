@@ -1,0 +1,15 @@
+The Require header field contains a list of option tags, described in
+   Section 19.2. Each option tag defines a SIP extension that MUST be
+   understood to process the request. Frequently, this is used to
+   indicate that a specific set of extension header fields need to be
+   understood. A UAC compliant to this specification MUST only include
+   option tags corresponding to standards-track RFCs. Example:
+      Require: 100rel
+20.33 Retry-After
+   The Retry-After header field can be used with a 500 (Server Internal
+   Error) or 503 (Service Unavailable) response to indicate how long the
+   service is expected to be unavailable to the requesting client and
+   with a 404 (Not Found), 413 (Request Entity Too Large), 480
+   (Temporarily Unavailable), 486 (Busy Here), 600 (Busy), or 603    (Decline) response to indicate when the called party anticipates
+   being available again. The value of this field is a positive integer
+   number of seconds (in decimal) after the time of the response.

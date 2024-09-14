@@ -1,0 +1,8 @@
+|INVITE
+                               |pass INV to TU
+            INVITE             V send 100 if TU won’t in 200ms
+            send response+-----------+
+                +--------|           |--------+101-199 from TU
+                |        | Proceeding|        |send response
+                +------->|           |<-------+
+                         |           |          Transport Err.

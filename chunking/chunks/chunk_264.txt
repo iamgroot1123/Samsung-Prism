@@ -1,0 +1,14 @@
+The new URI provided by the proxy MUST satisfy the same
+         constraints on URIs placed in Record-Route header fields in
+         requests (see Step 4 of Section 16.6) with the following
+         modifications:
+         The URI SHOULD NOT contain the transport parameter unless the
+         proxy has knowledge that the next upstream (as opposed to
+         downstream) element that will be in the path of subsequent
+         requests supports that transport. When a proxy does decide to modify the Record-Route header
+         field in the response, one of the operations it performs is
+         locating the Record-Route value that it had inserted. If the
+         request spiraled, and the proxy inserted a Record-Route value
+         in each iteration of the spiral, locating the correct value in
+         the response (which must be the proper iteration in the reverse
+         direction) is tricky.

@@ -1,0 +1,14 @@
+Including these header fields allows the UAC to determine the
+   features and extensions supported by the UAS for the duration of the
+   call, without probing. If the INVITE request contained an offer, and the UAS had not yet
+   sent an answer, the 2xx MUST contain an answer. If the INVITE did
+   not contain an offer, the 2xx MUST contain an offer if the UAS had
+   not yet sent an offer. Once the response has been constructed, it is passed to the INVITE
+   server transaction. Note, however, that the INVITE server
+   transaction will be destroyed as soon as it receives this final
+   response and passes it to the transport. Therefore, it is necessary
+   to periodically pass the response directly to the transport until the
+   ACK arrives. The 2xx response is passed to the transport with an
+   interval that starts at T1 seconds and doubles for each
+   retransmission until it reaches T2 seconds (T1 and T2 are defined in
+   Section 17).

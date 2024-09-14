@@ -1,0 +1,22 @@
+Determine target(s) for the request (Section 16.5)
+            +--------------------+
+            |                    | +---+
+            |                    | | C |
+            |                    | | T |
+            |                    | +---+
+      +---+ |       Proxy        | +---+   CT = Client Transaction
+      | S | |  "Higher" Layer    | | C |
+      | T | |                    | | T |   ST = Server Transaction
+      +---+ |                    | +---+
+            |                    | +---+
+            |                    | | C |
+            |                    | | T |
+            |                    | +---+
+            +--------------------+
+               Figure 3: Stateful Proxy Model
+      4. Forward the request to each target (Section 16.6)
+      5. Process all responses (Section 16.7)
+16.3 Request Validation
+   Before an element can proxy a request, it MUST verify the message’s
+   validity. A valid message must pass the following checks:
+      1.

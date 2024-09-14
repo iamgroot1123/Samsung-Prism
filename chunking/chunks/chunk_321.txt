@@ -1,0 +1,14 @@
+For unreliable transports,
+   timer G is set to fire in T1 seconds, and is not set to fire for
+   reliable transports. This is a change from RFC 2543, where responses were always
+      retransmitted, even over reliable transports. When the "Completed" state is entered, timer H MUST be set to fire in
+   64*T1 seconds for all transports. Timer H determines when the server
+   transaction abandons retransmitting the response. Its value is
+   chosen to equal Timer B, the amount of time a client transaction will
+   continue to retry sending a request. If timer G fires, the response
+   is passed to the transport layer once more for retransmission, and
+   timer G is set to fire in MIN(2*T1, T2) seconds. From then on, when
+   timer G fires, the response is passed to the transport again for
+   transmission, and timer G is reset with a value that doubles, unless
+   that value exceeds T2, in which case it is reset with the value of
+   T2.

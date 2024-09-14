@@ -1,0 +1,13 @@
+To address these concerns, it is RECOMMENDED that recipients of a
+   request whose Request-URI contains a SIP or SIPS URI inspect the To
+   header field value to see if it contains a SIPS URI (though note that
+   it does not constitute a breach of security if this URI has the same
+   scheme but is not equivalent to the URI in the To header field). Although clients may choose to populate the Request-URI and To header
+   field of a request differently, when SIPS is used this disparity
+   could be interpreted as a possible security violation, and the
+   request could consequently be rejected by its recipient. Recipients
+   MAY also inspect the Via header chain in order to double-check
+   whether or not TLS was used for the entire request path until the
+   local administrative domain was reached. S/MIME may also be used by
+   the originating UAC to help ensure that the original form of the To
+   header field is carried end-to-end.

@@ -1,0 +1,14 @@
+Note that, because the source
+   port is often ephemeral, but it cannot be known whether it is
+   ephemeral or selected through procedures in [4], connections accepted
+   by the transport layer will frequently not be reused. The result is
+   that two proxies in a "peering" relationship using a connection-
+   oriented transport frequently will have two connections in use, one
+   for transactions initiated in each direction. It is RECOMMENDED that connections be kept open for some
+   implementation-defined duration after the last message was sent or
+   received over that connection. This duration SHOULD at least equal
+   the longest amount of time the element would need in order to bring a
+   transaction from instantiation to the terminated state. This is to
+   make it likely that transactions are completed over the same
+   connection on which they are initiated (for example, request,
+   response, and in the case of INVITE, ACK for non-2xx responses).

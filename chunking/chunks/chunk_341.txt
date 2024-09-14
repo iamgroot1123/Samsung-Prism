@@ -1,0 +1,14 @@
+If a request is destined to an IP address, port, and transport to
+   which an existing connection is open, it is RECOMMENDED that this
+   connection be used to send the request, but another connection MAY be
+   opened and used. If a request is sent using multicast, it is sent to the group
+   address, port, and TTL provided by the transport user. If a request
+   is sent using unicast unreliable transports, it is sent to the IP
+   address and port provided by the transport user. 18.1.2 Receiving Responses
+   When a response is received, the client transport examines the top
+   Via header field value. If the value of the "sent-by" parameter in
+   that header field value does not correspond to a value that the
+   client transport is configured to insert into requests, the response
+   MUST be silently discarded. If there are any client transactions in existence, the client
+   transport uses the matching procedures of Section 17.1.3 to attempt
+   to match the response to an existing transaction.

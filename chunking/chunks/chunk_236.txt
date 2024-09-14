@@ -1,0 +1,13 @@
+In a similar fashion, a proxy that receives a request
+         over TLS, but generates a request without a SIPS URI in the
+         Request-URI or topmost Route header field value (after the post
+         processing of bullet 6), MUST insert a Record-Route header
+         field that is not a SIPS URI. A proxy at a security perimeter must remain on the perimeter
+         throughout the dialog. If the URI placed in the Record-Route header field needs to be
+         rewritten when it passes back through in a response, the URI
+         MUST be distinct enough to locate at that time. (The request
+         may spiral through this proxy, resulting in more than one
+         Record-Route header field value being added). Item 8 of
+         Section 16.7 recommends a mechanism to make the URI
+         sufficiently distinct. The proxy MAY include parameters in the Record-Route header
+         field value.

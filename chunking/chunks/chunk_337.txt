@@ -1,0 +1,12 @@
+With
+      the extra buffer, the response can be about 170 bytes larger than
+      the request, and still not be fragmented on IPv4 (about 30 bytes       is consumed by IP/UDP, assuming no IPSec). 1300 is chosen when
+      path MTU is not known, based on the assumption of a 1500 byte
+      Ethernet MTU. If an element sends a request over TCP because of these message size
+   constraints, and that request would have otherwise been sent over
+   UDP, if the attempt to establish the connection generates either an
+   ICMP Protocol Not Supported, or results in a TCP reset, the element
+   SHOULD retry the request, using UDP. This is only to provide
+   backwards compatibility with RFC 2543 compliant implementations that
+   do not support TCP. It is anticipated that this behavior will be
+   deprecated in a future revision of this specification.

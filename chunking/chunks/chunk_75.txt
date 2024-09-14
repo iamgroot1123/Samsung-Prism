@@ -1,0 +1,11 @@
+Note that when requests are retried after certain    failure responses that solicit an amendment to a request (for
+   example, a challenge for authentication), these retried requests are
+   not considered new requests, and therefore do not need new Call-ID
+   header fields; see Section 8.1.3.5. Use of cryptographically random identifiers (RFC 1750 [12]) in the
+   generation of Call-IDs is RECOMMENDED. Implementations MAY use the
+   form "localid@host". Call-IDs are case-sensitive and are simply
+   compared byte-by-byte. Using cryptographically random identifiers provides some
+      protection against session hijacking and reduces the likelihood of
+      unintentional Call-ID collisions. No provisioning or human interface is required for the selection of
+   the Call-ID header field value for a request. For further information on the Call-ID header field, see Section
+   20.8.

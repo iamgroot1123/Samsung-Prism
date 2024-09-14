@@ -1,0 +1,13 @@
+The UAC uses the remote target and route set to build the Request-URI
+   and Route header field of the request. If the route set is empty, the UAC MUST place the remote target URI
+   into the Request-URI. The UAC MUST NOT add a Route header field to
+   the request. If the route set is not empty, and the first URI in the route set
+   contains the lr parameter (see Section 19.1.1), the UAC MUST place
+   the remote target URI into the Request-URI and MUST include a Route
+   header field containing the route set values in order, including all
+   parameters. If the route set is not empty, and its first URI does not contain the
+   lr parameter, the UAC MUST place the first URI from the route set
+   into the Request-URI, stripping any parameters that are not allowed
+   in a Request-URI. The UAC MUST add a Route header field containing
+   the remainder of the route set values in order, including all
+   parameters.

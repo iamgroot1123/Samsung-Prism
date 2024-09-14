@@ -1,0 +1,4 @@
+Any present header
+         component MUST be present in both URIs and match for the URIs
+         to match. The matching rules are defined for each header field
+         in Section 20.

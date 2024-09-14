@@ -1,0 +1,11 @@
+26.2.4 S/MIME
+   As is discussed above, encrypting entire SIP messages end-to-end for
+   the purpose of confidentiality is not appropriate because network
+   intermediaries (like proxy servers) need to view certain header
+   fields in order to route messages correctly, and if these
+   intermediaries are excluded from security associations, then SIP
+   messages will essentially be non-routable. However, S/MIME allows SIP UAs to encrypt MIME bodies within SIP,
+   securing these bodies end-to-end without affecting message headers. S/MIME can provide end-to-end confidentiality and integrity for
+   message bodies, as well as mutual authentication. It is also
+   possible to use S/MIME to provide a form of integrity and
+   confidentiality for SIP header fields through SIP message tunneling. The usage of S/MIME in SIP is detailed in Section 23.

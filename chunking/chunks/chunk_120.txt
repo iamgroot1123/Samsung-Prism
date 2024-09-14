@@ -1,0 +1,15 @@
+If the UAS has not issued a final response
+   for the original request, its behavior depends on the method of the
+   original request. If the original request was an INVITE, the UAS
+   SHOULD immediately respond to the INVITE with a 487 (Request
+   Terminated). A CANCEL request has no impact on the processing of
+   transactions with any other method defined in this specification. Regardless of the method of the original request, as long as the
+   CANCEL matched an existing transaction, the UAS answers the CANCEL
+   request itself with a 200 (OK) response. This response is
+   constructed following the procedures described in Section 8.2.6
+   noting that the To tag of the response to the CANCEL and the To tag
+   in the response to the original request SHOULD be the same. The
+   response to CANCEL is passed to the server transaction for
+   transmission. 10 Registrations
+10.1 Overview
+   SIP offers a discovery capability.

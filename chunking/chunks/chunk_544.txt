@@ -1,0 +1,13 @@
+The UA then creates a REGISTER request that SHOULD be addressed to a
+   Request-URI corresponding to the site certificate received from the
+   registrar. When the UA sends the REGISTER request over the existing
+   TLS connection, the registrar SHOULD challenge the request with a 401
+   (Proxy Authentication Required) response. The "realm" parameter
+   within the Proxy-Authenticate header field of the response SHOULD
+   correspond to the domain previously given by the site certificate. When the UAC receives the challenge, it SHOULD either prompt the user
+   for credentials or take an appropriate credential from a keyring
+   corresponding to the "realm" parameter in the challenge. The
+   username of this credential SHOULD correspond with the "userinfo"
+   portion of the URI in the To header field of the REGISTER request. Once the Digest credentials have been inserted into an appropriate
+   Proxy-Authorization header field, the REGISTER should be resubmitted
+   to the registrar.

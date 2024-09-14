@@ -1,0 +1,13 @@
+Procedures for
+   the generation of tags are defined in Section 19.3. 8.2.7 Stateless UAS Behavior
+   A stateless UAS is a UAS that does not maintain transaction state. It replies to requests normally, but discards any state that would
+   ordinarily be retained by a UAS after a response has been sent. If a
+   stateless UAS receives a retransmission of a request, it regenerates
+   the response and resends it, just as if it were replying to the first
+   instance of the request. A UAS cannot be stateless unless the request
+   processing for that method would always result in the same response
+   if the requests are identical. This rules out stateless registrars,
+   for example. Stateless UASs do not use a transaction layer; they
+   receive requests directly from the transport layer and send responses
+   directly to the transport layer. The stateless UAS role is needed primarily to handle unauthenticated
+   requests for which a challenge response is issued.

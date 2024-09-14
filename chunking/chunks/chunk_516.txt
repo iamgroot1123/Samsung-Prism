@@ -1,0 +1,13 @@
+Its use of intermediaries,
+   its multi-faceted trust relationships, its expected usage between
+   elements with no trust at all, and its user-to-user operation make
+   security far from trivial. Security solutions are needed that are
+   deployable today, without extensive coordination, in a wide variety
+   of environments and usages. In order to meet these diverse needs,
+   several distinct mechanisms applicable to different aspects and
+   usages of SIP will be required. Note that the security of SIP signaling itself has no bearing on the
+   security of protocols used in concert with SIP such as RTP, or with
+   the security implications of any specific bodies SIP might carry
+   (although MIME security plays a substantial role in securing SIP). Any media associated with a session can be encrypted end-to-end
+   independently of any associated SIP signaling. Media encryption is
+   outside the scope of this document.

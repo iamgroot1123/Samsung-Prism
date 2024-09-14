@@ -1,0 +1,13 @@
+We break the differences into functional behavior that is a
+   substantial change from RFC 2543, which has impact on
+   interoperability or correct operation in some cases, and functional
+   behavior that is different from RFC 2543 but not a potential source
+   of interoperability problems. There have been countless
+   clarifications as well, which are not documented here. 28.1 Major Functional Changes
+   o  When a UAC wishes to terminate a call before it has been answered,
+      it sends CANCEL. If the original INVITE still returns a 2xx, the
+      UAC then sends BYE. BYE can only be sent on an existing call leg
+      (now called a dialog in this RFC), whereas it could be sent at any
+      time in RFC 2543.
+   o  The SIP BNF was converted to be RFC 2234 compliant. o  SIP URL BNF was made more general, allowing a greater set of
+      characters in the user part.

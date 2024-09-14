@@ -1,0 +1,14 @@
+SIP is
+   rather a component that can be used with other IETF protocols to
+   build a complete multimedia architecture. Typically, these
+   architectures will include protocols such as the Real-time Transport
+   Protocol (RTP) (RFC 1889 [28]) for transporting real-time data and
+   providing QoS feedback, the Real-Time streaming protocol (RTSP) (RFC
+   2326 [29]) for controlling delivery of streaming media, the Media    Gateway Control Protocol (MEGACO) (RFC 3015 [30]) for controlling
+   gateways to the Public Switched Telephone Network (PSTN), and the
+   Session Description Protocol (SDP) (RFC 2327 [1]) for describing
+   multimedia sessions. Therefore, SIP should be used in conjunction
+   with other protocols in order to provide complete services to the
+   users. However, the basic functionality and operation of SIP does
+   not depend on any of these protocols. SIP does not provide services. Rather, SIP provides primitives that
+   can be used to implement different services.

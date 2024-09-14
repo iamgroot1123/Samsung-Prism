@@ -1,0 +1,13 @@
+Use of the "*" Contact header field value allows a registering UA
+      to remove all bindings associated with an address-of-record
+      without knowing their precise values. 10.2.3 Fetching Bindings
+   A success response to any REGISTER request contains the complete list
+   of existing bindings, regardless of whether the request contained a
+   Contact header field. If no Contact header field is present in a
+   REGISTER request, the list of bindings is left unchanged. 10.2.4 Refreshing Bindings
+   Each UA is responsible for refreshing the bindings that it has
+   previously established. A UA SHOULD NOT refresh bindings set up by
+   other UAs. The 200 (OK) response from the registrar contains a list of Contact
+   fields enumerating all current bindings. The UA compares each
+   contact address to see if it created the contact address, using
+   comparison rules in Section 19.1.4.

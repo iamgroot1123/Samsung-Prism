@@ -1,0 +1,14 @@
+However, SIP
+   requests and responses cannot be naively encrypted end-to-end in
+   their entirety because message fields such as the Request-URI, Route,
+   and Via need to be visible to proxies in most network architectures
+   so that SIP requests are routed correctly. Note that proxy servers
+   need to modify some features of messages as well (such as adding Via
+   header field values) in order for SIP to function. Proxy servers
+   must therefore be trusted, to some degree, by SIP UAs. To this
+   purpose, low-layer security mechanisms for SIP are recommended, which    encrypt the entire SIP requests or responses on the wire on a hop-
+   by-hop basis, and that allow endpoints to verify the identity of
+   proxy servers to whom they send requests. SIP entities also have a need to identify one another in a secure
+   fashion. When a SIP endpoint asserts the identity of its user to a
+   peer UA or to a proxy server, that identity should in some way be
+   verifiable.

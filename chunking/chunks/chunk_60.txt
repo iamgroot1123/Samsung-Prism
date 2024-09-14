@@ -1,0 +1,12 @@
+It
+   will always be either an opaque sequence of TEXT-UTF8 octets, or a
+   combination of whitespace, tokens, separators, and quoted strings. Many existing header fields will adhere to the general form of a
+   value followed by a semi-colon separated sequence of parameter-name,
+   parameter-value pairs:
+         field-name: field-value *(;parameter-name=parameter-value)    Even though an arbitrary number of parameter pairs may be attached to
+   a header field value, any given parameter-name MUST NOT appear more
+   than once. When comparing header fields, field names are always case-
+   insensitive. Unless otherwise stated in the definition of a
+   particular header field, field values, parameter names, and parameter
+   values are case-insensitive. Tokens are always case-insensitive. Unless specified otherwise, values expressed as quoted strings are
+   case-sensitive.

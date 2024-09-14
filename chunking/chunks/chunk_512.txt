@@ -1,0 +1,123 @@
+0*3("0") ] )
+generic-param  =  token [ EQUAL gen-value ]
+gen-value      =  token / host / quoted-string
+Accept-Encoding  =  "Accept-Encoding" HCOLON
+                     [ encoding *(COMMA encoding) ]
+encoding         =  codings *(SEMI accept-param)
+codings          =  content-coding / "*"
+content-coding   =  token
+Accept-Language  =  "Accept-Language" HCOLON
+                     [ language *(COMMA language) ]
+language         =  language-range *(SEMI accept-param)
+language-range   =  ( ( 1*8ALPHA *( "-" 1*8ALPHA ) ) / "*" )
+Alert-Info   =  "Alert-Info" HCOLON alert-param *(COMMA alert-param)
+alert-param  =  LAQUOT absoluteURI RAQUOT *( SEMI generic-param )
+Allow  =  "Allow" HCOLON [Method *(COMMA Method)]
+Authorization     =  "Authorization" HCOLON credentials
+credentials       =  ("Digest" LWS digest-response)
+                     / other-response
+digest-response   =  dig-resp *(COMMA dig-resp)
+dig-resp          =  username / realm / nonce / digest-uri
+                      / dresponse / algorithm / cnonce
+                      / opaque / message-qop
+                      / nonce-count / auth-param
+username          =  "username" EQUAL username-value
+username-value    =  quoted-string
+digest-uri        =  "uri" EQUAL LDQUOT digest-uri-value RDQUOT
+digest-uri-value  =  rquest-uri ; Equal to request-uri as specified
+                     by HTTP/1.1
+message-qop       =  "qop" EQUAL qop-value
+cnonce            =  "cnonce" EQUAL cnonce-value
+cnonce-value      =  nonce-value
+nonce-count       =  "nc" EQUAL nc-value
+nc-value          =  8LHEX
+dresponse         =  "response" EQUAL request-digest
+request-digest    =  LDQUOT 32LHEX RDQUOT
+auth-param        =  auth-param-name EQUAL
+                     ( token / quoted-string )
+auth-param-name   =  token
+other-response    =  auth-scheme LWS auth-param
+                     *(COMMA auth-param)
+auth-scheme       =  token
+Authentication-Info  =  "Authentication-Info" HCOLON ainfo
+                        *(COMMA ainfo)
+ainfo                =  nextnonce / message-qop
+                         / response-auth / cnonce
+                         / nonce-count
+nextnonce            =  "nextnonce" EQUAL nonce-value
+response-auth        =  "rspauth" EQUAL response-digest
+response-digest      =  LDQUOT *LHEX RDQUOT
+Call-ID  =  ( "Call-ID" / "i" ) HCOLON callid
+callid   =  word [ "@" word ]
+Call-Info   =  "Call-Info" HCOLON info *(COMMA info)
+info        =  LAQUOT absoluteURI RAQUOT *( SEMI info-param)
+info-param  =  ( "purpose" EQUAL ( "icon" / "info"
+               / "card" / token ) ) / generic-param
+Contact        =  ("Contact" / "m" ) HCOLON
+                  ( STAR / (contact-param *(COMMA contact-param)))
+contact-param  =  (name-addr / addr-spec) *(SEMI contact-params)
+name-addr      =  [ display-name ] LAQUOT addr-spec RAQUOT
+addr-spec      =  SIP-URI / SIPS-URI / absoluteURI
+display-name   =  *(token LWS)/ quoted-string
+contact-params     =  c-p-q / c-p-expires
+                      / contact-extension
+c-p-q              =  "q" EQUAL qvalue
+c-p-expires        =  "expires" EQUAL delta-seconds
+contact-extension  =  generic-param
+delta-seconds      =  1*DIGIT
+Content-Disposition   =  "Content-Disposition" HCOLON
+                         disp-type *( SEMI disp-param )
+disp-type             =  "render" / "session" / "icon" / "alert"
+                         / disp-extension-token
+disp-param            =  handling-param / generic-param
+handling-param        =  "handling" EQUAL
+                         ( "optional" / "required"
+                         / other-handling )
+other-handling        =  token
+disp-extension-token  =  token
+Content-Encoding  =  ( "Content-Encoding" / "e" ) HCOLON
+                     content-coding *(COMMA content-coding)
+Content-Language  =  "Content-Language" HCOLON
+                     language-tag *(COMMA language-tag)
+language-tag      =  primary-tag *( "-" subtag )
+primary-tag       =  1*8ALPHA
+subtag            =  1*8ALPHA
+Content-Length  =  ( "Content-Length" / "l" ) HCOLON 1*DIGIT
+Content-Type     =  ( "Content-Type" / "c" ) HCOLON media-type
+media-type       =  m-type SLASH m-subtype *(SEMI m-parameter)
+m-type           =  discrete-type / composite-type
+discrete-type    =  "text" / "image" / "audio" / "video"
+                    / "application" / extension-token
+composite-type   =  "message" / "multipart" / extension-token
+extension-token  =  ietf-token / x-token
+ietf-token       =  token
+x-token          =  "x-" token
+m-subtype        =  extension-token / iana-token
+iana-token       =  token
+m-parameter      =  m-attribute EQUAL m-value
+m-attribute      =  token
+m-value          =  token / quoted-string
+CSeq  =  "CSeq" HCOLON 1*DIGIT LWS Method
+Date          =  "Date" HCOLON SIP-date
+SIP-date      =  rfc1123-date
+rfc1123-date  =  wkday "," SP date1 SP time SP "GMT"
+date1         =  2DIGIT SP month SP 4DIGIT
+                 ; day month year (e.g., 02 Jun 1982)
+time          =  2DIGIT ":" 2DIGIT ":" 2DIGIT
+                 ; 00:00:00 - 23:59:59
+wkday         =  "Mon" / "Tue" / "Wed"
+                 / "Thu" / "Fri" / "Sat" / "Sun"
+month         =  "Jan" / "Feb" / "Mar" / "Apr"
+                 / "May" / "Jun" / "Jul" / "Aug"
+                 / "Sep" / "Oct" / "Nov" / "Dec"
+Error-Info  =  "Error-Info" HCOLON error-uri *(COMMA error-uri)
+error-uri   =  LAQUOT absoluteURI RAQUOT *( SEMI generic-param )
+Expires     =  "Expires" HCOLON delta-seconds
+From        =  ( "From" / "f" ) HCOLON from-spec
+from-spec   =  ( name-addr / addr-spec )
+               *( SEMI from-param )
+from-param  =  tag-param / generic-param
+tag-param   =  "tag" EQUAL token
+In-Reply-To  =  "In-Reply-To" HCOLON callid *(COMMA callid)
+Max-Forwards  =  "Max-Forwards" HCOLON 1*DIGIT
+MIME-Version  =  "MIME-Version" HCOLON 1*DIGIT "."

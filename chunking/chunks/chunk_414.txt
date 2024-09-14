@@ -1,0 +1,15 @@
+The compact form of the To header field is t.
+   The following are examples of valid To header fields:
+      To: The Operator <sip:operator@cs.columbia.edu>;tag=287447
+      t: sip:+12125551212@server.phone2net.com
+20.40 Unsupported
+   The Unsupported header field lists the features not supported by the
+   UAS. See Section 20.32 for motivation. Example:
+      Unsupported: foo
+20.41 User-Agent
+   The User-Agent header field contains information about the UAC
+   originating the request. The semantics of this header field are
+   defined in [H14.43]. Revealing the specific software version of the user agent might allow
+   the user agent to become more vulnerable to attacks against software
+   that is known to contain security holes. Implementers SHOULD make
+   the User-Agent header field a configurable option.

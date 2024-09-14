@@ -1,0 +1,12 @@
+If a response context is not found, the element does not have any
+   knowledge of the request to apply the CANCEL to. It MUST statelessly
+   forward the CANCEL request (it may have statelessly forwarded the
+   associated request previously). 16.11 Stateless Proxy
+   When acting statelessly, a proxy is a simple message forwarder. Much
+   of the processing performed when acting statelessly is the same as
+   when behaving statefully. The differences are detailed here. A stateless proxy does not have any notion of a transaction, or of
+   the response context used to describe stateful proxy behavior. Instead, the stateless proxy takes messages, both requests and
+   responses, directly from the transport layer (See section 18). As a
+   result, stateless proxies do not retransmit messages on their own. They do, however, forward all retransmissions they receive (they do
+   not have the ability to distinguish a retransmission from the
+   original message).

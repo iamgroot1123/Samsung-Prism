@@ -1,0 +1,5 @@
+Contact: REGISTER requests MAY contain a Contact header field with
+           zero or more values containing address bindings. UAs MUST NOT send a new registration (that is, containing new Contact
+   header field values, as opposed to a retransmission) until they have
+   received a final response from the registrar for the previous one or
+   the previous REGISTER request has timed out.

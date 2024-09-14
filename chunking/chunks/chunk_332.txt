@@ -1,0 +1,13 @@
+Matching is done based on the matching    rules defined for each of those header fields. When a non-INVITE
+   request matches an existing transaction, it is a retransmission of
+   the request that created that transaction. Because the matching rules include the Request-URI, the server cannot
+   match a response to a transaction. When the TU passes a response to
+   the server transaction, it must pass it to the specific server
+   transaction for which the response is targeted. 17.2.4 Handling Transport Errors
+   When the server transaction sends a response to the transport layer
+   to be sent, the following procedures are followed if the transport
+   layer indicates a failure. First, the procedures in [4] are followed, which attempt to deliver
+   the response to a backup. If those should all fail, based on the
+   definition of failure in [4], the server transaction SHOULD inform
+   the TU that a failure has occurred, and SHOULD transition to the
+   terminated state.

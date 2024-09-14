@@ -1,0 +1,13 @@
+UAC
+   processing of this response is described in Section 8.1.3.5. 21.4.14 416 Unsupported URI Scheme
+   The server cannot process the request because the scheme of the URI
+   in the Request-URI is unknown to the server. Client processing of
+   this response is described in Section 8.1.3.5. 21.4.15 420 Bad Extension
+   The server did not understand the protocol extension specified in a
+   Proxy-Require (Section 20.29) or Require (Section 20.32) header
+   field. The server MUST include a list of the unsupported extensions
+   in an Unsupported header field in the response. UAC processing of
+   this response is described in Section 8.1.3.5. 21.4.16 421 Extension Required
+   The UAS needs a particular extension to process the request, but this
+   extension is not listed in a Supported header field in the request. Responses with this status code MUST contain a Require header field
+   listing the required extensions.

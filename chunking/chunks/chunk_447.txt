@@ -1,0 +1,14 @@
+o  Realm strings SHOULD present a human-readable identifier that
+         can be rendered to a user. For example:
+      INVITE sip:bob@biloxi.com SIP/2.0
+      Authorization: Digest realm="biloxi.com", <...>
+   Generally, SIP authentication is meaningful for a specific realm, a
+   protection domain. Thus, for Digest authentication, each such
+   protection domain has its own set of usernames and passwords. If a
+   server does not require authentication for a particular request, it
+   MAY accept a default username, "anonymous", which has no password
+   (password of ""). Similarly, UACs representing many users, such as
+   PSTN gateways, MAY have their own device-specific username and
+   password, rather than accounts for particular users, for their realm. While a server can legitimately challenge most SIP requests, there
+   are two requests defined by this document that require special
+   handling for authentication: ACK and CANCEL.

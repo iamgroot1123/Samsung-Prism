@@ -1,0 +1,12 @@
+Attackers could de-register some or all users in an administrative
+   domain, thereby preventing these users from being invited to new
+   sessions. An attacker could also register a large number of contacts
+   designating the same host for a given address-of-record in order to
+   use the registrar and any associated proxy servers as amplifiers in a
+   denial-of-service attack. Attackers might also attempt to deplete
+   available memory and disk resources of a registrar by registering
+   huge numbers of bindings. The use of multicast to transmit SIP requests can greatly increase
+   the potential for denial-of-service attacks. These problems demonstrate a general need to define architectures
+   that minimize the risks of denial-of-service, and the need to be
+   mindful in recommendations for security mechanisms of this class of
+   attacks.

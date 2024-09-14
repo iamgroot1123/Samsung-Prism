@@ -1,0 +1,10 @@
+Note that a UAC MUST NOT initiate a new INVITE transaction within a
+   dialog while another INVITE transaction is in progress in either
+   direction. 1. If there is an ongoing INVITE client transaction, the TU MUST
+         wait until the transaction reaches the completed or terminated
+         state before initiating the new INVITE. 2. If there is an ongoing INVITE server transaction, the TU MUST
+         wait until the transaction reaches the confirmed or terminated
+         state before initiating the new INVITE. However, a UA MAY initiate a regular transaction while an INVITE
+   transaction is in progress. A UA MAY also initiate an INVITE
+   transaction while a regular transaction is in progress. If a UA receives a non-2xx final response to a re-INVITE, the session
+   parameters MUST remain unchanged, as if no re-INVITE had been issued.

@@ -1,0 +1,13 @@
+The procedures in Section 8.1.2 will normally result in the
+      request being sent to the address indicated by the topmost Route
+      header field value or the Request-URI if no Route header field is
+      present. Subject to certain restrictions, they allow the request
+      to be sent to an alternate address (such as a default outbound
+      proxy not represented in the route set). 12.2.1.2 Processing the Responses
+   The UAC will receive responses to the request from the transaction
+   layer. If the client transaction returns a timeout, this is treated
+   as a 408 (Request Timeout) response. The behavior of a UAC that receives a 3xx response for a request sent
+   within a dialog is the same as if the request had been sent outside a
+   dialog. This behavior is described in Section 8.1.3.4. Note, however, that when the UAC tries alternative locations, it
+      still uses the route set for the dialog to build the Route header
+      of the request.

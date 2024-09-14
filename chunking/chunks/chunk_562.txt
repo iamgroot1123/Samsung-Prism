@@ -1,0 +1,13 @@
+When users move between devices, it may be difficult to transport
+   private keys securely between UAs; how such keys might be acquired by
+   a device is outside the scope of this document. Another, more prosaic difficulty with the S/MIME mechanism is that it
+   can result in very large messages, especially when the SIP tunneling
+   mechanism described in Section 23.4 is used. For that reason, it is
+   RECOMMENDED that TCP should be used as a transport protocol when
+   S/MIME tunneling is employed. 26.4.3 TLS
+   The most commonly voiced concern about TLS is that it cannot run over
+   UDP; TLS requires a connection-oriented underlying transport
+   protocol, which for the purposes of this document means TCP. It may also be arduous for a local outbound proxy server and/or
+   registrar to maintain many simultaneous long-lived TLS connections
+   with numerous UAs. This introduces some valid scalability concerns,
+   especially for intensive ciphersuites.

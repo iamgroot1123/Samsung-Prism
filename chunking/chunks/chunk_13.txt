@@ -1,0 +1,9 @@
+Content-Type contains a description of the message body (not shown). Content-Length contains an octet (byte) count of the message body. The complete set of SIP header fields is defined in Section 20. The details of the session, such as the type of media, codec, or
+   sampling rate, are not described using SIP. Rather, the body of a
+   SIP message contains a description of the session, encoded in some
+   other protocol format. One such format is the Session Description
+   Protocol (SDP) (RFC 2327 [1]). This SDP message (not shown in the    example) is carried by the SIP message in a way that is analogous to
+   a document attachment being carried by an email message, or a web
+   page being carried in an HTTP message. Since the softphone does not know the location of Bob or the SIP
+   server in the biloxi.com domain, the softphone sends the INVITE to
+   the SIP server that serves Alice’s domain, atlanta.com.

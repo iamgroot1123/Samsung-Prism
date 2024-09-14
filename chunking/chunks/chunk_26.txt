@@ -1,0 +1,14 @@
+Authorization and authentication are handled in
+   SIP either on a request-by-request basis with a challenge/response
+   mechanism, or by using a lower layer scheme as discussed in Section
+   26. The complete set of SIP message details for this registration example
+   is in Section 24.1. Additional operations in SIP, such as querying for the capabilities
+   of a SIP server or client using OPTIONS, or canceling a pending
+   request using CANCEL, will be introduced in later sections. 5 Structure of the Protocol
+   SIP is structured as a layered protocol, which means that its
+   behavior is described in terms of a set of fairly independent
+   processing stages with only a loose coupling between each stage. The
+   protocol behavior is described as layers for the purpose of
+   presentation, allowing the description of functions common across
+   elements in a single section. It does not dictate an implementation
+   in any way.

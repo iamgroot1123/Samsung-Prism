@@ -1,0 +1,10 @@
+For instance,
+         transporting a PIN number in this field exposes the PIN. Note that the password field is just an extension of the user
+         portion. Implementations not wishing to give special
+         significance to the password portion of the field MAY simply
+         treat "user:password" as a single string. host: The host providing the SIP resource. The host part contains
+         either a fully-qualified domain name or numeric IPv4 or IPv6
+         address. Using the fully-qualified domain name form is
+         RECOMMENDED whenever possible. port: The port number where the request is to be sent. URI parameters: Parameters affecting a request constructed from
+         the URI. URI parameters are added after the hostport component and are
+         separated by semi-colons.

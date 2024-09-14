@@ -1,0 +1,5 @@
+If an integrity violation in a message is detected by its recipient,
+   the message MAY be rejected with a 403 (Forbidden) response if it is
+   a request, or any existing dialog MAY be terminated. UAs SHOULD
+   notify users of this circumstance and request explicit guidance on
+   how to proceed.

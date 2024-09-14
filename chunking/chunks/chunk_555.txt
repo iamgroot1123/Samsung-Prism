@@ -1,0 +1,12 @@
+26.3.2.4 DoS Protection
+   In order to minimize the risk of a denial-of-service attack against
+   architectures using these security solutions, implementers should
+   take note of the following guidelines. When the host on which a SIP proxy server is operating is routable
+   from the public Internet, it SHOULD be deployed in an administrative
+   domain with defensive operational policies (blocking source-routed
+   traffic, preferably filtering ping traffic). Both TLS and IPSec can
+   also make use of bastion hosts at the edges of administrative domains
+   that participate in the security associations to aggregate secure
+   tunnels and sockets. These bastion hosts can also take the brunt of
+   denial-of-service attacks, ensuring that SIP hosts within the
+   administrative domain are not encumbered with superfluous messaging.

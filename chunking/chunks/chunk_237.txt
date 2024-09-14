@@ -1,0 +1,11 @@
+These will be echoed in some responses to the
+         request such as the 200 (OK) responses to INVITE. Such
+         parameters may be useful for keeping state in the message
+         rather than the proxy. If a proxy needs to be in the path of any type of dialog (such
+         as one straddling a firewall), it SHOULD add a Record-Route
+         header field value to every request with a method it does not
+         understand since that method may have dialog semantics. The URI a proxy places into a Record-Route header field is only
+         valid for the lifetime of any dialog created by the transaction
+         in which it occurs. A dialog-stateful proxy, for example, MAY
+         refuse to accept future requests with that value in the
+         Request-URI after the dialog has terminated.

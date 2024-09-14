@@ -1,0 +1,14 @@
+Specifically, LWS on either side of the
+   ":" or "/" is allowed, as shown here:
+      Via: SIP / 2.0 / UDP first.example.com: 4000;ttl=16
+        ;maddr=224.2.0.1 ;branch=z9hG4bKa7c6a8dlze.1
+   Even though this specification mandates that the branch parameter be
+   present in all requests, the BNF for the header field indicates that
+   it is optional. This allows interoperation with RFC 2543 elements,
+   which did not have to insert the branch parameter. Two Via header fields are equal if their sent-protocol and sent-by
+   fields are equal, both have the same set of parameters, and the
+   values of all parameters are equal. 20.43 Warning
+   The Warning header field is used to carry additional information
+   about the status of a response. Warning header field values are sent
+   with responses and contain a three-digit warning code, host name, and
+   warning text.

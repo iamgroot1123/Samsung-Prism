@@ -1,0 +1,17 @@
+The compact form of the Supported header field is k.
+   Example:
+      Supported: 100rel
+20.38 Timestamp
+   The Timestamp header field describes when the UAC sent the request to
+   the UAS. See Section 8.2.6 for details on how to generate a response to a
+   request that contains the header field. Although there is no
+   normative behavior defined here that makes use of the header, it
+   allows for extensions or SIP applications to obtain RTT estimates. Example:
+      Timestamp: 54
+20.39 To
+   The To header field specifies the logical recipient of the request. The optional "display-name" is meant to be rendered by a human-user
+   interface. The "tag" parameter serves as a general mechanism for
+   dialog identification. See Section 19.3 for details of the "tag" parameter. Comparison of To header fields for equality is identical to
+   comparison of From header fields. See Section 20.10 for the rules
+   for parsing a display name, URI and URI parameters, and header field
+   parameters.

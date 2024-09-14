@@ -1,0 +1,12 @@
+Of course, there are some safeguards against this (if the
+   destination UA is truly paranoid it could refuse all non-SIPS
+   requests), but it is a limitation worth noting. On the bright side,
+   users might also divine that ’SIPS’ would be valid even when they are
+   presented only with a SIP URI. 26.5 Privacy
+   SIP messages frequently contain sensitive information about their
+   senders - not just what they have to say, but with whom they
+   communicate, when they communicate and for how long, and from where
+   they participate in sessions. Many applications and their users
+   require that this sort of private information be hidden from any
+   parties that do not need to know it. Note that there are also less direct ways in which private
+   information can be divulged.

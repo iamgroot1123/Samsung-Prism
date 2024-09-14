@@ -1,0 +1,13 @@
+If that
+         connection attempt fails, the server SHOULD use the procedures
+         in [4] for servers in order to determine the IP address and
+         port to open the connection and send the response to. o  Otherwise, if the Via header field value contains a "maddr"
+         parameter, the response MUST be forwarded to the address listed
+         there, using the port indicated in "sent-by", or port 5060 if
+         none is present. If the address is a multicast address, the
+         response SHOULD be sent using the TTL indicated in the "ttl"
+         parameter, or with a TTL of 1 if that parameter is not present. o  Otherwise (for unreliable unicast transports), if the top Via
+         has a "received" parameter, the response MUST be sent to the
+         address in the "received" parameter, using the port indicated
+         in the "sent-by" value, or using port 5060 if none is specified
+         explicitly.

@@ -1,0 +1,13 @@
+A mandatory response header field MUST be present in the
+   response, and the header field MUST be understood by the UAC
+   processing the response. "Not applicable" means that the header
+   field MUST NOT be present in a request. If one is placed in a
+   request by mistake, it MUST be ignored by the UAS receiving the
+   request. Similarly, a header field labeled "not applicable" for a
+   response means that the UAS MUST NOT place the header field in the
+   response, and the UAC MUST ignore the header field in the response. A UA SHOULD ignore extension header parameters that are not
+   understood. A compact form of some common header field names is also defined for
+   use when overall message size is an issue. The Contact, From, and To header fields contain a URI. If the URI
+   contains a comma, question mark or semicolon, the URI MUST be
+   enclosed in angle brackets (< and >). Any URI parameters are
+   contained within these brackets.

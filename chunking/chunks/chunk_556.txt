@@ -1,0 +1,14 @@
+No matter what security solutions are deployed, floods of messages
+   directed at proxy servers can lock up proxy server resources and
+   prevent desirable traffic from reaching its destination. There is a
+   computational expense associated with processing a SIP transaction at
+   a proxy server, and that expense is greater for stateful proxy
+   servers than it is for stateless proxy servers. Therefore, stateful
+   proxies are more susceptible to flooding than stateless proxy
+   servers. UAs and proxy servers SHOULD challenge questionable requests with
+   only a single 401 (Unauthorized) or 407 (Proxy Authentication
+   Required), forgoing the normal response retransmission algorithm, and
+   thus behaving statelessly towards unauthenticated requests. Retransmitting the 401 (Unauthorized) or 407 (Proxy Authentication
+      Required) status response amplifies the problem of an attacker
+      using a falsified header field value (such as Via) to direct
+      traffic to a third party.

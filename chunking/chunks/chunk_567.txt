@@ -1,0 +1,12 @@
+If the UAS has reason to believe that the scheme of the Request-URI
+   has been improperly modified in transit, the UA SHOULD notify its
+   user of a potential security breach. As a further measure to prevent downgrade attacks, entities that
+   accept only SIPS requests MAY also refuse connections on insecure
+   ports. End users will undoubtedly discern the difference between SIPS and
+   SIP URIs, and they may manually edit them in response to stimuli. This can either benefit or degrade security. For example, if an
+   attacker corrupts a DNS cache, inserting a fake record set that
+   effectively removes all SIPS records for a proxy server, then any
+   SIPS requests that traverse this proxy server may fail. When a user,
+   however, sees that repeated calls to a SIPS AOR are failing, they
+   could on some devices manually convert the scheme from SIPS to SIP
+   and retry.

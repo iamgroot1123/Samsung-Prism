@@ -1,0 +1,13 @@
+A stateful proxy MAY process the set in any order. It
+   MAY process multiple targets serially, allowing each client
+   transaction to complete before starting the next. It MAY start
+   client transactions with every target in parallel. It also MAY
+   arbitrarily divide the set into groups, processing the groups
+   serially and processing the targets in each group in parallel. A common ordering mechanism is to use the qvalue parameter of targets
+   obtained from Contact header fields (see Section 20.10). Targets are
+   processed from highest qvalue to lowest. Targets with equal qvalues
+   may be processed in parallel. A stateful proxy must have a mechanism to maintain the target set as
+   responses are received and associate the responses to each forwarded
+   request with the original request. For the purposes of this model,
+   this mechanism is a "response context" created by the proxy layer
+   before forwarding the first request.

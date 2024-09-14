@@ -1,0 +1,14 @@
+They use a form similar to the mailto URL, allowing the specification
+   of SIP request-header fields and the SIP message-body. This makes it
+   possible to specify the subject, media type, or urgency of sessions
+   initiated by using a URI on a web page or in an email message. The
+   formal syntax for a SIP or SIPS URI is presented in Section 25. Its
+   general form, in the case of a SIP URI, is:
+      sip:user:password@host:port;uri-parameters?headers
+   The format for a SIPS URI is the same, except that the scheme is
+   "sips" instead of sip. These tokens, and some of the tokens in their
+   expansions, have the following meanings:
+      user: The identifier of a particular resource at the host being
+         addressed. The term "host" in this context frequently refers
+         to a domain. The "userinfo" of a URI consists of this user
+         field, the password field, and the @ sign following them.

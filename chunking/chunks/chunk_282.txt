@@ -1,0 +1,13 @@
+Now, U1 sets its
+   dialog state’s remote target URI to sip:callee@u2.domain.com and its
+   route set to:
+      (<sip:p1.example.com;lr>,<sip:p2.domain.com;lr>)
+   Since all the route set elements contain the lr parameter, U1
+   constructs the following BYE request:
+      BYE sip:callee@u2.domain.com SIP/2.0
+      Route: <sip:p1.example.com;lr>,<sip:p2.domain.com;lr>
+   As any other element (including proxies) would do, it resolves the
+   URI in the topmost Route header field value using DNS to determine
+   where to send the request. This goes to P1. P1 notices that it is
+   not responsible for the resource indicated in the Request-URI so it
+   doesn’t change it.

@@ -1,0 +1,13 @@
+8 General User Agent Behavior
+   A user agent represents an end system. It contains a user agent
+   client (UAC), which generates requests, and a user agent server
+   (UAS), which responds to them. A UAC is capable of generating a
+   request based on some external stimulus (the user clicking a button,
+   or a signal on a PSTN line) and processing a response. A UAS is
+   capable of receiving a request and generating a response based on
+   user input, external stimulus, the result of a program execution, or
+   some other mechanism. When a UAC sends a request, the request passes through some number of
+   proxy servers, which forward the request towards the UAS. When the
+   UAS generates a response, the response is forwarded towards the UAC. UAC and UAS procedures depend strongly on two factors. First, based
+   on whether the request or response is inside or outside of a dialog,
+   and second, based on the method of a request.

@@ -1,0 +1,15 @@
+The UAC MUST
+   consider the session terminated (and therefore stop sending or
+   listening for media) as soon as the BYE request is passed to the
+   client transaction. If the response for the BYE is a 481
+   (Call/Transaction Does Not Exist) or a 408 (Request Timeout) or no    response at all is received for the BYE (that is, a timeout is
+   returned by the client transaction), the UAC MUST consider the
+   session and the dialog terminated. 15.1.2 UAS Behavior
+   A UAS first processes the BYE request according to the general UAS
+   processing described in Section 8.2. A UAS core receiving a BYE
+   request checks if it matches an existing dialog. If the BYE does not
+   match an existing dialog, the UAS core SHOULD generate a 481
+   (Call/Transaction Does Not Exist) response and pass that to the
+   server transaction. This rule means that a BYE sent without tags by a UAC will be
+      rejected. This is a change from RFC 2543, which allowed BYE
+      without tags.

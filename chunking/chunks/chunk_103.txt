@@ -1,0 +1,15 @@
+For further information on the
+   processing of content-specific header fields, see Section 7.4 as well
+   as Section 20.11 through 20.15. 8.2.4 Applying Extensions
+   A UAS that wishes to apply some extension when generating the
+   response MUST NOT do so unless support for that extension is
+   indicated in the Supported header field in the request. If the
+   desired extension is not supported, the server SHOULD rely only on
+   baseline SIP and any other extensions supported by the client. In
+   rare circumstances, where the server cannot process the request
+   without the extension, the server MAY send a 421 (Extension Required)
+   response. This response indicates that the proper response cannot be
+   generated without support of a specific extension. The needed
+   extension(s) MUST be included in a Require header field in the
+   response. This behavior is NOT RECOMMENDED, as it will generally
+   break interoperability.

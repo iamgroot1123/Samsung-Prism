@@ -1,0 +1,12 @@
+If the host portion of the "sent-by" parameter
+   contains a domain name, or if it contains an IP address that differs
+   from the packet source address, the server MUST add a "received"
+   parameter to that Via header field value. This parameter MUST
+   contain the source address from which the packet was received. This
+   is to assist the server transport layer in sending the response,
+   since it must be sent to the source IP address from which the request
+   came. Consider a request received by the server transport which looks like,
+   in part:
+      INVITE sip:bob@Biloxi.com SIP/2.0
+      Via: SIP/2.0/UDP bobspc.biloxi.com:5060
+   The request is received with a source IP address of 192.0.2.4.

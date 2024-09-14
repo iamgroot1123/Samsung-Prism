@@ -1,0 +1,13 @@
+A 486 (Busy Here)
+   SHOULD be returned in such a scenario. If the UAS knows that no
+   other end system will be able to accept this call, a 600 (Busy
+   Everywhere) response SHOULD be sent instead. However, it is unlikely
+   that a UAS will be able to know this in general, and thus this
+   response will not usually be used. The response is passed to the
+   INVITE server transaction, which will deal with its retransmissions. A UAS rejecting an offer contained in an INVITE SHOULD return a 488
+   (Not Acceptable Here) response. Such a response SHOULD include a
+   Warning header field value explaining why the offer was rejected. 13.3.1.4 The INVITE is Accepted
+   The UAS core generates a 2xx response. This response establishes a
+   dialog, and therefore follows the procedures of Section 12.1.1 in
+   addition to those of Section 8.2.6. A 2xx response to an INVITE SHOULD contain the Allow header field and
+   the Supported header field, and MAY contain the Accept header field.

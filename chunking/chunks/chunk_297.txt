@@ -1,0 +1,11 @@
+When timer A fires 2*T1 seconds later, the request MUST be
+   retransmitted again (assuming the client transaction is still in this
+   state). This process MUST continue so that the request is
+   retransmitted with intervals that double after each transmission. These retransmissions SHOULD only be done while the client
+   transaction is in the "calling" state. The default value for T1 is 500 ms.  T1 is an estimate of the RTT
+   between the client and server transactions. Elements MAY (though it
+   is NOT RECOMMENDED) use smaller values of T1 within closed, private
+   networks that do not permit general Internet connection. T1 MAY be
+   chosen larger, and this is RECOMMENDED if it is known in advance
+   (such as on high latency access links) that the RTT is larger. Whatever the value of T1, the exponential backoffs on retransmissions
+   described in this section MUST be used.

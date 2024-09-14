@@ -1,0 +1,11 @@
+The optional "display-name" is meant to be rendered by a human user
+   interface. A system SHOULD use the display name "Anonymous" if the
+   identity of the client is to remain hidden. Even if the "display-
+   name" is empty, the "name-addr" form MUST be used if the "addr-spec"
+   contains a comma, question mark, or semicolon. Syntax issues are
+   discussed in Section 7.3.1. Two From header fields are equivalent if their URIs match, and their
+   parameters match. Extension parameters in one header field, not
+   present in the other are ignored for the purposes of comparison. This
+   means that the display name and presence or absence of angle brackets
+   do not affect matching. See Section 20.10 for the rules for parsing a display name, URI and
+   URI parameters, and header field parameters.

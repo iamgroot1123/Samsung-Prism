@@ -1,0 +1,14 @@
+21.6.2 603 Decline
+   The callee’s machine was successfully contacted but the user
+   explicitly does not wish to or cannot participate. The response MAY
+   indicate a better time to call in the Retry-After header field. This
+   status response is returned only if the client knows that no other
+   end point will answer the request. 21.6.3 604 Does Not Exist Anywhere
+   The server has authoritative information that the user indicated in
+   the Request-URI does not exist anywhere. 21.6.4 606 Not Acceptable
+   The user’s agent was contacted successfully but some aspects of the
+   session description such as the requested media, bandwidth, or
+   addressing style were not acceptable. A 606 (Not Acceptable) response means that the user wishes to
+   communicate, but cannot adequately support the session described. The 606 (Not Acceptable) response MAY contain a list of reasons in a
+   Warning header field describing why the session described cannot be
+   supported.

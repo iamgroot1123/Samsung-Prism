@@ -1,0 +1,14 @@
+Subject: I know you’re there,
+               pick up the phone
+               and talk to me! The relative order of header fields with different field names is not
+   significant. However, it is RECOMMENDED that header fields which are
+   needed for proxy processing (Via, Route, Record-Route, Proxy-Require,
+   Max-Forwards, and Proxy-Authorization, for example) appear towards
+   the top of the message to facilitate rapid parsing. The relative
+   order of header field rows with the same field name is important. Multiple header field rows with the same field-name MAY be present in
+   a message if and only if the entire field-value for that header field
+   is defined as a comma-separated list (that is, if follows the grammar
+   defined in Section 7.3). It MUST be possible to combine the multiple
+   header field rows into one "field-name: field-value" pair, without
+   changing the semantics of the message, by appending each subsequent
+   field-value to the first, each separated by a comma.

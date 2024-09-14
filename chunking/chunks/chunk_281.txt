@@ -1,0 +1,15 @@
+There is no Route header field, so it resolves
+   the new Request-URI to determine where to send the request:
+      INVITE sip:callee@u2.domain.com SIP/2.0
+      Contact: sip:caller@u1.example.com
+      Record-Route: <sip:p2.domain.com;lr>
+      Record-Route: <sip:p1.example.com;lr>
+   The callee at u2.domain.com gets this and responds with a 200 OK:
+      SIP/2.0 200 OK
+      Contact: sip:callee@u2.domain.com
+      Record-Route: <sip:p2.domain.com;lr>
+      Record-Route: <sip:p1.example.com;lr>
+   The callee at u2 also sets its dialog state’s remote target URI to
+   sip:caller@u1.example.com and its route set to:
+      (<sip:p2.domain.com;lr>,<sip:p1.example.com;lr>)
+   This is forwarded by P2 to P1 to U1 as normal.

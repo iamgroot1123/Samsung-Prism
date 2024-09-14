@@ -1,0 +1,15 @@
+The stateless proxy MAY use any technique it likes to guarantee
+         uniqueness of its branch IDs across transactions. However, the
+         following procedure is RECOMMENDED. The proxy examines the
+         branch ID in the topmost Via header field of the received
+         request. If it begins with the magic cookie, the first
+         component of the branch ID of the outgoing request is computed
+         as a hash of the received branch ID. Otherwise, the first
+         component of the branch ID is computed as a hash of the topmost
+         Via, the tag in the To header field, the tag in the From header
+         field, the Call-ID header field, the CSeq number (but not
+         method), and the Request-URI from the received request. One of
+         these fields will always vary across two different
+         transactions. o  All other message transformations specified in Section 16.6
+         MUST result in the same transformation of a retransmitted
+         request.

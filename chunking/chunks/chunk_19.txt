@@ -1,0 +1,12 @@
+(There are three Via header field values - one
+   added by Alice’s SIP phone, one added by the atlanta.com proxy, and
+   one added by the biloxi.com proxy.) Bob’s SIP phone has added a tag
+   parameter to the To header field. This tag will be incorporated by
+   both endpoints into the dialog and will be included in all future    requests and responses in this call. The Contact header field
+   contains a URI at which Bob can be directly reached at his SIP phone. The Content-Type and Content-Length refer to the message body (not
+   shown) that contains Bob’s SDP media information. In addition to DNS and location service lookups shown in this
+   example, proxy servers can make flexible "routing decisions" to
+   decide where to send a request. For example, if Bob’s SIP phone
+   returned a 486 (Busy Here) response, the biloxi.com proxy server
+   could proxy the INVITE to Bob’s voicemail server. A proxy server can
+   also send an INVITE to a number of locations at the same time.

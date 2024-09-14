@@ -1,0 +1,14 @@
+If so, it updates the expiration
+   time interval according to the expires parameter or, if absent, the
+   Expires field value. The UA then issues a REGISTER request for each
+   of its bindings before the expiration interval has elapsed. It MAY
+   combine several updates into one REGISTER request. A UA SHOULD use the same Call-ID for all registrations during a
+   single boot cycle. Registration refreshes SHOULD be sent to the same
+   network address as the original registration, unless redirected. 10.2.5 Setting the Internal Clock
+   If the response for a REGISTER request contains a Date header field,
+   the client MAY use this header field to learn the current time in
+   order to set any internal clocks. 10.2.6 Discovering a Registrar
+   UAs can use three ways to determine the address to which to send
+   registrations:  by configuration, using the address-of-record, and
+   multicast. A UA can be configured, in ways beyond the scope of this
+   specification, with a registrar address.

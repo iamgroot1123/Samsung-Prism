@@ -1,0 +1,11 @@
+If the session description format has the capability for version
+   numbers, the offerer SHOULD indicate that the version of the session
+   description has changed. The To, From, Call-ID, CSeq, and Request-URI of a re-INVITE are set
+   following the same rules as for regular requests within an existing
+   dialog, described in Section 12. A UAC MAY choose not to add an Alert-Info header field or a body with
+   Content-Disposition "alert" to re-INVITEs because UASs do not
+   typically alert the user upon reception of a re-INVITE. Unlike an INVITE, which can fork, a re-INVITE will never fork, and
+   therefore, only ever generate a single final response. The reason a
+   re-INVITE will never fork is that the Request-URI identifies the
+   target as the UA instance it established the dialog with, rather than
+   identifying an address-of-record for the user.

@@ -1,0 +1,12 @@
+21.3.1 300 Multiple Choices
+   The address in the request resolved to several choices, each with its
+   own specific location, and the user (or UA) can select a preferred
+   communication end point and redirect its request to that location. The response MAY include a message body containing a list of resource
+   characteristics and location(s) from which the user or UA can choose
+   the one most appropriate, if allowed by the Accept request header
+   field. However, no MIME types have been defined for this message
+   body. The choices SHOULD also be listed as Contact fields (Section 20.10). Unlike HTTP, the SIP response MAY contain several Contact fields or a
+   list of addresses in a Contact field. UAs MAY use the Contact header
+   field value for automatic redirection or MAY ask the user to confirm
+   a choice. However, this specification does not define any standard
+   for such automatic selection.

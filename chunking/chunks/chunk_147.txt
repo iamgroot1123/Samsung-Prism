@@ -1,0 +1,11 @@
+For example, before
+   a client inserts a Require header field into an INVITE listing an
+   option that it is not certain the destination UAS supports, the
+   client can query the destination UAS with an OPTIONS to see if this
+   option is returned in a Supported header field. All UAs MUST support
+   the OPTIONS method. The target of the OPTIONS request is identified by the Request-URI,
+   which could identify another UA or a SIP server. If the OPTIONS is
+   addressed to a proxy server, the Request-URI is set without a user
+   part, similar to the way a Request-URI is set for a REGISTER request. Alternatively, a server receiving an OPTIONS request with a Max-
+   Forwards header field value of 0 MAY respond to the request
+   regardless of the Request-URI. This behavior is common with HTTP/1.1.

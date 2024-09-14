@@ -1,0 +1,13 @@
+Aggregate Authorization Header Field Values
+         If the selected response is a 401 (Unauthorized) or 407 (Proxy
+         Authentication Required), the proxy MUST collect any WWW-
+         Authenticate and Proxy-Authenticate header field values from
+         all other 401 (Unauthorized) and 407 (Proxy Authentication
+         Required) responses received so far in this response context
+         and add them to this response without modification before
+         forwarding. The resulting 401 (Unauthorized) or 407 (Proxy
+         Authentication Required) response could have several WWW-
+         Authenticate AND Proxy-Authenticate header field values. This is necessary because any or all of the destinations the
+         request was forwarded to may have requested credentials. The
+         client needs to receive all of those challenges and supply
+         credentials for each of them when it retries the request. Motivation for this behavior is provided in Section 26. 8.

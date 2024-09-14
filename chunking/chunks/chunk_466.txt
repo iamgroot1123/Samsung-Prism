@@ -1,0 +1,12 @@
+The PGP mechanism for encrypting the header fields and bodies of
+      SIP messages described in RFC 2543 has been deprecated. 23.1 S/MIME Certificates
+   The certificates that are used to identify an end-user for the
+   purposes of S/MIME differ from those used by servers in one important
+   respect - rather than asserting that the identity of the holder
+   corresponds to a particular hostname, these certificates assert that
+   the holder is identified by an end-user address. This address is
+   composed of the concatenation of the "userinfo" "@" and "domainname"
+   portions of a SIP or SIPS URI (in other words, an email address of
+   the form "bob@biloxi.com"), most commonly corresponding to a user’s
+   address-of-record. These certificates are also associated with keys that are used to
+   sign or encrypt bodies of SIP messages.

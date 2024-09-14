@@ -1,0 +1,14 @@
+The rules for handling any such
+   differences for all of the header fields described in this document
+   are given in this section. Note that for the purposes of loose timestamping, all SIP messages
+   that tunnel "message/sip" SHOULD contain a Date header in both the
+   "inner" and "outer" headers. 23.4.1.1 Integrity
+   Whenever integrity checks are performed, the integrity of a header
+   field should be determined by matching the value of the header field
+   in the signed body with that in the "outer" messages using the
+   comparison rules of SIP as described in 20. Header fields that can be legitimately modified by proxy servers are:
+   Request-URI, Via, Record-Route, Route, Max-Forwards, and Proxy-
+   Authorization. If these header fields are not intact end-to-end,
+   implementations SHOULD NOT consider this a breach of security. Changes to any other header fields defined in this document
+   constitute an integrity violation; users MUST be notified of a
+   discrepancy.

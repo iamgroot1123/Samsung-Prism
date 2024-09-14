@@ -1,0 +1,13 @@
+The client transaction SHOULD inform the TU that a transport failure
+   has occurred, and the client transaction SHOULD transition directly
+   to the "Terminated" state. The TU will handle the failover
+   mechanisms described in [4]. 17.2 Server Transaction
+   The server transaction is responsible for the delivery of requests to
+   the TU and the reliable transmission of responses. It accomplishes
+   this through a state machine. Server transactions are created by the
+   core when a request is received, and transaction handling is desired
+   for that request (this is not always the case). As with the client transactions, the state machine depends on whether
+   the received request is an INVITE request. 17.2.1 INVITE Server Transaction
+   The state diagram for the INVITE server transaction is shown in
+   Figure 7. When a server transaction is constructed for a request, it enters the
+   "Proceeding" state.

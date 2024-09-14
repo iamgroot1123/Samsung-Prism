@@ -1,0 +1,11 @@
+The considerations that follow first examine a set of classic threat
+   models that broadly identify the security needs of SIP. The set of
+   security services required to address these threats is then detailed,
+   followed by an explanation of several security mechanisms that can be
+   used to provide these services. Next, the requirements for
+   implementers of SIP are enumerated, along with exemplary deployments
+   in which these security mechanisms could be used to improve the
+   security of SIP. Some notes on privacy conclude this section. 26.1 Attacks and Threat Models
+   This section details some threats that should be common to most
+   deployments of SIP. These threats have been chosen specifically to
+   illustrate each of the security services that SIP requires.

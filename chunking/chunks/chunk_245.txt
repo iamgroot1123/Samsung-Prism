@@ -1,0 +1,12 @@
+This implies that the proxy will compute its own branch
+         parameter, which will be globally unique for that branch, and
+         contain the requisite magic cookie. Note that this implies that
+         the branch parameter will be different for different instances
+         of a spiraled or looped request through a proxy. Proxies choosing to detect loops have an additional constraint
+         in the value they use for construction of the branch parameter. A proxy choosing to detect loops SHOULD create a branch
+         parameter separable into two parts by the implementation. The
+         first part MUST satisfy the constraints of Section 8.1.1.7 as
+         described above. The second is used to perform loop detection
+         and distinguish loops from spirals. Loop detection is performed by verifying that, when a request
+         returns to a proxy, those fields having an impact on the
+         processing of the request have not changed.

@@ -1,0 +1,13 @@
+The
+   registrar SHOULD offer a certificate to the UA, and the site
+   identified by the certificate MUST correspond with the domain in
+   which the UA intends to register; for example, if the UA intends to
+   register the address-of-record ’alice@atlanta.com’, the site
+   certificate must identify a host within the atlanta.com domain (such
+   as sip.atlanta.com). When it receives the TLS Certificate message,
+   the UA SHOULD verify the certificate and inspect the site identified
+   by the certificate. If the certificate is invalid, revoked, or if it
+   does not identify the appropriate party, the UA MUST NOT send the
+   REGISTER message and otherwise proceed with the registration. When a valid certificate has been provided by the registrar, the
+      UA knows that the registrar is not an attacker who might redirect
+      the UA, steal passwords, or attempt any similar attacks.

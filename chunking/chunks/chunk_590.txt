@@ -1,0 +1,11 @@
+o  Added the In-Reply-To and Reply-To header fields for supporting
+      the return of missed calls or messages at a later time. o  Added TLS and SCTP as valid SIP transports. o  There were a variety of mechanisms described for handling failures
+      at any time during a call; those are now generally unified. BYE
+      is sent to terminate. o  RFC 2543 mandated retransmission of INVITE responses over TCP, but
+      noted it was really only needed for 2xx. That was an artifact of
+      insufficient protocol layering. With a more coherent transaction
+      layer defined here, that is no longer needed. Only 2xx responses
+      to INVITEs are retransmitted over TCP. o  Client and server transaction machines are now driven based on
+      timeouts rather than retransmit counts. This allows the state
+      machines to be properly specified for TCP and UDP. o  The Date header field is used in REGISTER responses to provide a
+      simple means for auto-configuration of dates in user agents.

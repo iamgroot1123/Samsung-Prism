@@ -1,0 +1,19 @@
+It then prepares to
+   send the request based on the now first Route header field value of
+   sip:p3.middle.com, but it notices that this URI does not contain the
+   lr parameter, so before sending, it reformats the request to be:
+      BYE sip:p3.middle.com SIP/2.0
+      Route: <sip:p2.example.com;lr>
+      Route: <sip:p1.example.com;lr>
+      Route: <sip:caller@u1.example.com>
+   P3 is a strict router, so it forwards the following to P2:
+      BYE sip:p2.example.com;lr SIP/2.0
+      Route: <sip:p1.example.com;lr>
+      Route: <sip:caller@u1.example.com>
+   P2 sees the request-URI is a value it placed into a Record-Route
+   header field, so before further processing, it rewrites the request
+   to be:
+      BYE sip:caller@u1.example.com SIP/2.0
+      Route: <sip:p1.example.com;lr>
+   P2 is not responsible for u1.example.com, so it sends the request to
+   P1 based on the resolution of the Route header field value.

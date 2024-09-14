@@ -1,0 +1,17 @@
+Example:
+      Call-ID: f81d4fae-7dec-11d0-a765-00a0c91e6bf6@foo.bar.com
+8.1.1.5 CSeq
+   The CSeq header field serves as a way to identify and order
+   transactions. It consists of a sequence number and a method. The
+   method MUST match that of the request. For non-REGISTER requests
+   outside of a dialog, the sequence number value is arbitrary. The
+   sequence number value MUST be expressible as a 32-bit unsigned
+   integer and MUST be less than 2**31. As long as it follows the above
+   guidelines, a client may use any mechanism it would like to select
+   CSeq header field values. Section 12.2.1.1 discusses construction of the CSeq for requests
+   within a dialog. Example:
+      CSeq: 4711 INVITE
+8.1.1.6 Max-Forwards
+   The Max-Forwards header field serves to limit the number of hops a
+   request can transit on the way to its destination. It consists of an
+   integer that is decremented by one at each hop.

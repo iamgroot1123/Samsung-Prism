@@ -1,0 +1,18 @@
+In the example below, there are no quotes around the Digest
+   parameter:
+      Authorization: Digest username="Alice", realm="atlanta.com",
+       nonce="84a4cc6f3082121f32b42a2187831a9e",
+       response="7587245234b3434cc3412213e5f113a5432"
+20.8 Call-ID
+   The Call-ID header field uniquely identifies a particular invitation
+   or all registrations of a particular client. A single multimedia
+   conference can give rise to several calls with different Call-IDs,
+   for example, if a user invites a single individual several times to
+   the same (long-running) conference. Call-IDs are case-sensitive and
+   are simply compared byte-by-byte. The compact form of the Call-ID header field is i. Examples:
+      Call-ID: f81d4fae-7dec-11d0-a765-00a0c91e6bf6@biloxi.com
+      i:f81d4fae-7dec-11d0-a765-00a0c91e6bf6@192.0.2.4
+20.9 Call-Info
+   The Call-Info header field provides additional information about the
+   caller or callee, depending on whether it is found in a request or
+   response.

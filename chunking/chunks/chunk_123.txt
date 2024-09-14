@@ -1,0 +1,12 @@
+This mechanism is known as
+   registration. Registration entails sending a REGISTER request to a special type of
+   UAS known as a registrar. A registrar acts as the front end to the
+   location service for a domain, reading and writing mappings based on
+   the contents of REGISTER requests. This location service is then
+   typically consulted by a proxy server that is responsible for routing
+   requests for that domain. An illustration of the overall registration process is given in
+   Figure 2. Note that the registrar and proxy server are logical roles
+   that can be played by a single device in a network; for purposes of    clarity the two are separated in this illustration. Also note that
+   UAs may send requests through a proxy server in order to reach a
+   registrar if the two are separate elements. SIP does not mandate a particular mechanism for implementing the
+   location service.

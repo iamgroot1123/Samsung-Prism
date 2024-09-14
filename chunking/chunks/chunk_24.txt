@@ -1,0 +1,11 @@
+Registration is another common operation in SIP. Registration is one
+   way that the biloxi.com server can learn the current location of Bob. Upon initialization, and at periodic intervals, Bob’s SIP phone sends
+   REGISTER messages to a server in the biloxi.com domain known as a SIP
+   registrar. The REGISTER messages associate Bob’s SIP or SIPS URI
+   (sip:bob@biloxi.com) with the machine into which he is currently
+   logged (conveyed as a SIP or SIPS URI in the Contact header field). The registrar writes this association, also called a binding, to a
+   database, called the location service, where it can be used by the
+   proxy in the biloxi.com domain. Often, a registrar server for a
+   domain is co-located with the proxy for that domain. It is an
+   important concept that the distinction between types of SIP servers
+   is logical, not physical. Bob is not limited to registering from a single device.

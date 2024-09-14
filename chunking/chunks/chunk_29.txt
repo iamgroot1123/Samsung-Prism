@@ -1,0 +1,13 @@
+The layer above the transaction layer is called the transaction user
+   (TU). Each of the SIP entities, except the stateless proxy, is a
+   transaction user. When a TU wishes to send a request, it creates a
+   client transaction instance and passes it the request along with the
+   destination IP address, port, and transport to which to send the
+   request. A TU that creates a client transaction can also cancel it. When a client cancels a transaction, it requests that the server stop
+   further processing, revert to the state that existed before the
+   transaction was initiated, and generate a specific error response to
+   that transaction. This is done with a CANCEL request, which
+   constitutes its own transaction, but references the transaction to be
+   cancelled (Section 9). The SIP elements, that is, user agent clients and servers, stateless
+   and stateful proxies and registrars, contain a core that
+   distinguishes them from each other.

@@ -1,0 +1,19 @@
+The registrar responds
+   with a 200 OK:
+   F2 200 OK Registrar -> Bob
+        SIP/2.0 200 OK
+        Via: SIP/2.0/UDP bobspc.biloxi.com:5060;branch=z9hG4bKnashds7
+         ;received=192.0.2.4
+        To: Bob <sip:bob@biloxi.com>;tag=2493k59kd
+        From: Bob <sip:bob@biloxi.com>;tag=456248
+        Call-ID: 843817637684230@998sdasdh09
+        CSeq: 1826 REGISTER
+        Contact: <sip:bob@192.0.2.4>
+        Expires: 7200
+        Content-Length: 0
+24.2 Session Setup
+   This example contains the full details of the example session setup
+   in Section 4. The message flow is shown in Figure 1. Note that
+   these flows show the minimum required set of header fields - some
+   other header fields such as Allow and Supported would normally be
+   present.

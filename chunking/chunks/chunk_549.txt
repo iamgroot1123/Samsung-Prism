@@ -1,0 +1,13 @@
+Once it has done so, and TLS
+   negotiation has completed, resulting in a secure channel between the
+   two proxies, the atlanta.com proxy can forward the INVITE request to
+   biloxi.com. The proxy server at biloxi.com SHOULD inspect the certificate of the
+   proxy server at atlanta.com in turn and compare the domain asserted
+   by the certificate with the "domainname" portion of the From header
+   field in the INVITE request. The biloxi proxy MAY have a strict
+   security policy that requires it to reject requests that do not match
+   the administrative domain from which they have been proxied. Such security policies could be instituted to prevent the SIP
+      equivalent of SMTP ’open relays’ that are frequently exploited to
+      generate spam. This policy, however, only guarantees that the request came from the
+   domain it ascribes to itself; it does not allow biloxi.com to
+   ascertain how atlanta.com authenticated Alice.

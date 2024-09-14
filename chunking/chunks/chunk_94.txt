@@ -1,0 +1,12 @@
+If a 416 (Unsupported URI Scheme) response is received (Section
+   21.4.14), the Request-URI used a URI scheme not supported by the
+   server. The client SHOULD retry the request, this time, using a SIP
+   URI. If a 420 (Bad Extension) response is received (Section 21.4.15), the
+   request contained a Require or Proxy-Require header field listing an
+   option-tag for a feature not supported by a proxy or UAS. The UAC
+   SHOULD retry the request, this time omitting any extensions listed in
+   the Unsupported header field in the response. In all of the above cases, the request is retried by creating a new
+   request with the appropriate modifications. This new request
+   constitutes a new transaction and SHOULD have the same value of the
+   Call-ID, To, and From of the previous request, but the CSeq should
+   contain a new sequence number that is one higher than the previous.

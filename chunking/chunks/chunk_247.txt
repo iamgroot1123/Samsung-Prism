@@ -1,0 +1,12 @@
+If a proxy wishes to detect loops, the "branch" parameter it
+         supplies MUST depend on all information affecting processing of
+         a request, including the incoming Request-URI and any header
+         fields affecting the request’s admission or routing. This is
+         necessary to distinguish looped requests from requests whose
+         routing parameters have changed before returning to this
+         server. The request method MUST NOT be included in the calculation of
+         the branch parameter. In particular, CANCEL and ACK requests
+         (for non-2xx responses) MUST have the same branch value as the
+         corresponding request they cancel or acknowledge. The branch
+         parameter is used in correlating those requests at the server
+         handling them (see Sections 17.2.3 and 9.2). 9.

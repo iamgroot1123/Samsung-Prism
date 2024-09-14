@@ -1,0 +1,15 @@
+If there are any bodies whose type (indicated by the
+   Content-Type), language (indicated by the Content-Language) or
+   encoding (indicated by the Content-Encoding) are not understood, and
+   that body part is not optional (as indicated by the Content-
+   Disposition header field), the UAS MUST reject the request with a 415
+   (Unsupported Media Type) response. The response MUST contain an
+   Accept header field listing the types of all bodies it understands,
+   in the event the request contained bodies of types not supported by
+   the UAS. If the request contained content encodings not understood
+   by the UAS, the response MUST contain an Accept-Encoding header field
+   listing the encodings understood by the UAS. If the request
+   contained content with languages not understood by the UAS, the
+   response MUST contain an Accept-Language header field indicating the
+   languages understood by the UAS. Beyond these checks, body handling
+   depends on the method and type.

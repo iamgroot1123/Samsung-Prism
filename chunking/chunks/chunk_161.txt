@@ -1,0 +1,11 @@
+The local sequence number MUST be set to the value of the sequence
+   number in the CSeq header field of the request. The remote sequence
+   number MUST be empty (it is established when the remote UA sends a
+   request within the dialog). The call identifier component of the
+   dialog ID MUST be set to the value of the Call-ID in the request. The local tag component of the dialog ID MUST be set to the tag in
+   the From field in the request, and the remote tag component of the
+   dialog ID MUST be set to the tag in the To field of the response. A
+   UAC MUST be prepared to receive a response without a tag in the To
+   field, in which case the tag is considered to have a value of null. This is to maintain backwards compatibility with RFC 2543, which
+      did not mandate To tags. The remote URI MUST be set to the URI in the To field, and the local
+   URI MUST be set to the URI in the From field.

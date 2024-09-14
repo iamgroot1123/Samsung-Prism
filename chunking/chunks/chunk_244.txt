@@ -1,0 +1,12 @@
+Thus, the branch parameter provided with the Via
+         header field inserted in step 8 MUST be different for each
+         attempt. If the client transaction reports failure to send the request
+         or a timeout from its state machine, the proxy continues to the
+         next address in that ordered set. If the ordered set is
+         exhausted, the request cannot be forwarded to this element in
+         the target set. The proxy does not need to place anything in
+         the response context, but otherwise acts as if this element of
+         the target set returned a 408 (Request Timeout) final response. 8. Add a Via header field value
+         The proxy MUST insert a Via header field value into the copy
+         before the existing Via header field values. The construction
+         of this value follows the same guidelines of Section 8.1.1.7.

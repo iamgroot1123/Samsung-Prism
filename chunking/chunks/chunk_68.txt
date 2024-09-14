@@ -1,0 +1,11 @@
+It may also be undesirable for privacy reasons or
+   convenience to set these fields to the same value (especially if the
+   originating UA expects that the Request-URI will be changed during
+   transit). In some special circumstances, the presence of a pre-existing route
+   set can affect the Request-URI of the message. A pre-existing route
+   set is an ordered set of URIs that identify a chain of servers, to
+   which a UAC will send outgoing requests that are outside of a dialog. Commonly, they are configured on the UA by a user or service provider
+   manually, or through some other non-SIP mechanism. When a provider
+   wishes to configure a UA with an outbound proxy, it is RECOMMENDED
+   that this be done by providing it with a pre-existing route set with
+   a single URI, that of the outbound proxy.

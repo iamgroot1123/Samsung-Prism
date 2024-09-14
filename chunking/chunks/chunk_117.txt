@@ -1,0 +1,12 @@
+When the
+   client decides to send the CANCEL, it creates a client transaction
+   for the CANCEL and passes it the CANCEL request along with the
+   destination address, port, and transport. The destination address,
+   port, and transport for the CANCEL MUST be identical to those used to
+   send the original request. If it was allowed to send the CANCEL before receiving a response
+      for the previous request, the server could receive the CANCEL
+      before the original request. Note that both the transaction corresponding to the original request
+   and the CANCEL transaction will complete independently. However, a
+   UAC canceling a request cannot rely on receiving a 487 (Request
+   Terminated) response for the original request, as an RFC 2543-
+   compliant UAS will not generate such a response.

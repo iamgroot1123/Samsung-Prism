@@ -1,0 +1,13 @@
+The address
+   of the atlanta.com SIP server could have been configured in Alice’s
+   softphone, or it could have been discovered by DHCP, for example. The atlanta.com SIP server is a type of SIP server known as a proxy
+   server. A proxy server receives SIP requests and forwards them on
+   behalf of the requestor. In this example, the proxy server receives
+   the INVITE request and sends a 100 (Trying) response back to Alice’s
+   softphone. The 100 (Trying) response indicates that the INVITE has
+   been received and that the proxy is working on her behalf to route
+   the INVITE to the destination. Responses in SIP use a three-digit
+   code followed by a descriptive phrase. This response contains the
+   same To, From, Call-ID, CSeq and branch parameter in the Via as the
+   INVITE, which allows Alice’s softphone to correlate this response to
+   the sent INVITE.

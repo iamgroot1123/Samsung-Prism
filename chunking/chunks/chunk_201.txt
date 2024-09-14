@@ -1,0 +1,13 @@
+Note that, as stated in Section 12.2.1.2, if the non-2xx final
+   response is a 481 (Call/Transaction Does Not Exist), or a 408
+   (Request Timeout), or no response at all is received for the re-
+   INVITE (that is, a timeout is returned by the INVITE client
+   transaction), the UAC will terminate the dialog. If a UAC receives a 491 response to a re-INVITE, it SHOULD start a
+   timer with a value T chosen as follows:
+      1. If the UAC is the owner of the Call-ID of the dialog ID
+         (meaning it generated the value), T has a randomly chosen value
+         between 2.1 and 4 seconds in units of 10 ms.
+      2. If the UAC is not the owner of the Call-ID of the dialog ID, T
+         has a randomly chosen value of between 0 and 2 seconds in units
+         of 10 ms. When the timer fires, the UAC SHOULD attempt the re-INVITE once more,
+   if it still desires for that session modification to take place.

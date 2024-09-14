@@ -1,0 +1,14 @@
+For
+   instance, a proxy MAY forward a request from one TCP connection to
+   another transaction statelessly as long as it places enough
+   information in the message to be able to forward the response down
+   the same connection the request arrived on. Requests forwarded
+   between different types of transports where the proxy’s TU must take
+   an active role in ensuring reliable delivery on one of the transports
+   MUST be forwarded transaction statefully. A stateful proxy MAY transition to stateless operation at any time
+   during the processing of a request, so long as it did not do anything
+   that would otherwise prevent it from being stateless initially
+   (forking, for example, or generation of a 100 response). When
+   performing such a transition, all state is simply discarded. The
+   proxy SHOULD NOT initiate a CANCEL request. Much of the processing involved when acting statelessly or statefully
+   for a request is identical.

@@ -1,0 +1,10 @@
+Defining sip:user@host to not be equivalent to
+            sip:user@host:5060 is a change from RFC 2543. When deriving
+            addresses from URIs, equivalent addresses are expected from
+            equivalent URIs. The URI sip:user@host:5060 will always
+            resolve to port 5060. The URI sip:user@host may resolve to
+            other ports through the DNS SRV mechanisms detailed in [4]. o  URI uri-parameter components are compared as follows:
+         -  Any uri-parameter appearing in both URIs must match. -  A user, ttl, or method uri-parameter appearing in only one
+            URI never matches, even if it contains the default value. -  A URI that includes an maddr parameter will not match a URI
+            that contains no maddr parameter. -  All other uri-parameters appearing in only one URI are
+            ignored when comparing the URIs. o  URI header components are never ignored.

@@ -1,0 +1,13 @@
+Other extensions may define different target refresh
+   requests for dialogs established in other ways. Note that an ACK is NOT a target refresh request. Target refresh requests only update the dialog’s remote target URI,
+   and not the route set formed from the Record-Route. Updating the
+   latter would introduce severe backwards compatibility problems with
+   RFC 2543-compliant systems. 12.2.1 UAC Behavior
+12.2.1.1 Generating the Request
+   A request within a dialog is constructed by using many of the
+   components of the state stored as part of the dialog. The URI in the To field of the request MUST be set to the remote URI
+   from the dialog state. The tag in the To header field of the request
+   MUST be set to the remote tag of the dialog ID. The From URI of the
+   request MUST be set to the local URI from the dialog state. The tag
+   in the From header field of the request MUST be set to the local tag
+   of the dialog ID.

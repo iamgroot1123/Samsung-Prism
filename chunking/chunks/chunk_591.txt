@@ -1,0 +1,3 @@
+o  Allowed a registrar to reject registrations with expirations that
+      are too short in duration. Defined the 423 response code and the
+      Min-Expires for this purpose.

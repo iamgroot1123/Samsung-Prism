@@ -1,0 +1,11 @@
+Since the registrar requires the user agent to authenticate
+      itself, it would be difficult for an attacker to forge REGISTER
+      requests for the user’s address-of-record. Also note that since
+      the REGISTER is sent over a confidential TLS connection, attackers
+      will not be able to intercept the REGISTER to record credentials
+      for any possible replay attack. Once the registration has been accepted by the registrar, the UA
+   SHOULD leave this TLS connection open provided that the registrar
+   also acts as the proxy server to which requests are sent for users in
+   this administrative domain. The existing TLS connection will be
+   reused to deliver incoming requests to the UA that has just completed
+   registration.

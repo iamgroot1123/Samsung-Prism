@@ -1,0 +1,14 @@
+The UAS will never see the first
+      request, and thus, it will notice a gap in the CSeq number space. Such a gap does not represent any error condition. When a UAS receives a target refresh request, it MUST replace the
+   dialog’s remote target URI with the URI from the Contact header field
+   in that request, if present. 12.3 Termination of a Dialog
+   Independent of the method, if a request outside of a dialog generates
+   a non-2xx final response, any early dialogs created through
+   provisional responses to that request are terminated. The mechanism
+   for terminating confirmed dialogs is method specific. In this
+   specification, the BYE method terminates a session and the dialog
+   associated with it. See Section 15 for details. 13 Initiating a Session
+13.1 Overview
+   When a user agent client desires to initiate a session (for example,
+   audio, video, or a game), it formulates an INVITE request. The
+   INVITE request asks a server to establish a session.

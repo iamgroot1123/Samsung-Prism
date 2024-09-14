@@ -1,0 +1,12 @@
+Ensuring that TLS will be used for all of the request segments up to
+   the target domain is somewhat complex. It is possible that
+   cryptographically authenticated proxy servers along the way that are
+   non-compliant or compromised may choose to disregard the forwarding
+   rules associated with SIPS (and the general forwarding rules in
+   Section 16.6). Such malicious intermediaries could, for example,
+   retarget a request from a SIPS URI to a SIP URI in an attempt to
+   downgrade security. Alternatively, an intermediary might legitimately retarget a request
+   from a SIP to a SIPS URI. Recipients of a request whose Request-URI
+   uses the SIPS URI scheme thus cannot assume on the basis of the
+   Request-URI alone that SIPS was used for the entire request path
+   (from the client onwards).

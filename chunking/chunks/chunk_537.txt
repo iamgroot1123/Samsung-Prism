@@ -1,0 +1,8 @@
+This is a change
+      since RFC 2543. Users that distribute a SIPS URI as an address-of-record may elect to
+   operate devices that refuse requests over insecure transports. 26.2.3 HTTP Authentication
+   SIP provides a challenge capability, based on HTTP authentication,
+   that relies on the 401 and 407 response codes as well as header
+   fields for carrying challenges and credentials. Without significant
+   modification, the reuse of the HTTP Digest authentication scheme in
+   SIP allows for replay protection and one-way authentication. The usage of Digest authentication in SIP is detailed in Section 22.

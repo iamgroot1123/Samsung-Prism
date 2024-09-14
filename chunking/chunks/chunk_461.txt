@@ -1,0 +1,13 @@
+22.4 The Digest Authentication Scheme
+   This section describes the modifications and clarifications required
+   to apply the HTTP Digest authentication scheme to SIP. The SIP
+   scheme usage is almost completely identical to that for HTTP [17]. Since RFC 2543 is based on HTTP Digest as defined in RFC 2069 [39],
+   SIP servers supporting RFC 2617 MUST ensure they are backwards
+   compatible with RFC 2069. Procedures for this backwards
+   compatibility are specified in RFC 2617. Note, however, that SIP
+   servers MUST NOT accept or request Basic authentication. The rules for Digest authentication follow those defined in [17],
+   with "HTTP/1.1" replaced by "SIP/2.0" in addition to the following
+   differences:
+      1. The URI included in the challenge has the following BNF:
+          URI  =  SIP-URI / SIPS-URI
+      2.

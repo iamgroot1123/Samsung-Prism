@@ -1,0 +1,17 @@
+It does see that it is the first value in the
+   Route header field, so it removes that value, and forwards the
+   request to P2:
+      BYE sip:callee@u2.domain.com SIP/2.0
+      Route: <sip:p2.domain.com;lr>
+   P2 also notices it is not responsible for the resource indicated by
+   the Request-URI (it is responsible for domain.com, not
+   u2.domain.com), so it doesn’t change it. It does see itself in the
+   first Route header field value, so it removes it and forwards the
+   following to u2.domain.com based on a DNS lookup against the
+   Request-URI:
+      BYE sip:callee@u2.domain.com SIP/2.0
+16.12.1.2 Traversing a Strict-Routing Proxy
+   In this scenario, a dialog is established across four proxies, each
+   of which adds Record-Route header field values. The third proxy
+   implements the strict-routing procedures specified in RFC 2543 and
+   many works in progress.

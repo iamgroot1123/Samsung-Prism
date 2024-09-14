@@ -1,0 +1,17 @@
+This header field, along with Authorization, breaks the general rules
+   about multiple header field names. Although not a comma-separated
+   list, this header field name may be present multiple times, and MUST
+   NOT be combined into a single header line using the usual rules
+   described in Section 7.3.1. Example:
+   Proxy-Authorization: Digest username="Alice", realm="atlanta.com",
+      nonce="c60f3082ee1212b402a21831ae",
+      response="245f23415f11432b3434341c022"
+20.29 Proxy-Require
+   The Proxy-Require header field is used to indicate proxy-sensitive
+   features that must be supported by the proxy. See Section 20.32 for
+   more details on the mechanics of this message and a usage example. Example:
+      Proxy-Require: foo
+20.30 Record-Route
+   The Record-Route header field is inserted by proxies in a request to
+   force future requests in the dialog to be routed through the proxy. Examples of its use with the Route header field are described in
+   Sections 16.12.1.

@@ -1,0 +1,11 @@
+The client transaction
+   MUST pass the received response up to the TU, and the client
+   transaction MUST generate an ACK request, even if the transport is
+   reliable (guidelines for constructing the ACK from the response are
+   given in Section 17.1.1.3) and then pass the ACK to the transport
+   layer for transmission. The ACK MUST be sent to the same address,
+   port, and transport to which the original request was sent. The
+   client transaction SHOULD start timer D when it enters the
+   "Completed" state, with a value of at least 32 seconds for unreliable
+   transports, and a value of zero seconds for reliable transports. Timer D reflects the amount of time that the server transaction can
+   remain in the "Completed" state when unreliable transports are used. This is equal to Timer H in the INVITE server transaction, whose    default is 64*T1.

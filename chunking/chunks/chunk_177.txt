@@ -1,0 +1,11 @@
+13.2 UAC Processing
+13.2.1 Creating the Initial INVITE
+   Since the initial INVITE represents a request outside of a dialog,
+   its construction follows the procedures of Section 8.1.1. Additional
+   processing is required for the specific case of INVITE. An Allow header field (Section 20.5) SHOULD be present in the INVITE. It indicates what methods can be invoked within a dialog, on the UA
+   sending the INVITE, for the duration of the dialog. For example, a
+   UA capable of receiving INFO requests within a dialog [34] SHOULD
+   include an Allow header field listing the INFO method. A Supported header field (Section 20.37) SHOULD be present in the
+   INVITE. It enumerates all the extensions understood by the UAC. An Accept (Section 20.1) header field MAY be present in the INVITE. It indicates which Content-Types are acceptable to the UA, in both
+   the response received by it, and in any subsequent requests sent to
+   it within dialogs established by the INVITE.

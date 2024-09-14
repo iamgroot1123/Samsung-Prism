@@ -1,0 +1,11 @@
+If the request being cancelled contains a Route header field, the
+   CANCEL request MUST include that Route header field’s values. This is needed so that stateless proxies are able to route CANCEL
+      requests properly. The CANCEL request MUST NOT contain any Require or Proxy-Require
+   header fields. Once the CANCEL is constructed, the client SHOULD check whether it
+   has received any response (provisional or final) for the request
+   being cancelled (herein referred to as the "original request"). If no provisional response has been received, the CANCEL request MUST
+   NOT be sent; rather, the client MUST wait for the arrival of a
+   provisional response before sending the request. If the original
+   request has generated a final response, the CANCEL SHOULD NOT be
+   sent, as it is an effective no-op, since CANCEL has no effect on
+   requests that have already generated a final response.

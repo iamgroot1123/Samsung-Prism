@@ -1,0 +1,12 @@
+On a peer-to-peer level, UAs trust the network to authenticate one
+   another ordinarily; however, S/MIME can also be used to provide
+   direct authentication when the network does not, or if the network
+   itself is not trusted. The following is an illustrative example in which these security
+   mechanisms are used by various UAs and servers to prevent the sorts
+   of threats described in Section 26.1. While implementers and network
+   administrators MAY follow the normative guidelines given in the
+   remainder of this section, these are provided only as example
+   implementations. 26.3.2.1 Registration
+   When a UA comes online and registers with its local administrative
+   domain, it SHOULD establish a TLS connection with its registrar
+   (Section 10 describes how the UA reaches its registrar).

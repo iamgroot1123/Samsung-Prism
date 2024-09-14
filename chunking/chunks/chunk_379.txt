@@ -1,0 +1,13 @@
+Tags are helpful in
+   fault tolerant systems, where a dialog is to be recovered on an
+   alternate server after a failure. A UAS can select the tag in such a
+   way that a backup can recognize a request as part of a dialog on the
+   failed server, and therefore determine that it should attempt to
+   recover the dialog and any other state associated with it. 20 Header Fields
+   The general syntax for header fields is covered in Section 7.3. This
+   section lists the full set of header fields along with notes on
+   syntax, meaning, and usage. Throughout this section, we use [HX.Y]
+   to refer to Section X.Y of the current HTTP/1.1 specification RFC
+   2616 [8]. Examples of each header field are given. Information about header fields in relation to methods and proxy
+   processing is summarized in Tables 2 and 3. The "where" column describes the request and response types in which
+   the header field can be used.

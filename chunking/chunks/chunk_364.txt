@@ -1,0 +1,13 @@
+URIs MUST NOT contain unescaped space and control
+      characters. For each component, the set of valid BNF expansions defines exactly
+   which characters may appear unescaped. All other characters MUST be
+   escaped. For example, "@" is not in the set of characters in the user
+   component, so the user "j@s0n" must have at least the @ sign encoded,
+   as in "j%40s0n". Expanding the hname and hvalue tokens in Section 25 show that all URI
+   reserved characters in header field names and values MUST be escaped. The telephone-subscriber subset of the user component has special
+   escaping considerations. The set of characters not reserved in the
+   RFC 2806 [9] description of telephone-subscriber contains a number of
+   characters in various syntax elements that need to be escaped when
+   used in SIP URIs. Any characters occurring in a telephone-subscriber
+   that do not appear in an expansion of the BNF for the user rule MUST
+   be escaped.

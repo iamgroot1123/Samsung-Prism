@@ -1,0 +1,12 @@
+On future occasions, when the UA receives requests or responses that
+   contain a From header field corresponding to a value in its keyring,
+   the UA SHOULD compare the certificate offered in these messages with
+   the existing certificate in its keyring. If there is a discrepancy,
+   the UA MUST notify its user of a change of the certificate
+   (preferably in terms that indicate that this is a potential security
+   breach) and acquire the user’s permission before continuing to    process the signaling. If the user authorizes this certificate, it
+   SHOULD be added to the keyring alongside any previous value(s) for
+   this address-of-record. Note well however, that this key exchange mechanism does not
+   guarantee the secure exchange of keys when self-signed certificates,
+   or certificates signed by an obscure authority, are used - it is
+   vulnerable to well-known attacks.

@@ -1,0 +1,12 @@
+For example,
+   both his SIP phone at home and the one in the office could send
+   registrations. This information is stored together in the location    service and allows a proxy to perform various types of searches to
+   locate Bob. Similarly, more than one user can be registered on a
+   single device at the same time. The location service is just an abstract concept. It generally
+   contains information that allows a proxy to input a URI and receive a
+   set of zero or more URIs that tell the proxy where to send the
+   request. Registrations are one way to create this information, but
+   not the only way. Arbitrary mapping functions can be configured at
+   the discretion of the administrator. Finally, it is important to note that in SIP, registration is used
+   for routing incoming SIP requests and has no role in authorizing
+   outgoing requests.

@@ -1,0 +1,20 @@
+For example,
+      Contact: <sip:alice@atlanta.com>;expires=3600
+   is equivalent to
+      CONTACT: <sip:alice@atlanta.com>;ExPiReS=3600
+   and
+      Content-Disposition: session;handling=optional
+   is equivalent to
+      content-disposition: Session;HANDLING=OPTIONAL
+   The following two header fields are not equivalent:
+      Warning: 370 devnull "Choose a bigger pipe"
+      Warning: 370 devnull "CHOOSE A BIGGER PIPE"
+7.3.2 Header Field Classification
+   Some header fields only make sense in requests or responses. These
+   are called request header fields and response header fields,
+   respectively. If a header field appears in a message not matching
+   its category (such as a request header field in a response), it MUST
+   be ignored. Section 20 defines the classification of each header
+   field. 7.3.3 Compact Form
+   SIP provides a mechanism to represent common header field names in an
+   abbreviated form.

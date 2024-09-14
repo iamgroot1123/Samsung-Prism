@@ -1,0 +1,14 @@
+o  RFC 2543 was silent on whether a UA could initiate a new
+      transaction to a peer while another was in progress. That is now
+      specified here. It is allowed for non-INVITE requests, disallowed
+      for INVITE. o  PGP was removed. It was not sufficiently specified, and not
+      compatible with the more complete PGP MIME. It was replaced with
+      S/MIME. o  Added the "sips" URI scheme for end-to-end TLS. This scheme is
+      not backwards compatible with RFC 2543. Existing elements that
+      receive a request with a SIPS URI scheme in the Request-URI will
+      likely reject the request. This is actually a feature; it ensures
+      that a call to a SIPS URI is only delivered if all path hops can
+      be secured. o  Additional security features were added with TLS, and these are
+      described in a much larger and complete security considerations
+      section. o  In RFC 2543, a proxy was not required to forward provisional
+      responses from 101 to 199 upstream.

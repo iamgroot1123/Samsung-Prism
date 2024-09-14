@@ -1,28 +1,11 @@
-# Create a virtual environment
-#python -m venv rag_env
-
-# Activate the virtual environment
-# On Windows:
-#rag_env\Scripts\activate
-# On macOS/Linux:
-#source rag_env/bin/activate
-
-# Upgrade pip
-#pip install --upgrade pip
-
-
-#Install Necessary Libraries
-
-
-
 import nltk
 from nltk.tokenize import sent_tokenize
 
 # Specify custom download directory
-nltk.data.path.append('./rag_env/nltk_data')
+nltk.data.path.append('/home/madhukiran/Desktop/Samsung-Prism/rag_env/nltk_data')
 # Download the Punkt tokenizer for sentence splitting
-nltk.download('punkt', download_dir='./rag_env/nltk_data')
-nltk.download('punkt_tab', download_dir='./rag_env/nltk_data')
+nltk.download('punkt', download_dir='/home/madhukiran/Desktop/Samsung-Prism/rag_env/nltk_data')
+nltk.download('punkt_tab', download_dir='/home/madhukiran/Desktop/Samsung-Prism/rag_env/nltk_data')
 
 file_path = '/home/madhukiran/Desktop/Samsung-Prism/Data/RFC_3261/rfc3261.txt'
 

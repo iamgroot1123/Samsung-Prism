@@ -1,46 +1,54 @@
-from transformers import AutoTokenizer, AutoModel
+import os
 import numpy as np
-import faiss
+from sentence_transformers import SentenceTransformer
+from sklearn.metrics.pairwise import cosine_similarity
 
-# Paths
-faiss_index_path = '/home/madhukiran/Desktop/Samsung-Prism/vectorDB/faiss_index.index'
-chunk_map_path = '/home/madhukiran/Desktop/Samsung-Prism/vectorDB/chunk_map.json'
+# Load pre-trained model
+model = SentenceTransformer('all-MiniLM-L6-v2')
 
-# Load the FAISS index
-index = faiss.read_index(faiss_index_path)
+# Directory where the chunks are stored
+chunks_dir = r'Samsung-Prism\chunking\chunks'
 
-# Load the chunk map
-import json
-with open(chunk_map_path, 'r') as file:
-    chunk_map = json.load(file)
+# Load the precomputed embeddings
+embeddings_path = r'Samsung-Prism\embedding\embeddings.npy'
+embeddings = np.load(embeddings_path)
 
-# Load the tokenizer and model
-model_name = "bert-base-uncased"
-tokenizer = AutoTokenizer.from_pretrained(model_name)
-model = AutoModel.from_pretrained(model_name)
+# Function to load a chunk file
+def load_chunk(chunk_file):
+    with open(chunk_file, 'r') as file:
+        return file.read()
 
-def query_vector(query_text):
-    inputs = tokenizer(query_text, return_tensors='pt')
-    with torch.no_grad():
-        outputs = model(**inputs)
-    return outputs.last_hidden_state.mean(dim=1).numpy()
+# List all chunk files in the directory
+chunk_files = sorted([os.path.join(chunks_dir, file) for file in os.listdir(chunks_dir) if file.startswith('chunk_')])
 
-def retrieve_chunks(query_text, top_k=5):
-    query_vector = query_vector(query_text)
-    distances, indices = index.search(query_vector, top_k)
-    
-    results = []
-    for i in range(top_k):
-        idx = indices[0][i]
-        chunk = chunk_map.get(str(idx), "Chunk not found")
-        results.append((distances[0][i], chunk))
-    
-    return results
+# Function to handle the query and find the most relevant chunks
+def query_chunks(query, top_k=5):
+    # Encode the query using the same model
+    query_embedding = model.encode(query)
 
-# Example query
-query_text = "Explain the key features of the HTTP protocol."
-results = retrieve_chunks(query_text)
+    # Compute cosine similarity between query and all precomputed chunk embeddings
+    similarities = cosine_similarity([query_embedding], embeddings)[0]
 
-# Print results
-for distance, chunk in results:
-    print(f"Distance: {distance}\nChunk: {chunk}\n")
+    # Get the indices of the top_k most similar chunks
+    top_k_indices = np.argsort(similarities)[-top_k:][::-1]
+
+    # Retrieve the corresponding chunks and their similarity scores
+    top_chunks = []
+    for idx in top_k_indices:
+        chunk_file = chunk_files[idx]
+        chunk_text = load_chunk(chunk_file)
+        similarity_score = similarities[idx]
+        top_chunks.append((chunk_text, similarity_score))
+
+    return top_chunks
+
+# Example usage:
+if __name__ == '__main__':
+    query = "Explain Stateless Proxy"
+    top_chunks = query_chunks(query, top_k=5)
+
+    # Display the top results
+    print("\nTop relevant chunks:\n")
+    for i, (chunk, score) in enumerate(top_chunks):
+        print(f"Chunk {i+1} (Similarity: {score:.4f}):\n{chunk}\n")
+
